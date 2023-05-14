@@ -14,6 +14,7 @@
 </head>
 
 <body>
+    <h1>알고리즘 문제 분석 서비스</h1>
     <canvas id="method-count-chart"></canvas>
     <canvas id="line-count-chart"></canvas>
     <canvas id="company-count-chart"></canvas>
@@ -28,28 +29,29 @@
                 console.log(data)
                 // 레벨 별 메서드 카운트
                 let methodCountLvData = [];
-                for (const count of data["python"]["countmethod"]) {
-                    methodCountLvData.push(count)
+                for (const key in data["python"]["countmethod"]){
+                    methodCountLvData.push(data["python"]["countmethod"][key])
                 }
+                console.log(methodCountLvData)
 
                 // 레벨 별 라인 수
                 const lineCountLvData = [
-                    data["javascript"]["countline"]["lv0"],
-                    data["javascript"]["countline"]["lv1"],
-                    data["javascript"]["countline"]["lv2"],
-                    data["javascript"]["countline"]["lv3"],
-                    data["javascript"]["countline"]["lv4"],
-                    data["javascript"]["countline"]["lv5"]
+                    data["python"]["countline"]["lv0"],
+                    data["python"]["countline"]["lv1"],
+                    data["python"]["countline"]["lv2"],
+                    data["python"]["countline"]["lv3"],
+                    data["python"]["countline"]["lv4"],
+                    data["python"]["countline"]["lv5"]
                 ];
 
                 // 출제 업체 수
                 const companyCountData = [
-                    data["javascript"]["countcompany"]["카카오"],
-                    data["javascript"]["countcompany"]["네이버"],
-                    data["javascript"]["countcompany"]["라인"],
-                    data["javascript"]["countcompany"]["쿠팡"],
-                    data["javascript"]["countcompany"]["위니브"],
-                    data["javascript"]["countcompany"]["프로그래머스"]
+                    data["python"]["countcompany"]["카카오"],
+                    data["python"]["countcompany"]["네이버"],
+                    data["python"]["countcompany"]["라인"],
+                    data["python"]["countcompany"]["쿠팡"],
+                    data["python"]["countcompany"]["위니브"],
+                    data["python"]["countcompany"]["프로그래머스"]
                 ];
 
                 // 전체 문제 유형
