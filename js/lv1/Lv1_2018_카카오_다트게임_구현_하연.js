@@ -19,5 +19,3 @@ function solution(dartResult) {
   }
   return answer.reduce((a, b) => a + b);
 }
-
-// https://school.programmers.co.kr/learn/courses/30/lessons/17682
