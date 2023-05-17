@@ -12,6 +12,7 @@ function solution(s) {
     nine: "9",
   };
 
+  
   let answer = "";
   let temp = "";
   for (let i = 0; i < s.length; i++) {
