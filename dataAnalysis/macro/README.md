@@ -2,10 +2,19 @@
 ## 진행 사항
 - get_data.py
     - 특정(./data/)폴더를 순회하여 확장자가 .py이거나 .js파일의 데이터를 수집한 뒤, dictionary형태의 요소값을 가진 list를 반환
+- module_count.py
+    - get_data.py의 return 값을 data로 받아서 모든 요소값의 code에서 import {값}을 count 해준 뒤 업데이트 해주고, data의 code를 삭제한 뒤, list[dict]형으로 반환
 
 ## 개선 사항
 - get_data.py
     - js와 py폴더를 data폴더에 넣어 문제 해결하거나, 전체폴더(./)를 순회할 경우, js와 py폴더만 순회하도록 개선하여 문제 해결
+- module_count.py
+    - import math, re 일 경우 두 번째 값은 count하지 못하여 개선 필요
+        -  ```py
+            import math
+            import re
+            # 각 라인일 경우 count되는것은 확인
+            ```
 
 
 ---
