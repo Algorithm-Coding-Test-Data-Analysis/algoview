@@ -1,4 +1,6 @@
+# Standard library import
 import os
+
 
 def get_data_from_file(path, file_name) -> dict:
     '''
