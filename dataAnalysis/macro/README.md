@@ -1,3 +1,14 @@
+# Status Board
+## 진행 사항
+- get_data.py
+    - 특정(./data/)폴더를 순회하여 확장자가 .py이거나 .js파일의 데이터를 수집한 뒤, dictionary형태의 요소값을 가진 list를 반환
+
+## 개선 사항
+- get_data.py
+    - js와 py폴더를 data폴더에 넣어 문제 해결하거나, 전체폴더(./)를 순회할 경우, js와 py폴더만 순회하도록 개선하여 문제 해결
+
+
+---
 # Code Convention
 
 ## Code lay-out
