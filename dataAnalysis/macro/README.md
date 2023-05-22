@@ -7,7 +7,7 @@
 
 ## 개선 사항
 - get_data.py
-    - js와 py폴더를 data폴더에 넣어 문제 해결하거나, 전체폴더(./)를 순회할 경우, js와 py폴더만 순회하도록 개선하여 문제 해결
+    - js와 py폴더를 data폴더에 넣어 문제 해결
 - module_count.py
     - import math, re 일 경우 두 번째 값은 count하지 못하여 개선 필요
         -  ```py
