@@ -1,11 +1,8 @@
 function solution(s){
-    if(s.length%2) return false
-    if(s[0]==='(' && s.slice(-1) === ')') s = s.slice(1, -1)
-    
-    while(s.length) {
-        if ((s[0]==='(' && s.slice(-1)+'' === ')')
-           || (s[0]===')' && s.slice(-1)+'' === '(')) {
-            s = s.slice(1, -1)
-        } else return false
-    } return true
+    let acc = 0
+    for(let i=0; i<s.length; i++) {
+        s[i] === '(' ? acc+=1 : acc-=1
+        if(acc < 0) return false
+    } 
+    return acc === 0 ? true : false
 }
