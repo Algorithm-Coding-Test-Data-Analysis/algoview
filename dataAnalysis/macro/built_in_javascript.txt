@@ -1,0 +1,567 @@
+JavaScript ECMAScript 버전
+
+기본 함수
+[기본 함수]
+decodeURI
+decodeURIComponent
+encodeURI
+encodeURIComponent
+eval
+isFinite
+isNaN
+parseFloat
+parseInt
+
+수학 함수
+[수학 함수]
+Math.abs
+Math.acos
+Math.acosh
+Math.asin
+Math.asinh
+Math.atan
+Math.atan2
+Math.atanh
+Math.cbrt
+Math.ceil
+Math.clz32
+Math.cos
+Math.cosh
+Math.exp
+Math.expm1
+Math.floor
+Math.fround
+Math.hypot
+Math.imul
+Math.log
+Math.log1p
+Math.log10
+Math.log2
+Math.max
+Math.min
+Math.pow
+Math.random
+Math.round
+Math.sign
+Math.sin
+Math.sinh
+Math.sqrt
+Math.tan
+Math.tanh
+Math.trunc
+
+문자열 함수
+[문자열 함수]
+String.fromCharCode
+String.fromCodePoint
+String.prototype.charAt
+String.prototype.charCodeAt
+String.prototype.codePointAt
+String.prototype.concat
+String.prototype.endsWith
+String.prototype.includes
+String.prototype.indexOf
+String.prototype.lastIndexOf
+String.prototype.localeCompare
+String.prototype.match
+String.prototype.matchAll
+String.prototype.normalize
+String.prototype.padEnd
+String.prototype.padStart
+String.prototype.repeat
+String.prototype.replace
+String.prototype.search
+String.prototype.slice
+String.prototype.split
+String.prototype.startsWith
+String.prototype.substr
+String.prototype.substring
+String.prototype.toLocaleLowerCase
+String.prototype.toLocaleUpperCase
+String.prototype.toLowerCase
+String.prototype.toString
+String.prototype.toUpperCase
+String.prototype.trim
+String.prototype.trimEnd
+String.prototype.trimStart
+String.prototype.valueOf
+
+배열 함수
+[배열 함수]
+Array.from
+Array.isArray
+Array.of
+Array.prototype.concat
+Array.prototype.copyWithin
+Array.prototype.entries
+Array.prototype.every
+Array.prototype.fill
+Array.prototype.filter
+Array.prototype.find
+Array.prototype.findIndex
+Array.prototype.flat
+Array.prototype.flatMap
+Array.prototype.forEach
+Array.prototype.includes
+Array.prototype.indexOf
+Array.prototype.join
+Array.prototype.keys
+Array.prototype.lastIndexOf
+Array.prototype.map
+Array.prototype.pop
+Array.prototype.push
+Array.prototype.reduce
+Array.prototype.reduceRight
+Array.prototype.reverse
+Array.prototype.shift
+Array.prototype.slice
+Array.prototype.some
+Array.prototype.sort
+Array.prototype.splice
+Array.prototype.toLocaleString
+Array.prototype.toSource
+Array.prototype.toString
+Array.prototype.unshift
+Array.prototype.values
+
+객체 함수
+[객체 함수]
+Object.assign
+Object.create
+Object.defineProperties
+Object.defineProperty
+Object.entries
+Object.freeze
+Object.fromEntries
+Object.getOwnPropertyDescriptor
+Object.getOwnPropertyDescriptors
+Object.getOwnPropertyNames
+Object.getOwnPropertySymbols
+Object.getPrototypeOf
+Object.is
+Object.isExtensible
+Object.isFrozen
+Object.isSealed
+Object.keys
+Object.preventExtensions
+Object.prototype.hasOwnProperty
+Object.prototype.isPrototypeOf
+Object.prototype.propertyIsEnumerable
+Object.prototype.toLocaleString
+Object.prototype.toString
+Object.prototype.valueOf
+Object.seal
+Object.setPrototypeOf
+Object.values
+
+날짜 함수
+[날짜 함수]
+Date.now
+Date.parse
+Date.UTC
+Date.prototype.getDate
+Date.prototype.getDay
+Date.prototype.getFullYear
+Date.prototype.getHours
+Date.prototype.getMilliseconds
+Date.prototype.getMinutes
+Date.prototype.getMonth
+Date.prototype.getSeconds
+Date.prototype.getTime
+Date.prototype.getTimezoneOffset
+Date.prototype.getUTCDate
+Date.prototype.getUTCDay
+Date.prototype.getUTCFullYear
+Date.prototype.getUTCHours
+Date.prototype.getUTCMilliseconds
+Date.prototype.getUTCMinutes
+Date.prototype.getUTCMonth
+Date.prototype.getUTCSeconds
+Date.prototype.setDate
+Date.prototype.setFullYear
+Date.prototype.setHours
+Date.prototype.setMilliseconds
+Date.prototype.setMinutes
+Date.prototype.setMonth
+Date.prototype.setSeconds
+Date.prototype.setTime
+Date.prototype.setUTCDate
+Date.prototype.setUTCFullYear
+Date.prototype.setUTCHours
+Date.prototype.setUTCMilliseconds
+Date.prototype.setUTCMinutes
+Date.prototype.setUTCMonth
+Date.prototype.setUTCSeconds
+Date.prototype.toDateString
+Date.prototype.toISOString
+Date.prototype.toJSON
+Date.prototype.toLocaleDateString
+Date.prototype.toLocaleString
+Date.prototype.toLocaleTimeString
+Date.prototype.toString
+Date.prototype.toTimeString
+Date.prototype.toUTCString
+Date.prototype.valueOf
+
+정규 표현식 함수
+[정규 표현식 함수]
+RegExp.prototype.compile
+RegExp.prototype.exec
+RegExp.prototype.test
+RegExp.prototype.toSource
+RegExp.prototype.toString
+
+함수 함수
+[함수 함수]
+Function.prototype.apply
+Function.prototype.bind
+Function.prototype.call
+Function.prototype.toString
+
+JSON 함수
+[JSON 함수]
+JSON.parse
+JSON.stringify
+
+예외 처리 함수
+[예외 처리 함수]
+Error.prototype.toString
+Error.prototype.valueOf
+EvalError.prototype.toString
+EvalError.prototype.valueOf
+RangeError.prototype.toString
+RangeError.prototype.valueOf
+ReferenceError.prototype.toString
+ReferenceError.prototype.valueOf
+SyntaxError.prototype.toString
+SyntaxError.prototype.valueOf
+TypeError.prototype.toString
+TypeError.prototype.valueOf
+URIError.prototype.toString
+URIError.prototype.valueOf
+
+배열 관련 함수
+[배열 관련 함수]
+Array.prototype.toLocaleTimeString
+Array.prototype.toTimeString
+Array.prototype.toUTCString
+
+날짜 관련 함수
+[날짜 관련 함수]
+Date.prototype.toLocaleTimeString
+Date.prototype.toTimeString
+Date.prototype.toUTCString
+
+숫자 관련 함수
+[숫자 관련 함수]
+Number.isFinite
+Number.isInteger
+Number.isNaN
+Number.isSafeInteger
+Number.parseFloat
+Number.parseInt
+
+문자열 관련 함수
+[문자열 관련 함수]
+String.prototype.localeCompare
+String.prototype.match
+String.prototype.replace
+String.prototype.search
+String.prototype.split
+String.prototype.toLocaleLowerCase
+String.prototype.toLocaleUpperCase
+String.prototype.toLowerCase
+String.prototype.toUpperCase
+String.prototype.valueOf
+
+심볼 관련 함수
+[심볼 관련 함수]
+Symbol.prototype.toString
+Symbol.prototype.valueOf
+Symbol.prototype.description
+
+약한 맵 관련 함수
+[약한 맵 관련 함수]
+WeakMap.prototype.delete
+WeakMap.prototype.get
+WeakMap.prototype.has
+WeakMap.prototype.set
+
+약한 셋 관련 함수
+[약한 셋 관련 함수]
+WeakSet.prototype.add
+WeakSet.prototype.delete
+WeakSet.prototype.has
+
+프로미스 관련 함수
+[프로미스 관련 함수]
+Promise.prototype.catch
+Promise.prototype.finally
+Promise.prototype.then
+
+셋 관련 함수
+[셋 관련 함수]
+Set.prototype.add
+Set.prototype.clear
+Set.prototype.delete
+Set.prototype.has
+
+맵 관련 함수
+[맵 관련 함수]
+Map.prototype.clear
+Map.prototype.delete
+Map.prototype.get
+Map.prototype.has
+Map.prototype.set
+Map.prototype.entries
+Map.prototype.forEach
+Map.prototype.keys
+Map.prototype.values
+
+국제화 관련 함수
+[국제화 관련 함수]
+Intl.Collator.prototype.compare
+Intl.DateTimeFormat.prototype.format
+Intl.NumberFormat.prototype.format
+Intl.NumberFormat.prototype.formatToParts
+Intl.NumberFormat.prototype.resolvedOptions
+Intl.PluralRules.prototype.select
+Intl.RelativeTimeFormat.prototype.format
+Intl.RelativeTimeFormat.prototype.formatToParts
+Intl.RelativeTimeFormat.prototype.resolvedOptions
+
+리플렉션 관련 함수
+[리플렉션 관련 함수]
+Reflect.apply
+Reflect.construct
+Reflect.defineProperty
+Reflect.deleteProperty
+Reflect.get
+Reflect.getOwnPropertyDescriptor
+Reflect.getPrototypeOf
+Reflect.has
+Reflect.isExtensible
+Reflect.ownKeys
+Reflect.preventExtensions
+Reflect.set
+Reflect.setPrototypeOf
+
+실행 컨텍스트 관련 함수
+[실행 컨텍스트 관련 함수]
+Function.prototype.apply
+Function.prototype.bind
+Function.prototype.call
+Function.prototype.toString
+
+실행 컨텍스트 관련 함수
+[실행 컨텍스트 관련 함수]
+JSON.parse
+JSON.stringify
+
+실행 컨텍스트 관련 함수
+[실행 컨텍스트 관련 함수]
+Error.prototype.toString
+Error.prototype.valueOf
+EvalError.prototype.toString
+EvalError.prototype.valueOf
+RangeError.prototype.toString
+RangeError.prototype.valueOf
+ReferenceError.prototype.toString
+ReferenceError.prototype.valueOf
+SyntaxError.prototype.toString
+SyntaxError.prototype.valueOf
+TypeError.prototype.toString
+TypeError.prototype.valueOf
+URIError.prototype.toString
+URIError.prototype.valueOf
+
+실행 컨텍스트 관련 함수
+[실행 컨텍스트 관련 함수]
+Object.assign
+Object.create
+Object.defineProperties
+Object.defineProperty
+Object.entries
+Object.freeze
+Object.fromEntries
+Object.getOwnPropertyDescriptor
+Object.getOwnPropertyDescriptors
+Object.getOwnPropertyNames
+Object.getOwnPropertySymbols
+Object.getPrototypeOf
+Object.is
+Object.isExtensible
+Object.isFrozen
+Object.isSealed
+Object.keys
+Object.preventExtensions
+Object.prototype.hasOwnProperty
+Object.prototype.isPrototypeOf
+Object.prototype.propertyIsEnumerable
+Object.prototype.toLocaleString
+Object.prototype.toString
+Object.prototype.valueOf
+Object.seal
+Object.setPrototypeOf
+Object.values
+
+날짜 관련 함수
+[날짜 관련 함수]
+Date.now
+Date.parse
+Date.UTC
+Date.prototype.getDate
+Date.prototype.getDay
+Date.prototype.getFullYear
+Date.prototype.getHours
+Date.prototype.getMilliseconds
+Date.prototype.getMinutes
+Date.prototype.getMonth
+Date.prototype.getSeconds
+Date.prototype.getTime
+Date.prototype.getTimezoneOffset
+Date.prototype.getUTCDate
+Date.prototype.getUTCDay
+Date.prototype.getUTCFullYear
+Date.prototype.getUTCHours
+Date.prototype.getUTCMilliseconds
+Date.prototype.getUTCMinutes
+Date.prototype.getUTCMonth
+Date.prototype.getUTCSeconds
+Date.prototype.setDate
+Date.prototype.setFullYear
+Date.prototype.setHours
+Date.prototype.setMilliseconds
+Date.prototype.setMinutes
+Date.prototype.setMonth
+Date.prototype.setSeconds
+Date.prototype.setTime
+Date.prototype.setUTCDate
+Date.prototype.setUTCHours
+Date.prototype.setUTCMilliseconds
+Date.prototype.setUTCMinutes
+Date.prototype.setUTCMonth
+Date.prototype.setUTCSeconds
+Date.prototype.toDateString
+Date.prototype.toISOString
+Date.prototype.toJSON
+Date.prototype.toLocaleDateString
+Date.prototype.toLocaleString
+Date.prototype.toLocaleTimeString
+Date.prototype.toString
+Date.prototype.toTimeString
+Date.prototype.toUTCString
+Date.prototype.valueOf
+
+정규 표현식 관련 함수
+[정규 표현식 관련 함수]
+RegExp.prototype.compile
+RegExp.prototype.exec
+RegExp.prototype.test
+RegExp.prototype.toSource
+RegExp.prototype.toString
+
+배열 관련 함수
+[배열 관련 함수]
+Array.from
+Array.isArray
+Array.of
+Array.prototype.concat
+Array.prototype.copyWithin
+Array.prototype.entries
+Array.prototype.every
+Array.prototype.fill
+Array.prototype.filter
+Array.prototype.find
+Array.prototype.findIndex
+Array.prototype.flat
+Array.prototype.flatMap
+Array.prototype.forEach
+Array.prototype.includes
+Array.prototype.indexOf
+Array.prototype.join
+Array.prototype.keys
+Array.prototype.lastIndexOf
+Array.prototype.map
+Array.prototype.pop
+Array.prototype.push
+Array.prototype.reduce
+Array.prototype.reduceRight
+Array.prototype.reverse
+Array.prototype.shift
+Array.prototype.slice
+Array.prototype.some
+Array.prototype.sort
+Array.prototype.splice
+Array.prototype.toLocaleString
+Array.prototype.toSource
+Array.prototype.toString
+Array.prototype.unshift
+Array.prototype.values
+
+객체 관련 함수
+[객체 관련 함수]
+Object.assign
+Object.create
+Object.defineProperties
+Object.defineProperty
+Object.entries
+Object.freeze
+Object.fromEntries
+Object.getOwnPropertyDescriptor
+Object.getOwnPropertyDescriptors
+Object.getOwnPropertyNames
+Object.getOwnPropertySymbols
+Object.getPrototypeOf
+Object.is
+Object.isExtensible
+Object.isFrozen
+Object.isSealed
+Object.keys
+Object.preventExtensions
+Object.prototype.hasOwnProperty
+Object.prototype.isPrototypeOf
+Object.prototype.propertyIsEnumerable
+Object.prototype.toLocaleString
+Object.prototype.toString
+Object.prototype.valueOf
+Object.seal
+Object.setPrototypeOf
+Object.values
+
+심볼 관련 함수
+[심볼 관련 함수]
+Symbol.prototype.toString
+Symbol.prototype.valueOf
+Symbol.prototype.description
+
+타입드 어레이 관련 함수
+[타입드 어레이 관련 함수]
+TypedArray.prototype.buffer
+TypedArray.prototype.byteLength
+TypedArray.prototype.byteOffset
+TypedArray.prototype.copyWithin
+TypedArray.prototype.entries
+TypedArray.prototype.every
+TypedArray.prototype.fill
+TypedArray.prototype.filter
+TypedArray.prototype.find
+TypedArray.prototype.findIndex
+TypedArray.prototype.forEach
+TypedArray.prototype.includes
+TypedArray.prototype.indexOf
+TypedArray.prototype.join
+TypedArray.prototype.keys
+TypedArray.prototype.lastIndexOf
+TypedArray.prototype.map
+TypedArray.prototype.reduce
+TypedArray.prototype.reduceRight
+TypedArray.prototype.reverse
+TypedArray.prototype.set
+TypedArray.prototype.slice
+TypedArray.prototype.some
+TypedArray.prototype.sort
+TypedArray.prototype.subarray
+TypedArray.prototype.toLocaleString
+TypedArray.prototype.toString
+TypedArray.prototype.values
