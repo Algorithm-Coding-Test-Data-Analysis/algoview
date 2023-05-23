@@ -5,7 +5,10 @@
 - module_count.py
     - get_data.py의 return 값을 data로 받아서 모든 요소값의 code에서 import {값}을 count 해준 뒤 업데이트 해주고, data의 code를 삭제한 뒤, list[dict]형으로 반환
 - built_in_func_cnt.py
-    - code: str을 algument값으로 받는 기준으로 카운팅된 dict형 데이터 반환
+    - code: str을 argument값으로 받는 기준으로 카운팅된 dict형 데이터 반환
+- built-in/built_in_function.py
+    - 2개의 argument값을 받으며, 첫 번째는 code_data: str, 두 번째는 language: str을 받아 language을 조건으로 txt파일에 정리해둔 built-in function을 기준으로 counting
+
 
 ## 개선 사항
 - get_data.py
@@ -18,8 +21,12 @@
             # 각 라인일 경우 count되는것은 확인
             ```
 - built-in-func-cnt.py
-    - get_built_in_func_cnt함수의 원하는 algument값으로 맞춰주기 위해 추가 함수 필요.
+    - get_built_in_func_cnt함수의 원하는 argument값으로 맞춰주기 위해 추가 함수 필요.
     - 현재 python기준으로 작업되어 있으며, javascript 추가 예정
+- built-in/built_in_function.py
+    - get_built_in_func_cnt 함수와 동일하게 원하는 argument값을 제공하는 추가 함수 필요.
+    - built-in function 리스트를 txt파일로 별도 관리할 경우, 읽어오는 과정에서 path 설정 필요.
+
 
 ---
 # Code Convention
