@@ -10,6 +10,8 @@
     - code: str을 argument값으로 받는 기준으로 카운팅된 dict형 데이터 반환
 - built-in/built_in_function.py
     - 2개의 argument값을 받으며, 첫 번째는 code_data: str, 두 번째는 language: str을 받아 language을 조건으로 txt파일에 정리해둔 built-in function을 기준으로 counting
+- dict_to_json.py
+    - data: List[dict] argument를 받아 file_name을 key값으로 가진 dict[dict]형식의 data를 반환
 
 
 ## 개선 사항
@@ -21,6 +23,8 @@
 - built-in/built_in_function.py
     - get_built_in_func_cnt 함수와 동일하게 원하는 argument값을 제공하는 추가 함수 필요.
     - built-in function 리스트를 txt파일로 별도 관리할 경우, 읽어오는 과정에서 path 설정 필요.
+- dict_to_json.py
+- 풀이 code 제거
 
 
 ---

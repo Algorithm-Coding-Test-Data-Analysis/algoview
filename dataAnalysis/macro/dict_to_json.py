@@ -1,7 +1,9 @@
+# Standard library import
 import json
-import get_data as gd
-import module_count as mc
 
+# Local application import
+import module_count as mc
+import get_data as gd
 
 def dict_to_json(data):
     '''
