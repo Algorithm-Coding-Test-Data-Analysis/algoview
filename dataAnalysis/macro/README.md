@@ -4,6 +4,8 @@
     - 특정(./data/)폴더를 순회하여 확장자가 .py이거나 .js파일의 데이터를 수집한 뒤, dictionary형태의 요소값을 가진 list를 반환
 - module_count.py
     - get_data.py의 return 값을 data로 받아서 모든 요소값의 code에서 import {값}을 count 해준 뒤 업데이트 해주고, data의 code를 삭제한 뒤, list[dict]형으로 반환
+- built_in_func_cnt.py
+    - code: str을 algument값으로 받는 기준으로 카운팅된 dict형 데이터 반환
 
 ## 개선 사항
 - get_data.py
@@ -15,7 +17,9 @@
             import re
             # 각 라인일 경우 count되는것은 확인
             ```
-
+- built-in-func-cnt.py
+    - get_built_in_func_cnt함수의 원하는 algument값으로 맞춰주기 위해 추가 함수 필요.
+    - 현재 python기준으로 작업되어 있으며, javascript 추가 예정
 
 ---
 # Code Convention
