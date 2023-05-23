@@ -12,12 +12,15 @@ def module_count(data):
 
         module_counts = Counter()
 
-        modules = re.findall(r'(?:import|from)\s+(\w+)', code)
-        module_counts.update(modules)
+        matches = re.findall(
+            r'(?:from|import)\s+([\w\s,]+?)(?:\s+as\s+\w+)?(?=\s*import|\n|$)', code)
+
+        for match in matches:
+            modules = [m.strip() for m in match.split(',')]
+            module_counts.update(modules)
 
         file_data['module'] = dict(module_counts)
 
-        file_data.pop('code')
     return data
 
 
