@@ -65,5 +65,5 @@ def get_method_cnt(code_data: str, language: str = 'py') -> dict:
 
 if __name__ == '__main__':
     data = gd.get_data()
-    for i in insert_countmethod_data(data):
-        print(i['countmethod'])
+    print(insert_countmethod_data(data))
+    
