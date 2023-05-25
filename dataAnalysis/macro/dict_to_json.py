@@ -4,6 +4,7 @@ import json
 # Local application import
 import module_count as mc
 import get_data as gd
+import built_in_func_cnt as bf
 
 def dict_to_json(data):
     '''
@@ -24,6 +25,7 @@ def dict_to_json(data):
 
 if __name__ == '__main__':
     data = gd.get_data()
-    data_module_counted = mc.module_count(data)
+    data_built_in_counted = bf.insert_countmethod_data(data)
+    data_module_counted = mc.module_count(data_built_in_counted)
     data_json = dict_to_json(data_module_counted)
     print(data_json)
