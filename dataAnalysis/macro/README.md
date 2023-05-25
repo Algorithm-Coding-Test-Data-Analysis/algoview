@@ -15,8 +15,6 @@
 
 
 ## 개선 사항
-- built-in-func-cnt.py
-    - javascript built-in function check
 - built-in/built_in_function.py
     - get_built_in_func_cnt 함수와 동일하게 원하는 argument값을 제공하는 추가 함수 필요.
     - built-in function 리스트를 txt파일로 별도 관리할 경우, 읽어오는 과정에서 path 설정 필요.
