@@ -1,6 +1,6 @@
 from collections import Counter
 import re
-import get_data as gd
+
 
 def insert_countmethod_data(full_data: list[dict]) -> list[dict]:
     '''
@@ -62,8 +62,3 @@ def get_method_cnt(code_data: str, language: str = 'py') -> dict:
     pattern = f'({func_list_str}|[.][a-zA-Z0-9]+)\('
     p = re.compile(pattern)
     return dict(Counter(p.findall(code_data)))
-
-if __name__ == '__main__':
-    data = gd.get_data()
-    print(insert_countmethod_data(data))
-    

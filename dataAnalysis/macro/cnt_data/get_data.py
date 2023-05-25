@@ -1,4 +1,3 @@
-# Standard library import
 import os
 
 
@@ -61,7 +60,3 @@ def get_data() -> list[dict]:
             if ext == '.py' or ext == '.js':
                 data.append(get_data_from_file(path, file_name))
     return data
-
-
-if __name__ == '__main__':
-    print(get_data())
