@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIC TAC TOE</title>
+    <link rel="stylesheet" href="tictactoe.css">
+
+</head>
+
+<body class="sue-body">
+    <div id="sue-home-screen" class="sue-game-tictactoe">
+        <header class="sue-title">
+            <p class="sue-title-p">TIC TAC TOE</p>
+        </header>
+        <main class="sue-main">
+            <span class="sue-main-o" data-caption="You will start first">O</span>
+            <span class="sue-main-x" data-caption="The computer starts first">X</span>
+        </main>
+        <footer class="sue-footer blink">Choose a side</footer>
+    </div>
+
+    <!-- 게임 화면 -->
+    <div id="sue-game-screen" class="sue-game-tictactoe" style="display: none;">
+        <div class="sue-goback-container">
+            <button class="sue-goback-btn"><a href="">&lt;</a></button>
+            <div id="sue-goback-caption">Choose a side again</div>
+        </div>
+        <header class="sue-title">
+            <p class="sue-title-p">TIC TAC TOE</p>
+        </header>
+        <div class="sue-turn">
+            <p></p>
+        </div>
+        <main class="sue-game-board">
+            <div data-cell-index="0" class="sue-cell"></div>
+            <div data-cell-index="1" class="sue-cell"></div>
+            <div data-cell-index="2" class="sue-cell"></div>
+            <div data-cell-index="3" class="sue-cell"></div>
+            <div data-cell-index="4" class="sue-cell"></div>
+            <div data-cell-index="5" class="sue-cell"></div>
+            <div data-cell-index="6" class="sue-cell"></div>
+            <div data-cell-index="7" class="sue-cell"></div>
+            <div data-cell-index="8" class="sue-cell"></div>
+        </main>
+        <footer>
+            <div class="sue-score-container">
+                <div class="sue-score-box sue-player">
+                    <span>Player</span>
+                    <span>0</span>
+                </div>
+                <div class="sue-score-box sue-tie">
+                    <span>Ties</span>
+                    <span>0</span>
+                </div>
+                <div class="sue-score-box sue-computer">
+                    <span>Computer</span>
+                    <span>0</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- 게임 결과 모달창 -->
+    <div id="sueModal" class="sue-modal">
+        <div class="sue-modal-content">
+            <p id="sueModalText"></p>
+            <div class="sue-modal-buttons">
+                <button id="sueContinueBtn">Continue</button>
+                <button id="sueResetBtn">Reset</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="tictactoe.js"></script>
+</body>
+
+</html>
