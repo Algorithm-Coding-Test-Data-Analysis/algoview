@@ -1,4 +1,14 @@
 # Status Board
+
+```
+- cnt_data
+    - __init__.py
+    - _built_in_func_cnt.py
+    - _dict_to_json.py
+    - _get_data.py
+    _ _module_count.py
+```
+
 ## 진행 사항
 - get_data.py
     - data폴더를 순회하여 확장자가 .py이거나 .js파일의 데이터를 수집한 뒤, dictionary형태의 요소값을 가진 list를 반환
@@ -15,13 +25,12 @@
 
 
 ## 개선 사항
+- 사용자 클래스의 사용 유/무
+- lambda 사용 유/무
 - built-in/built_in_function.py
     - get_built_in_func_cnt 함수와 동일하게 원하는 argument값을 제공하는 추가 함수 필요.
     - built-in function 리스트를 txt파일로 별도 관리할 경우, 읽어오는 과정에서 path 설정 필요.
 - 풀이 code 제거
-- module별 method 식별 작업
-- lambda 함수 유/무 check
-- Local application library 식별 작업
 - JavaScript의 경우, Node 코드 check
 
 

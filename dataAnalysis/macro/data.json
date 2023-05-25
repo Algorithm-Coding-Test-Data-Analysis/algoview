@@ -5657,6 +5657,20 @@
         "module": {},
         "code": "function solution(n) {\n    let arr = [];\n    for(let i = 1; i <= n; i++){\n        if(n % i === 0){\n            arr.push(i);\n        }\n    }\n    return arr.length\n}\n"
     },
+    "lv0_0000_프로그래머스_치킨 쿠폰_구현_사라.js": {
+        "file_name": "lv0_0000_프로그래머스_치킨 쿠폰_구현_사라.js",
+        "level": "level0",
+        "year": "0000",
+        "company_name": "프로그래머스",
+        "problem_name": "치킨 쿠폰",
+        "problem_type": "구현",
+        "countmethod": {
+            ".floor": 2
+        },
+        "line_count": 8,
+        "module": {},
+        "code": "function solution(chicken) {\n  let result = 0;\n  while (chicken >= 10) {\n    result += Math.floor(chicken / 10);\n    chicken = (chicken % 10) + Math.floor(chicken / 10);\n  }\n  return result;\n}\n"
+    },
     "Lv0_0000_프로그래머스_순서쌍의 개수_구현_수아.js": {
         "file_name": "Lv0_0000_프로그래머스_순서쌍의 개수_구현_수아.js",
         "level": "level0",
