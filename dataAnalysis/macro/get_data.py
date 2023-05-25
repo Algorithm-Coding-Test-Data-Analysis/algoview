@@ -9,14 +9,14 @@ def get_data_from_file(path, file_name) -> dict:
 
     Args:
         path (str): 파일의 경로
-        file_name: 파일의 이름
+        file_name (str): 파일의 이름
 
     Returns:
         file_data (dict): 파일의 데이터
     '''
     f = open(path+'/'+file_name, 'r', encoding='utf-8')
     code_str = ''
-    line_ctd = 0
+    line_cnt = 0
     while True:
         line = f.readline()
         if line == '\n':
@@ -24,7 +24,7 @@ def get_data_from_file(path, file_name) -> dict:
         if not line:
             break
         code_str += line
-        line_ctd += 1
+        line_cnt += 1
 
     name_split = file_name.split('_')
     file_data = {
@@ -35,7 +35,7 @@ def get_data_from_file(path, file_name) -> dict:
         "problem_name" : name_split[3],
         "problem_type" : name_split[4],
         "countmethod": None,
-        "line_count":line_ctd,
+        "line_count":line_cnt,
         "module": None,
         "code": code_str,
     }
