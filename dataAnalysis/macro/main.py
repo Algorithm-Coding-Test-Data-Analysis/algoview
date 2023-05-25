@@ -2,10 +2,10 @@
 import os
 
 # Local application library
-from cnt_data.get_data import get_data
-from cnt_data.built_in_func_cnt import insert_countmethod_data
-from cnt_data.module_count import module_count
-from cnt_data.dict_to_json import dict_to_json
+from cnt_data import get_data
+from cnt_data import insert_countmethod_data
+from cnt_data import module_count
+from cnt_data import dict_to_json
 
 
 def get_cnt_data():

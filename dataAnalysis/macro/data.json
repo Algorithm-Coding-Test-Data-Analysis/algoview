@@ -5475,6 +5475,23 @@
         "module": {},
         "code": "function solution(n) {\n  let answer = -1;\n  let sqrt = Math.sqrt(n);\n  if (parseInt(sqrt) === Math.sqrt(n)){\n      answer = (sqrt + 1) ** 2;\n  } \n  return answer;\n}"
     },
+    "Lv1_0000_프로그래머스_이상한문자만들기_구현_지현.js": {
+        "file_name": "Lv1_0000_프로그래머스_이상한문자만들기_구현_지현.js",
+        "level": "level1",
+        "year": "0000",
+        "company_name": "프로그래머스",
+        "problem_name": "이상한문자만들기",
+        "problem_type": "구현",
+        "countmethod": {
+            ".split": 1,
+            ".toUpperCase": 1,
+            ".toLowerCase": 1,
+            ".substr": 1
+        },
+        "line_count": 18,
+        "module": {},
+        "code": "function solution(s) {\n    let arr = s.split(' ')\n    let answer = ''\n    let str = ''\n    for(let i = 0; i<arr.length;i++){\n        let str = arr[i]\n        for(let j = 0; j<str.length;j++){\n            if(j%2 ===0){\n                 answer += str[j].toUpperCase();\n            }else{\n                 answer += str[j].toLowerCase();\n            }\n        } \n        answer += ' '\n    }\n     answer = answer.substr(0,answer.length-1);\n    return answer;\n}\n"
+    },
     "Lv1_0000_프로그래머스_가운데 글자 가져오기_구현_지수.js": {
         "file_name": "Lv1_0000_프로그래머스_가운데 글자 가져오기_구현_지수.js",
         "level": "level1",
