@@ -6,7 +6,8 @@
     - _built_in_func_cnt.py
     - _dict_to_json.py
     - _get_data.py
-    _ _module_count.py
+    - _module_count.py
+- main.py
 ```
 
 ## 진행 사항
