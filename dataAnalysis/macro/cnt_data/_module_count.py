@@ -1,9 +1,5 @@
-# Standard library import
 from collections import Counter
 import re
-
-# Local application import
-from get_data import get_data
 
 
 def module_count(data):
@@ -22,8 +18,3 @@ def module_count(data):
         file_data['module'] = dict(module_counts)
 
     return data
-
-
-if __name__ == '__main__':
-    data = get_data()
-    print(module_count(data))
