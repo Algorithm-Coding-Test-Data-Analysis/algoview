@@ -1,2 +1,5 @@
 # python compiled
 __pycache__/
+
+# mac DS_Store
+.DS_Store
