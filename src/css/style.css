@@ -1,4 +1,7 @@
 /* ===== assets ===== */
-@import '../assets/fonts/fonts.css';
+@import '../assets/fonts/font.css';
 @import './common/reset.css';
 @import './common/global.css';
+
+/* ===== pages ===== */
+@import './pages/chart.css';
