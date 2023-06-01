@@ -23,8 +23,7 @@
         "problem_name": "나머지가1이되는수찾기",
         "problem_type": "구현",
         "countmethod": {
-            "min": 1,
-            "range": 1
+            "min": 1
         },
         "line_count": 2,
         "module": {},
@@ -38,7 +37,6 @@
         "problem_name": "약수의개수와덧셈",
         "problem_type": "구현",
         "countmethod": {
-            "range": 1,
             "int": 1
         },
         "line_count": 9,
@@ -72,9 +70,7 @@
         "company_name": "프로그래머스",
         "problem_name": "수박수박수박수박수박수",
         "problem_type": "",
-        "countmethod": {
-            "range": 1
-        },
+        "countmethod": 0,
         "line_count": 8,
         "module": {},
         "code": "def solution(n):\n    result = ''\n    for i in range(n):\n        if (i + 1) % 2 != 0:\n            result += '수'\n        else:\n            result += '박'\n    return result"
@@ -104,7 +100,6 @@
         "problem_name": "부족한 금액 계산하기",
         "problem_type": "구현",
         "countmethod": {
-            "range": 1,
             "print": 1,
             "abs": 1
         },
@@ -232,8 +227,7 @@
         "problem_name": "없는숫자더하기",
         "problem_type": "구현",
         "countmethod": {
-            "sum": 1,
-            "range": 1
+            "sum": 1
         },
         "line_count": 2,
         "module": {},
@@ -247,7 +241,6 @@
         "problem_name": "실패율",
         "problem_type": "구현",
         "countmethod": {
-            "range": 4,
             "sorted": 1,
             ".items": 1
         },
@@ -304,9 +297,7 @@
         "company_name": "프로그래머스",
         "problem_name": "두정수사이의합",
         "problem_type": "구현",
-        "countmethod": {
-            "range": 2
-        },
+        "countmethod": 0,
         "line_count": 11,
         "module": {},
         "code": "def solution(a, b):\n    sum = 0\n    if a < b:\n        for i in range(a, b+1):\n            sum += i\n    elif a > b:\n        for i in range(b, a+1):\n            sum += i\n    else:\n        return a\n    return sum"
@@ -420,7 +411,6 @@
         "problem_name": "약수의합",
         "problem_type": "구현",
         "countmethod": {
-            "range": 1,
             ".append": 1,
             "sum": 1
         },
@@ -439,7 +429,6 @@
             ".sort": 2,
             "len": 4,
             "set": 4,
-            "range": 1,
             "list": 1
         },
         "line_count": 16,
@@ -486,7 +475,6 @@
         "problem_type": "구현",
         "countmethod": {
             ".lower": 1,
-            "range": 3,
             "len": 6,
             ".append": 1,
             ".strip": 2
@@ -503,8 +491,7 @@
         "problem_name": "소수 만들기",
         "problem_type": "구현",
         "countmethod": {
-            "sum": 1,
-            "range": 1
+            "sum": 1
         },
         "line_count": 12,
         "module": {
@@ -521,7 +508,6 @@
         "problem_name": "내적",
         "problem_type": "구현",
         "countmethod": {
-            "range": 1,
             "len": 1
         },
         "line_count": 6,
@@ -578,7 +564,6 @@
         "problem_name": "명예의전당(1)",
         "problem_type": "구현",
         "countmethod": {
-            "range": 1,
             "len": 1,
             ".append": 1,
             "min": 1,
@@ -597,7 +582,6 @@
         "problem_type": "구현",
         "countmethod": {
             "list": 1,
-            "range": 1,
             "len": 1,
             ".isupper": 1,
             "chr": 2,
@@ -648,9 +632,7 @@
         "company_name": "프로그래머스",
         "problem_name": "나머지가 1이 되는 수 찾기",
         "problem_type": "구현",
-        "countmethod": {
-            "range": 1
-        },
+        "countmethod": 0,
         "line_count": 9,
         "module": {},
         "code": "def solution(n):\n    answer = 0\n    \n    for i in range(1,n+1):\n        if (n%i==1):\n            answer = i\n            break\n    \n    return answer"
@@ -662,9 +644,7 @@
         "company_name": "월간코드챌린지시즌3",
         "problem_name": "나머지가 1이 되는 수 찾기",
         "problem_type": "구현",
-        "countmethod": {
-            "range": 1
-        },
+        "countmethod": 0,
         "line_count": 4,
         "module": {},
         "code": "def solution(n):\n    for i in range(1, n+1):\n        if n % i == 1:\n            return i\n"
@@ -722,12 +702,26 @@
         "company_name": "프로그래머스",
         "problem_name": "부족한금액계산하기",
         "problem_type": "구현",
-        "countmethod": {
-            "range": 1
-        },
+        "countmethod": 0,
         "line_count": 8,
         "module": {},
         "code": "def solution(price, money, count):\n    result = 0\n    for i in range(1, count + 1):\n        result += price * i\n    if result <= money:\n        return 0\n    else:\n        return result - money"
+    },
+    "Lv1_0000_프로그래머스_제일 작은 수 제거하기_구현_선빈.py": {
+        "file_name": "Lv1_0000_프로그래머스_제일 작은 수 제거하기_구현_선빈.py",
+        "level": "level1",
+        "year": "0000",
+        "company_name": "프로그래머스",
+        "problem_name": "제일 작은 수 제거하기",
+        "problem_type": "구현",
+        "countmethod": {
+            ".pop": 1,
+            ".index": 1,
+            "min": 1
+        },
+        "line_count": 4,
+        "module": {},
+        "code": "def solution(arr):\n    arr.pop(arr.index(min(arr)))\n    answer = [-1] if arr == [] else arr\n    return answer\n"
     },
     "Lv1_2018_카카오_[1차]비밀지도_비트연산_재호.py": {
         "file_name": "Lv1_2018_카카오_[1차]비밀지도_비트연산_재호.py",
@@ -737,7 +731,6 @@
         "problem_name": "[1차]비밀지도",
         "problem_type": "비트연산",
         "countmethod": {
-            "range": 1,
             ".append": 1,
             "bin": 1,
             ".zfill": 1,
@@ -755,8 +748,7 @@
         "problem_name": "두 정수 사이의 합",
         "problem_type": "구현",
         "countmethod": {
-            "sum": 2,
-            "range": 2
+            "sum": 2
         },
         "line_count": 6,
         "module": {},
@@ -770,7 +762,6 @@
         "problem_name": "푸드파이트대회",
         "problem_type": "구현",
         "countmethod": {
-            "range": 1,
             "len": 1,
             "str": 1
         },
@@ -811,9 +802,7 @@
         "company_name": "프로그래머스",
         "problem_name": "콜라츠추측",
         "problem_type": "구현",
-        "countmethod": {
-            "range": 1
-        },
+        "countmethod": 0,
         "line_count": 15,
         "module": {},
         "code": "def solution(num):\n    result = 0\n    for i in range(501):\n        if num % 2 == 0:\n            num /= 2\n            result += 1\n            if num == 1:\n                return result\n        elif num == 1:\n            return 0\n        elif num % 2 != 0:\n            num = num * 3 + 1\n            result += 1\n    if num != 1:\n        return -1"
@@ -842,7 +831,6 @@
         "problem_type": "구현",
         "countmethod": {
             ".split": 1,
-            "range": 1,
             "len": 1,
             ".upper": 1,
             ".lower": 1,
@@ -909,7 +897,6 @@
         "problem_name": "음양더하기",
         "problem_type": "구현",
         "countmethod": {
-            "range": 1,
             "len": 1
         },
         "line_count": 9,
@@ -925,7 +912,6 @@
         "problem_type": "완전탐색",
         "countmethod": {
             "len": 5,
-            "range": 4,
             "max": 1,
             ".values": 1,
             ".append": 1
@@ -1016,13 +1002,13 @@
         },
         "code": "import re\ndef solution(s):\n    p_p = re.compile('p|P')\n    p_y = re.compile('y|Y')\n    p_count = len(p_p.findall(s))\n    y_count = len(p_y.findall(s))\n    answer = True if p_count == y_count or p_count == y_count == 0 else False\n    return answer\n"
     },
-    "Lv1_0000_프로그래머스_대충만든자판_구현_광호.py": {
-        "file_name": "Lv1_0000_프로그래머스_대충만든자판_구현_광호.py",
+    "Lv1_0000_프로그래머스_대충만든자판_구현_광호.py": {
+        "file_name": "Lv1_0000_프로그래머스_대충만든자판_구현_광호.py",
         "level": "level1",
         "year": "0000",
-        "company_name": "프로그래머스",
-        "problem_name": "대충만든자판",
-        "problem_type": "구현",
+        "company_name": "프로그래머스",
+        "problem_name": "대충만든자판",
+        "problem_type": "구현",
         "countmethod": {
             ".join": 1,
             "set": 1,
@@ -1056,7 +1042,6 @@
         "problem_type": "구현",
         "countmethod": {
             "len": 2,
-            "range": 2,
             ".find": 1,
             ".split": 1,
             "int": 1
@@ -1073,7 +1058,6 @@
         "problem_name": "같은숫자는싫어",
         "problem_type": "스택큐",
         "countmethod": {
-            "range": 1,
             "len": 1,
             ".append": 1
         },
@@ -1089,7 +1073,6 @@
         "problem_name": "최소직사각형",
         "problem_type": "완전탐색",
         "countmethod": {
-            "range": 1,
             "len": 1,
             "max": 2
         },
@@ -1147,7 +1130,6 @@
         "problem_name": "추억점수",
         "problem_type": "구현",
         "countmethod": {
-            "range": 1,
             "len": 1,
             ".index": 1,
             ".append": 1
@@ -1178,26 +1160,38 @@
         "company_name": "프로그래머스",
         "problem_name": "x만큼간격이있는n개의숫자",
         "problem_type": "구현",
-        "countmethod": {
-            "range": 1
-        },
+        "countmethod": 0,
         "line_count": 2,
         "module": {},
         "code": "def solution(x, n):\n    return [x * i for i in range(1, n + 1)]"
     },
-    "Lv1_0000_프로그래머스_카드뭉치_스택큐_광호.py": {
-        "file_name": "Lv1_0000_프로그래머스_카드뭉치_스택큐_광호.py",
+    "Lv1_0000_프로그래머스_카드뭉치_스택큐_광호.py": {
+        "file_name": "Lv1_0000_프로그래머스_카드뭉치_스택큐_광호.py",
         "level": "level1",
         "year": "0000",
-        "company_name": "프로그래머스",
-        "problem_name": "카드뭉치",
-        "problem_type": "스택큐",
+        "company_name": "프로그래머스",
+        "problem_name": "카드뭉치",
+        "problem_type": "스택큐",
         "countmethod": {
             ".pop": 2
         },
         "line_count": 14,
         "module": {},
         "code": "def solution(cards1, cards2, goal):\n    answer = ''\n    for i in goal:\n        if i in cards1:\n            if cards1.pop(0) != i:\n                answer = 'No'\n                break\n        if i in cards2:\n            if cards2.pop(0) != i:\n                answer = 'No'\n                break\n    if not(answer):\n        answer = 'Yes'\n    return answer"
+    },
+    "Lv1_0000_월간코드챌린지시즌3_없는 숫자 더하기_구현_선빈.py": {
+        "file_name": "Lv1_0000_월간코드챌린지시즌3_없는 숫자 더하기_구현_선빈.py",
+        "level": "level1",
+        "year": "0000",
+        "company_name": "월간코드챌린지시즌3",
+        "problem_name": "없는 숫자 더하기",
+        "problem_type": "구현",
+        "countmethod": {
+            "sum": 1
+        },
+        "line_count": 3,
+        "module": {},
+        "code": "def solution(numbers):\n    answer = sum([i for i in [i for i in range(0, 10)] if i not in numbers])\n    return answer\n"
     },
     "Lv1_0000_프로그래머스_문자열다루기기본_구현_재호.py": {
         "file_name": "Lv1_0000_프로그래머스_문자열다루기기본_구현_재호.py",
@@ -1226,7 +1220,6 @@
             "input": 1,
             ".strip": 1,
             ".split": 1,
-            "range": 1,
             "print": 1
         },
         "line_count": 4,
@@ -1241,7 +1234,6 @@
         "problem_name": "두개뽑아서더하기",
         "problem_type": "구현",
         "countmethod": {
-            "range": 2,
             "len": 2,
             ".append": 1,
             "set": 1,
@@ -1276,7 +1268,6 @@
         "countmethod": {
             ".append": 2,
             ".gcd": 1,
-            "range": 1,
             "max": 1
         },
         "line_count": 10,
@@ -1293,7 +1284,6 @@
         "problem_name": "x만틈 간격이 있는 n개의 숫자",
         "problem_type": "구현",
         "countmethod": {
-            "range": 1,
             ".append": 2
         },
         "line_count": 8,
@@ -1444,8 +1434,7 @@
         "problem_name": "약수의 합",
         "problem_type": "구현",
         "countmethod": {
-            "sum": 1,
-            "range": 1
+            "sum": 1
         },
         "line_count": 4,
         "module": {},
@@ -1459,7 +1448,6 @@
         "problem_name": "약수의 개수와 덧셈",
         "problem_type": "구현",
         "countmethod": {
-            "range": 2,
             ".append": 2,
             "len": 1
         },
@@ -1499,7 +1487,6 @@
         "problem_name": "약수의 합",
         "problem_type": "구현",
         "countmethod": {
-            "range": 1,
             "int": 1
         },
         "line_count": 6,
@@ -1542,8 +1529,7 @@
         "problem_name": "2016년",
         "problem_type": "구현",
         "countmethod": {
-            ".split": 1,
-            "range": 1
+            ".split": 1
         },
         "line_count": 12,
         "module": {},
@@ -1614,7 +1600,6 @@
         "problem_type": "구현",
         "countmethod": {
             "list": 1,
-            "range": 1,
             "len": 1,
             "int": 1
         },
@@ -1698,9 +1683,7 @@
         "company_name": "프로그래머스",
         "problem_name": "약수구하기",
         "problem_type": "구현",
-        "countmethod": {
-            "range": 1
-        },
+        "countmethod": 0,
         "line_count": 2,
         "module": {},
         "code": "def solution(n):\n    return [i for i in range(1, n+1) if n % i == 0]"
@@ -1752,7 +1735,6 @@
         "problem_type": "구현",
         "countmethod": {
             "sorted": 1,
-            "range": 1,
             ".append": 1,
             "len": 1
         },
@@ -1864,7 +1846,6 @@
         "problem_type": "구현",
         "countmethod": {
             ".join": 1,
-            "range": 1,
             "len": 1
         },
         "line_count": 2,
@@ -1922,8 +1903,7 @@
         "problem_name": "짝수의합",
         "problem_type": "구현",
         "countmethod": {
-            "sum": 1,
-            "range": 1
+            "sum": 1
         },
         "line_count": 2,
         "module": {},
@@ -2138,7 +2118,6 @@
         "problem_name": "합성수 찾기",
         "problem_type": "구현",
         "countmethod": {
-            "range": 2,
             "len": 1
         },
         "line_count": 7,
@@ -2169,7 +2148,6 @@
         "countmethod": {
             "int": 1,
             "input": 1,
-            "range": 1,
             "print": 1
         },
         "line_count": 3,
@@ -2196,7 +2174,6 @@
         "problem_name": "문자열 섞기",
         "problem_type": "구현",
         "countmethod": {
-            "range": 1,
             "len": 1,
             ".append": 2,
             ".join": 1
@@ -2387,9 +2364,7 @@
         "company_name": "프로그래머스",
         "problem_name": "피자나눠먹기(2)",
         "problem_type": "구현",
-        "countmethod": {
-            "range": 1
-        },
+        "countmethod": 0,
         "line_count": 5,
         "module": {},
         "code": "def solution(n):\n    for i in range(1, n+1):\n        if 6 * i % n == 0:\n            return i\n            break"
@@ -2523,7 +2498,6 @@
         "problem_name": "합성수찾기",
         "problem_type": "구현",
         "countmethod": {
-            "range": 2,
             ".append": 1,
             "len": 1,
             "set": 1
@@ -2587,7 +2561,6 @@
         "countmethod": {
             "int": 1,
             "input": 1,
-            "range": 1,
             "print": 1
         },
         "line_count": 3,
@@ -2656,7 +2629,6 @@
         "problem_name": "순서쌍의",
         "problem_type": "개수",
         "countmethod": {
-            "range": 1,
             ".append": 2,
             "len": 1
         },
@@ -2713,9 +2685,7 @@
         "company_name": "프로그래머스",
         "problem_name": "짝수는싫어요",
         "problem_type": "구현",
-        "countmethod": {
-            "range": 1
-        },
+        "countmethod": 0,
         "line_count": 2,
         "module": {},
         "code": "def solution(n):\n    return [i for i in range(1, n+1, 2)]"
@@ -2767,9 +2737,7 @@
         "company_name": "프로그래머스",
         "problem_name": "순서쌍의 개수",
         "problem_type": "구현",
-        "countmethod": {
-            "range": 1
-        },
+        "countmethod": 0,
         "line_count": 6,
         "module": {},
         "code": "def solution(n):\n    count = 0\n    for i in range(1, n + 1):\n        if n % i == 0:\n            count += 1\n    return count\n"
@@ -2809,9 +2777,7 @@
         "company_name": "프로그래머스",
         "problem_name": "약수 구하기",
         "problem_type": "구현",
-        "countmethod": {
-            "range": 1
-        },
+        "countmethod": 0,
         "line_count": 3,
         "module": {},
         "code": "def solution(n):\n    answer = [i for i in range(1, n + 1) if n % i == 0]\n    return answer\n"
@@ -2823,9 +2789,7 @@
         "company_name": "프로그래머스",
         "problem_name": "짝수의 합",
         "problem_type": "구현",
-        "countmethod": {
-            "range": 1
-        },
+        "countmethod": 0,
         "line_count": 5,
         "module": {},
         "code": "def solution(n):\n    result = 0\n    for i in range(0, n + 1, 2):\n        result += i\n    return result\n"
@@ -2868,7 +2832,6 @@
         "problem_name": "짝수는 싫어요",
         "problem_type": "구현",
         "countmethod": {
-            "range": 1,
             ".append": 1
         },
         "line_count": 6,
@@ -3044,9 +3007,7 @@
         "company_name": "프로그래머스",
         "problem_name": "세균 증식",
         "problem_type": "구현",
-        "countmethod": {
-            "range": 1
-        },
+        "countmethod": 0,
         "line_count": 5,
         "module": {},
         "code": "def solution(n, t):\n    answer = n\n    for i in range(t):\n        answer *= 2\n    return answer\n"
@@ -3188,7 +3149,6 @@
         "problem_type": "구현",
         "countmethod": {
             ".upper": 2,
-            "range": 1,
             "len": 1,
             ".lower": 1
         },
@@ -3225,7 +3185,6 @@
         "countmethod": {
             "len": 2,
             ".popleft": 1,
-            "range": 1,
             ".append": 1
         },
         "line_count": 21,
@@ -3276,7 +3235,6 @@
         "problem_name": "숫자의 표현",
         "problem_type": "구현",
         "countmethod": {
-            "range": 1,
             "sum": 2,
             ".append": 1
         },
@@ -3291,9 +3249,7 @@
         "company_name": "프로그래머스",
         "problem_name": "카펫",
         "problem_type": "완전탐색",
-        "countmethod": {
-            "range": 1
-        },
+        "countmethod": 0,
         "line_count": 14,
         "module": {},
         "code": "def solution(brown, yellow):\n    answer = []\n    total = brown + yellow\n    \n    for i in range(1,total+1):\n        if total%i == 0:\n            bh = i\n            bw = total//i\n            yh = bh - 2\n            yw = bw - 2\n        if yh*yw == yellow:\n            break\n    answer = [bw,bh]\n    return answer\n"
@@ -3321,7 +3277,6 @@
         "problem_name": "영어 끝말잇기",
         "problem_type": "스택큐",
         "countmethod": {
-            "range": 1,
             "len": 1,
             ".append": 2,
             ".popleft": 2
@@ -3340,9 +3295,7 @@
         "company_name": "프로그래머스",
         "problem_name": "피보나치 수",
         "problem_type": "구현",
-        "countmethod": {
-            "range": 1
-        },
+        "countmethod": 0,
         "line_count": 11,
         "module": {},
         "code": "def solution(n):\n    answer = 0\n    \n    if n<2:\n        return n\n    l = [0]*(n+1)\n    l[1] = 1\n    for i in range(2,n+1):\n        l[i] = (l[i-2] + l[i-1])\n    \n    return l[-1]%1234567"
@@ -3474,7 +3427,6 @@
         "problem_type": "스택큐",
         "countmethod": {
             "list": 1,
-            "range": 1,
             "len": 1,
             ".append": 2,
             ".popleft": 1,
@@ -3496,7 +3448,6 @@
         "problem_type": "스택큐",
         "countmethod": {
             "sorted": 2,
-            "range": 1,
             "len": 1,
             ".popleft": 2
         },
@@ -3519,7 +3470,6 @@
             "len": 3,
             ".popleft": 1,
             ".append": 2,
-            "range": 2,
             "print": 1
         },
         "line_count": 32,
@@ -3537,7 +3487,6 @@
         "problem_name": "등굣길",
         "problem_type": "다이나믹",
         "countmethod": {
-            "range": 3,
             ".append": 1
         },
         "line_count": 19,
@@ -3573,7 +3522,6 @@
         "problem_type": "다이나믹",
         "countmethod": {
             "len": 2,
-            "range": 3,
             ".append": 1,
             "max": 2
         },
@@ -3589,7 +3537,6 @@
         "problem_name": "네트워크",
         "problem_type": "DFSBFS",
         "countmethod": {
-            "range": 4,
             ".append": 1
         },
         "line_count": 25,
@@ -3607,6 +3554,20 @@
         "line_count": 5,
         "module": {},
         "code": "function solution(nums) {\n  const half = nums.length / 2;\n  const setSize = new Set(nums).size;\n  return half < setSize ? half : setSize;\n}"
+    },
+    "Lv1_0000_프로그래머스_없는숫자더하기_준혁.js": {
+        "file_name": "Lv1_0000_프로그래머스_없는숫자더하기_준혁.js",
+        "level": "level1",
+        "year": "0000",
+        "company_name": "프로그래머스",
+        "problem_name": "없는숫자더하기",
+        "problem_type": "준혁.js",
+        "countmethod": {
+            ".includes": 1
+        },
+        "line_count": 7,
+        "module": {},
+        "code": "function solution(numbers) {\n  let sum = 0;\n  for (let i = 0; i < 10; i++) {\n    if (!numbers.includes(i)) sum += i;\n  }\n  return sum;\n}\n"
     },
     "Lv1_0000_프로그래머스_대충만든자판_완전탐색_하연.js": {
         "file_name": "Lv1_0000_프로그래머스_대충만든자판_완전탐색_하연.js",
@@ -3655,6 +3616,22 @@
         "module": {},
         "code": "function solution(x) {\n  var answer = true;\n  \n  pivot = (x+'').split('').reduce((acc,cur)=>acc+cur*1,0)\n  return !(x%pivot);\n}"
     },
+    "Lv1_0000_프로그래머스_문자열 내림차순으로 배치하기_구현_지수.js": {
+        "file_name": "Lv1_0000_프로그래머스_문자열 내림차순으로 배치하기_구현_지수.js",
+        "level": "level1",
+        "year": "0000",
+        "company_name": "프로그래머스",
+        "problem_name": "문자열 내림차순으로 배치하기",
+        "problem_type": "구현",
+        "countmethod": {
+            ".sort": 1,
+            ".reverse": 1,
+            ".join": 1
+        },
+        "line_count": 3,
+        "module": {},
+        "code": "function solution(s) {\n  return [...s].sort().reverse().join(\"\");\n}\n"
+    },
     "Lv1_0000_프로그래머스_내적_구현_윤정.js": {
         "file_name": "Lv1_0000_프로그래머스_내적_구현_윤정.js",
         "level": "level1",
@@ -3683,6 +3660,22 @@
         "module": {},
         "code": "function solution(s) {\n  return s.toUpperCase().replace(/\\w{2}/g, v => v[0] + v[1].toLowerCase())\n}"
     },
+    "Lv1_0000_프로그래머스_2016년_구현_지수.js": {
+        "file_name": "Lv1_0000_프로그래머스_2016년_구현_지수.js",
+        "level": "level1",
+        "year": "0000",
+        "company_name": "프로그래머스",
+        "problem_name": "2016년",
+        "problem_type": "구현",
+        "countmethod": {
+            ".filter": 1,
+            ".getDay": 1,
+            ".join": 1
+        },
+        "line_count": 7,
+        "module": {},
+        "code": "function solution(a, b) {\n  let day = new Date(`2016-${a}-${b}`);\n  const dayArr = [\"SUN\", \"MON\", \"TUE\", \"WED\", \"THU\", \"FRI\", \"SAT\"];\n  return dayArr\n    .filter((a, b) => (day.getDay() === b ? dayArr[b] : null))\n    .join(\"\");\n}\n"
+    },
     "Lv1_0000_프로그래머스_삼총사_구현_수정.js": {
         "file_name": "Lv1_0000_프로그래머스_삼총사_구현_수정.js",
         "level": "level1",
@@ -3695,6 +3688,18 @@
         "module": {},
         "code": "function solution(number) {\n    const n = number.length;\n    let count = 0;\n  \n    for (let i = 0; i < n - 2; i++) {\n      for (let j = i + 1; j < n - 1; j++) {\n        for (let k = j + 1; k < n; k++) {\n          if (number[i] + number[j] + number[k] === 0) {\n            count++;\n          }\n        }\n      }\n    }\n  \n    return count;\n  }\n"
     },
+    "Lv1_0000_프로그래머스_부족한 금액 계산하기_구현_지수.js": {
+        "file_name": "Lv1_0000_프로그래머스_부족한 금액 계산하기_구현_지수.js",
+        "level": "level1",
+        "year": "0000",
+        "company_name": "프로그래머스",
+        "problem_name": "부족한 금액 계산하기",
+        "problem_type": "구현",
+        "countmethod": 0,
+        "line_count": 7,
+        "module": {},
+        "code": "function solution(price, money, count) {\n  let total = 0;\n  for (let i = 1; i <= count; i++) {\n    total += price * i;\n  }\n  return total > money ? total - money : 0;\n}\n"
+    },
     "Lv1_0000_프로그래머스_짝수와 홀수_구현_가은.js": {
         "file_name": "Lv1_0000_프로그래머스_짝수와 홀수_구현_가은.js",
         "level": "level1",
@@ -3706,6 +3711,18 @@
         "line_count": 3,
         "module": {},
         "code": "function solution(num) {\n  return num % 2 === 0 ?  \"Even\" : \"Odd\"\n}"
+    },
+    "Lv1_0000_프로그래머스_약수의 개수와 덧셈_구현_지수.js": {
+        "file_name": "Lv1_0000_프로그래머스_약수의 개수와 덧셈_구현_지수.js",
+        "level": "level1",
+        "year": "0000",
+        "company_name": "프로그래머스",
+        "problem_name": "약수의 개수와 덧셈",
+        "problem_type": "구현",
+        "countmethod": 0,
+        "line_count": 14,
+        "module": {},
+        "code": "function solution(left, right) {\n  let measure = 0;\n  let answer = 0;\n  for (let i = left; i <= right; i++) {\n    for (let k = 1; k <= i; k++) {\n      if (i % k == 0) {\n        measure++;\n      }\n    }\n    measure % 2 == 0 ? (answer += i) : (answer -= i);\n    measure = 0;\n  }\n  return answer;\n}\n"
     },
     "Lv1_0000_프로그래머스_문자열내p와y의개수_준혁.js": {
         "file_name": "Lv1_0000_프로그래머스_문자열내p와y의개수_준혁.js",
@@ -3777,6 +3794,18 @@
         "module": {},
         "code": "function solution(n) {\n  for (let i = 2; i < n; i++) {\n    if (n % i === 1) return i;\n  }\n}\n"
     },
+    "Lv1_0000_프로그래머스_콜라르추측_준혁.js": {
+        "file_name": "Lv1_0000_프로그래머스_콜라르추측_준혁.js",
+        "level": "level1",
+        "year": "0000",
+        "company_name": "프로그래머스",
+        "problem_name": "콜라르추측",
+        "problem_type": "준혁.js",
+        "countmethod": 0,
+        "line_count": 10,
+        "module": {},
+        "code": "function solution(num) {\n  let cnt = 0;\n  while (num !== 1) {\n    if (num % 2 === 0) num /= 2;\n    else num = num * 3 + 1;\n    cnt++;\n    if (cnt === 500) return -1;\n  }\n  return cnt;\n}\n"
+    },
     "Lv1_0000_프로그래머스_평균 구하기_구현_가은.js": {
         "file_name": "Lv1_0000_프로그래머스_평균 구하기_구현_가은.js",
         "level": "level1",
@@ -3821,6 +3850,21 @@
         "line_count": 9,
         "module": {},
         "code": "function solution(n) {\n  let arr = [];\n  for(let i = 0; i < n; i++){\n      if (n % i === 1){\n          arr.push(i);\n      }\n  }\n  return arr.shift();\n}"
+    },
+    "Lv1_0000_프로그래머스_핸드폰번호가리기_준혁.js": {
+        "file_name": "Lv1_0000_프로그래머스_핸드폰번호가리기_준혁.js",
+        "level": "level1",
+        "year": "0000",
+        "company_name": "프로그래머스",
+        "problem_name": "핸드폰번호가리기",
+        "problem_type": "준혁.js",
+        "countmethod": {
+            ".repeat": 1,
+            ".slice": 1
+        },
+        "line_count": 3,
+        "module": {},
+        "code": "function solution(phone_number) {\n  return '*'.repeat(phone_number.length - 4) + phone_number.slice(-4);\n}\n"
     },
     "Lv1_0000_프로그래머스_시저암호_구현_하연.js": {
         "file_name": "Lv1_0000_프로그래머스_시저암호_구현_하연.js",
@@ -3891,6 +3935,21 @@
         "line_count": 4,
         "module": {},
         "code": "function solution(num) {\n  var answer = num%2!==0 ? 'Odd' : 'Even';\n  return answer;\n}"
+    },
+    "Lv1_0000_프로그래머스_문자열 다루기 기본_구현_지수.js": {
+        "file_name": "Lv1_0000_프로그래머스_문자열 다루기 기본_구현_지수.js",
+        "level": "level1",
+        "year": "0000",
+        "company_name": "프로그래머스",
+        "problem_name": "문자열 다루기 기본",
+        "problem_type": "구현",
+        "countmethod": {
+            ".split": 1,
+            ".every": 1
+        },
+        "line_count": 5,
+        "module": {},
+        "code": "function solution(s) {\n  if (s.length == 4 || s.length == 6) {\n    return s.split(\"\").every((x) => !isNaN(x));\n  } else return false;\n}\n"
     },
     "Lv1_0000_프로그래머스_추억점수_해시_태수.js": {
         "file_name": "Lv1_0000_프로그래머스_추억점수_해시_태수.js",
@@ -4217,6 +4276,20 @@
         "module": {},
         "code": "function solution(participant, completion) {\n  participant.sort();\n  completion.sort();\n  for (let i = 0; i < participant.length; i++) {\n    if (participant[i] !== completion[i]) return participant[i];\n  }\n}\n"
     },
+    "Lv1_0000_프로그래머스_음양더하기_준혁.js": {
+        "file_name": "Lv1_0000_프로그래머스_음양더하기_준혁.js",
+        "level": "level1",
+        "year": "0000",
+        "company_name": "프로그래머스",
+        "problem_name": "음양더하기",
+        "problem_type": "준혁.js",
+        "countmethod": {
+            ".forEach": 1
+        },
+        "line_count": 8,
+        "module": {},
+        "code": "function solution(absolutes, signs) {\n  let sum = 0;\n  absolutes.forEach((num, index) => {\n    if (signs[index]) sum += num;\n    else sum -= num;\n  });\n  return sum;\n}\n"
+    },
     "Lv1_2018_프로그래머스_소수만들기_구현_하연.js": {
         "file_name": "Lv1_2018_프로그래머스_소수만들기_구현_하연.js",
         "level": "level1",
@@ -4259,9 +4332,9 @@
         "problem_name": "평균 구하기",
         "problem_type": "구현",
         "countmethod": 0,
-        "line_count": 11,
+        "line_count": 7,
         "module": {},
-        "code": "function solution(n) {\n  let answer = '';\n  for(let i = 0; i < n; i++){\n      if(i % 2 === 0){\n          answer += '수'\n      } else {\n          answer += '박'\n      }\n  }\n  return answer;\n}"
+        "code": "function solution(arr) {\n    let answer = 0;\n    for(let i=0; i<arr.length; i++){\n        answer += arr[i];\n    }\n    return answer/arr.length;\n}"
     },
     "Lv1_0000_프로그래머스_두 정수 사이의 합_구현_가은.js": {
         "file_name": "Lv1_0000_프로그래머스_두 정수 사이의 합_구현_가은.js",
@@ -4358,13 +4431,13 @@
         "module": {},
         "code": "function solution(n, lost, reserve) {\n  const filter_reserve = reserve.filter(v => !lost.includes(v));\n  const filter_lost = lost.filter(v => !reserve.includes(v));\n  \n  filter_lost.sort((a, b) => a - b);\n  filter_reserve.sort((a, b) => a - b);\n  \n  filter_reserve.forEach(v => {\n      if(filter_lost.includes(v-1)) {\n          filter_lost.splice(filter_lost.indexOf(v-1), 1);\n      } else if (filter_lost.includes(v+1)) {\n          filter_lost.splice(filter_lost.indexOf(v+1), 1);\n      }\n  });\n  return n - filter_lost.length;\n}"
     },
-    "Lv1_0000_프로그래머스_K번째수_정렬_지수.js": {
-        "file_name": "Lv1_0000_프로그래머스_K번째수_정렬_지수.js",
+    "Lv1_0000_프로그래머스_K번째수_정렬_지수.js": {
+        "file_name": "Lv1_0000_프로그래머스_K번째수_정렬_지수.js",
         "level": "level1",
         "year": "0000",
-        "company_name": "프로그래머스",
-        "problem_name": "K번째수",
-        "problem_type": "정렬",
+        "company_name": "프로그래머스",
+        "problem_name": "K번째수",
+        "problem_type": "정렬",
         "countmethod": {
             ".push": 2,
             ".slice": 1,
@@ -4436,6 +4509,20 @@
         "line_count": 6,
         "module": {},
         "code": "function solution(strings, n) {\n  return strings\n      .sort()\n      .reverse()\n      .sort((a, b) => a[n] > b[n] ? 1 : -1)\n}"
+    },
+    "Lv1_0000_프로그래머스_행렬의 덧셈_구현_지수.js": {
+        "file_name": "Lv1_0000_프로그래머스_행렬의 덧셈_구현_지수.js",
+        "level": "level1",
+        "year": "0000",
+        "company_name": "프로그래머스",
+        "problem_name": "행렬의 덧셈",
+        "problem_type": "구현",
+        "countmethod": {
+            ".push": 2
+        },
+        "line_count": 11,
+        "module": {},
+        "code": "function solution(arr1, arr2) {\n  let result = [];\n  for (let i = 0; i < arr1.length; i++) {\n    let sum = [];\n    for (let k = 0; k < arr1[i].length; k++) {\n      sum.push(arr1[i][k] + arr2[i][k]);\n    }\n    result.push(sum);\n  }\n  return result;\n}\n"
     },
     "Lv1_0000_프로그래머스_서울에서 김서방 찾기_구현_가은.js": {
         "file_name": "Lv1_0000_프로그래머스_서울에서 김서방 찾기_구현_가은.js",
@@ -4525,6 +4612,20 @@
         "module": {},
         "code": "function solution(price, money, count) {\n  let answer = 0;\n  for (let i = 0; i <= count; i++){\n      answer += price * i\n  }\n  return  answer > money ? answer - money : 0;\n}"
     },
+    "Lv1_0000_프로그래머스_같은 숫자는 싫어_스택큐_지수.js": {
+        "file_name": "Lv1_0000_프로그래머스_같은 숫자는 싫어_스택큐_지수.js",
+        "level": "level1",
+        "year": "0000",
+        "company_name": "프로그래머스",
+        "problem_name": "같은 숫자는 싫어",
+        "problem_type": "스택큐",
+        "countmethod": {
+            ".push": 1
+        },
+        "line_count": 9,
+        "module": {},
+        "code": "function solution(arr) {\n  let array = [];\n  for (let i = 0; i < arr.length + 1; i++) {\n    if (arr[i] !== arr[i + 1]) {\n      array.push(arr[i]);\n    }\n  }\n  return array;\n}\n"
+    },
     "Lv1_0000_프로그래머스_가장가까운글자_구현_용덕.js": {
         "file_name": "Lv1_0000_프로그래머스_가장가까운글자_구현_용덕.js",
         "level": "level1",
@@ -4541,6 +4642,50 @@
         "module": {},
         "code": "function solution(s) {\n    s = s.split('');\n    let answer = new Array(s.length).fill(-1)\n    for (let i = 0; i < s.length; i++) {\n      for (let j = i - 1; j >= 0; j--) {\n        if (s[i] === s[j]) {\n          // console.log(i);\n          answer[i] = (i - j);\n          break;\n        }\n      }\n    }\n    return answer\n  }"
     },
+    "Lv1_0000_프로그래머스_직사각형 별찍기_구현_지수.js": {
+        "file_name": "Lv1_0000_프로그래머스_직사각형 별찍기_구현_지수.js",
+        "level": "level1",
+        "year": "0000",
+        "company_name": "프로그래머스",
+        "problem_name": "직사각형 별찍기",
+        "problem_type": "구현",
+        "countmethod": {
+            ".setEncoding": 1,
+            ".on": 1,
+            ".split": 1,
+            ".repeat": 1,
+            ".log": 1
+        },
+        "line_count": 10,
+        "module": {},
+        "code": "process.stdin.setEncoding(\"utf8\");\nprocess.stdin.on(\"data\", (data) => {\n  const n = data.split(\" \");\n  const a = Number(n[0]),\n    b = Number(n[1]);\n  const row = \"*\".repeat(a);\n  for (let i = 0; i < b; i++) {\n    console.log(row);\n  }\n});\n"
+    },
+    "Lv1_0000_프로그래머스_수박수박수박수박수박수_준혁.js": {
+        "file_name": "Lv1_0000_프로그래머스_수박수박수박수박수박수_준혁.js",
+        "level": "level1",
+        "year": "0000",
+        "company_name": "프로그래머스",
+        "problem_name": "수박수박수박수박수박수",
+        "problem_type": "준혁.js",
+        "countmethod": 0,
+        "line_count": 7,
+        "module": {},
+        "code": "function solution(n) {\n  let watermelon = '';\n  for (let i = 0; i < n; i++) {\n    watermelon += i % 2 === 0 ? '수' : '박';\n  }\n  return watermelon;\n}\n"
+    },
+    "Lv1_0000_프로그래머스_서울에서김서방찾기_준혁.js": {
+        "file_name": "Lv1_0000_프로그래머스_서울에서김서방찾기_준혁.js",
+        "level": "level1",
+        "year": "0000",
+        "company_name": "프로그래머스",
+        "problem_name": "서울에서김서방찾기",
+        "problem_type": "준혁.js",
+        "countmethod": {
+            ".indexOf": 1
+        },
+        "line_count": 3,
+        "module": {},
+        "code": "function solution(seoul) {\n  return `김서방은 ${seoul.indexOf('Kim')}에 있다`;\n}\n"
+    },
     "Lv1_0000_프로그래머스_약수의 합_구현_하은.js": {
         "file_name": "Lv1_0000_프로그래머스_약수의 합_구현_하은.js",
         "level": "level1",
@@ -4553,13 +4698,30 @@
         "module": {},
         "code": ""
     },
-    "Lv1_0000_프로그래머스_문자열 내 p와 y의 개수_구현_지수.js": {
-        "file_name": "Lv1_0000_프로그래머스_문자열 내 p와 y의 개수_구현_지수.js",
+    "Lv1_0000_프로그래머스_최소직사각형_완전탐색_지수.js": {
+        "file_name": "Lv1_0000_프로그래머스_최소직사각형_완전탐색_지수.js",
         "level": "level1",
         "year": "0000",
-        "company_name": "프로그래머스",
-        "problem_name": "문자열 내 p와 y의 개수",
-        "problem_type": "구현",
+        "company_name": "프로그래머스",
+        "problem_name": "최소직사각형",
+        "problem_type": "완전탐색",
+        "countmethod": {
+            ".map": 2,
+            ".sort": 1,
+            ".push": 2,
+            ".max": 2
+        },
+        "line_count": 11,
+        "module": {},
+        "code": "function solution(sizes) {\n  let width = [];\n  let height = [];\n  sizes\n    .map((x) => x.sort((a, b) => b - a))\n    .map((x) => {\n      width.push(x[0]);\n      height.push(x[1]);\n    });\n  return Math.max(...width) * Math.max(...height);\n}\n"
+    },
+    "Lv1_0000_프로그래머스_문자열 내 p와 y의 개수_구현_지수.js": {
+        "file_name": "Lv1_0000_프로그래머스_문자열 내 p와 y의 개수_구현_지수.js",
+        "level": "level1",
+        "year": "0000",
+        "company_name": "프로그래머스",
+        "problem_name": "문자열 내 p와 y의 개수",
+        "problem_type": "구현",
         "countmethod": {
             ".toUpperCase": 2,
             ".split": 2
@@ -4567,6 +4729,18 @@
         "line_count": 5,
         "module": {},
         "code": "function solution(s) {\n  return (\n    s.toUpperCase().split(\"P\").length === s.toUpperCase().split(\"Y\").length\n  );\n}\n"
+    },
+    "Lv1_0000_프로그래머스_약수의개수와덧셈_준혁.js": {
+        "file_name": "Lv1_0000_프로그래머스_약수의개수와덧셈_준혁.js",
+        "level": "level1",
+        "year": "0000",
+        "company_name": "프로그래머스",
+        "problem_name": "약수의개수와덧셈",
+        "problem_type": "준혁.js",
+        "countmethod": 0,
+        "line_count": 12,
+        "module": {},
+        "code": "function solution(left, right) {\n  let sum = 0;\n  for (let i = left; i <= right; i++) {\n    let cnt = 0;\n    for (let j = 1; j <= i; j++) {\n      if (i % j === 0) cnt++;\n    }\n    if (cnt % 2 === 0) sum += i;\n    else sum -= i;\n  }\n  return sum;\n}\n"
     },
     "Lv1_2021_카카오_신규아이디추천_구현_하연.js": {
         "file_name": "Lv1_2021_카카오_신규아이디추천_구현_하연.js",
@@ -4611,6 +4785,21 @@
         "module": {},
         "code": "function solution(number, limit, power) {\n  let answer = 0;\n  for (let i = 1; i <= number; i++) {\n    let divisor = 0;\n    for (let j = 1; j <= Math.sqrt(i); j++) {\n      if (i % j === 0) {\n        if (i / j === j) divisor += 1;\n        else divisor += 2;\n      }\n      if (divisor > limit) {\n        divisor = power;\n        break;\n      }\n    }\n    answer += divisor;\n  }\n  \n  return answer;\n}\n"
     },
+    "Lv1_0000_프로그래머스_제일작은수제거하기_준혁.js": {
+        "file_name": "Lv1_0000_프로그래머스_제일작은수제거하기_준혁.js",
+        "level": "level1",
+        "year": "0000",
+        "company_name": "프로그래머스",
+        "problem_name": "제일작은수제거하기",
+        "problem_type": "준혁.js",
+        "countmethod": {
+            ".min": 1,
+            ".filter": 1
+        },
+        "line_count": 6,
+        "module": {},
+        "code": "function solution(arr) {\n  const min = Math.min(...arr);\n  arr = arr.filter(num => num !== min);\n  if (arr.length === 0) return [-1];\n  else return arr;\n}\n"
+    },
     "Lv1_0000_프로그래머스_문자열 다루기 기본_구현_가은.js": {
         "file_name": "Lv1_0000_프로그래머스_문자열 다루기 기본_구현_가은.js",
         "level": "level1",
@@ -4625,6 +4814,24 @@
         "line_count": 7,
         "module": {},
         "code": "function solution(s) {\n  if (s.length === 4 || s.length === 6){\n      return s.split(\"\").every(a => !isNaN(a));\n  } else {\n      return false;\n  }\n}"
+    },
+    "Lv1_0000_프로그래머스_하샤드수_준혁.js": {
+        "file_name": "Lv1_0000_프로그래머스_하샤드수_준혁.js",
+        "level": "level1",
+        "year": "0000",
+        "company_name": "프로그래머스",
+        "problem_name": "하샤드수",
+        "problem_type": "준혁.js",
+        "countmethod": {
+            ".toString": 1,
+            ".split": 1,
+            ".map": 1,
+            "parseInt": 1,
+            ".reduce": 1
+        },
+        "line_count": 9,
+        "module": {},
+        "code": "function solution(x) {\n  const sum = x\n    .toString()\n    .split('')\n    .map(num => parseInt(num))\n    .reduce((a, b) => a + b);\n  if (x % sum === 0) return true;\n  else return false;\n}\n"
     },
     "Lv1_0000_프로그래머스_직사각형별찍기_구현_지현.js": {
         "file_name": "Lv1_0000_프로그래머스_직사각형별찍기_구현_지현.js",
@@ -4659,13 +4866,27 @@
         "module": {},
         "code": "function solution(array, commands) {\n  return commands.map(v => {\n      return array\n          .slice(v[0]-1, v[1])\n          .sort((a, c) => a - c, 0)[v[2]-1];\n  })\n}"
     },
-    "Lv1_0000_프로그래머스_짝수와 홀수_구현_지수.js": {
-        "file_name": "Lv1_0000_프로그래머스_짝수와 홀수_구현_지수.js",
+    "Lv1_0000_프로그래머스_최대공약수와 최소공배수_구현_지수.js": {
+        "file_name": "Lv1_0000_프로그래머스_최대공약수와 최소공배수_구현_지수.js",
         "level": "level1",
         "year": "0000",
-        "company_name": "프로그래머스",
-        "problem_name": "짝수와 홀수",
-        "problem_type": "구현",
+        "company_name": "프로그래머스",
+        "problem_name": "최대공약수와 최소공배수",
+        "problem_type": "구현",
+        "countmethod": {
+            ".max": 1
+        },
+        "line_count": 11,
+        "module": {},
+        "code": "function solution(n, m) {\n  let a;\n  let b;\n  for (let i = 1; i <= Math.max(n, m); i++) {\n    if (n % i == 0 && m % i == 0) {\n      a = i;\n    }\n  }\n  b = (n * m) / a;\n  return [a, b];\n}\n"
+    },
+    "Lv1_0000_프로그래머스_짝수와 홀수_구현_지수.js": {
+        "file_name": "Lv1_0000_프로그래머스_짝수와 홀수_구현_지수.js",
+        "level": "level1",
+        "year": "0000",
+        "company_name": "프로그래머스",
+        "problem_name": "짝수와 홀수",
+        "problem_type": "구현",
         "countmethod": 0,
         "line_count": 3,
         "module": {},
@@ -4748,6 +4969,21 @@
         "module": {},
         "code": "function solution(nums) {\n    const set = new Set(nums)\n    return set.size >= nums.length/2 \n    ? nums.length/2\n    : set.size\n}\n"
     },
+    "Lv1_0000_프로그래머스_가운데글자가져오기_준혁.js": {
+        "file_name": "Lv1_0000_프로그래머스_가운데글자가져오기_준혁.js",
+        "level": "level1",
+        "year": "0000",
+        "company_name": "프로그래머스",
+        "problem_name": "가운데글자가져오기",
+        "problem_type": "준혁.js",
+        "countmethod": {
+            ".floor": 1,
+            ".substr": 2
+        },
+        "line_count": 5,
+        "module": {},
+        "code": "function solution(s) {\n  const midLen = Math.floor(s.length / 2);\n  if (s.length % 2 === 0) return s.substr(midLen - 1, 2);\n  else return s.substr(midLen, 1);\n}\n"
+    },
     "Lv1_2023_카카오_개인정보수집유효기간_구현_현태.js": {
         "file_name": "Lv1_2023_카카오_개인정보수집유효기간_구현_현태.js",
         "level": "level1",
@@ -4767,13 +5003,30 @@
         "module": {},
         "code": "function solution(today, terms, privacies) {\n    \n    const answer = [];\n    const map = new Map();\n    \n    for(let term of terms){\n        const [alpha, month] = term.split(' ');\n        \n        map.set(alpha, month);\n    }\n    for(let i = 0; i < privacies.length; i++){\n        const [date, type] = privacies[i].split(' ');\n        let [year, month, day] = date.split('.').map(Number);\n        \n        let addMonth = Number(map.get(type));\n        \n        year += parseInt(addMonth / 12);\n        month += addMonth % 12;\n        if (month > 12){\n            year += 1;\n            month %= 12;\n        }\n        \n        const [tY, tM, tD] = today.split('.').map(Number);\n        \n        if (year < tY){\n            answer.push(i+1);\n            continue;\n        } else if (year === tY){\n            if (month < tM) {\n                answer.push(i+1);\n                continue;\n            } else if (month === tM){\n                if (day <= tD) {\n                    answer.push(i+1);\n                    continue;\n                }\n            }\n        }\n    }\n    return answer\n}"
     },
-    "Lv1_0000_프로그래머스_두 개 뽑아서 더하기_구현_지수.js": {
-        "file_name": "Lv1_0000_프로그래머스_두 개 뽑아서 더하기_구현_지수.js",
+    "Lv1_0000_프로그래머스_문자열내림차순으로배치하기_준혁.js": {
+        "file_name": "Lv1_0000_프로그래머스_문자열내림차순으로배치하기_준혁.js",
         "level": "level1",
         "year": "0000",
-        "company_name": "프로그래머스",
-        "problem_name": "두 개 뽑아서 더하기",
-        "problem_type": "구현",
+        "company_name": "프로그래머스",
+        "problem_name": "문자열내림차순으로배치하기",
+        "problem_type": "준혁.js",
+        "countmethod": {
+            ".split": 1,
+            ".sort": 1,
+            ".reverse": 1,
+            ".join": 1
+        },
+        "line_count": 3,
+        "module": {},
+        "code": "function solution(s) {\n  return s.split('').sort().reverse().join('');\n}\n"
+    },
+    "Lv1_0000_프로그래머스_두 개 뽑아서 더하기_구현_지수.js": {
+        "file_name": "Lv1_0000_프로그래머스_두 개 뽑아서 더하기_구현_지수.js",
+        "level": "level1",
+        "year": "0000",
+        "company_name": "프로그래머스",
+        "problem_name": "두 개 뽑아서 더하기",
+        "problem_type": "구현",
         "countmethod": {
             ".push": 1,
             ".sort": 1
@@ -4815,13 +5068,13 @@
         "module": {},
         "code": "function solution(phone_number) {\n  let numArr = phone_number.split(\"\");\n  return numArr.fill(\"*\", 0, numArr.length - 4).join(\"\")\n}"
     },
-    "Lv1_0000_프로그래머스_숫자 짝꿍_구현_지수.js": {
-        "file_name": "Lv1_0000_프로그래머스_숫자 짝꿍_구현_지수.js",
+    "Lv1_0000_프로그래머스_숫자 짝꿍_구현_지수.js": {
+        "file_name": "Lv1_0000_프로그래머스_숫자 짝꿍_구현_지수.js",
         "level": "level1",
         "year": "0000",
-        "company_name": "프로그래머스",
-        "problem_name": "숫자 짝꿍",
-        "problem_type": "구현",
+        "company_name": "프로그래머스",
+        "problem_name": "숫자 짝꿍",
+        "problem_type": "구현",
         "countmethod": {
             ".split": 3,
             ".filter": 2,
@@ -4947,13 +5200,13 @@
         "module": {},
         "code": "function solution(sizes) {\n    \n    sizes.forEach(size => size.sort((a,b) => b-a))\n    let row = Number.MIN_SAFE_INTEGER;\n    let col = Number.MIN_SAFE_INTEGER;\n    \n    for(let size of sizes){\n        const [a,b] = size;\n        row = Math.max(a, row);\n        col = Math.max(b, col);\n    }\n    \n    return row*col\n    \n}"
     },
-    "Lv1_2019_카카오_실패율_구현_지수.js": {
-        "file_name": "Lv1_2019_카카오_실패율_구현_지수.js",
+    "Lv1_2019_카카오_실패율_구현_지수.js": {
+        "file_name": "Lv1_2019_카카오_실패율_구현_지수.js",
         "level": "level1",
         "year": "2019",
         "company_name": "카카오",
-        "problem_name": "실패율",
-        "problem_type": "구현",
+        "problem_name": "실패율",
+        "problem_type": "구현",
         "countmethod": {
             ".filter": 2,
             ".push": 1,
@@ -4980,6 +5233,18 @@
         "line_count": 16,
         "module": {},
         "code": "function solution(k, m, score) {\n    let scoreSort = score.sort((a,b) => b-a)\n    let boxs = []\n    let price = 0\n    \n    for(let i = 0; i < scoreSort.length; i += m){\n        if(scoreSort.slice(i, i + m).length === m){\n            boxs.push(scoreSort.slice(i, i + m))    \n        }\n    }\n    \n    for(let i = 0; i < boxs.length; i++){\n        price += Math.min(...boxs[i]) * m\n    }\n    return price\n}\n"
+    },
+    "Lv1_0000_프로그래머스_삼총사_구현_지수.js": {
+        "file_name": "Lv1_0000_프로그래머스_삼총사_구현_지수.js",
+        "level": "level1",
+        "year": "0000",
+        "company_name": "프로그래머스",
+        "problem_name": "삼총사",
+        "problem_type": "구현",
+        "countmethod": 0,
+        "line_count": 11,
+        "module": {},
+        "code": "function solution(number) {\n  let result = 0;\n  for (let i = 0; i < number.length - 2; i++) {\n    for (let k = i + 1; k < number.length - 1; k++) {\n      for (let j = k + 1; j < number.length; j++) {\n        number[i] + number[k] + number[j] == 0 ? result++ : null;\n      }\n    }\n  }\n  return result;\n}\n"
     },
     "Lv1_0000_프로그래머스_약수의개수와덧셈_구현_혜연.js": {
         "file_name": "Lv1_0000_프로그래머스_약수의개수와덧셈_구현_혜연.js",
@@ -5082,13 +5347,13 @@
         "module": {},
         "code": "function solution(n) {\n  let answer = 0;\n  for (let i = 0; i <= n; i++) {\n    n % i === 0 && (answer += i);\n  }\n  return answer;\n}\n"
     },
-    "Lv1_0000_프로그래머스_나머지가 1이 되는 수 찾기_구현_지수.js": {
-        "file_name": "Lv1_0000_프로그래머스_나머지가 1이 되는 수 찾기_구현_지수.js",
+    "Lv1_0000_프로그래머스_나머지가 1이 되는 수 찾기_구현_지수.js": {
+        "file_name": "Lv1_0000_프로그래머스_나머지가 1이 되는 수 찾기_구현_지수.js",
         "level": "level1",
         "year": "0000",
-        "company_name": "프로그래머스",
-        "problem_name": "나머지가 1이 되는 수 찾기",
-        "problem_type": "구현",
+        "company_name": "프로그래머스",
+        "problem_name": "나머지가 1이 되는 수 찾기",
+        "problem_type": "구현",
         "countmethod": {
             ".push": 1,
             ".min": 1
@@ -5097,13 +5362,13 @@
         "module": {},
         "code": "function solution(n) {\n  let x = [];\n  for (let i = 0; i <= n; i++) {\n    if (n % i === 1) {\n      x.push(i);\n    }\n  }\n  return Math.min(...x);\n}\n"
     },
-    "Lv1_0000_프로그래머스_푸드 파이트 대회_구현_지수.js": {
-        "file_name": "Lv1_0000_프로그래머스_푸드 파이트 대회_구현_지수.js",
+    "Lv1_0000_프로그래머스_푸드 파이트 대회_구현_지수.js": {
+        "file_name": "Lv1_0000_프로그래머스_푸드 파이트 대회_구현_지수.js",
         "level": "level1",
         "year": "0000",
-        "company_name": "프로그래머스",
-        "problem_name": "푸드 파이트 대회",
-        "problem_type": "구현",
+        "company_name": "프로그래머스",
+        "problem_name": "푸드 파이트 대회",
+        "problem_type": "구현",
         "countmethod": {
             "parseInt": 1,
             ".push": 1,
@@ -5246,13 +5511,13 @@
         "module": {},
         "code": "function solution(numbers) {\n  const answer = [];\n  for (let i = 0; i < numbers.length-1; i++) {\n    for (let j = i+1; j < numbers.length; j++) {\n      answer.push(numbers[i] + numbers[j]);\n    }\n  }\n  return [...new Set(answer)].sort((a, b) => a - b);\n}"
     },
-    "Lv1_0000_프로그래머스_추억 점수_구현_지수.js": {
-        "file_name": "Lv1_0000_프로그래머스_추억 점수_구현_지수.js",
+    "Lv1_0000_프로그래머스_추억 점수_구현_지수.js": {
+        "file_name": "Lv1_0000_프로그래머스_추억 점수_구현_지수.js",
         "level": "level1",
         "year": "0000",
-        "company_name": "프로그래머스",
-        "problem_name": "추억 점수",
-        "problem_type": "구현",
+        "company_name": "프로그래머스",
+        "problem_name": "추억 점수",
+        "problem_type": "구현",
         "countmethod": {
             ".map": 2,
             ".filter": 1,
@@ -5299,6 +5564,21 @@
         "module": {},
         "code": "function solution(n) {\n  return n\n    .toString()\n    .split('')\n    .reverse()\n    .map(x => parseInt(x));\n}\n"
     },
+    "Lv1_0000_프로그래머스_나누어떨어지는숫자배열_준혁.js": {
+        "file_name": "Lv1_0000_프로그래머스_나누어떨어지는숫자배열_준혁.js",
+        "level": "level1",
+        "year": "0000",
+        "company_name": "프로그래머스",
+        "problem_name": "나누어떨어지는숫자배열",
+        "problem_type": "준혁.js",
+        "countmethod": {
+            ".filter": 1,
+            ".sort": 1
+        },
+        "line_count": 5,
+        "module": {},
+        "code": "function solution(arr, divisor) {\n  let res = arr.filter(num => num % divisor === 0).sort((a, b) => a - b);\n  if (res.length === 0) return [-1];\n  else return res;\n}\n"
+    },
     "Lv1_0000_프로그래머스_콜라츠 추측_구현_가은.js": {
         "file_name": "Lv1_0000_프로그래머스_콜라츠 추측_구현_가은.js",
         "level": "level1",
@@ -5311,13 +5591,30 @@
         "module": {},
         "code": "function solution(num) {\n  for (let i = 0; i <= 500; i++) {\n    if (num === 1) {\n      return i;\n    } else if (i === 500) {\n      return -1;\n    } else if (num % 2 === 0) {\n      num = num / 2;\n    } else if (num % 2 !== 0) {\n      num = (num * 3) + 1;\n    }\n  }\n}"
     },
-    "Lv1_0000_프로그래머스_카드 뭉치_구현_지수.js": {
-        "file_name": "Lv1_0000_프로그래머스_카드 뭉치_구현_지수.js",
+    "Lv1_0000_프로그래머스_크기가 작은 부분문자열_구현_지수.js": {
+        "file_name": "Lv1_0000_프로그래머스_크기가 작은 부분문자열_구현_지수.js",
         "level": "level1",
         "year": "0000",
-        "company_name": "프로그래머스",
-        "problem_name": "카드 뭉치",
-        "problem_type": "구현",
+        "company_name": "프로그래머스",
+        "problem_name": "크기가 작은 부분문자열",
+        "problem_type": "구현",
+        "countmethod": {
+            ".slice": 2,
+            ".push": 1,
+            ".filter": 1,
+            "parseInt": 2
+        },
+        "line_count": 9,
+        "module": {},
+        "code": "function solution(t, p) {\n  let array = [];\n  for (let i = 0; i < t.length; i++) {\n    if (t.slice(i, i + p.length).length == p.length) {\n      array.push(t.slice(i, i + p.length));\n    }\n  }\n  return array.filter((x) => parseInt(x) <= parseInt(p)).length;\n}\n"
+    },
+    "Lv1_0000_프로그래머스_카드 뭉치_구현_지수.js": {
+        "file_name": "Lv1_0000_프로그래머스_카드 뭉치_구현_지수.js",
+        "level": "level1",
+        "year": "0000",
+        "company_name": "프로그래머스",
+        "problem_name": "카드 뭉치",
+        "problem_type": "구현",
         "countmethod": {
             ".shift": 2
         },
@@ -5363,6 +5660,20 @@
         "line_count": 13,
         "module": {},
         "code": "function solution(arr) {\n    var answer = [];\n    if(arr.length===1){\n        return [-1]\n    }else{\n        m = Math.min(...arr)\n        for(let i of arr){\n            if(i!==m) answer.push(i)\n        }\n    }\n    \n    return answer;\n}"
+    },
+    "Lv1_0000_프로그래머스_내적_준혁.js": {
+        "file_name": "Lv1_0000_프로그래머스_내적_준혁.js",
+        "level": "level1",
+        "year": "0000",
+        "company_name": "프로그래머스",
+        "problem_name": "내적",
+        "problem_type": "준혁.js",
+        "countmethod": {
+            ".reduce": 1
+        },
+        "line_count": 3,
+        "module": {},
+        "code": "function solution(a, b) {\n  return a.reduce((sum, num, index) => sum + num * b[index], 0);\n}\n"
     },
     "Lv1_2021_카카오_숫자문자열과영단어_구현_세원.js": {
         "file_name": "Lv1_2021_카카오_숫자문자열과영단어_구현_세원.js",
@@ -5420,13 +5731,13 @@
         "module": {},
         "code": "function solution(num) {\n  var answer = 0;\n  let cnt = 0;\n  while(num!==1 && cnt<500){\n      num = !(num%2) ? num/2 : num*3+1;\n      cnt++;\n  }\n  if(cnt>=500){\n      cnt = -1\n  }\n  \n  return cnt;\n}"
     },
-    "Lv1_0000_프로그래머스_폰켓몬_해시_지수.js": {
-        "file_name": "Lv1_0000_프로그래머스_폰켓몬_해시_지수.js",
+    "Lv1_0000_프로그래머스_폰켓몬_해시_지수.js": {
+        "file_name": "Lv1_0000_프로그래머스_폰켓몬_해시_지수.js",
         "level": "level1",
         "year": "0000",
-        "company_name": "프로그래머스",
-        "problem_name": "폰켓몬",
-        "problem_type": "해시",
+        "company_name": "프로그래머스",
+        "problem_name": "폰켓몬",
+        "problem_type": "해시",
         "countmethod": 0,
         "line_count": 5,
         "module": {},
@@ -5492,13 +5803,28 @@
         "module": {},
         "code": "function solution(s) {\n    let arr = s.split(' ')\n    let answer = ''\n    let str = ''\n    for(let i = 0; i<arr.length;i++){\n        let str = arr[i]\n        for(let j = 0; j<str.length;j++){\n            if(j%2 ===0){\n                 answer += str[j].toUpperCase();\n            }else{\n                 answer += str[j].toLowerCase();\n            }\n        } \n        answer += ' '\n    }\n     answer = answer.substr(0,answer.length-1);\n    return answer;\n}\n"
     },
-    "Lv1_0000_프로그래머스_가운데 글자 가져오기_구현_지수.js": {
-        "file_name": "Lv1_0000_프로그래머스_가운데 글자 가져오기_구현_지수.js",
+    "Lv1_0000_프로그래머스_두정수사이의합_준혁.js": {
+        "file_name": "Lv1_0000_프로그래머스_두정수사이의합_준혁.js",
         "level": "level1",
         "year": "0000",
-        "company_name": "프로그래머스",
-        "problem_name": "가운데 글자 가져오기",
-        "problem_type": "구현",
+        "company_name": "프로그래머스",
+        "problem_name": "두정수사이의합",
+        "problem_type": "준혁.js",
+        "countmethod": {
+            ".min": 1,
+            ".max": 1
+        },
+        "line_count": 7,
+        "module": {},
+        "code": "function solution(a, b) {\n  let sum = 0;\n  for (let i = Math.min(a, b); i <= Math.max(a, b); i++) {\n    sum += i;\n  }\n  return sum;\n}\n"
+    },
+    "Lv1_0000_프로그래머스_가운데 글자 가져오기_구현_지수.js": {
+        "file_name": "Lv1_0000_프로그래머스_가운데 글자 가져오기_구현_지수.js",
+        "level": "level1",
+        "year": "0000",
+        "company_name": "프로그래머스",
+        "problem_name": "가운데 글자 가져오기",
+        "problem_type": "구현",
         "countmethod": {
             ".floor": 1,
             ".slice": 2
@@ -5506,6 +5832,21 @@
         "line_count": 4,
         "module": {},
         "code": "function solution(s) {\n  const cnt = Math.floor(s.length / 2);\n  return s.length % 2 == 0 ? s.slice(cnt - 1, cnt + 1) : s.slice(cnt, cnt + 1);\n}\n"
+    },
+    "Lv1_0000_프로그래머스_예산_구현_지수.js": {
+        "file_name": "Lv1_0000_프로그래머스_예산_구현_지수.js",
+        "level": "level1",
+        "year": "0000",
+        "company_name": "프로그래머스",
+        "problem_name": "예산",
+        "problem_type": "구현",
+        "countmethod": {
+            ".sort": 1,
+            ".map": 1
+        },
+        "line_count": 9,
+        "module": {},
+        "code": "function solution(d, budget) {\n  let result = 0;\n  let cnt = 0;\n  d.sort((a, b) => a - b).map((x) => {\n    result += x;\n    result <= budget ? cnt++ : null;\n  });\n  return cnt;\n}\n"
     },
     "Lv1_0000_프로그래머스_없는숫자더하기_구현_윤정.js": {
         "file_name": "Lv1_0000_프로그래머스_없는숫자더하기_구현_윤정.js",
@@ -5522,6 +5863,18 @@
         "line_count": 6,
         "module": {},
         "code": "function solution(numbers) {\n  let num = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];\n  const numFilter = num.filter((v) => !numbers.includes(v));\n  const sum = numFilter.reduce((a, c) => a + c, 0);\n  return sum;\n}\n"
+    },
+    "Lv1_0000_프로그래머스_부족한금액계산하기_준혁.js": {
+        "file_name": "Lv1_0000_프로그래머스_부족한금액계산하기_준혁.js",
+        "level": "level1",
+        "year": "0000",
+        "company_name": "프로그래머스",
+        "problem_name": "부족한금액계산하기",
+        "problem_type": "준혁.js",
+        "countmethod": 0,
+        "line_count": 8,
+        "module": {},
+        "code": "function solution(price, money, count) {\n  let totalNeedMoney = 0;\n  for (let i = 1; i <= count; i++) {\n    totalNeedMoney += i * price;\n  }\n  if (totalNeedMoney <= money) return 0;\n  return totalNeedMoney - money;\n}\n"
     },
     "Lv1_2021_카카오_숫자문자열과영단어_구현_하연.js": {
         "file_name": "Lv1_2021_카카오_숫자문자열과영단어_구현_하연.js",
@@ -5567,6 +5920,24 @@
         "module": {},
         "code": "function solution(n, m, section) {\n    let cnt = 0\n    let idx = 0\n    for(let i of section){\n        while(i > idx){\n            cnt++\n            idx = i + m - 1\n        }\n    }\n    return cnt\n}\n"
     },
+    "Lv1_0000_프로그래머스_정수내림차순으로배치하기_준혁.js": {
+        "file_name": "Lv1_0000_프로그래머스_정수내림차순으로배치하기_준혁.js",
+        "level": "level1",
+        "year": "0000",
+        "company_name": "프로그래머스",
+        "problem_name": "정수내림차순으로배치하기",
+        "problem_type": "준혁.js",
+        "countmethod": {
+            "parseInt": 1,
+            ".toString": 1,
+            ".split": 1,
+            ".sort": 1,
+            ".join": 1
+        },
+        "line_count": 9,
+        "module": {},
+        "code": "function solution(n) {\n  return parseInt(\n    n\n      .toString()\n      .split('')\n      .sort((a, b) => b - a)\n      .join(''),\n  );\n}\n"
+    },
     "lv0_0000_프로그래머스_7의 개수_구현_사라.js": {
         "file_name": "lv0_0000_프로그래머스_7의 개수_구현_사라.js",
         "level": "level0",
@@ -5582,11 +5953,11 @@
         "module": {},
         "code": "function solution(array) {\n  return array.join('').split('7').length - 1;\n}\n"
     },
-    "Lv0_0000_프로그래머스_덧셈식_출력하기_구현_예지.js": {
-        "file_name": "Lv0_0000_프로그래머스_덧셈식_출력하기_구현_예지.js",
+    "Lv0_0000_프로그래머스_덧셈식_출력하기_구현_예지.js": {
+        "file_name": "Lv0_0000_프로그래머스_덧셈식_출력하기_구현_예지.js",
         "level": "level0",
         "year": "0000",
-        "company_name": "프로그래머스",
+        "company_name": "프로그래머스",
         "problem_name": "덧셈식",
         "problem_type": "출력하기",
         "countmethod": {
@@ -5861,6 +6232,21 @@
         "module": {},
         "code": "function solution(s1, s2){\n    const checkArr = s1.filter(el => s2.includes(el));\n    return checkArr.length\n}\n"
     },
+    "Lv0_0000_프로그래머스_문자열여러번뒤집기_정렬_혜연.js": {
+        "file_name": "Lv0_0000_프로그래머스_문자열여러번뒤집기_정렬_혜연.js",
+        "level": "level0",
+        "year": "0000",
+        "company_name": "프로그래머스",
+        "problem_name": "문자열여러번뒤집기",
+        "problem_type": "정렬",
+        "countmethod": {
+            ".forEach": 1,
+            ".join": 1
+        },
+        "line_count": 9,
+        "module": {},
+        "code": "function solution(my_string, queries) {\n    const arr = [...my_string]\n    queries.forEach(([s,e]) => {\n        for(let i=0; i<(e-s)/2; i++) {\n            [arr[s+i], arr[e-i]] = [arr[e-i], arr[s+i]]\n        } \n    })\n    return arr.join('')\n}\n"
+    },
     "Lv0_0000_프로그래머스_암호 해독_구현_가은.js": {
         "file_name": "Lv0_0000_프로그래머스_암호 해독_구현_가은.js",
         "level": "level0",
@@ -6087,6 +6473,18 @@
         "line_count": 5,
         "module": {},
         "code": "function solution(arr, queries) {\n    return queries.map(([s, e, k]) => {\n        return arr.slice(s,e+1).sort((a,b) => a-b).find(i => i>k) || -1\n    })\n}\n"
+    },
+    "Lv0_0000_프로그래머스_정수찾기_구현_윤정.js": {
+        "file_name": "Lv0_0000_프로그래머스_정수찾기_구현_윤정.js",
+        "level": "level0",
+        "year": "0000",
+        "company_name": "프로그래머스",
+        "problem_name": "정수찾기",
+        "problem_type": "구현",
+        "countmethod": 0,
+        "line_count": 13,
+        "module": {},
+        "code": "function solution(num_list, n) {\n    var answer = 0;\n    for(let i = 0; i < num_list.length; i++){\n        if(num_list[i] === n){\n            answer = 1;\n            break\n        }\n        else{\n            answer = 0;\n        }\n    }\n    return answer;\n}"
     },
     "Lv0_0000_프로그래머스_캐릭터의좌표_해시_혜연.js": {
         "file_name": "Lv0_0000_프로그래머스_캐릭터의좌표_해시_혜연.js",
@@ -6348,6 +6746,22 @@
         "line_count": 9,
         "module": {},
         "code": "function solution(n, numlist) {\n  let answer = [];\n  for (let i = 0; i < numlist.length; i++) {\n    if (numlist[i] % n === 0) {\n      answer.push(numlist[i]);\n    }\n  }\n  return answer;\n}\n"
+    },
+    "Lv0_0000_프로그래머스_배열만들기4_스택큐_혜연.js": {
+        "file_name": "Lv0_0000_프로그래머스_배열만들기4_스택큐_혜연.js",
+        "level": "level0",
+        "year": "0000",
+        "company_name": "프로그래머스",
+        "problem_name": "배열만들기4",
+        "problem_type": "스택큐",
+        "countmethod": {
+            ".push": 2,
+            ".slice": 1,
+            ".pop": 1
+        },
+        "line_count": 11,
+        "module": {},
+        "code": "function solution(arr) {\n    const stk = []\n    for(let i = 0; i < arr.length; i++) {\n        if(!stk.length) stk.push(arr[i])\n        else {\n            if ([...stk.slice(-1)] < arr[i]) stk.push(arr[i])\n            else stk.pop(), --i\n        }\n    }\n    return stk;\n}\n"
     },
     "lv0_0000_프로그래머스_A로 B 만들기_구현_사라.js": {
         "file_name": "lv0_0000_프로그래머스_A로 B 만들기_구현_사라.js",
@@ -6689,6 +7103,18 @@
         "line_count": 3,
         "module": {},
         "code": "function solution(n, numlist) {\n  return numlist.filter((el) => el % n === 0)\n}"
+    },
+    "Lv0_0000_프로그래머스_두 수의 연산값 비교하기_구현_예지.js": {
+        "file_name": "Lv0_0000_프로그래머스_두 수의 연산값 비교하기_구현_예지.js",
+        "level": "level0",
+        "year": "0000",
+        "company_name": "프로그래머스",
+        "problem_name": "두 수의 연산값 비교하기",
+        "problem_type": "구현",
+        "countmethod": 0,
+        "line_count": 6,
+        "module": {},
+        "code": "function solution(a, b) {\n    const atob = String(a) + String(b)\n    const ab2 = 2*a*b\n    \n    return atob >= ab2 ? Number(atob) : Number(ab2)\n}\n"
     },
     "Lv0_0000_뒤에서 5등까지_구현_수정.js": {
         "file_name": "Lv0_0000_뒤에서 5등까지_구현_수정.js",
@@ -7219,6 +7645,24 @@
         "line_count": 12,
         "module": {},
         "code": "const readline = require('readline');\nconst rl = readline.createInterface({\n    input: process.stdin,\n    output: process.stdout\n});\nlet input = [];\nrl.on('line', function (line) {\n    input = [line];\n}).on('close',function(){\n    str = input[0];\n    console.log(str)\n});\n"
+    },
+    "Lv0_0000_프로그래머스_주사위게임3_완전탐색_혜연.js": {
+        "file_name": "Lv0_0000_프로그래머스_주사위게임3_완전탐색_혜연.js",
+        "level": "level0",
+        "year": "0000",
+        "company_name": "프로그래머스",
+        "problem_name": "주사위게임3",
+        "problem_type": "완전탐색",
+        "countmethod": {
+            ".entries": 1,
+            ".sort": 1,
+            ".map": 1,
+            ".min": 1,
+            ".abs": 1
+        },
+        "line_count": 14,
+        "module": {},
+        "code": "function solution(a, b, c, d) {\n    const obj = {}\n    for(let i of [a, b, c, d]) obj[i] = (obj[i] || 0) + 1\n    const arr = Object.entries(obj).sort((a,b) => a[1]-b[1])\n    const arr2 = arr.map(v => ~~v[0])\n    switch(arr.length) {\n        case 4: return Math.min(a, b, c, d)\n        case 3: return arr2[0]*arr2[1]\n        case 2: return (arr[0][1] === 1 \n                ? (10 * arr2[1] + arr2[0])**2 \n                : (arr2[0] + arr2[1]) * Math.abs(arr2[0] - arr2[1]))\n        case 1: return 1111 * arr2[0]\n    }\n}\n"
     },
     "Lv0_0000_자릿수더하기_구현_지현.js": {
         "file_name": "Lv0_0000_자릿수더하기_구현_지현.js",
@@ -7763,6 +8207,25 @@
         "module": {},
         "code": "function solution(n) {\n    const arr = [0,1]\n    for(let i = 2; i<=n; i++) {\n        arr[i] = (arr[i-1] + arr[i-2]) % 1234567\n    }\n    return arr[n] \n}\n"
     },
+    "Lv2_2022_카카오_k진수에서소수개수구하기_구현_원영.js": {
+        "file_name": "Lv2_2022_카카오_k진수에서소수개수구하기_구현_원영.js",
+        "level": "level2",
+        "year": "2022",
+        "company_name": "카카오",
+        "problem_name": "k진수에서소수개수구하기",
+        "problem_type": "구현",
+        "countmethod": {
+            ".toString": 1,
+            ".split": 1,
+            ".filter": 1,
+            ".map": 1,
+            ".forEach": 1,
+            ".sqrt": 1
+        },
+        "line_count": 16,
+        "module": {},
+        "code": "function solution(n, k) {\n  var answer = 0;\n  n.toString(k)\n    .split('0')\n    .filter((a) => a !== '' && a !== '1')\n    .map(Number)\n    .forEach((a, i) => {\n      for (let i = 2; i <= Math.sqrt(a); i++) {\n        if (a % i === 0) {\n          return false;\n        }\n      }\n      answer++;\n    });\n  return answer;\n}\n"
+    },
     "Lv2_0000_프로그래머스_짝지어제거하기_스택큐_보경.js": {
         "file_name": "Lv2_0000_프로그래머스_짝지어제거하기_스택큐_보경.js",
         "level": "level2",
@@ -7884,6 +8347,50 @@
         "module": {},
         "code": "function solution(s){\n    let acc = 0\n    for(let i=0; i<s.length; i++) {\n        s[i] === '(' ? acc+=1 : acc-=1\n        if(acc < 0) return false\n    } \n    return acc === 0 ? true : false\n}\n"
     },
+    "Lv2_0000_프로그래머스_피로도_완전탐색_원영.js": {
+        "file_name": "Lv2_0000_프로그래머스_피로도_완전탐색_원영.js",
+        "level": "level2",
+        "year": "0000",
+        "company_name": "프로그래머스",
+        "problem_name": "피로도",
+        "problem_type": "완전탐색",
+        "countmethod": {
+            ".fill": 1,
+            ".push": 1,
+            ".max": 1
+        },
+        "line_count": 17,
+        "module": {},
+        "code": "function solution(k, dungeons) {\n  var answer = [];\n  let visited = new Array(dungeons.length).fill(0);\n  function dfs(count, k) {\n    answer.push(count);\n    for (let i = 0; i < dungeons.length; i++) {\n      let current = dungeons[i];\n      if (k >= current[0] && !visited[i]) {\n        visited[i] = 1;\n        dfs(count + 1, k - current[1]);\n        visited[i] = 0;\n      }\n    }\n  }\n  dfs(0, k);\n  return Math.max(...answer);\n}\n"
+    },
+    "Lv2_0000_프로그래머스_최댓값과최솟값_구현_하은.js": {
+        "file_name": "Lv2_0000_프로그래머스_최댓값과최솟값_구현_하은.js",
+        "level": "level2",
+        "year": "0000",
+        "company_name": "프로그래머스",
+        "problem_name": "최댓값과최솟값",
+        "problem_type": "구현",
+        "countmethod": {
+            ".split": 1,
+            ".max": 1,
+            ".min": 1
+        },
+        "line_count": 6,
+        "module": {},
+        "code": "function solution(s) {\n    s = s.split(\" \")\n    let max = Math.max(...s)\n    let min = Math.min(...s)\n    return min+\" \"+max;\n}\n"
+    },
+    "Lv2_0000_프로그래머스_연속된 부분 수열의 합_투포인터_수정.js": {
+        "file_name": "Lv2_0000_프로그래머스_연속된 부분 수열의 합_투포인터_수정.js",
+        "level": "level2",
+        "year": "0000",
+        "company_name": "프로그래머스",
+        "problem_name": "연속된 부분 수열의 합",
+        "problem_type": "투포인터",
+        "countmethod": 0,
+        "line_count": 24,
+        "module": {},
+        "code": "function solution(sequence, k) {\n    let answer = [];\n    let start = 0;\n    let end = 0;\n    let sum = sequence[0];\n  \n    while (end < sequence.length) {\n      if (sum < k) {\n        end++;\n        sum += sequence[end];\n      } else if (sum > k) {\n        sum -= sequence[start];\n        start++;\n      } else {\n        if (!answer.length || end - start < answer[1] - answer[0]) {\n          answer = [start, end];\n        }\n        end++;\n        sum += sequence[end];\n      }\n    }\n  \n    return answer;\n  }"
+    },
     "Lv2_0000_프로그래머스_우박수열정적분_구현_선근.js": {
         "file_name": "Lv2_0000_프로그래머스_우박수열정적분_구현_선근.js",
         "level": "level2",
@@ -8002,6 +8509,29 @@
         "module": {},
         "code": "function solution(fees, records) {\n  const number = Array.from(new Set(records.map((v) => v.split(\" \")[1]))).sort(\n    (a, b) => a - b\n  );\n  const answer = Array(number.length).fill(0);\n  for (let item of records) {\n    item = item.split(\" \");\n    if (item[2] === \"IN\") {\n      item[0] = item[0].split(\":\");\n      answer[number.indexOf(item[1])] -= item[0][0] * 60 + +item[0][1] - 1439;\n    } else {\n      item[0] = item[0].split(\":\");\n      answer[number.indexOf(item[1])] += item[0][0] * 60 + +item[0][1] - 1439;\n    }\n  }\n  return answer.map((v) =>\n    v - fees[0] > 0\n      ? fees[1] + Math.ceil((v - fees[0]) / fees[2]) * fees[3]\n      : fees[1]\n  );\n}\n"
     },
+    "Lv3_0000_프로그래머스_베스트앨범_해시_의호.js": {
+        "file_name": "Lv3_0000_프로그래머스_베스트앨범_해시_의호.js",
+        "level": "level3",
+        "year": "0000",
+        "company_name": "프로그래머스",
+        "problem_name": "베스트앨범",
+        "problem_type": "해시",
+        "countmethod": {
+            ".map": 2,
+            ".sort": 3,
+            ".has": 1,
+            ".get": 6,
+            ".set": 4,
+            ".flat": 4,
+            ".push": 2,
+            ".findIndex": 1,
+            ".splice": 2,
+            ".join": 1
+        },
+        "line_count": 41,
+        "module": {},
+        "code": "function solution(genres, plays) {\n  let answer = [];\n  let zip = genres.map((v, i) => v + plays[i]);\n  let sorted = genres.map((v, i) => [v, plays[i]]).sort((a, b) => b[1] - a[1]);\n  let temp = [];\n  let list = new Map();\n  let count = new Map();\n  for (let i = 0; i < sorted.length; i++) {\n    if (list.has(sorted[i][0]) && list.get(sorted[i][0]).length < 4) {\n      list.set(sorted[i][0], [list.get(sorted[i][0]), sorted[i]].flat());\n    } else if (list.get(sorted[i][0])) {\n      continue;\n    } else {\n      list.set(sorted[i][0], sorted[i].flat());\n    }\n  }\n  for (let i = 0; i < genres.length; i++) {\n    if (count.get(genres[i]) !== undefined) {\n      count.set(genres[i], count.get(genres[i]) + plays[i]);\n    } else {\n      count.set(genres[i], plays[i]);\n    }\n  }\n  [...count].sort((a, b) => b[1] - a[1]);\n  for (let i = 0; i < count.size; i++) {\n    temp.push(list.get([...count].sort((a, b) => b[1] - a[1])[i][0]));\n  }\n  for (let i = 0; i < temp.flat().length / 2; i++) {\n    let zipIndex = zip.findIndex(\n      (x) =>\n        x ===\n        temp\n          .flat()\n          .splice(2 * i, 2)\n          .join(\"\")\n    );\n    zip.splice(zipIndex, 1, null);\n    answer.push(zipIndex);\n  }\n  return answer;\n}\n"
+    },
     "Lv3_0000_프로그래머스_가장 먼 노드_그래프_의호.js": {
         "file_name": "Lv3_0000_프로그래머스_가장 먼 노드_그래프_의호.js",
         "level": "level3",
@@ -8021,6 +8551,50 @@
         "line_count": 23,
         "module": {},
         "code": "function solution(n, vertex) {\n  let answer = 0;\n  let list = Array(n + 1).fill([]);\n  let count = Array(n + 1).fill(0);\n  count[1] = 1;\n  let node = [1];\n  let queue = [node];\n  vertex.map((v) => {\n    list[v[0]] = [...list[v[0]], v[1]];\n    list[v[1]] = [...list[v[1]], v[0]];\n  });\n  while (queue.length) {\n    node = queue.shift();\n    list[node].forEach((x) => {\n      if (!count[x]) {\n        queue.push(x);\n        count[x] = count[node] + 1;\n      }\n    });\n  }\n  answer = count.filter((x) => x === Math.max(...count)).length;\n  return answer;\n}\n"
+    },
+    "Lv3_0000_백준_가장긴감소하는부분배열_다이나믹_보경.js": {
+        "file_name": "Lv3_0000_백준_가장긴감소하는부분배열_다이나믹_보경.js",
+        "level": "level3",
+        "year": "0000",
+        "company_name": "백준",
+        "problem_name": "가장긴감소하는부분배열",
+        "problem_type": "다이나믹",
+        "countmethod": {
+            ".readFileSync": 1,
+            ".toString": 1,
+            ".trim": 1,
+            ".split": 2,
+            ".map": 1,
+            ".fill": 1,
+            ".push": 1,
+            ".max": 2,
+            ".log": 1
+        },
+        "line_count": 14,
+        "module": {},
+        "code": "const filePath = process.platform === \"linux\" ? \"/dev/stdin\" : \"input.txt\";\nlet [N, A] = require('fs').readFileSync(filePath).toString().trim().split('\\n');\nA = A.split(' ').map(i => +i);\nlet memo = new Array(N * 1).fill(1);\nfor (let i = 1; i < N; i++) {\n    const values = [1];\n    for (let j = 0; j < i; j++) {\n        if (A[i] < A[j]) {\n            values.push(memo[j] + 1);\n        }\n    }\n    memo[i] = Math.max(...values);\n}\nconsole.log(Math.max(...memo));"
+    },
+    "Lv3_0000_백준_바이러스_DFSBFS_보경.js": {
+        "file_name": "Lv3_0000_백준_바이러스_DFSBFS_보경.js",
+        "level": "level3",
+        "year": "0000",
+        "company_name": "백준",
+        "problem_name": "바이러스",
+        "problem_type": "DFSBFS",
+        "countmethod": {
+            ".readFileSync": 1,
+            ".toString": 1,
+            ".trim": 1,
+            ".split": 2,
+            ".map": 1,
+            ".push": 4,
+            ".pop": 1,
+            ".includes": 1,
+            ".log": 1
+        },
+        "line_count": 25,
+        "module": {},
+        "code": "const filePath = process.platform === 'linux' ? '/dev/stdin' : './input.txt';\nlet [C, N, ...arr] = require('fs').readFileSync(filePath).toString().trim().split('\\n');\nlet graph = {};\nfor (let i = 1; i <= C; i++) {\n    graph[i] = []\n}\nfor (let i = 0; i < N; i++) {\n    const [a, b] = arr[i].split(' ').map(v => +v);\n    graph[a].push(b);\n    graph[b].push(a);\n}\nconst dfs = (graph, startNode) => {\n    let visited = [];\n    let needVisit = [];\n    needVisit.push(startNode);\n    while (needVisit.length !== 0) {\n        const node = needVisit.pop();\n        if (!visited.includes(node)) {\n            visited.push(node);\n            needVisit = [...needVisit, ...graph[node]];\n        }\n    }\n    return visited;\n};\nconsole.log(dfs(graph, 1).length - 1);"
     },
     "Lv3_2023_카카오_표현가능한이진트리_트리_현태.js": {
         "file_name": "Lv3_2023_카카오_표현가능한이진트리_트리_현태.js",
@@ -8074,6 +8648,20 @@
         "line_count": 24,
         "module": {},
         "code": "function solution(tickets) {\n  let answer = [];\n  let newObj = {};\n  for (let ticket of tickets) {\n    if (newObj[ticket[0]] === undefined) {\n      newObj[ticket[0]] = [ticket[1]];\n    } else {\n      newObj[ticket[0]] = [...newObj[ticket[0]], ticket[1]];\n    }\n  }\n  for (let key in newObj) {\n    newObj[key].sort().reverse();\n  }\n  let stack = [\"ICN\"];\n  while (stack.length) {\n    let curNode = stack[stack.length - 1];\n    if (newObj[curNode] && newObj[curNode].length > 0) {\n      stack.push(newObj[curNode].pop());\n    } else {\n      answer.unshift(stack.pop());\n    }\n  }\n  return answer;\n}\n"
+    },
+    "Lv3_0000_백준_sxn타일링_다이나믹_보경.js": {
+        "file_name": "Lv3_0000_백준_sxn타일링_다이나믹_보경.js",
+        "level": "level3",
+        "year": "0000",
+        "company_name": "백준",
+        "problem_name": "sxn타일링",
+        "problem_type": "다이나믹",
+        "countmethod": {
+            ".log": 1
+        },
+        "line_count": 9,
+        "module": {},
+        "code": "function solution(n) {\n    let memo = new Array(n + 1);\n    memo[1] = 1;\n    memo[2] = 2;\n    for (let i = 3; i <= n; i++) {\n        memo[i] = (memo[i - 1] + memo[i - 2]) % 10007;\n    }\n    console.log(memo[n]);\n}"
     },
     "Lv3_0000_프로그래머스_입국심사_구현_의호.js": {
         "file_name": "Lv3_0000_프로그래머스_입국심사_구현_의호.js",
