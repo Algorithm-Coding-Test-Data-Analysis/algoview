@@ -230,6 +230,18 @@
         "module": {},
         "code": "function solution(n, numlist) {\n  let answer = [];\n  for (let i = 0; i < numlist.length; i++) {\n    if (numlist[i] % n === 0) {\n      answer.push(numlist[i]);\n    }\n  }\n  return answer;\n}\n"
     },
+    "Lv0_0000_프로그래머스_n의배수_구현_윤정.js": {
+        "file_name": "Lv0_0000_프로그래머스_n의배수_구현_윤정.js",
+        "level": "level0",
+        "year": "0000",
+        "company_name": "프로그래머스",
+        "problem_name": "n의배수",
+        "problem_type": "구현",
+        "countmethod": 0,
+        "line_count": 10,
+        "module": {},
+        "code": "function solution(num, n) {\n    var answer = 0;\n    if(num % n === 0) {\n        answer = 1;\n    }\n    else{\n        answer = 0;\n    }\n    return answer;\n}"
+    },
     "Lv0_0000_프로그래머스_OX퀴즈_구현_혜연.js": {
         "file_name": "Lv0_0000_프로그래머스_OX퀴즈_구현_혜연.js",
         "level": "level0",
@@ -5389,6 +5401,7 @@
         "problem_type": "구현",
         "countmethod": {
             "list": 1,
+            "range": 1,
             "len": 1,
             "int": 1
         },
@@ -5792,6 +5805,7 @@
         "problem_name": "문자열 섞기",
         "problem_type": "구현",
         "countmethod": {
+            "range": 1,
             "len": 1,
             ".append": 2,
             ".join": 1
@@ -6108,6 +6122,7 @@
         "problem_type": "구현",
         "countmethod": {
             "sorted": 1,
+            "range": 1,
             ".append": 1,
             "len": 1
         },
@@ -6122,7 +6137,9 @@
         "company_name": "프로그래머스",
         "problem_name": "세균 증식",
         "problem_type": "구현",
-        "countmethod": 0,
+        "countmethod": {
+            "range": 1
+        },
         "line_count": 5,
         "module": {},
         "code": "def solution(n, t):\n    answer = n\n    for i in range(t):\n        answer *= 2\n    return answer\n"
@@ -6146,7 +6163,9 @@
         "company_name": "프로그래머스",
         "problem_name": "순서쌍의 개수",
         "problem_type": "구현",
-        "countmethod": 0,
+        "countmethod": {
+            "range": 1
+        },
         "line_count": 6,
         "module": {},
         "code": "def solution(n):\n    count = 0\n    for i in range(1, n + 1):\n        if n % i == 0:\n            count += 1\n    return count\n"
@@ -6159,6 +6178,7 @@
         "problem_name": "순서쌍의",
         "problem_type": "개수",
         "countmethod": {
+            "range": 1,
             ".append": 2,
             "len": 1
         },
@@ -6286,6 +6306,7 @@
         "problem_type": "구현",
         "countmethod": {
             ".join": 1,
+            "range": 1,
             "len": 1
         },
         "line_count": 2,
@@ -6299,7 +6320,9 @@
         "company_name": "프로그래머스",
         "problem_name": "약수 구하기",
         "problem_type": "구현",
-        "countmethod": 0,
+        "countmethod": {
+            "range": 1
+        },
         "line_count": 3,
         "module": {},
         "code": "def solution(n):\n    answer = [i for i in range(1, n + 1) if n % i == 0]\n    return answer\n"
@@ -6311,7 +6334,9 @@
         "company_name": "프로그래머스",
         "problem_name": "약수구하기",
         "problem_type": "구현",
-        "countmethod": 0,
+        "countmethod": {
+            "range": 1
+        },
         "line_count": 2,
         "module": {},
         "code": "def solution(n):\n    return [i for i in range(1, n+1) if n % i == 0]"
@@ -6606,6 +6631,7 @@
         "countmethod": {
             "int": 1,
             "input": 1,
+            "range": 1,
             "print": 1
         },
         "line_count": 3,
@@ -6622,6 +6648,7 @@
         "countmethod": {
             "int": 1,
             "input": 1,
+            "range": 1,
             "print": 1
         },
         "line_count": 3,
@@ -6663,6 +6690,7 @@
         "problem_name": "짝수는 싫어요",
         "problem_type": "구현",
         "countmethod": {
+            "range": 1,
             ".append": 1
         },
         "line_count": 6,
@@ -6676,7 +6704,9 @@
         "company_name": "프로그래머스",
         "problem_name": "짝수는싫어요",
         "problem_type": "구현",
-        "countmethod": 0,
+        "countmethod": {
+            "range": 1
+        },
         "line_count": 2,
         "module": {},
         "code": "def solution(n):\n    return [i for i in range(1, n+1, 2)]"
@@ -6688,7 +6718,9 @@
         "company_name": "프로그래머스",
         "problem_name": "짝수의 합",
         "problem_type": "구현",
-        "countmethod": 0,
+        "countmethod": {
+            "range": 1
+        },
         "line_count": 5,
         "module": {},
         "code": "def solution(n):\n    result = 0\n    for i in range(0, n + 1, 2):\n        result += i\n    return result\n"
@@ -6701,7 +6733,8 @@
         "problem_name": "짝수의합",
         "problem_type": "구현",
         "countmethod": {
-            "sum": 1
+            "sum": 1,
+            "range": 1
         },
         "line_count": 2,
         "module": {},
@@ -6908,7 +6941,9 @@
         "company_name": "프로그래머스",
         "problem_name": "피자나눠먹기(2)",
         "problem_type": "구현",
-        "countmethod": 0,
+        "countmethod": {
+            "range": 1
+        },
         "line_count": 5,
         "module": {},
         "code": "def solution(n):\n    for i in range(1, n+1):\n        if 6 * i % n == 0:\n            return i\n            break"
@@ -6933,6 +6968,7 @@
         "problem_name": "합성수 찾기",
         "problem_type": "구현",
         "countmethod": {
+            "range": 2,
             "len": 1
         },
         "line_count": 7,
@@ -6947,6 +6983,7 @@
         "problem_name": "합성수찾기",
         "problem_type": "구현",
         "countmethod": {
+            "range": 2,
             ".append": 1,
             "len": 1,
             "set": 1
@@ -6963,7 +7000,8 @@
         "problem_name": "없는 숫자 더하기",
         "problem_type": "구현",
         "countmethod": {
-            "sum": 1
+            "sum": 1,
+            "range": 1
         },
         "line_count": 3,
         "module": {},
@@ -7008,7 +7046,9 @@
         "company_name": "월간코드챌린지시즌3",
         "problem_name": "나머지가 1이 되는 수 찾기",
         "problem_type": "구현",
-        "countmethod": 0,
+        "countmethod": {
+            "range": 1
+        },
         "line_count": 4,
         "module": {},
         "code": "def solution(n):\n    for i in range(1, n+1):\n        if n % i == 1:\n            return i\n"
@@ -7021,7 +7061,8 @@
         "problem_name": "없는 숫자 더하기",
         "problem_type": "구현",
         "countmethod": {
-            "sum": 1
+            "sum": 1,
+            "range": 1
         },
         "line_count": 3,
         "module": {},
@@ -7035,7 +7076,8 @@
         "problem_name": "2016년",
         "problem_type": "구현",
         "countmethod": {
-            ".split": 1
+            ".split": 1,
+            "range": 1
         },
         "line_count": 12,
         "module": {},
@@ -7076,7 +7118,9 @@
         "company_name": "프로그래머스",
         "problem_name": "x만큼간격이있는n개의숫자",
         "problem_type": "구현",
-        "countmethod": 0,
+        "countmethod": {
+            "range": 1
+        },
         "line_count": 2,
         "module": {},
         "code": "def solution(x, n):\n    return [x * i for i in range(1, n + 1)]"
@@ -7089,6 +7133,7 @@
         "problem_name": "x만틈 간격이 있는 n개의 숫자",
         "problem_type": "구현",
         "countmethod": {
+            "range": 1,
             ".append": 2
         },
         "line_count": 8,
@@ -7144,6 +7189,7 @@
         "problem_name": "같은숫자는싫어",
         "problem_type": "스택큐",
         "countmethod": {
+            "range": 1,
             "len": 1,
             ".append": 1
         },
@@ -7160,6 +7206,7 @@
         "problem_type": "구현",
         "countmethod": {
             "len": 2,
+            "range": 2,
             ".find": 1,
             ".split": 1,
             "int": 1
@@ -7221,7 +7268,9 @@
         "company_name": "프로그래머스",
         "problem_name": "나머지가 1이 되는 수 찾기",
         "problem_type": "구현",
-        "countmethod": 0,
+        "countmethod": {
+            "range": 1
+        },
         "line_count": 9,
         "module": {},
         "code": "def solution(n):\n    answer = 0\n    \n    for i in range(1,n+1):\n        if (n%i==1):\n            answer = i\n            break\n    \n    return answer"
@@ -7234,7 +7283,8 @@
         "problem_name": "나머지가1이되는수찾기",
         "problem_type": "구현",
         "countmethod": {
-            "min": 1
+            "min": 1,
+            "range": 1
         },
         "line_count": 2,
         "module": {},
@@ -7263,6 +7313,7 @@
         "problem_name": "내적",
         "problem_type": "구현",
         "countmethod": {
+            "range": 1,
             "len": 1
         },
         "line_count": 6,
@@ -7314,7 +7365,8 @@
         "problem_name": "두 정수 사이의 합",
         "problem_type": "구현",
         "countmethod": {
-            "sum": 2
+            "sum": 2,
+            "range": 2
         },
         "line_count": 6,
         "module": {},
@@ -7342,6 +7394,7 @@
         "problem_name": "두개뽑아서더하기",
         "problem_type": "구현",
         "countmethod": {
+            "range": 2,
             "len": 2,
             ".append": 1,
             "set": 1,
@@ -7358,7 +7411,9 @@
         "company_name": "프로그래머스",
         "problem_name": "두정수사이의합",
         "problem_type": "구현",
-        "countmethod": 0,
+        "countmethod": {
+            "range": 2
+        },
         "line_count": 11,
         "module": {},
         "code": "def solution(a, b):\n    sum = 0\n    if a < b:\n        for i in range(a, b+1):\n            sum += i\n    elif a > b:\n        for i in range(b, a+1):\n            sum += i\n    else:\n        return a\n    return sum"
@@ -7371,6 +7426,7 @@
         "problem_name": "명예의전당(1)",
         "problem_type": "구현",
         "countmethod": {
+            "range": 1,
             "len": 1,
             ".append": 1,
             "min": 1,
@@ -7389,6 +7445,7 @@
         "problem_type": "완전탐색",
         "countmethod": {
             "len": 5,
+            "range": 4,
             "max": 1,
             ".values": 1,
             ".append": 1
@@ -7565,6 +7622,7 @@
         "problem_name": "부족한 금액 계산하기",
         "problem_type": "구현",
         "countmethod": {
+            "range": 1,
             "print": 1,
             "abs": 1
         },
@@ -7579,7 +7637,9 @@
         "company_name": "프로그래머스",
         "problem_name": "부족한금액계산하기",
         "problem_type": "구현",
-        "countmethod": 0,
+        "countmethod": {
+            "range": 1
+        },
         "line_count": 8,
         "module": {},
         "code": "def solution(price, money, count):\n    result = 0\n    for i in range(1, count + 1):\n        result += price * i\n    if result <= money:\n        return 0\n    else:\n        return result - money"
@@ -7634,7 +7694,9 @@
         "company_name": "프로그래머스",
         "problem_name": "수박수박수박수박수박수",
         "problem_type": "",
-        "countmethod": 0,
+        "countmethod": {
+            "range": 1
+        },
         "line_count": 8,
         "module": {},
         "code": "def solution(n):\n    result = ''\n    for i in range(n):\n        if (i + 1) % 2 != 0:\n            result += '수'\n        else:\n            result += '박'\n    return result"
@@ -7648,6 +7710,7 @@
         "problem_type": "구현",
         "countmethod": {
             "list": 1,
+            "range": 1,
             "len": 1,
             ".isupper": 1,
             "chr": 2,
@@ -7682,6 +7745,7 @@
         "problem_name": "약수의 개수와 덧셈",
         "problem_type": "구현",
         "countmethod": {
+            "range": 2,
             ".append": 2,
             "len": 1
         },
@@ -7697,7 +7761,8 @@
         "problem_name": "약수의 합",
         "problem_type": "구현",
         "countmethod": {
-            "sum": 1
+            "sum": 1,
+            "range": 1
         },
         "line_count": 4,
         "module": {},
@@ -7711,6 +7776,7 @@
         "problem_name": "약수의 합",
         "problem_type": "구현",
         "countmethod": {
+            "range": 1,
             "int": 1
         },
         "line_count": 6,
@@ -7725,6 +7791,7 @@
         "problem_name": "약수의개수와덧셈",
         "problem_type": "구현",
         "countmethod": {
+            "range": 1,
             "int": 1
         },
         "line_count": 9,
@@ -7739,6 +7806,7 @@
         "problem_name": "약수의합",
         "problem_type": "구현",
         "countmethod": {
+            "range": 1,
             ".append": 1,
             "sum": 1
         },
@@ -7766,7 +7834,8 @@
         "problem_name": "없는숫자더하기",
         "problem_type": "구현",
         "countmethod": {
-            "sum": 1
+            "sum": 1,
+            "range": 1
         },
         "line_count": 2,
         "module": {},
@@ -7797,6 +7866,7 @@
             ".sort": 2,
             "len": 4,
             "set": 4,
+            "range": 1,
             "list": 1
         },
         "line_count": 16,
@@ -7826,6 +7896,7 @@
         "problem_name": "음양더하기",
         "problem_type": "구현",
         "countmethod": {
+            "range": 1,
             "len": 1
         },
         "line_count": 9,
@@ -7841,6 +7912,7 @@
         "problem_type": "구현",
         "countmethod": {
             ".split": 1,
+            "range": 1,
             "len": 1,
             ".upper": 1,
             ".lower": 1,
@@ -8055,6 +8127,7 @@
             "input": 1,
             ".strip": 1,
             ".split": 1,
+            "range": 1,
             "print": 1
         },
         "line_count": 4,
@@ -8110,6 +8183,7 @@
         "countmethod": {
             ".append": 2,
             ".gcd": 1,
+            "range": 1,
             "max": 1
         },
         "line_count": 10,
@@ -8126,6 +8200,7 @@
         "problem_name": "최소직사각형",
         "problem_type": "완전탐색",
         "countmethod": {
+            "range": 1,
             "len": 1,
             "max": 2
         },
@@ -8173,6 +8248,7 @@
         "problem_name": "추억점수",
         "problem_type": "구현",
         "countmethod": {
+            "range": 1,
             "len": 1,
             ".index": 1,
             ".append": 1
@@ -8226,7 +8302,9 @@
         "company_name": "프로그래머스",
         "problem_name": "콜라츠추측",
         "problem_type": "구현",
-        "countmethod": 0,
+        "countmethod": {
+            "range": 1
+        },
         "line_count": 15,
         "module": {},
         "code": "def solution(num):\n    result = 0\n    for i in range(501):\n        if num % 2 == 0:\n            num /= 2\n            result += 1\n            if num == 1:\n                return result\n        elif num == 1:\n            return 0\n        elif num % 2 != 0:\n            num = num * 3 + 1\n            result += 1\n    if num != 1:\n        return -1"
@@ -8284,6 +8362,7 @@
         "problem_name": "푸드파이트대회",
         "problem_type": "구현",
         "countmethod": {
+            "range": 1,
             "len": 1,
             "str": 1
         },
@@ -8386,6 +8465,7 @@
         "problem_name": "[1차]비밀지도",
         "problem_type": "비트연산",
         "countmethod": {
+            "range": 1,
             ".append": 1,
             "bin": 1,
             ".zfill": 1,
@@ -8403,7 +8483,8 @@
         "problem_name": "소수 만들기",
         "problem_type": "구현",
         "countmethod": {
-            "sum": 1
+            "sum": 1,
+            "range": 1
         },
         "line_count": 12,
         "module": {
@@ -8432,6 +8513,7 @@
         "problem_name": "실패율",
         "problem_type": "구현",
         "countmethod": {
+            "range": 4,
             "sorted": 1,
             ".items": 1
         },
@@ -8501,6 +8583,7 @@
         "problem_type": "구현",
         "countmethod": {
             ".lower": 1,
+            "range": 3,
             "len": 6,
             ".append": 1,
             ".strip": 2
@@ -8530,6 +8613,7 @@
         "problem_type": "구현",
         "countmethod": {
             ".upper": 2,
+            "range": 1,
             "len": 1,
             ".lower": 1
         },
@@ -8547,6 +8631,7 @@
         "countmethod": {
             "len": 2,
             ".popleft": 1,
+            "range": 1,
             ".append": 1
         },
         "line_count": 21,
@@ -8565,6 +8650,7 @@
         "problem_type": "스택큐",
         "countmethod": {
             "list": 1,
+            "range": 1,
             "len": 1,
             ".append": 2,
             ".popleft": 1,
@@ -8637,6 +8723,7 @@
         "problem_name": "숫자의 표현",
         "problem_type": "구현",
         "countmethod": {
+            "range": 1,
             "sum": 2,
             ".append": 1
         },
@@ -8755,6 +8842,7 @@
         "problem_type": "스택큐",
         "countmethod": {
             "sorted": 2,
+            "range": 1,
             "len": 1,
             ".popleft": 2
         },
@@ -8772,7 +8860,9 @@
         "company_name": "프로그래머스",
         "problem_name": "카펫",
         "problem_type": "완전탐색",
-        "countmethod": 0,
+        "countmethod": {
+            "range": 1
+        },
         "line_count": 14,
         "module": {},
         "code": "def solution(brown, yellow):\n    answer = []\n    total = brown + yellow\n    \n    for i in range(1,total+1):\n        if total%i == 0:\n            bh = i\n            bw = total//i\n            yh = bh - 2\n            yw = bw - 2\n        if yh*yw == yellow:\n            break\n    answer = [bw,bh]\n    return answer\n"
@@ -8815,7 +8905,9 @@
         "company_name": "프로그래머스",
         "problem_name": "피보나치 수",
         "problem_type": "구현",
-        "countmethod": 0,
+        "countmethod": {
+            "range": 1
+        },
         "line_count": 11,
         "module": {},
         "code": "def solution(n):\n    answer = 0\n    \n    if n<2:\n        return n\n    l = [0]*(n+1)\n    l[1] = 1\n    for i in range(2,n+1):\n        l[i] = (l[i-2] + l[i-1])\n    \n    return l[-1]%1234567"
@@ -8828,6 +8920,7 @@
         "problem_name": "영어 끝말잇기",
         "problem_type": "스택큐",
         "countmethod": {
+            "range": 1,
             "len": 1,
             ".append": 2,
             ".popleft": 2
@@ -8847,6 +8940,7 @@
         "problem_name": "네트워크",
         "problem_type": "DFSBFS",
         "countmethod": {
+            "range": 4,
             ".append": 1
         },
         "line_count": 25,
@@ -8865,6 +8959,7 @@
             "len": 3,
             ".popleft": 1,
             ".append": 2,
+            "range": 2,
             "print": 1
         },
         "line_count": 32,
@@ -8882,6 +8977,7 @@
         "problem_name": "등굣길",
         "problem_type": "다이나믹",
         "countmethod": {
+            "range": 3,
             ".append": 1
         },
         "line_count": 19,
@@ -8917,6 +9013,7 @@
         "problem_type": "다이나믹",
         "countmethod": {
             "len": 2,
+            "range": 3,
             ".append": 1,
             "max": 2
         },
