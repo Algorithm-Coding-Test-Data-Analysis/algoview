@@ -28,13 +28,18 @@ article {
   border: 1px solid gold;
 }
 
-.btn-top{
-  position: absolute;
-  bottom: 0;
-  right: 0;
+.btn-top {
+  position: fixed;
+  bottom: 80px;
+  right: 80px;
+  width: 80px;
+  height: 80px;
+  border: none;
+  border-radius: 50%;
+  background: url('../../assets/images/btn-top.svg');
 }
 
-.footer{
+.footer {
   height: 200px;
   background-color: lightgrey;
   font-size: 3rem;
