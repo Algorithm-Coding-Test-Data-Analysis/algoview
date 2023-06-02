@@ -19,7 +19,7 @@ function setCharts(lang) {
         // console.log(problemTypeCountData);
 
         const problemTypeCountChart = new Chart(
-          document.getElementById('problem-type-chart'),
+          document.getElementById('problem-type-chart-1'),
           {
             type: 'bar',
             data: {
@@ -78,7 +78,7 @@ function setCharts(lang) {
 
         // 레벨 별 메서드 카운트 차트
         const problemTypeCountChart = new Chart(
-          document.getElementById('problem-type-chart'),
+          document.getElementById('problem-type-chart-1'),
           {
             type: 'bar',
             data: {
