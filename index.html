@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <title>Algoview</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
-        canvas {
-            -moz-user-select: none;
-            -webkit-user-select: none;
-            -ms-user-select: none;
-        }
+      canvas {
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <h1>알고리즘 문제 분석 서비스</h1>
     <canvas id="method-count-chart"></canvas>
     <canvas id="line-count-chart"></canvas>
@@ -21,139 +21,257 @@
     <canvas id="problem-type-chart"></canvas>
 
     <script>
-        const url = "https://raw.githubusercontent.com/Algorithm-Coding-Test-Data-Analysis/algoview/main/data.json";
+      const url =
+        'https://raw.githubusercontent.com/Algorithm-Coding-Test-Data-Analysis/algoview/main/data.json';
 
-        fetch(url)
-            .then(response => response.json())
-            .then(data => {
-                console.log(data)
-                // 레벨 별 메서드 카운트
-                let methodCountLvData = [];
-                for (const key in data["python"]["countmethod"]){
-                    methodCountLvData.push(data["python"]["countmethod"][key])
-                }
-                console.log(methodCountLvData)
+      fetch(url)
+        .then((response) => response.json())
+        .then((data) => {
+          console.log(data);
+          // 레벨 별 메서드 카운트
+          let methodCountLvData = [];
+          for (const key in data['python']['countmethod']) {
+            methodCountLvData.push(data['python']['countmethod'][key]);
+          }
+          console.log(methodCountLvData);
 
-                // 레벨 별 라인 수
-                const lineCountLvData = [
-                    data["python"]["countline"]["lv0"],
-                    data["python"]["countline"]["lv1"],
-                    data["python"]["countline"]["lv2"],
-                    data["python"]["countline"]["lv3"],
-                    data["python"]["countline"]["lv4"],
-                    data["python"]["countline"]["lv5"]
-                ];
+          // 레벨 별 라인 수
+          const lineCountLvData = [
+            data['python']['countline']['lv0'],
+            data['python']['countline']['lv1'],
+            data['python']['countline']['lv2'],
+            data['python']['countline']['lv3'],
+            data['python']['countline']['lv4'],
+            data['python']['countline']['lv5'],
+          ];
 
-                // 출제 업체 수
-                const companyCountData = [
-                    data["python"]["countcompany"]["카카오"],
-                    data["python"]["countcompany"]["네이버"],
-                    data["python"]["countcompany"]["라인"],
-                    data["python"]["countcompany"]["쿠팡"],
-                    data["python"]["countcompany"]["위니브"],
-                    data["python"]["countcompany"]["프로그래머스"]
-                ];
+          // 출제 업체 수
+          const companyCountData = [
+            data['python']['countcompany']['카카오'],
+            data['python']['countcompany']['네이버'],
+            data['python']['countcompany']['라인'],
+            data['python']['countcompany']['쿠팡'],
+            data['python']['countcompany']['위니브'],
+            data['python']['countcompany']['프로그래머스'],
+          ];
 
-                // 전체 문제 유형
-                const problemTypeData = [
-                    data["python"]["countType"]["lv0"]["구현"],
-                    data["python"]["countType"]["lv0"]["해시"],
-                    data["python"]["countType"]["lv0"]["스택큐"],
-                    data["python"]["countType"]["lv0"]["DFSBFS"],
-                    data["python"]["countType"]["lv0"]["힙"],
-                    data["python"]["countType"]["lv0"]["완전탐색"],
-                    data["python"]["countType"]["lv0"]["그리디"],
-                    data["python"]["countType"]["lv0"]["다이나믹"],
-                    data["python"]["countType"]["lv0"]["트리"],
-                    data["python"]["countType"]["lv0"]["그래프"],
-                    data["python"]["countType"]["lv0"]["투포인터슬라이딩윈도우"],
-                    data["python"]["countType"]["lv0"]["집합"],
-                    data["python"]["countType"]["lv0"]["비트연산"]
-                ];
+          // 전체 문제 유형
+          const problemTypeData = [
+            data['python']['countType']['lv0']['구현'],
+            data['python']['countType']['lv0']['해시'],
+            data['python']['countType']['lv0']['스택큐'],
+            data['python']['countType']['lv0']['DFSBFS'],
+            data['python']['countType']['lv0']['힙'],
+            data['python']['countType']['lv0']['완전탐색'],
+            data['python']['countType']['lv0']['그리디'],
+            data['python']['countType']['lv0']['다이나믹'],
+            data['python']['countType']['lv0']['트리'],
+            data['python']['countType']['lv0']['그래프'],
+            data['python']['countType']['lv0']['투포인터슬라이딩윈도우'],
+            data['python']['countType']['lv0']['집합'],
+            data['python']['countType']['lv0']['비트연산'],
+          ];
 
-                // 레벨 별 메서드 카운트 차트
-                var methodCountLvChart = new Chart(document.getElementById('method-count-chart'), {
-                    type: 'bar',
-                    data: {
-                        labels: ["LV0", "LV1", "LV2", "LV3", "LV4", "LV5"],
-                        datasets: [{
-                            data: methodCountLvData,
-                            backgroundColor: ['rgba(255, 99, 132, 0.2)', 'rgba(54, 162, 235, 0.2)', 'rgba(255, 206, 86, 0.2)', 'rgba(75, 192, 192, 0.2)', 'rgba(153, 102, 255, 0.2)', 'rgba(255, 159, 64, 0.2)'],
-                            borderColor: ['rgba(255, 99, 132, 1)', 'rgba(54, 162, 235, 1)', 'rgba(255, 206, 86, 1)', 'rgba(75, 192, 192, 1)', 'rgba(153, 102, 255, 1)', 'rgba(255, 159, 64, 1)'],
-                            borderWidth: 1
-                        }]
+          // 레벨 별 메서드 카운트 차트
+          var methodCountLvChart = new Chart(
+            document.getElementById('method-count-chart'),
+            {
+              type: 'bar',
+              data: {
+                labels: ['LV0', 'LV1', 'LV2', 'LV3', 'LV4', 'LV5'],
+                datasets: [
+                  {
+                    data: methodCountLvData,
+                    backgroundColor: [
+                      'rgba(255, 99, 132, 0.2)',
+                      'rgba(54, 162, 235, 0.2)',
+                      'rgba(255, 206, 86, 0.2)',
+                      'rgba(75, 192, 192, 0.2)',
+                      'rgba(153, 102, 255, 0.2)',
+                      'rgba(255, 159, 64, 0.2)',
+                    ],
+                    borderColor: [
+                      'rgba(255, 99, 132, 1)',
+                      'rgba(54, 162, 235, 1)',
+                      'rgba(255, 206, 86, 1)',
+                      'rgba(75, 192, 192, 1)',
+                      'rgba(153, 102, 255, 1)',
+                      'rgba(255, 159, 64, 1)',
+                    ],
+                    borderWidth: 1,
+                  },
+                ],
+              },
+              options: {
+                scales: {
+                  yAxes: [
+                    {
+                      ticks: {
+                        beginAtZero: true,
+                      },
                     },
-                    options: {
-                        scales: {
-                            yAxes: [{
-                                ticks: {
-                                    beginAtZero: true
-                                }
-                            }]
-                        }
-                    }
-                });
+                  ],
+                },
+              },
+            }
+          );
 
-                // 레벨 별 라인 수 차트
-                var lineCountLvChart = new Chart(document.getElementById('line-count-chart'), {
-                    type: 'bar',
-                    data: {
-                        labels: ["LV0", "LV1", "LV2", "LV3", "LV4", "LV5"],
-                        datasets: [{
-                            data: lineCountLvData,
-                            backgroundColor: ['rgba(255, 99, 132, 0.2)', 'rgba(54, 162, 235, 0.2)', 'rgba(255, 206, 86, 0.2)', 'rgba(75, 192, 192, 0.2)', 'rgba(153, 102, 255, 0.2)', 'rgba(255, 159, 64, 0.2)'],
-                            borderColor: ['rgba(255, 99, 132, 1)', 'rgba(54, 162, 235, 1)', 'rgba(255, 206, 86, 1)', 'rgba(75, 192, 192, 1)', 'rgba(153, 102, 255, 1)', 'rgba(255, 159, 64, 1)'],
-                            borderWidth: 1
-                        }]
+          // 레벨 별 라인 수 차트
+          var lineCountLvChart = new Chart(
+            document.getElementById('line-count-chart'),
+            {
+              type: 'bar',
+              data: {
+                labels: ['LV0', 'LV1', 'LV2', 'LV3', 'LV4', 'LV5'],
+                datasets: [
+                  {
+                    data: lineCountLvData,
+                    backgroundColor: [
+                      'rgba(255, 99, 132, 0.2)',
+                      'rgba(54, 162, 235, 0.2)',
+                      'rgba(255, 206, 86, 0.2)',
+                      'rgba(75, 192, 192, 0.2)',
+                      'rgba(153, 102, 255, 0.2)',
+                      'rgba(255, 159, 64, 0.2)',
+                    ],
+                    borderColor: [
+                      'rgba(255, 99, 132, 1)',
+                      'rgba(54, 162, 235, 1)',
+                      'rgba(255, 206, 86, 1)',
+                      'rgba(75, 192, 192, 1)',
+                      'rgba(153, 102, 255, 1)',
+                      'rgba(255, 159, 64, 1)',
+                    ],
+                    borderWidth: 1,
+                  },
+                ],
+              },
+              options: {
+                scales: {
+                  yAxes: [
+                    {
+                      ticks: {
+                        beginAtZero: true,
+                      },
                     },
-                    options: {
-                        scales: {
-                            yAxes: [{
-                                ticks: {
-                                    beginAtZero: true
-                                }
-                            }]
-                        }
-                    }
-                });
+                  ],
+                },
+              },
+            }
+          );
 
-                // 출제 업체 수 차트
-                var companyCountChart = new Chart(document.getElementById('company-count-chart'), {
-                    type: 'pie',
-                    data: {
-                        labels: ["카카오", "네이버", "라인", "쿠팡", "위니브", "프로그래머스"],
-                        datasets: [{
-                            data: companyCountData,
-                            backgroundColor: ['rgba(255, 99, 132, 0.2)', 'rgba(54, 162, 235, 0.2)', 'rgba(255, 206, 86, 0.2)', 'rgba(75, 192, 192, 0.2)', 'rgba(153, 102, 255, 0.2)', 'rgba(255, 159, 64, 0.2)'],
-                            borderColor: ['rgba(255, 99, 132, 1)', 'rgba(54, 162, 235, 1)', 'rgba(255, 206, 86, 1)', 'rgba(75, 192, 192, 1)', 'rgba(153, 102, 255, 1)', 'rgba(255, 159, 64, 1)'],
-                            borderWidth: 1
-                        }]
-                    }
-                });
+          // 출제 업체 수 차트
+          var companyCountChart = new Chart(
+            document.getElementById('company-count-chart'),
+            {
+              type: 'pie',
+              data: {
+                labels: [
+                  '카카오',
+                  '네이버',
+                  '라인',
+                  '쿠팡',
+                  '위니브',
+                  '프로그래머스',
+                ],
+                datasets: [
+                  {
+                    data: companyCountData,
+                    backgroundColor: [
+                      'rgba(255, 99, 132, 0.2)',
+                      'rgba(54, 162, 235, 0.2)',
+                      'rgba(255, 206, 86, 0.2)',
+                      'rgba(75, 192, 192, 0.2)',
+                      'rgba(153, 102, 255, 0.2)',
+                      'rgba(255, 159, 64, 0.2)',
+                    ],
+                    borderColor: [
+                      'rgba(255, 99, 132, 1)',
+                      'rgba(54, 162, 235, 1)',
+                      'rgba(255, 206, 86, 1)',
+                      'rgba(75, 192, 192, 1)',
+                      'rgba(153, 102, 255, 1)',
+                      'rgba(255, 159, 64, 1)',
+                    ],
+                    borderWidth: 1,
+                  },
+                ],
+              },
+            }
+          );
 
-                // 전체 문제 유형 차트
-                var problemTypeChart = new Chart(document.getElementById('problem-type-chart'), {
-                    type: 'bar',
-                    data: {
-                        labels: ["구현", "해시", "스택/큐", "DFS/BFS", "힙", "완전탐색", "그리디", "다이나믹", "트리", "그래프", "투포인터/슬라이딩윈도우", "집합", "비트연산"],
-                        datasets: [{
-                            data: problemTypeData,
-                            backgroundColor: ['rgba(255, 99, 132, 0.2)', 'rgba(54, 162, 235, 0.2)', 'rgba(255, 206, 86, 0.2)', 'rgba(75, 192, 192, 0.2)', 'rgba(153, 102, 255, 0.2)', 'rgba(255, 159, 64, 0.2)', 'rgba(255, 99, 132, 0.2)', 'rgba(54, 162, 235, 0.2)', 'rgba(255, 206, 86, 0.2)', 'rgba(75, 192, 192, 0.2)', 'rgba(153, 102, 255, 0.2)', 'rgba(255, 159, 64, 0.2)', 'rgba(255, 99, 132, 0.2)'],
-                            borderColor: ['rgba(255, 99, 132, 1)', 'rgba(54, 162, 235, 1)', 'rgba(255, 206, 86, 1)', 'rgba(75, 192, 192, 1)', 'rgba(153, 102, 255, 1)', 'rgba(255, 159, 64, 1)', 'rgba(255, 99, 132, 1)', 'rgba(54, 162, 235, 1)', 'rgba(255, 206, 86, 1)', 'rgba(75, 192, 192, 1)', 'rgba(153, 102, 255, 1)', 'rgba(255, 159, 64, 1)', 'rgba(255, 99, 132, 1)'],
-                            borderWidth: 1
-                        }]
+          // 전체 문제 유형 차트
+          var problemTypeChart = new Chart(
+            document.getElementById('problem-type-chart'),
+            {
+              type: 'bar',
+              data: {
+                labels: [
+                  '구현',
+                  '해시',
+                  '스택/큐',
+                  'DFS/BFS',
+                  '힙',
+                  '완전탐색',
+                  '그리디',
+                  '다이나믹',
+                  '트리',
+                  '그래프',
+                  '투포인터/슬라이딩윈도우',
+                  '집합',
+                  '비트연산',
+                ],
+                datasets: [
+                  {
+                    data: problemTypeData,
+                    backgroundColor: [
+                      'rgba(255, 99, 132, 0.2)',
+                      'rgba(54, 162, 235, 0.2)',
+                      'rgba(255, 206, 86, 0.2)',
+                      'rgba(75, 192, 192, 0.2)',
+                      'rgba(153, 102, 255, 0.2)',
+                      'rgba(255, 159, 64, 0.2)',
+                      'rgba(255, 99, 132, 0.2)',
+                      'rgba(54, 162, 235, 0.2)',
+                      'rgba(255, 206, 86, 0.2)',
+                      'rgba(75, 192, 192, 0.2)',
+                      'rgba(153, 102, 255, 0.2)',
+                      'rgba(255, 159, 64, 0.2)',
+                      'rgba(255, 99, 132, 0.2)',
+                    ],
+                    borderColor: [
+                      'rgba(255, 99, 132, 1)',
+                      'rgba(54, 162, 235, 1)',
+                      'rgba(255, 206, 86, 1)',
+                      'rgba(75, 192, 192, 1)',
+                      'rgba(153, 102, 255, 1)',
+                      'rgba(255, 159, 64, 1)',
+                      'rgba(255, 99, 132, 1)',
+                      'rgba(54, 162, 235, 1)',
+                      'rgba(255, 206, 86, 1)',
+                      'rgba(75, 192, 192, 1)',
+                      'rgba(153, 102, 255, 1)',
+                      'rgba(255, 159, 64, 1)',
+                      'rgba(255, 99, 132, 1)',
+                    ],
+                    borderWidth: 1,
+                  },
+                ],
+              },
+              options: {
+                scales: {
+                  yAxes: [
+                    {
+                      ticks: {
+                        beginAtZero: true,
+                      },
                     },
-                    options: {
-                        scales: {
-                            yAxes: [{
-                                ticks: {
-                                    beginAtZero: true
-                                }
-                            }]
-                        }
-                    }
-                });
-            });
+                  ],
+                },
+              },
+            }
+          );
+        });
     </script>
-</body>
+  </body>
 </html>
