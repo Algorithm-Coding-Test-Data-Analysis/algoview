@@ -1,5 +1,5 @@
 @import '../../../src/css/common/global.css';
-@import '../src/assets/fonts/font.css';
+@import '../../../src/assets/fonts/font.css';
 
 .headerContainer {
   border: 1px solid black;

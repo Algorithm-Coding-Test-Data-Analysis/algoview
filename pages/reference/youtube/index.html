@@ -4,7 +4,7 @@
     <link rel="icon" href="./favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>reference</title>
-    <link rel="stylesheet" href="../../../../src/css/common/reset.css" />
+    <link rel="stylesheet" href="../../../src/css/common/reset.css" />
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body class="body">
@@ -17,7 +17,8 @@
     </nav>
     <main class="referenceContainer">
       <h2 class="referenceTitle">YouTube</h2>
-      <ul class="youtubeListContainer">
+      <ul class="youtubeListContainer" id="youtubeListContainer">
+        <!-- Existing item -->
         <li class="youtubeItem">
           <img src="" alt="hi" class="youtubeImage" />
           <div class="listInformation">
@@ -33,47 +34,28 @@
     </main>
 
     <script>
-      let page = 1;
-      let isLoading = false;
-      let youtubeList = document.querySelector('.youtubeListContainer');
+      async function loadMoreContent() {
+        const response = await fetch('./youtuber.json');
+        const data = await response.json();
 
-      function loadMoreContent() {
-        if (isLoading) return; // 이미 로딩 중인 경우 중복 실행 방지
+        const youtubeList = document.getElementById('youtubeListContainer');
 
-        isLoading = true;
-
-        setTimeout(function () {
-          for (let i = 0; i < 10; i++) {
-            let newItem = document.createElement('li');
-            newItem.className = 'youtubeItem';
-            newItem.innerHTML = `
-              <img src="https://example.com/image.jpg" alt="hi" class="youtubeImage" />
-              <div class="listInformation">
-                <h3 class="youtubeTitle">New Item</h3>
-                <div class="youtubeID">@new_item</div>
-                <p class="youtubeContent">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              </div>
-            `;
-            youtubeList.appendChild(newItem);
-          }
-
-          isLoading = false;
-        }, 200);
+        data.youtuber.forEach((youtuber) => {
+          const newItem = document.createElement('li');
+          newItem.className = 'youtubeItem';
+          newItem.innerHTML = `
+          <a href="${youtuber.link}" class="">
+            <img src="" alt="hi" class="youtubeImage" />
+            <div class="listInformation">
+              <h3 class="youtubeTitle">${youtuber.title}</h3>
+              <div class="youtubeID">${youtuber.id}</div>
+              <p class="youtubeContent">${youtuber.description}</p>
+            </div>
+          </a>
+          `;
+          youtubeList.appendChild(newItem);
+        });
       }
-
-      function handleScroll() {
-        let scrollTop =
-          window.pageYOffset || document.documentElement.scrollTop;
-        let windowHeight = window.innerHeight;
-        let documentHeight = document.documentElement.offsetHeight;
-
-        if (scrollTop + windowHeight + 30 >= documentHeight) {
-          page++;
-          loadMoreContent();
-        }
-      }
-
-      window.addEventListener('scroll', handleScroll);
 
       loadMoreContent();
     </script>
