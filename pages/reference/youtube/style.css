@@ -1,0 +1,103 @@
+@import '../../../src/css/common/global.css';
+@import '../src/assets/fonts/font.css';
+
+.headerContainer {
+  border: 1px solid black;
+  width: 100%;
+  height: 80px;
+}
+/* 위 코드 공통 부분 파트가 작업하면 삭제 예정 */
+
+.html,
+.body {
+  height: 100%;
+}
+
+/* navigation */
+.referenceNavigationContainer {
+  float: left;
+  background: #605bff;
+  width: 360px;
+  height: 100%;
+  padding: 80px 60px;
+}
+.navigationListWrapper {
+  height: calc(100% - 80px);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.navigationItem {
+  display: flex;
+  align-items: center;
+  width: 225px;
+  height: 70px;
+  padding-left: 30px;
+  border-radius: 10px;
+}
+.navigationItem.active {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.navigationItem > a {
+  text-decoration: none;
+  color: white;
+  font-size: 24px;
+  font-weight: 600;
+}
+/* !navigation */
+
+/* main */
+.referenceContainer {
+  overflow: scroll;
+  height: 100%;
+  padding: 80px 60px 120px 60px;
+  background-color: var(--bgc-body);
+}
+.referenceTitle {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.youtubeListContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 44px 40px;
+}
+.youtubeItem {
+  border-radius: 10px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  width: 700px;
+  height: 160px;
+  padding: 32px;
+  margin-bottom: 20px;
+}
+.youtubeImage {
+  background-color: yellow;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin-right: 32px;
+}
+.listInformation {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.youtubeTitle {
+  font-size: 24px;
+  font-weight: 500;
+}
+.yotubeID {
+  font-size: 14px;
+  font-weight: 600;
+}
+.youtubeContent {
+  width: 420px;
+  margin-top: 5px;
+  font-size: 14px;
+  font-weight: 400;
+  color: gray;
+}
+/* !main */
