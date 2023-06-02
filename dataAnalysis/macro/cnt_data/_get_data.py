@@ -27,7 +27,7 @@ def get_data() -> list[dict]:
             if check_file_name(file_name):  # 파일 이름이 유효한지 검사
                 data.append(get_data_from_file(path, file_name))
             else:
-                excluded_list.append(path + '/' + file_name)
+                excluded_list.append(file_name)
 
     # 제외된 목록 저장
     path = os.getcwd()
