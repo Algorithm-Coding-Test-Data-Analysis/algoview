@@ -1,0 +1,11 @@
+# python compiled
+__pycache__/
+
+# mac DS_Store
+.DS_Store
+
+# ipynb checkpoints
+.ipynb_checkpoints
+
+# 데이터수집 test
+dataAnalysis/macro/test/
