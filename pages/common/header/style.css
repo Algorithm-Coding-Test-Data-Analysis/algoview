@@ -8,7 +8,7 @@ header {
   justify-content: space-between;
   align-items: center;
   background-color: #fff;
-  padding: 27px 98px 28px 60px;
+  padding: 16px 60px 15px 60px;
   color: #878787;
   font-weight: 700;
   font-size: 24px;
@@ -40,13 +40,12 @@ nav {
 
 /* toggle UI */
 .dark-toggle {
-  /* padding: 4px; */
   width: 64px;
   height: 32px;
   background-color: #605bff;
   box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 40px;
-  margin-left: 43px;
+  margin-left: 48px;
   border: 0px;
   cursor: pointer;
   position: relative;
@@ -70,7 +69,7 @@ nav {
 /* 메뉴 버튼 */
 .top-menu {
   display: flex;
-  gap: 36px;
+  gap: 32px;
 }
 
 .top-menu-chart {
