@@ -1,9 +1,9 @@
-export function footerHTML() {
-    return `
+export function headerHTML() {
+  return `
         <header>
             <h1>
                 <a href="#">
-                    <img class="top-logo" src="/src/assets/images/ALGOVIEWlogo.png" alt="알고뷰 로고">
+                    <img class="top-logo" src="/src/assets/images/ALGOVIEW-Head-logo.png" alt="알고뷰 로고">
                 </a>
             </h1>
             <nav>
@@ -19,4 +19,4 @@ export function footerHTML() {
             </nav>
         </header>
       `;
-  }
+}
