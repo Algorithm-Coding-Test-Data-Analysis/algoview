@@ -1,0 +1,85 @@
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 16px 60px 15px 60px;
+  color: #878787;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+/* toggle change */
+#toggle:checked ~ .dark-toggle {
+  background: #ffffff;
+}
+
+#toggle:checked ~ .dark-toggle .light-toggle-img {
+  opacity: 1;
+  transition: all 0.3s ease-in;
+}
+
+#toggle:checked ~ .dark-toggle .dark-toggle-img {
+  left: calc(100% - 28px);
+}
+
+.dark-toggle,
+.dark-toggle-img {
+  transition: all 0.3s ease-in;
+}
+
+/* toggle UI */
+.dark-toggle {
+  width: 64px;
+  height: 32px;
+  background-color: #605bff;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 40px;
+  margin-left: 48px;
+  border: 0px;
+  cursor: pointer;
+  position: relative;
+}
+
+.dark-toggle-img {
+  position: absolute;
+  top: 50%;
+  left: 4px;
+  transform: translateY(-50%);
+}
+
+.light-toggle-img {
+  position: absolute;
+  top: 50%;
+  right: 4px;
+  transform: translateY(-50%);
+  opacity: 0;
+}
+
+/* 메뉴 버튼 */
+.top-menu {
+  display: flex;
+  gap: 32px;
+}
+
+.top-menu-chart {
+  padding: 10px 15px;
+}
+
+.top-menu-reference {
+  padding: 10px 15px;
+}
+
+.top-menu .on-click {
+  color: #605bff;
+}
