@@ -1,60 +1,64 @@
 function getLevelDataJs(data, lang, charts) {
   if (lang === 'js') {
     // 레벨별 문제수
-    const levelCountData = [
-      data['js']['level_problem_name']['level0'],
-      data['js']['level_problem_name']['level1'],
-      data['js']['level_problem_name']['level2'],
-      data['js']['level_problem_name']['level3'],
-    ];
+    const levelCountData = [];
+    for (const key in data['js']['level_problem_name']) {
+      levelCountData.push(data['js']['level_problem_name'][key]);
+    }
+    const levelCountLabels = Object.keys(data['js']['level_problem_name']);
 
     // 레벨별 유형별 문제수
-    const levelProblemTypeCountData = [
-      data['js']['level_problem_type']['level0'],
-      data['js']['level_problem_type']['level1'],
-      data['js']['level_problem_type']['level2'],
-      data['js']['level_problem_type']['level3'],
-    ];
+    const levelProblemTypeCountData = [];
+    for (const key in data['js']['level_problem_type']) {
+      levelProblemTypeCountData.push(data['js']['level_problem_type'][key]);
+    }
+    const levelProblemTypeCountLabels = Object.keys(
+      data['js']['level_problem_type']
+    );
 
     // 레벨별 문제 유형 비율 level 0
-    const level0ProblemTypeData = [
-      data['js']['level_problem_type_ratio']['level0']['구현'],
-      data['js']['level_problem_type_ratio']['level0']['기타'],
-      data['js']['level_problem_type_ratio']['level0']['완전탐색'],
-      data['js']['level_problem_type_ratio']['level0']['정렬'],
-      data['js']['level_problem_type_ratio']['level0']['해시'],
-    ];
+    const level0ProblemTypeData = [];
+    for (const key in data['js']['level_problem_type_ratio']['level0']) {
+      level0ProblemTypeData.push(
+        data['js']['level_problem_type_ratio']['level0'][key]
+      );
+    }
+    const level0ProblemTypeLabels = Object.keys(
+      data['js']['level_problem_type_ratio']['level0']
+    );
 
     // 레벨별 문제 유형 비율 level 1
-    const level1ProblemTypeData = [
-      data['js']['level_problem_type_ratio']['level1']['구현'],
-      data['js']['level_problem_type_ratio']['level1']['그리디'],
-      data['js']['level_problem_type_ratio']['level1']['기타'],
-      data['js']['level_problem_type_ratio']['level1']['스택큐'],
-      data['js']['level_problem_type_ratio']['level1']['완전탐색'],
-      data['js']['level_problem_type_ratio']['level1']['정렬'],
-      data['js']['level_problem_type_ratio']['level1']['집합'],
-      data['js']['level_problem_type_ratio']['level1']['해시'],
-    ];
+    const level1ProblemTypeData = [];
+    for (const key in data['js']['level_problem_type_ratio']['level1']) {
+      level1ProblemTypeData.push(
+        data['js']['level_problem_type_ratio']['level1'][key]
+      );
+    }
+    const level1ProblemTypeLabels = Object.keys(
+      data['js']['level_problem_type_ratio']['level1']
+    );
 
     // 레벨별 문제 유형 비율 level 2
-    const level2ProblemTypeData = [
-      data['js']['level_problem_type_ratio']['level2']['구현'],
-      data['js']['level_problem_type_ratio']['level2']['스택'],
-      data['js']['level_problem_type_ratio']['level2']['스택큐'],
-      data['js']['level_problem_type_ratio']['level2']['재귀'],
-      data['js']['level_problem_type_ratio']['level2']['정렬'],
-      data['js']['level_problem_type_ratio']['level2']['투포인터'],
-      data['js']['level_problem_type_ratio']['level2']['해시'],
-    ];
+    const level2ProblemTypeData = [];
+    for (const key in data['js']['level_problem_type_ratio']['level2']) {
+      level2ProblemTypeData.push(
+        data['js']['level_problem_type_ratio']['level2'][key]
+      );
+    }
+    const level2ProblemTypeLabels = Object.keys(
+      data['js']['level_problem_type_ratio']['level2']
+    );
 
     // 레벨별 문제 유형 비율 level 3
-    const level3ProblemTypeData = [
-      data['js']['level_problem_type_ratio']['level3']['DFSBFS'],
-      data['js']['level_problem_type_ratio']['level3']['구현'],
-      data['js']['level_problem_type_ratio']['level3']['그래프'],
-      data['js']['level_problem_type_ratio']['level3']['트리'],
-    ];
+    const level3ProblemTypeData = [];
+    for (const key in data['js']['level_problem_type_ratio']['level3']) {
+      level3ProblemTypeData.push(
+        data['js']['level_problem_type_ratio']['level3'][key]
+      );
+    }
+    const level3ProblemTypeLabels = Object.keys(
+      data['js']['level_problem_type_ratio']['level3']
+    );
 
     // 레벨별 메서드 수 level 0
     const level0PerFunctionMethodData = [];
@@ -63,6 +67,9 @@ function getLevelDataJs(data, lang, charts) {
         data['js']['level_per_function_method']['level0'][key]
       );
     }
+    const level0PerFunctionMethodLabels = Object.keys(
+      data['js']['level_per_function_method']['level0']
+    );
 
     // 레벨별 메서드 수 level 1
     const level1PerFunctionMethodData = [];
@@ -71,6 +78,9 @@ function getLevelDataJs(data, lang, charts) {
         data['js']['level_per_function_method']['level1'][key]
       );
     }
+    const level1PerFunctionMethodLabels = Object.keys(
+      data['js']['level_per_function_method']['level1']
+    );
 
     // 레벨별 메서드 수 level 2
     const level2PerFunctionMethodData = [];
@@ -79,6 +89,9 @@ function getLevelDataJs(data, lang, charts) {
         data['js']['level_per_function_method']['level2'][key]
       );
     }
+    const level2PerFunctionMethodLabels = Object.keys(
+      data['js']['level_per_function_method']['level2']
+    );
 
     // 레벨별 메서드 수 level 3
     const level3PerFunctionMethodData = [];
@@ -87,6 +100,9 @@ function getLevelDataJs(data, lang, charts) {
         data['js']['level_per_function_method']['level3'][key]
       );
     }
+    const level3PerFunctionMethodLabels = Object.keys(
+      data['js']['level_per_function_method']['level3']
+    );
 
     // 레벨별 문제수
     const levelCountChart = new Chart(
@@ -94,7 +110,7 @@ function getLevelDataJs(data, lang, charts) {
       {
         type: 'doughnut',
         data: {
-          labels: ['level0', 'level1', 'level2', 'level3'],
+          labels: levelCountLabels,
           datasets: [
             {
               data: levelCountData,
@@ -123,7 +139,7 @@ function getLevelDataJs(data, lang, charts) {
       {
         type: 'doughnut',
         data: {
-          labels: ['level0', 'level1', 'level2', 'level3'],
+          labels: levelProblemTypeCountLabels,
           datasets: [
             {
               data: levelProblemTypeCountData,
@@ -152,7 +168,7 @@ function getLevelDataJs(data, lang, charts) {
       {
         type: 'doughnut',
         data: {
-          labels: ['구현', '기타', '완전탐색', '정렬', '해시'],
+          labels: level0ProblemTypeLabels,
           datasets: [
             {
               data: level0ProblemTypeData,
@@ -183,16 +199,7 @@ function getLevelDataJs(data, lang, charts) {
       {
         type: 'doughnut',
         data: {
-          labels: [
-            '구현',
-            '그리디',
-            '기타',
-            '스택큐',
-            '완전탐색',
-            '정렬',
-            '집합',
-            '해시',
-          ],
+          labels: level1ProblemTypeLabels,
           datasets: [
             {
               data: level1ProblemTypeData,
@@ -229,15 +236,7 @@ function getLevelDataJs(data, lang, charts) {
       {
         type: 'doughnut',
         data: {
-          labels: [
-            '구현',
-            '스택',
-            '스택큐',
-            '재귀',
-            '정렬',
-            '투포인터',
-            '해시',
-          ],
+          labels: level2ProblemTypeLabels,
           datasets: [
             {
               data: level2ProblemTypeData,
@@ -272,7 +271,7 @@ function getLevelDataJs(data, lang, charts) {
       {
         type: 'doughnut',
         data: {
-          labels: ['DFSBFS', '구현', '그래프', '트리'],
+          labels: level3ProblemTypeLabels,
           datasets: [
             {
               data: level3ProblemTypeData,
@@ -301,54 +300,7 @@ function getLevelDataJs(data, lang, charts) {
       {
         type: 'bar',
         data: {
-          labels: [
-            'abs',
-            'add',
-            'ceil',
-            'charCodeAt',
-            'createInterface',
-            'filter',
-            'find',
-            'floor',
-            'forEach',
-            'from',
-            'fromCharCode',
-            'get',
-            'includes',
-            'indexOf',
-            'isInteger',
-            'isNaN',
-            'join',
-            'log',
-            'map',
-            'match',
-            'max',
-            'min',
-            'on',
-            'pop',
-            'pow',
-            'push',
-            'reduce',
-            'repeat',
-            'replace',
-            'replaceAll',
-            'reverse',
-            'round',
-            'set',
-            'shift',
-            'slice',
-            'sort',
-            'splice',
-            'split',
-            'sqrt',
-            'substring',
-            'test',
-            'toLowerCase',
-            'toString',
-            'toUpperCase',
-            'unshift',
-            'ParseInt',
-          ],
+          labels: level0PerFunctionMethodLabels,
           datasets: [
             {
               data: level0PerFunctionMethodData,
@@ -371,12 +323,12 @@ function getLevelDataJs(data, lang, charts) {
               text: 'level 0 Method Count Chart',
               font: {
                 size: 16,
-                weight: 'bold'
-              }
+                weight: 'bold',
+              },
             },
             legend: {
-              display: false
-            }
+              display: false,
+            },
           },
           scales: {
             yAxes: [
@@ -397,54 +349,7 @@ function getLevelDataJs(data, lang, charts) {
       {
         type: 'bar',
         data: {
-          labels: [
-            'Array',
-            'abs',
-            'charCodeAt',
-            'every',
-            'fill',
-            'filter',
-            'find',
-            'floor',
-            'forEach',
-            'from',
-            'fromCharCode',
-            'get',
-            'includes',
-            'indexOf',
-            'isInteger',
-            'join',
-            'keys',
-            'log',
-            'map',
-            'max',
-            'min',
-            'on',
-            'padStart',
-            'pop',
-            'pow',
-            'push',
-            'reduce',
-            'repeat',
-            'replace',
-            'replaceAll',
-            'reverse',
-            'set',
-            'setEncoding',
-            'shift',
-            'slice',
-            'sort',
-            'splice',
-            'split',
-            'sqrt',
-            'substr',
-            'test',
-            'toLowerCase',
-            'toString',
-            'toUpperCase',
-            'trunc',
-            'ParseInt',
-          ],
+          labels: level1PerFunctionMethodLabels,
           datasets: [
             {
               data: level1PerFunctionMethodData,
@@ -467,12 +372,12 @@ function getLevelDataJs(data, lang, charts) {
               text: 'level 1 Method Count Chart',
               font: {
                 size: 16,
-                weight: 'bold'
-              }
+                weight: 'bold',
+              },
             },
             legend: {
-              display: false
-            }
+              display: false,
+            },
           },
           scales: {
             yAxes: [
@@ -493,42 +398,7 @@ function getLevelDataJs(data, lang, charts) {
       {
         type: 'bar',
         data: {
-          labels: [
-            'add',
-            'ceil',
-            'dequeue',
-            'enqueue',
-            'fill',
-            'filter',
-            'forEach',
-            'from',
-            'get',
-            'indexOf',
-            'join',
-            'log',
-            'map',
-            'max',
-            'min',
-            'peek',
-            'pop',
-            'push',
-            'readFileSync',
-            'reduce',
-            'replace',
-            'replaceAll',
-            'set',
-            'shift',
-            'slice',
-            'sort',
-            'splice',
-            'split',
-            'toLowerCase',
-            'toString',
-            'toUpperCase',
-            'trim',
-            'unshift',
-            'values',
-          ],
+          labels: level2PerFunctionMethodLabels,
           datasets: [
             {
               data: level2PerFunctionMethodData,
@@ -551,12 +421,12 @@ function getLevelDataJs(data, lang, charts) {
               text: 'level 2 Method Count Chart',
               font: {
                 size: 16,
-                weight: 'bold'
-              }
+                weight: 'bold',
+              },
             },
             legend: {
-              display: false
-            }
+              display: false,
+            },
           },
           scales: {
             yAxes: [
@@ -577,26 +447,7 @@ function getLevelDataJs(data, lang, charts) {
       {
         type: 'bar',
         data: {
-          labels: [
-            'fill',
-            'filter',
-            'floor',
-            'forEach',
-            'from',
-            'log2',
-            'map',
-            'max',
-            'pop',
-            'pow',
-            'push',
-            'reverse',
-            'shift',
-            'sort',
-            'split',
-            'toString',
-            'unshift',
-            'parseInt',
-          ],
+          labels: level3PerFunctionMethodLabels,
           datasets: [
             {
               data: level3PerFunctionMethodData,
@@ -619,12 +470,12 @@ function getLevelDataJs(data, lang, charts) {
               text: 'level 3 Method Count Chart',
               font: {
                 size: 16,
-                weight: 'bold'
-              }
+                weight: 'bold',
+              },
             },
             legend: {
-              display: false
-            }
+              display: false,
+            },
           },
           scales: {
             yAxes: [
