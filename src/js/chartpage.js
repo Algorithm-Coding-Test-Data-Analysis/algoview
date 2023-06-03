@@ -10,9 +10,9 @@ function setCharts() {
   fetch(URL)
     .then((response) => response.json())
     .then((data) => {
-      getCategoryLevelMethod(data, lang, charts);
-      getCategoryProblemType(data, lang, charts);
-      getCategoryYearCompany(data, lang, charts);
+      getCategoryLevelMethod([data, lang, charts]);
+      getCategoryProblemType([data, lang, charts]);
+      getCategoryYearCompany([data, lang, charts]);
     });
 }
 

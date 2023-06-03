@@ -1,13 +1,13 @@
-import getMethodDataJs from './levelMethod/methodChartJs.js';
-import getMethodDataPy from './levelMethod/methodChartPy.js';
-import getLevelDataJs from './levelMethod/levelChartJS.js';
-import getLevelDataPy from './levelMethod/levelChartPy.js';
+import getMethodDataJs from './methodChartJs.js';
+import getMethodDataPy from './methodChartPy.js';
+import getLevelDataJs from './levelChartJS.js';
+import getLevelDataPy from './levelChartPy.js';
 
-function getCategoryLevelMethod(data, lang, charts) {
-  getMethodDataJs(data, lang, charts);
-  getMethodDataPy(data, lang, charts);
-  getLevelDataJs(data, lang, charts);
-  getLevelDataPy(data, lang, charts);
+function getCategoryLevelMethod(props) {
+  getMethodDataJs(...props);
+  getMethodDataPy(...props);
+  getLevelDataJs(...props);
+  getLevelDataPy(...props);
 }
 
 export default getCategoryLevelMethod;

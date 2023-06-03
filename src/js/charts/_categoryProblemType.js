@@ -1,9 +1,9 @@
-import getProblemTypeData from './problemType/problemTypeChart.js';
-import getProblemTypeMethod from './problemType/problemTypeMethodChart.js';
+import getProblemTypeData from './problemTypeChart.js';
+import getProblemTypeMethod from './problemTypeMethodChart.js';
 
-function getCategoryProblemType(data, lang, charts) {
-  getProblemTypeData(data, lang, charts);
-  getProblemTypeMethod(data, lang, charts);
+function getCategoryProblemType(props) {
+  getProblemTypeData(...props);
+  getProblemTypeMethod(...props);
 }
 
 export default getCategoryProblemType;

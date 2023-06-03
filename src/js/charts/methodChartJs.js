@@ -98,12 +98,12 @@ function getMethodDataJs(data, lang, charts) {
               text: 'Method Count Chart',
               font: {
                 size: 16,
-                weight: 'bold'
-              }
+                weight: 'bold',
+              },
             },
             legend: {
-              display: false
-            }
+              display: false,
+            },
           },
           scales: {
             yAxes: [
