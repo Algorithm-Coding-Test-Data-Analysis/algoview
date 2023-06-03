@@ -1,5 +1,9 @@
 import getProblemTypeData from './charts/problemTypeChart.js';
 import getCompanyData from './charts/companyChart.js';
+import getLevelDataJs from './charts/levelChartJS.js';
+import getLevelDataPy from './charts/levelChartPy.js';
+import getMethodDataJs from './charts/methodChartJs.js';
+import getMethodDataPy from './charts/methodChartPy.js';
 
 let lang = 'py';
 let charts = [];
@@ -11,6 +15,10 @@ function setCharts() {
     .then((data) => {
       getCompanyData(data, lang, charts);
       getProblemTypeData(data, lang, charts);
+      getLevelDataJs(data, lang, charts);
+      getLevelDataPy(data, lang, charts);
+      getMethodDataJs(data, lang, charts);
+      getMethodDataPy(data, lang, charts);
     });
 }
 

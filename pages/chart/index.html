@@ -1,88 +1,101 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <link rel="icon" href="./favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>chart</title>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <link rel="stylesheet" href="../../src/css/style.css" />
-  </head>
 
-  <body>
-    <!-- div 태그 부분은 공통 담당이므로 임시로 넣어두었습니다. -->
-    <div class="header">
-      <h1>header</h1>
-    </div>
+<head>
+  <link rel="icon" href="./favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>chart</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="../../src/css/style.css" />
+</head>
 
-    <main class="main">
-      <div class="sidebar">
-        <!-- 스크롤 다운해도 사이드바 메뉴는 위치 고정이어야 할 듯 -->
-        <div>
-          <button id="lang-btn">toggle</button>
-        </div>
-        <ul>
-          <li><a href="#1.level">레벨</a></li>
-          <li><a href="#2.method">레벨</a></li>
-          <li><a href="#3.problem">레벨</a></li>
-        </ul>
+<body>
+  <!-- div 태그 부분은 공통 담당이므로 임시로 넣어두었습니다. -->
+  <div class="header">
+    <h1>header</h1>
+  </div>
+
+  <main class="main">
+    <div class="sidebar">
+      <!-- 스크롤 다운해도 사이드바 메뉴는 위치 고정이어야 할 듯 -->
+      <div>
+        <button id="lang-btn">toggle</button>
       </div>
-      <section class="sec-charts">
-        <h2>charts-section</h2>
-        <article id="1.level">
-          <h3>level-chart</h3>
-          <canvas id="level-chart-1"></canvas>
-          <canvas id="level-chart-2"></canvas>
-          <canvas id="level-chart-3"></canvas>
-          <canvas id="level-chart-4"></canvas>
-          <canvas id="level-chart-5"></canvas>
-        </article>
-        <article id="2.method">
-          <h3>method_module-chart</h3>
-          <canvas id="method_module-chart-1"></canvas>
-          <canvas id="method_module-chart-2"></canvas>
-          <canvas id="method_module-chart-3"></canvas>
-          <canvas id="method_module-chart-4"></canvas>
-          <canvas id="method_module-chart-5"></canvas>
-        </article>
-        <article id="3.problem">
-          <h3>problem-type-chart</h3>
-          <canvas id="problem-type-chart-1"></canvas>
-          <canvas id="problem-type-chart-2"></canvas>
-          <canvas id="problem-type-chart-3"></canvas>
-          <canvas id="problem-type-chart-4"></canvas>
-          <canvas id="problem-type-chart-5"></canvas>
-        </article>
-        <article id="4.year">
-          <h3>year-chart</h3>
-          <canvas id="year-chart-1"></canvas>
-          <canvas id="year-chart-2"></canvas>
-          <canvas id="year-chart-3"></canvas>
-          <canvas id="year-chart-4"></canvas>
-          <canvas id="year-chart-5"></canvas>
-        </article>
-        <article id="5.company">
-          <h3>company-chart</h3>
-          <canvas id="packJun-chart"></canvas>
-          <canvas id="kakao-chart"></canvas>
-          <canvas id="programmers-chart"></canvas>
-          <canvas id="company-chart-4"></canvas>
-          <canvas id="company-chart-5"></canvas>
-        </article>
-        <article id="6.type">
-          <h3>type-chart</h3>
-          <canvas id="type-chart-1"></canvas>
-          <canvas id="type-chart-2"></canvas>
-          <canvas id="type-chart-3"></canvas>
-          <canvas id="type-chart-4"></canvas>
-          <canvas id="type-chart-5"></canvas>
-        </article>
-      </section>
-      <button class="btn-top"></button>
-    </main>
+      <ul>
+        <li><a href="#1.level">레벨</a></li>
+        <li><a href="#2.method">레벨</a></li>
+        <li><a href="#3.problem">레벨</a></li>
+      </ul>
+    </div>
+    <section class="sec-charts">
+      <h2>charts-section</h2>
+      <article id="1.level">
+        <h3>level-chart</h3>
+        <canvas id="level-chart"></canvas>
+        <canvas id="level-count-chart"></canvas>
+        <canvas id="level-problem-type-count-chart"></canvas>
+        <canvas id="level0-problem-type-chart"></canvas>
+        <canvas id="level1-problem-type-chart"></canvas>
+        <canvas id="level2-problem-type-chart"></canvas>
+        <canvas id="level3-problem-type-chart"></canvas>
+        <canvas id="level4-problem-type-chart"></canvas>
+        <canvas id="level5-problem-type-chart"></canvas>
+        <canvas id="level0-per-function-method"></canvas>
+        <canvas id="level1-per-function-method"></canvas>
+        <canvas id="level2-per-function-method"></canvas>
+        <canvas id="level3-per-function-method"></canvas>
+        <canvas id="level4-per-function-method"></canvas>
+        <canvas id="level5-per-function-method"></canvas>
+      </article>
+      <article id="2.method">
+        <h3>method_module-chart</h3>
+        <canvas id="method-count-chart"></canvas>
+        <canvas id="method_module-chart-1"></canvas>
+        <canvas id="method_module-chart-2"></canvas>
+        <canvas id="method_module-chart-3"></canvas>
+        <canvas id="method_module-chart-4"></canvas>
+        <canvas id="method_module-chart-5"></canvas>
+      </article>
+      <article id="3.problem">
+        <h3>problem-type-chart</h3>
+        <canvas id="problem-type-chart-1"></canvas>
+        <canvas id="problem-type-chart-2"></canvas>
+        <canvas id="problem-type-chart-3"></canvas>
+        <canvas id="problem-type-chart-4"></canvas>
+        <canvas id="problem-type-chart-5"></canvas>
+      </article>
+      <article id="4.year">
+        <h3>year-chart</h3>
+        <canvas id="year-chart-1"></canvas>
+        <canvas id="year-chart-2"></canvas>
+        <canvas id="year-chart-3"></canvas>
+        <canvas id="year-chart-4"></canvas>
+        <canvas id="year-chart-5"></canvas>
+      </article>
+      <article id="5.company">
+        <h3>company-chart</h3>
+        <canvas id="packJun-chart"></canvas>
+        <canvas id="kakao-chart"></canvas>
+        <canvas id="programmers-chart"></canvas>
+        <canvas id="company-chart-4"></canvas>
+        <canvas id="company-chart-5"></canvas>
+      </article>
+      <article id="6.type">
+        <h3>type-chart</h3>
+        <canvas id="type-chart-1"></canvas>
+        <canvas id="type-chart-2"></canvas>
+        <canvas id="type-chart-3"></canvas>
+        <canvas id="type-chart-4"></canvas>
+        <canvas id="type-chart-5"></canvas>
+      </article>
+    </section>
+    <button class="btn-top"></button>
+  </main>
 
-    <div class="footer">footer</div>
-    <!-- <script type="module" src="../../src/js/common.js"></script> -->
-    <script type="module" src="../../src/js/chartpage.js"></script>
-    <script type="module" src="../../src/js/topbutton.js"></script>
-  </body>
+  <div class="footer">footer</div>
+  <!-- <script type="module" src="../../src/js/common.js"></script> -->
+  <script type="module" src="../../src/js/chartpage.js"></script>
+  <script type="module" src="../../src/js/topbutton.js"></script>
+</body>
+
 </html>
