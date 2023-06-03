@@ -1,33 +1,118 @@
 .header {
+  position: fixed;
   width: 100%;
-  height: 70px;
-  border-bottom: 1px solid black;
+  height: 80px;
   font-size: 3rem;
   font-weight: bolder;
+  background: white;
+  z-index: 100;
 }
 
 .sidebar {
-  width: 250px;
+  position: fixed;
+  width: 360px;
+  padding: 160px 60px 0;
   background-color: var(--algoview);
   height: 100vh;
+  z-index: -1;
 }
 
+/* main */
 .main {
-  display: flex;
-}
-
-.sidebar {
-  width: 400px;
+  width: calc(100% - 360px);
+  padding: 160px 60px 120px;
+  margin-left: auto;
+  background: var(--bgc-body);
 }
 
 .sec-charts {
+  margin-top: 44px;
+}
+
+.sec-charts article:not(:last-child) {
+  margin-bottom: 60px;
+}
+
+.sec-charts li {
+  padding: 48px 48px 36px;
+  border-radius: 10px;
+  background: white;
+}
+
+.sec-charts li:not(:first-child) {
+  margin-top: 60px;
+}
+
+.sec-charts li::before {
+  content: '';
+  display: inline-block;
+  height: 28px;
+  width: 4px;
+  margin-right: 18px;
+  background: var(--algoview);
+}
+
+.sec-charts li>h4{
+  display: inline-block;
+  vertical-align: top;
+  margin-bottom: 48px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.sec-charts canvas {
+  display: block;
+}
+
+/* 셀렉트 박스 */
+.select-lang {
+  position: relative;
+  margin-left: auto;
+  width: 220px;
+}
+
+.select-lang > button {
   width: 100%;
+  padding: 14px 16px 14px 14px;
+  text-align: left;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 8px;
+  border: 1px solid #dcdcdc;
+  background: white;
 }
 
-article {
-  border: 1px solid gold;
+.select-lang ul {
+  /* display: none; */
+  position: absolute;
+  top: 60px;
+  width: 100%;
+  padding: 16px 0;
+  box-sizing: border-box;
+  border-radius: 8px;
+  border: 1px solid #dcdcdc;
+  background: white;
+  box-shadow: -4px 4px 10px rgba(0, 0, 0, 0.08);
 }
 
+/* .select-lang.active ul {
+  display: block;
+} */
+
+.select-lang li button {
+  width: 100%;
+  padding: 13px 13px 11px;
+  text-align: left;
+  font-weight: 500;
+  border: none;
+  background: none;
+}
+
+.select-lang li:first-child button{
+  background: var(--bgc-body);
+}
+
+/* 탑버튼 */
 .btn-top {
   position: fixed;
   bottom: 80px;
@@ -39,6 +124,7 @@ article {
   background: url('../../assets/images/btn-top.svg');
 }
 
+/* footer */
 .footer {
   height: 200px;
   background-color: lightgrey;
