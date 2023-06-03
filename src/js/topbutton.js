@@ -17,10 +17,8 @@ window.addEventListener('scroll', function () {
   var footerOffset = footer.offsetTop;
 
   if (scrollTop + windowHeight >= footerOffset - btnOffset) {
-    btnTop.style.position = 'absolute';
-    btnTop.style.bottom = '80px';
+    btnTop.classList.add('fixed');
   } else {
-    btnTop.style.position = 'fixed';
-    btnTop.style.bottom = btnOffset + 'px';
+    btnTop.classList.remove('fixed');
   }
 });

@@ -40,6 +40,10 @@ article {
   background: url('../../assets/images/btn-top.svg');
 }
 
+.btn-top.fixed {
+  position: absolute;
+}
+
 .footer {
   height: 200px;
   background-color: lightgrey;
