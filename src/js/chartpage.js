@@ -22,10 +22,18 @@ function updateCharts() {
   setCharts();
 }
 
-const $toggle = document.getElementById('lang-btn');
+// const $toggle = document.getElementById('lang-btn');
 
-$toggle.addEventListener('click', () => {
-  lang = lang === 'py' ? 'js' : 'py';
+const $pyBtn = document.getElementById('py-btn');
+const $jsBtn = document.getElementById('js-btn');
+
+$pyBtn.addEventListener('click', () => {
+  // lang = lang === 'py' ? 'js' : 'py';
+  lang = 'py';
+  updateCharts();
+});
+$jsBtn.addEventListener('click', () => {
+  lang = 'js';
   updateCharts();
 });
 
