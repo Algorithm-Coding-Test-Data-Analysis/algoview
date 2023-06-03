@@ -40,7 +40,7 @@ article {
   background: url('../../assets/images/btn-top.svg');
 }
 
-.btn-top.fixed {
+.btn-top.unfixed {
   position: absolute;
 }
 
