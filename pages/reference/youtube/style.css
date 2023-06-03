@@ -13,16 +13,19 @@
   height: 100%;
 }
 
+.body {
+  font-family: 'Pretendard-Regular';
+}
+
 /* navigation */
 .referenceNavigationContainer {
   float: left;
   background: #605bff;
   width: 360px;
-  height: 100%;
+  height: calc(100% - 280px);
   padding: 80px 60px;
 }
 .navigationListWrapper {
-  height: calc(100% - 80px);
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -49,55 +52,58 @@
 /* main */
 .referenceContainer {
   overflow: scroll;
-  height: 100%;
+  height: calc(100% - 280px);
   padding: 80px 60px 120px 60px;
   background-color: var(--bgc-body);
 }
 .referenceTitle {
   font-size: 48px;
   font-weight: 700;
-  margin-bottom: 20px;
+  margin-bottom: 48px;
 }
 .youtubeListContainer {
   display: flex;
   flex-wrap: wrap;
-  gap: 44px 40px;
+  gap: 40px 44px;
 }
 .youtubeItem {
-  border-radius: 10px;
-  background-color: white;
   display: flex;
   align-items: center;
-  width: 700px;
+  border-radius: 10px;
+  background-color: white;
+  width: 698px;
   height: 160px;
   padding: 32px;
   margin-bottom: 20px;
+  text-decoration: none;
+  color: black;
 }
 .youtubeImage {
   background-color: yellow;
   border-radius: 50%;
   width: 100px;
   height: 100px;
-  margin-right: 32px;
+  margin-right: 30px;
 }
 .listInformation {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 6px;
 }
 .youtubeTitle {
   font-size: 24px;
-  font-weight: 500;
+  font-weight: 700;
 }
 .yotubeID {
   font-size: 14px;
   font-weight: 600;
+  color: #595e89;
 }
 .youtubeContent {
   width: 420px;
-  margin-top: 5px;
+  margin-top: 2px;
   font-size: 14px;
   font-weight: 400;
-  color: gray;
+  color: #8a90a5;
 }
 /* !main */

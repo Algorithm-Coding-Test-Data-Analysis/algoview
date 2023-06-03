@@ -4,49 +4,57 @@
       "title": "제주코딩베이스캠프",
       "id": "@jejucodingcamp",
       "description": "안녕하세요! 위니브, 바울랩, 제주코딩베이스캠프 유튜브입니다",
-      "link": "https://www.youtube.com/@jejucodingcamp"
+      "link": "https://www.youtube.com/@jejucodingcamp",
+      "img": "images/jejucodingbasecamp.jpg"
     },
     {
       "title": "빔캠프 CSS",
       "id": "@veamcamp",
       "description": "CSS 맛집",
-      "link": "https://www.youtube.com/@veamcamp"
+      "link": "https://www.youtube.com/@veamcamp",
+      "img": "images/veamcamp.jpg"
     },
     {
       "title": "1분코딩",
       "id": "@studiomeadl",
       "description": "제주 동쪽 바닷가 마을에 살며 주로 웹 분야의 디자인이나 개발을 하고 있어요",
-      "link": "https://www.youtube.com/@studiomeal"
+      "link": "https://www.youtube.com/@studiomeal",
+      "img": "images/studiomeal.jpg"
     },
     {
       "title": "드림코딩",
       "id": "@dream-coding",
       "description": "모든 드림코더분들이 개발자로 성장해 나가고 꿈을 이루는 여정에 함께 할 채널입니다",
-      "link": "https://www.youtube.com/@dream-coding"
+      "link": "https://www.youtube.com/@dream-coding",
+      "img": "images/dreamcoding.jpg"
     },
     {
       "title": "김버그 Kimbug",
       "id": "@kimbug",
       "description": "KIMBUG A Seoul frontend developer & user interface designer",
-      "link": "https://www.youtube.com/@kimbug"
+      "link": "https://www.youtube.com/@kimbug",
+      "img": "images/kimbug.jpg"
     },
     {
       "title": "라매 개발자",
       "id": "@lamedev",
       "description": "안녕하세요. 라매개발자입니다.",
-      "link": "https://www.youtube.com/@Ezweb"
+      "link": "https://www.youtube.com/@Ezweb",
+      "img": "images/lamedev.jpg"
     },
     {
       "title": "코딩문 condingmoon",
       "id": "@codingmoon",
       "description": "테크 | 커리어 | 프로그래밍",
-      "link": "https://www.youtube.com/@codingmoon"
+      "link": "https://www.youtube.com/@codingmoon",
+      "img": "images/codingmoon.jpg"
     },
     {
       "title": "이수안컴퓨터연구소",
       "id": "@user-ss5no9xw6e",
       "description": "이수안 교수와 함께 따라하며 배우는 컴퓨터 강의/실습 인수안컴퓨터연구소 suanlab.com.",
-      "link": "https://www.youtube.com/@user-ss5no9xw6e"
+      "link": "https://www.youtube.com/@user-ss5no9xw6e",
+      "img": "images/leesuancomputer.jpg"
     },
     {
       "title": "sentdex",

@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body class="body">
-    <header class="headerContainer">헤더 파트</header>
+    <header class="headerContainer">헤더 파트 추가 예정</header>
     <nav class="referenceNavigationContainer">
       <ul class="navigationListWrapper">
         <li class="navigationItem active"><a href="#">YouTube</a></li>
@@ -19,20 +19,11 @@
       <h2 class="referenceTitle">YouTube</h2>
       <ul class="youtubeListContainer" id="youtubeListContainer">
         <!-- Existing item -->
-        <li class="youtubeItem">
-          <img src="" alt="hi" class="youtubeImage" />
-          <div class="listInformation">
-            <h3 class="youtubeTitle">호준 코딩</h3>
-            <div class="youtubeID">@weniv_one</div>
-            <p class="youtubeContent">
-              제주 동쪽 바닷가 마을에 살며 주로 웹 뷴아의 디자인이나 개발을 하고
-              있어..
-            </p>
-          </div>
-        </li>
       </ul>
     </main>
+    <footer></footer>
 
+    <!-- 유튜버 리스트 추가 -->
     <script>
       async function loadMoreContent() {
         const response = await fetch('./youtuber.json');
@@ -42,10 +33,9 @@
 
         data.youtuber.forEach((youtuber) => {
           const newItem = document.createElement('li');
-          newItem.className = 'youtubeItem';
           newItem.innerHTML = `
-          <a href="${youtuber.link}" class="">
-            <img src="" alt="hi" class="youtubeImage" />
+          <a href="${youtuber.link}" class="youtubeItem" target="_blank">
+            <img src="${youtuber.img}" alt="hi" class="youtubeImage" />
             <div class="listInformation">
               <h3 class="youtubeTitle">${youtuber.title}</h3>
               <div class="youtubeID">${youtuber.id}</div>
@@ -58,6 +48,12 @@
       }
 
       loadMoreContent();
+    </script>
+    <!-- footer 추가 -->
+    <script type="module">
+      import { footerHTML } from '/src/js/footer.js';
+      const footer = document.querySelector('footer');
+      footer.innerHTML = footerHTML();
     </script>
   </body>
 </html>
