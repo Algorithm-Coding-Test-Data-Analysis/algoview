@@ -1,64 +1,51 @@
-const problemArticle = document.getElementById('3.problem');
-
-// 프로그래밍 언어 선택
-let language = 'js';
-
-const url ='./문제유형.json';
-
-fetch(url)
-  .then((response) => response.json())
-  .then((data) => {
-    drawProblemTypeMethodChart(data);
-});
-
-
-// 문제유형별 전체 메소드 사용횟수
-function drawProblemTypeMethodChart(data) {
-  const canvas = document.createElement('canvas');
-  canvas.id = 'problem-type-method';
-  problemArticle.appendChild(canvas);
-
-  // py 로직
-  // const labels = Object.keys(data[language]['problem_type_method']);
-  // const problemTypeMethodData = Object.values(data[language]['problem_type_method']);
-
-  // const labelList = new Set();
-  // problemTypeMethodData.forEach(type => {
-  //   Object.keys(type).forEach(method => labelList.add(method));
-  // })
-
-  // const datasets = [];
-  // labelList.forEach(item => {
-  //   datasets.push({
-  //     'label': item,
-  //     'data': []
-  //   });
-  // });
-
-  // problemTypeMethodData.forEach(type => {
-  //   [...labelList].forEach((method, i) => {
-  //     datasets[i].data.push(type[method] || 0);
-  //   });
-  // });
-
-  // js 로직
-  const labelList = Object.keys(data[language]['problem_type_method']);
-  const problemTypeMethodData = Object.values(data[language]['problem_type_method']);
-
-  const labels = Object.keys(data[language]['problem_type_method'][labelList[0]])
+export default function getProblemTypeMethod(data, lang, charts) {
+  if (lang === 'py') {
+    const labels = Object.keys(data[lang]['problem_type_method']);
+    const problemTypeMethodData = Object.values(data[lang]['problem_type_method']);
   
-  const datasets = [];
-  labelList.forEach(item => {
-    datasets.push({
-      'label': item
+    const labelList = new Set();
+    problemTypeMethodData.forEach(type => {
+      Object.keys(type).forEach(method => labelList.add(method));
+    })
+  
+    const datasets = [];
+    labelList.forEach(item => {
+      datasets.push({
+        'label': item,
+        'data': []
+      });
     });
-  });
+  
+    problemTypeMethodData.forEach(type => {
+      [...labelList].forEach((method, i) => {
+        datasets[i].data.push(type[method] || 0);
+      });
+    });
 
-  [...problemTypeMethodData].forEach((type, i) => {
-      datasets[i].data = Object.values(type);
-  });
+    charts.push(drawChart(labels, datasets));
 
-  const ProblemTypeMethodChart = new Chart(canvas, {
+  } else if (lang === 'js') {
+    const labelList = Object.keys(data[lang]['problem_type_method']);
+    const problemTypeMethodData = Object.values(data[lang]['problem_type_method']);
+    const labels = Object.keys(data[lang]['problem_type_method'][labelList[0]])
+
+    const datasets = [];
+    labelList.forEach(item => {
+      datasets.push({
+        'label': item
+      });
+    });
+
+    [...problemTypeMethodData].forEach((type, i) => {
+        datasets[i].data = Object.values(type);
+    });
+
+    charts.push(drawChart(labels, datasets));
+  }
+}
+
+function drawChart(labels, datasets) {
+  return new Chart(document.querySelector('#problem-type-method-chart'), {
     type: 'bar',
     data: {
       labels: labels,
@@ -82,6 +69,4 @@ function drawProblemTypeMethodChart(data) {
       }
     },
   });
-
-  console.log(datasets)
 }

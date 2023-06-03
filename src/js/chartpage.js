@@ -4,6 +4,7 @@ import getLevelDataJs from './charts/levelChartJS.js';
 import getLevelDataPy from './charts/levelChartPy.js';
 import getMethodDataJs from './charts/methodChartJs.js';
 import getMethodDataPy from './charts/methodChartPy.js';
+import getProblemTypeMethod from './charts/problemTypeMethodChart.js';
 
 let lang = 'py';
 let charts = [];
@@ -19,6 +20,7 @@ function setCharts() {
       getLevelDataPy(data, lang, charts);
       getMethodDataJs(data, lang, charts);
       getMethodDataPy(data, lang, charts);
+      getProblemTypeMethod(data, lang, charts);
     });
 }
 
