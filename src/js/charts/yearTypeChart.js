@@ -29,7 +29,7 @@ function getYearTypeChart(data, lang, charts) {
   }
 
   // 년도별 유형(year_type) 차트 세팅
-  let yearTypeChart = new Chart(document.querySelector('#year-chart'), {
+  let yearTypeChart = new Chart(document.querySelector('#year-type-chart'), {
     type: 'bar',
     data: {
       labels: yearTypelabels,
