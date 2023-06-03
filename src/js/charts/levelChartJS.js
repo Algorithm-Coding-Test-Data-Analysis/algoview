@@ -297,7 +297,7 @@ function getLevelDataJs(data, lang, charts) {
 
     // 전체 메소드 유형 level 0
     const level0PerFunctionMethodChart = new Chart(
-      document.getElementById('level0-per-function-method'),
+      document.getElementById('level0-method-count-chart'),
       {
         type: 'bar',
         data: {
@@ -380,7 +380,7 @@ function getLevelDataJs(data, lang, charts) {
 
     // 전체 메소드 유형 level 1
     const level1PerFunctionMethodChart = new Chart(
-      document.getElementById('level1-per-function-method'),
+      document.getElementById('level1-method-count-chart'),
       {
         type: 'bar',
         data: {
@@ -463,7 +463,7 @@ function getLevelDataJs(data, lang, charts) {
 
     // 전체 메소드 유형 level 2
     const level2PerFunctionMethodChart = new Chart(
-      document.getElementById('level2-per-function-method'),
+      document.getElementById('level2-method-count-chart'),
       {
         type: 'bar',
         data: {
@@ -534,7 +534,7 @@ function getLevelDataJs(data, lang, charts) {
 
     // 전체 메소드 유형 level 3
     const level3PerFunctionMethodChart = new Chart(
-      document.getElementById('level3-per-function-method'),
+      document.getElementById('level3-method-count-chart'),
       {
         type: 'bar',
         data: {
