@@ -15,8 +15,8 @@
 
 /* ===== VARIABLES ===== */
 :root {
-  --algoview: #4E49FF;
-  --bgc-body: #F2F2FD
+  --algoview: #4e49ff;
+  --bgc-body: #f2f2fd;
 }
 
 /* ===== FOOTER ===== */
@@ -111,6 +111,11 @@ header {
   font-size: 24px;
   font-family: 'Pretendard';
   font-style: normal;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 nav {
