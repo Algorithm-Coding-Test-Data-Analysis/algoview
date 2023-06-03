@@ -6,6 +6,7 @@ export function footerHTML() {
                     <img class="top-logo" src="/src/assets/images/ALGOVIEW-headerlogo.svg" alt="알고뷰 로고">
                 </a>
             </h1>
+            
             <nav>
                 <ul class="top-menu">
                     <li class="top-menu-chart on-click"><a href="#none">Chart</a></li>
