@@ -5,6 +5,7 @@ function getMethodDataJs(data, lang, charts) {
     for (const key in data['js']['function_method_sort']) {
       methodCountData.push(data['js']['function_method_sort'][key]);
     }
+    const methodCountLabels = Object.keys(data['js']['function_method_sort']);
 
     // 전체 메소드 유형 모음
     const methodCountChart = new Chart(
@@ -12,69 +13,7 @@ function getMethodDataJs(data, lang, charts) {
       {
         type: 'bar',
         data: {
-          labels: [
-            'push',
-            'split',
-            'sort',
-            'map',
-            'join',
-            'filter',
-            'forEach',
-            'arseInt',
-            'reduce',
-            'slice',
-            'toString',
-            'floor',
-            'min',
-            'indexOf',
-            'max',
-            'includes',
-            'get',
-            'replace',
-            'sqrt',
-            'pop',
-            'on',
-            'reverse',
-            'toUpperCase',
-            'set',
-            'charCodeAt',
-            'log',
-            'toLowerCase',
-            'splice',
-            'shift',
-            'from',
-            'repeat',
-            'fill',
-            'createInterface',
-            'replaceAll',
-            'match',
-            'test',
-            'abs',
-            'peek',
-            'ceil',
-            'unshift',
-            'find',
-            'add',
-            'isInteger',
-            'fromCharCode',
-            'pow',
-            'trim',
-            'trunc',
-            'padStart',
-            'readFileSync',
-            'setEncoding',
-            'round',
-            'substr',
-            'substring',
-            'log2',
-            'keys',
-            'isNaN',
-            'every',
-            'enqueue',
-            'dequeue',
-            'values',
-            'Array',
-          ],
+          labels: methodCountLabels,
           datasets: [
             {
               data: methodCountData,
@@ -98,12 +37,12 @@ function getMethodDataJs(data, lang, charts) {
               text: 'Method Count Chart',
               font: {
                 size: 16,
-                weight: 'bold'
-              }
+                weight: 'bold',
+              },
             },
             legend: {
-              display: false
-            }
+              display: false,
+            },
           },
           scales: {
             yAxes: [
