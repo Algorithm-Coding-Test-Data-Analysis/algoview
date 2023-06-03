@@ -6,6 +6,7 @@ import getMethodDataJs from './charts/methodChartJs.js';
 import getMethodDataPy from './charts/methodChartPy.js';
 import getProblemTypeMethod from './charts/problemTypeMethodChart.js';
 import getProblemTypeFunctionData from './charts/problemTypeFunctionChart.js';
+import getProblemTypeFunctionMethodData from './charts/problemTypeFunctionMethodChart.js';
 
 let lang = 'py';
 let charts = [];
@@ -23,6 +24,7 @@ function setCharts() {
       getMethodDataPy(data, lang, charts);
       getProblemTypeMethod(data, lang, charts);
       getProblemTypeFunctionData(data, lang, charts);
+      getProblemTypeFunctionMethodData(data, lang, charts);
     });
 }
 
