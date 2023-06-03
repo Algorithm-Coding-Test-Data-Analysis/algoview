@@ -1,3 +1,4 @@
+
 import getCategoryLevelMethod from './charts/_categoryLevelMethod.js';
 import getCategoryProblemType from './charts/_categoryProblemType.js';
 import getCategoryYearCompany from './charts/_categoryYearCompany.js';
