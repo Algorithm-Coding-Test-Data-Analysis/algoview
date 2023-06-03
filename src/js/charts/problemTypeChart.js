@@ -1,25 +1,28 @@
-const url =
-  'https://raw.githubusercontent.com/Algorithm-Coding-Test-Data-Analysis/algoview/main/data.json';
+function getProblemTypeData(data, lang, charts) {
+  let problemTypeCountData = [];
 
-fetch(url)
-  .then((response) => response.json())
-  .then((data) => {
-    console.log(data);
-    // 레벨 별 메서드 카운트
-    let methodCountLvData = [];
-    for (const key in data['python']['countmethod']) {
-      methodCountLvData.push(data['python']['countmethod'][key]);
-    }
-    console.log(methodCountLvData);
+  for (const key in data[lang]['problem_type_count']) {
+    problemTypeCountData.push(data[lang]['problem_type_count'][key]);
+  }
 
-    // 레벨 별 메서드 카운트 차트
-    var methodCountLvChart = new Chart(document.getElementById('level-chart'), {
+  const problemTypeCountChart = new Chart(
+    document.getElementById('problem-type-count-chart'),
+    {
       type: 'bar',
       data: {
-        labels: ['LV0', 'LV1', 'LV2', 'LV3', 'LV4', 'LV5'],
+        labels: [
+          '구현',
+          '스택큐',
+          '기타',
+          '완전탐색',
+          'DFSBFS',
+          '해시',
+          '그리디',
+          '비트연산',
+        ],
         datasets: [
           {
-            data: methodCountLvData,
+            data: problemTypeCountData,
             backgroundColor: [
               'rgba(255, 99, 132, 0.2)',
               'rgba(54, 162, 235, 0.2)',
@@ -51,5 +54,10 @@ fetch(url)
           ],
         },
       },
-    });
-  });
+    }
+  );
+
+  charts.push(problemTypeCountChart); // 차트 모으기!
+}
+
+export default getProblemTypeData;

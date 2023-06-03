@@ -20,7 +20,8 @@
   - main.py import 사용시 데이터 제공
   - main.py 직접 실행시, data.json 생성
 - \_get_data.py
-  - data폴더를 순회하여 확장자가 .py이거나 .js파일의 데이터를 수집한 뒤, dictionary형태의 요소값을 가진 list를 반환
+  - data폴더를 순회하여 파일 네임컨벤션에 맞다면 데이터를 수집하고, 맞지 않다면 excluded_list에 데이터 수집
+  - 중복값 예외 처리 개선
 - \_module_count.py
   - get_data.py의 return 값을 data: list[dict]으로 받아서 module counting해준 뒤 data: list[dict] update
   - module 전체 counting 개선 완료
@@ -40,10 +41,7 @@
   - 23-06-01 \_built_in_func_cnt.py 파일에서 개선
 - 사용자 정의 클래스의 사용 유/무
 - lambda 사용 유/무
-- 네이밍 전처리
-  - 띄어쓰기 통일화
-- 중복값 분류
-  - 동일 솔루션의 경우 0부터 카운팅
+- excluded_list를 repo최상단에 위치하여 공유.
 - 예외 처리
 
 ---
