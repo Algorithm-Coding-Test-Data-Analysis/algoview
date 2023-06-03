@@ -6,3 +6,6 @@ __pycache__/
 
 # ipynb checkpoints
 .ipynb_checkpoints
+
+# 데이터수집 test
+dataAnalysis/macro/test/
