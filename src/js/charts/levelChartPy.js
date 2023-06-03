@@ -170,20 +170,33 @@ function getLevelDataPy(data, lang, charts) {
       data: {
         labels: [".append", ".count", ".find", ".fromkeys", ".index", ".insert", ".isdigit", ".islower", ".isupper", ".items", ".join", ".lower", ".pop", ".remove", ".replace", ".reverse", ".sort", ".split", ".startswith", ".sub", ".upper", "abs", "input", "int", "len", "list", "max", "min", "print", "range", "re", "set", "sorted", "str", "sum"],
         datasets: [{
+          label: 'Level 0 Method Count',
           data: level0MethodCountData,
           backgroundColor: ['rgba(255, 99, 132, 0.2)', 'rgba(54, 162, 235, 0.2)', 'rgba(255, 206, 86, 0.2)', 'rgba(75, 192, 192, 0.2)', 'rgba(153, 102, 255, 0.2)', 'rgba(255, 159, 64, 0.2)', 'rgba(255, 99, 132, 0.2)', 'rgba(54, 162, 235, 0.2)', 'rgba(255, 206, 86, 0.2)', 'rgba(75, 192, 192, 0.2)', 'rgba(153, 102, 255, 0.2)', 'rgba(255, 159, 64, 0.2)'],
-          // borderColor: ['rgba(255, 99, 132, 1)', 'rgba(54, 162, 235, 1)', 'rgba(255, 206, 86, 1)', 'rgba(75, 192, 192, 1)', 'rgba(153, 102, 255, 1)', 'rgba(255, 159, 64, 1)'],
           borderWidth: 1
         }]
       },
       options: {
+        plugins: {
+          title: {
+            display: true,
+            text: 'Level 0 Method Count Chart',
+            font: {
+              size: 16,
+              weight: 'bold'
+            }
+          },
+          legend: {
+            display: false
+          }
+        },
         scales: {
           yAxes: [{
             ticks: {
               beginAtZero: true
             }
           }]
-        }
+        },
       }
     });
 
@@ -200,6 +213,19 @@ function getLevelDataPy(data, lang, charts) {
         }]
       },
       options: {
+        plugins: {
+          title: {
+            display: true,
+            text: 'Level 1 Method Count Chart',
+            font: {
+              size: 16,
+              weight: 'bold'
+            }
+          },
+          legend: {
+            display: false
+          }
+        },
         scales: {
           yAxes: [{
             ticks: {
@@ -223,6 +249,19 @@ function getLevelDataPy(data, lang, charts) {
         }]
       },
       options: {
+        plugins: {
+          title: {
+            display: true,
+            text: 'Level 2 Method Count Chart',
+            font: {
+              size: 16,
+              weight: 'bold'
+            }
+          },
+          legend: {
+            display: false
+          }
+        },
         scales: {
           yAxes: [{
             ticks: {
@@ -246,6 +285,19 @@ function getLevelDataPy(data, lang, charts) {
         }]
       },
       options: {
+        plugins: {
+          title: {
+            display: true,
+            text: 'Level 3 Method Count Chart',
+            font: {
+              size: 16,
+              weight: 'bold'
+            }
+          },
+          legend: {
+            display: false
+          }
+        },
         scales: {
           yAxes: [{
             ticks: {
