@@ -5,7 +5,6 @@ function getProblemTypeData(data, lang, charts) {
     for (const key in data['py']['problem_type_count']) {
       problemTypeCountData.push(data['py']['problem_type_count'][key]);
     }
-    // console.log(problemTypeCountData);
 
     const problemTypeCountChart = new Chart(
       document.getElementById('problem-type-chart-1'),
