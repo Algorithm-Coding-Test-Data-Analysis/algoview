@@ -15,6 +15,8 @@ let lang = 'py';
 let charts = [];
 const URL = '../../src/dummydata/chart_data.json';
 
+let data;
+
 fetch(URL)
 .then((response) => response.json())
 .then((json) => {
