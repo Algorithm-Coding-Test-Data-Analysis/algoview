@@ -1,5 +1,7 @@
 # Status Board
 
+## Python 3.10+
+
 ```
 - cnt_data
     - __init__.py
@@ -10,37 +12,37 @@
 - main.py
 ```
 
+---
+
 ## 진행 사항
 
-- 각 기능별 폴더에 묶어서 모듈화
+- 각 기능별 폴더에 묶어서 패키지화
   - main.py import 사용시 데이터 제공
   - main.py 직접 실행시, data.json 생성
-- get_data.py
-  - data폴더를 순회하여 확장자가 .py이거나 .js파일의 데이터를 수집한 뒤, dictionary형태의 요소값을 가진 list를 반환
-- module_count.py
+- \_get_data.py
+  - data폴더를 순회하여 파일 네임컨벤션에 맞다면 데이터를 수집하고, 맞지 않다면 excluded_list에 데이터 수집
+  - 중복값 예외 처리 개선
+- \_module_count.py
   - get_data.py의 return 값을 data: list[dict]으로 받아서 module counting해준 뒤 data: list[dict] update
   - module 전체 counting 개선 완료
-- built_in_func_cnt.py
+- \_built_in_func_cnt.py
   - code: str을 argument값으로 받는 기준으로 카운팅된 dict형 데이터 반환
   - counting 기능 함수에 알맞는 argument값을 주는 보조 insert_countmethod_data 함수 추가
-- built-in/built_in_function.py
-  - 2개의 argument값을 받으며, 첫 번째는 code_data: str, 두 번째는 language: str을 받아 language을 조건으로 txt파일에 정리해둔 built-in function을 기준으로 counting
-- dict_to_json.py
+  - 사용자 정의 class의 경우, counting이 되지 않도록 관련 method 제거되는 관련 함수 생성
+    - user_class_names : 사용자 정의 클래스 체크
+    - class_value_names : 클래스 인스턴스 체크
+    - remove_custom : method 체크하여 제거
+- \_dict_to_json.py
   - data: List[dict] argument를 받아 file_name을 key값으로 가진 dict[dict]형식의 data를 반환
 
 ## 개선 사항
 
-- JavaScript 이슈 개선
-  - 사용자 정의 클래스의 메서드 카운팅 이슈
+- ~~JavaScript 사용자 정의 클래스 카운팅 이슈 개선~~
+  - 23-06-01 \_built_in_func_cnt.py 파일에서 개선
 - 사용자 정의 클래스의 사용 유/무
 - lambda 사용 유/무
-- 네이밍 전처리
-  - 띄어쓰기 통일화
-- 중복값 분류
-  - 동일 솔루션의 경우 0부터 카운팅
-- built-in/built_in_function.py
-  - get_built_in_func_cnt 함수와 동일하게 원하는 argument값을 제공하는 추가 함수 필요.
-  - built-in function 리스트를 txt파일로 별도 관리할 경우, 읽어오는 과정에서 path 설정 필요.
+- excluded_list를 repo최상단에 위치하여 공유.
+- 예외 처리
 
 ---
 

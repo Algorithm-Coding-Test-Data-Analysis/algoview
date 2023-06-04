@@ -28,5 +28,5 @@ if __name__ == '__main__':
     
     # return된 data값을 json파일로 저장
     path = os.getcwd()
-    with open(f'{path}/dataAnalysis/macro/data.json', 'w') as f:
+    with open(f'{path}/dataAnalysis/macro/data.json', 'w', encoding='utf-8') as f:
         f.write(data)

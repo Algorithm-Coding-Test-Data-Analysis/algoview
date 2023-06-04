@@ -46,7 +46,7 @@ def get_method_cnt(code_data: str, language: str = 'py') -> dict:
         built_in_func_cnt_data (dict): 사용된 빌트인 함수 사용 횟수 데이터
     '''
     built_in_python = [
-        'abs', 'callable', 'compile', 'eval', 'exec', 'filter','format', 'globals', 'hash', 'help', 'id', 'map', 'memoryview',
+        'abs', 'callable', 'compile', 'eval', 'exec', 'filter','format', 'globals', 'hash', 'help', 'id', 'map', 'memoryview', 'range',
         'object', 'ord', 'slice', 'sorted', 'staticmethod', 'super', 'type', 'zip','complex', 'divmod', 'max', 'min', 'pow', 'round', 'sum',
         'bin', 'bool', 'bytearray', 'bytes', 'chr', 'float', 'hex','int', 'oct', 'str',
         'callable', 'classmethod', 'delattr', 'dir', 'getattr', 'hasattr', 'id', 'isinstance', 'issubclass', 'property',
