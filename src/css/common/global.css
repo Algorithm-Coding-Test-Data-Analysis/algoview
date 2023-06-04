@@ -34,8 +34,9 @@
   align-items: center;
   justify-content: center;
   padding: 50px 0;
-  position: fixed;
+  position: relative;
   bottom: 0;
+  height: 100px;
   width: 100%;
 }
 
@@ -55,6 +56,10 @@
   font-size: 18px;
   line-height: 25px;
   color: #717171;
+}
+
+.footer-description p {
+  margin: 0;
 }
 
 .footer-title {
