@@ -15,10 +15,14 @@ let lang = 'py';
 let charts = [];
 const URL = '../../src/dummydata/chart_data.json';
 
+fetch(URL)
+.then((response) => response.json())
+.then((json) => {
+  data = json;
+  setCharts()
+});
+
 function setCharts() {
-  fetch(URL)
-    .then((response) => response.json())
-    .then((data) => {
       getCompanyData(data, lang, charts);
       getProblemTypeData(data, lang, charts);
       getLevelDataJs(data, lang, charts);
@@ -31,7 +35,6 @@ function setCharts() {
       getCategoryLevelMethod([data, lang, charts]);
       getCategoryProblemType([data, lang, charts]);
       getCategoryYearCompany([data, lang, charts]);
-    });
 }
 
 function updateCharts() {
