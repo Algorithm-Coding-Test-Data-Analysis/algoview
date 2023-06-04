@@ -3,14 +3,14 @@ export function footerHTML() {
         <header>
             <h1>
                 <a href="#">
-                    <img class="top-logo" src="/src/assets/images/ALGOVIEW-headerlogo.svg" alt="알고뷰 로고">
+                    <img class="header-logo" src="/src/assets/images/ALGOVIEW-headerlogo.svg" alt="알고뷰 로고">
                 </a>
             </h1>
             
             <nav>
-                <ul class="top-menu">
-                    <li class="top-menu-chart on-click"><a href="#none">Chart</a></li>
-                    <li class="top-menu-reference"><a href="#none">Reference</a></li>
+                <ul class="header-menu">
+                    <li class="header-menu-chart on-click"><a href="#none">Chart</a></li>
+                    <li class="header-menu-reference"><a href="#none">Reference</a></li>
                 </ul>
                 <input type="checkbox" id="toggle" hidden>
                 <label for="toggle" class="dark-toggle">
