@@ -3,5 +3,8 @@
 @import './common/reset.css';
 @import './common/global.css';
 
+/* ===== common ===== */
+@import './common/header.css';
+
 /* ===== pages ===== */
 @import './pages/chart.css';
