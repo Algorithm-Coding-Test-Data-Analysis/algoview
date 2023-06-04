@@ -1,4 +1,4 @@
-export function footerHTML() {
+export function headerHTML() {
   return `
         <header>
             <h1>
