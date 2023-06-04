@@ -19,7 +19,6 @@
 
 /* main */
 .main {
-  display: flex;
   position: relative;
   width: calc(100% - 360px);
   padding: 160px 60px 120px;
@@ -45,7 +44,9 @@
   margin-top: 60px;
 }
 
-.sec-charts li::before {
+.sec-charts h4::before {
+  position: relative;
+  top: 6px;
   content: '';
   display: inline-block;
   height: 28px;
