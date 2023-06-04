@@ -35,6 +35,7 @@
   - 23-06-01 \_built_in_func_cnt.py 파일에서 개선
 - lambda 사용 유/무
 - excluded_list를 repo최상단에 위치하여 공유.
+  - excluded_list 체크하여 예외 처리하거나 네이밍 컨벤션 공유
 - 예외 처리
 
 ---
