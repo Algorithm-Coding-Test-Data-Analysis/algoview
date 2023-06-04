@@ -19,6 +19,8 @@
 
 /* main */
 .main {
+  display: flex;
+  position: relative;
   width: calc(100% - 360px);
   padding: 160px 60px 120px;
   margin-left: auto;
@@ -122,6 +124,10 @@
   border: none;
   border-radius: 50%;
   background: url('../../assets/images/btn-top.svg');
+}
+
+.btn-top.unfixed {
+  position: absolute;
 }
 
 /* footer */
