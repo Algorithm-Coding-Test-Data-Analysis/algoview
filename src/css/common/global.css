@@ -15,8 +15,55 @@
 
 /* ===== VARIABLES ===== */
 :root {
-  --algoview: #4e49ff;
+  --main-color: #605bff;
+  --sub-color: #8d89ff;
   --bgc-body: #f2f2fd;
+}
+
+/* ===== SIDEBAR ===== */
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff')
+    format('woff');
+  font-weight: 400;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.sidebar-menu-container {
+  position: sticky;
+  top: 0px;
+  width: 360px;
+  height: 100vh;
+  background-color: var(--main-color);
+  min-height: calc(100vh - 280px);
+}
+
+.sidebar-menu-list {
+  width: 100%;
+  padding: 80px 60px;
+}
+
+.sidebar-menu-item {
+  display: block;
+  text-decoration: none;
+  font-family: 'Pretendard';
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28.8px;
+  color: #ffffff;
+  text-align: start;
+  border-radius: 10px;
+  width: 100%;
+  padding: 22px;
+  margin-bottom: 16px;
+}
+
+.sidebar-menu-item:hover {
+  background-color: var(--sub-color);
+}
+.sidebar-highlight {
+  background-color: var(--sub-color);
 }
 
 /* ===== FOOTER ===== */
@@ -34,8 +81,8 @@
   align-items: center;
   justify-content: center;
   padding: 50px 0;
-  position: fixed;
-  bottom: 0;
+  /* position: fixed;
+  bottom: 0; */
   width: 100%;
 }
 
