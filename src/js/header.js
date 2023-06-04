@@ -1,6 +1,6 @@
 export function headerHTML() {
   return `
-        <header>
+        <div class="header-wrapper-div">
             <h1>
                 <a class="header-link" href="#">
                     <img class="header-logo" src="/src/assets/images/ALGOVIEW-headerlogo.svg" alt="알고뷰 로고">
@@ -18,6 +18,6 @@ export function headerHTML() {
                     <img class="light-toggle-img" src="/src/assets/images/light-mode.svg" alt="밝은모드">
                 </label>
             </nav>
-        </header>
+        </div>
       `;
 }
