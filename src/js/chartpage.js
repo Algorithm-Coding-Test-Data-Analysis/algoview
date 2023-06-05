@@ -5,7 +5,7 @@ import getCategoryYearCompany from './charts/categoryYearCompany.js';
 let data;
 let lang = 'py';
 let charts = [];
-const URL = 'https://algoview.co.kr/src/dummydata/chart_data.json'; // 임시 주소 연결
+const URL = 'https://algoview.co.kr/dataAnalysis/notebook/chart_data.json';
 
 function setCharts() {
   getCategoryLevelMethod([data, lang, charts]);
