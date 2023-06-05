@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko" class="html">
+  <head>
+    <link rel="icon" href="./favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>youtube | Algoview</title>
+    <link rel="stylesheet" href="../../../src/css/common/reset.css" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body class="body">
+    <header class="headerContainer">헤더 파트 추가 예정</header>
+    <nav class="referenceNavigationContainer">
+      <ul class="navigationListWrapper">
+        <li class="navigationItem active"><a href="#">YouTube</a></li>
+        <li class="navigationItem"><a href="#">Practice</a></li>
+      </ul>
+    </nav>
+    <main class="referenceContainer">
+      <h2 class="referenceTitle">YouTube</h2>
+      <ul class="youtubeListContainer" id="youtubeListContainer">
+        <!-- Existing item -->
+      </ul>
+    </main>
+    <footer></footer>
+
+    <!-- 유튜버 리스트 추가 -->
+    <script>
+      async function loadMoreContent() {
+        const response = await fetch('./youtuber.json');
+        const data = await response.json();
+
+        const youtubeList = document.getElementById('youtubeListContainer');
+
+        data.youtuber.forEach((youtuber) => {
+          const newItem = document.createElement('li');
+          newItem.innerHTML = `
+          <a href="${youtuber.link}" class="youtubeItem" target="_blank">
+            <img src="${youtuber.img}" alt="hi" class="youtubeImage" />
+            <div class="listInformation">
+              <h3 class="youtubeTitle">${youtuber.title}</h3>
+              <div class="youtubeID">${youtuber.id}</div>
+              <p class="youtubeContent">${youtuber.description}</p>
+            </div>
+          </a>
+          `;
+          youtubeList.appendChild(newItem);
+        });
+      }
+
+      loadMoreContent();
+    </script>
+    <!-- footer 추가 -->
+    <script type="module">
+      import { footerHTML } from '/src/js/footer.js';
+      const footer = document.querySelector('footer');
+      footer.innerHTML = footerHTML();
+    </script>
+  </body>
+</html>

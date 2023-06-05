@@ -1,15 +1,14 @@
 @import '../../../src/assets/fonts/font.css';
 @import '../../../src/css//common/global.css';
 
-.Practice {
+.practice {
   font-family: 'Pretendard-Regular';
   padding: 60px;
   box-sizing: border-box;
   background-color: var(--bgc-body);
-  /* body 색상 맞춰보고자 넣어놨습니다 */
 }
 
-.Practice h2 {
+.practice h2 {
   margin-bottom: 40px;
   font-size: 35px;
   font-weight: bold;
@@ -24,7 +23,7 @@
 
 .practice-list-item {
   height: 70px;
-  background: white url('./img/button.png') no-repeat 93%;
+  background: white url('./images/button.png') no-repeat 93%;
   border-bottom: 1px solid #ddd;
   transition: all .3s;
 }
@@ -48,8 +47,22 @@
 }
 
 .practice-list-item:hover {
-  background-image: url('./img/rt.png');
+  background-image: url('./images/rt.png');
   background-color: var(--algoview);
   transform: scale(1.1);
   border-radius: 10px;
+}
+
+@media (max-width: 1080px) {
+  .practice-list {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+}
+
+@media (max-width: 715px) {
+  .practice-list {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
 }
