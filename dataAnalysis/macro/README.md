@@ -23,15 +23,9 @@
   - data폴더를 순회하여 파일 네임컨벤션에 맞다면 데이터를 수집하고, 맞지 않다면 excluded_list에 데이터 수집
   - 중복값 예외 처리 개선
 - \_module_count.py
-  - get_data.py의 return 값을 data: list[dict]으로 받아서 module counting해준 뒤 data: list[dict] update
-  - module 전체 counting 개선 완료
+  - \_get_data.py의 반환 값을 받아서 모듈을 사용했을 경우, 모듈별로 카운팅 해주고, 사용자 정의 클래스가 있을 경우, 사용 유/무에 따라 별도의 값을 지정함
 - \_built_in_func_cnt.py
-  - code: str을 argument값으로 받는 기준으로 카운팅된 dict형 데이터 반환
-  - counting 기능 함수에 알맞는 argument값을 주는 보조 insert_countmethod_data 함수 추가
-  - 사용자 정의 class의 경우, counting이 되지 않도록 관련 method 제거되는 관련 함수 생성
-    - user_class_names : 사용자 정의 클래스 체크
-    - class_value_names : 클래스 인스턴스 체크
-    - remove_custom : method 체크하여 제거
+  - 내부 함수별로 카운팅 해주고, JavaScript의 경우 Node.js 코드 등 개선 진행중
 - \_dict_to_json.py
   - data: List[dict] argument를 받아 file_name을 key값으로 가진 dict[dict]형식의 data를 반환
 
@@ -39,9 +33,9 @@
 
 - ~~JavaScript 사용자 정의 클래스 카운팅 이슈 개선~~
   - 23-06-01 \_built_in_func_cnt.py 파일에서 개선
-- 사용자 정의 클래스의 사용 유/무
 - lambda 사용 유/무
 - excluded_list를 repo최상단에 위치하여 공유.
+  - excluded_list 체크하여 예외 처리하거나 네이밍 컨벤션 공유
 - 예외 처리
 
 ---

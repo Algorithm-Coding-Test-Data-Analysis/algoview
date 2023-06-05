@@ -1,9 +1,5 @@
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-header {
+/* ===== HEADER ===== */
+.header-wrapper-div {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -12,9 +8,15 @@ header {
   color: #878787;
   font-weight: 700;
   font-size: 24px;
+  font-style: normal;
 }
 
-nav {
+.header-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.header-nav {
   display: flex;
   align-items: center;
 }
@@ -67,19 +69,19 @@ nav {
 }
 
 /* 메뉴 버튼 */
-.top-menu {
+.header-menu {
   display: flex;
   gap: 32px;
 }
 
-.top-menu-chart {
+.header-menu-chart {
   padding: 10px 15px;
 }
 
-.top-menu-reference {
+.header-menu-reference {
   padding: 10px 15px;
 }
 
-.top-menu .on-click {
+.header-menu .on-click {
   color: #605bff;
 }

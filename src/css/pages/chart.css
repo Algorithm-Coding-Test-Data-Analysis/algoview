@@ -1,4 +1,4 @@
-.header {
+/* .header {
   position: fixed;
   width: 100%;
   height: 80px;
@@ -15,11 +15,10 @@
   background-color: var(--algoview);
   height: 100vh;
   z-index: -1;
-}
+} */
 
 /* main */
 .main {
-  display: flex;
   position: relative;
   width: calc(100% - 360px);
   padding: 160px 60px 120px;
@@ -27,8 +26,11 @@
   background: var(--bgc-body);
 }
 
-.sec-charts {
-  margin-top: 44px;
+.sec-charts > h2{
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+  margin-bottom: 48px;
 }
 
 .sec-charts article:not(:last-child) {
@@ -45,7 +47,9 @@
   margin-top: 60px;
 }
 
-.sec-charts li::before {
+.sec-charts h4::before {
+  position: relative;
+  top: 6px;
   content: '';
   display: inline-block;
   height: 28px;
@@ -59,6 +63,7 @@
   vertical-align: top;
   margin-bottom: 48px;
   font-size: 24px;
+  line-height: 29px;
   font-weight: 700;
 }
 
@@ -68,8 +73,8 @@
 
 /* 셀렉트 박스 */
 .select-lang {
-  position: relative;
-  margin-left: auto;
+  position: absolute;
+  right: 60px;
   width: 220px;
 }
 
@@ -96,10 +101,6 @@
   background: white;
   box-shadow: -4px 4px 10px rgba(0, 0, 0, 0.08);
 }
-
-/* .select-lang.active ul {
-  display: block;
-} */
 
 .select-lang li button {
   width: 100%;
@@ -131,9 +132,9 @@
 }
 
 /* footer */
-.footer {
+/* .footer {
   height: 200px;
   background-color: lightgrey;
   font-size: 3rem;
   font-weight: bolder;
-}
+} */

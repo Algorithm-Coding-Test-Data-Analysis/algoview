@@ -27,11 +27,15 @@ def get_data() -> list[dict]:
             if check_file_name(file_name):  # 파일 이름이 유효한지 검사
                 data.append(get_data_from_file(path, file_name))
             else:
-                excluded_list.append(file_name)
+                if (file_name in excluded_list) or file_name == 'README.md':
+                    continue  # 기존에 있던 파일이거나, README.md는 수집되지 않음
+                else:
+                    excluded_list.append(file_name)
 
     # 제외된 목록 저장
     path = os.getcwd()
-    with open(f'{path}/dataAnalysis/macro/excluded_list.txt', 'w', encoding='utf-8') as f:
+    with open(f'{path}/dataAnalysis/excluded_list.txt', 'w', encoding='utf-8') as f:
+        f.write('파일 업로드 양식에 맞지 않아 수집되지 않은 파일 리스트입니다.\n\n')
         for i in excluded_list:
             f.write(str(i).replace('/', '\\') + '\n')
 
