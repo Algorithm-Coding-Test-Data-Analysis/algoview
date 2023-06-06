@@ -1,4 +1,4 @@
-.header {
+/* .header {
   position: fixed;
   width: 100%;
   height: 80px;
@@ -15,7 +15,7 @@
   background-color: var(--algoview);
   height: 100vh;
   z-index: -1;
-}
+} */
 
 /* main */
 .main {
@@ -131,10 +131,14 @@
   position: absolute;
 }
 
+.hidden {
+  display: none;
+}
+
 /* footer */
-.footer {
+/* .footer {
   height: 200px;
   background-color: lightgrey;
   font-size: 3rem;
   font-weight: bolder;
-}
+} */

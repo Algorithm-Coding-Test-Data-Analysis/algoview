@@ -4,6 +4,7 @@ import { footerHTML } from './footer.js';
 
 headerHTML();
 onClickHeader();
+
 sideBarHTML();
 sidebarMenuHighlight();
 
