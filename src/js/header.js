@@ -3,7 +3,7 @@ export function headerHTML() {
     <div class="header-wrapper-div">
       <h1>
           <a class="header-link" href="#">
-              <img class="header-logo" src="../../src/assets/images/ALGOVIEW-headerlogo.svg" alt="알고뷰 로고">
+              <img class="header-logo" src="/src/assets/images/ALGOVIEW-headerlogo.svg" alt="알고뷰 로고">
           </a>
       </h1>
       
@@ -14,8 +14,8 @@ export function headerHTML() {
           </ul>
           <input type="checkbox" id="toggle" hidden>
           <label for="toggle" class="dark-toggle">
-              <img class="dark-toggle-img" src="../../src/assets/images/dark-mode.svg" alt="다크모드">
-              <img class="light-toggle-img" src="../../src/assets/images/light-mode.svg" alt="밝은모드">
+              <img class="dark-toggle-img" src="/src/assets/images/dark-mode.svg" alt="다크모드">
+              <img class="light-toggle-img" src="/src/assets/images/light-mode.svg" alt="밝은모드">
           </label>
       </nav>
     </div>
