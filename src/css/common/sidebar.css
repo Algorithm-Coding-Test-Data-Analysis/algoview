@@ -3,7 +3,7 @@
   position: sticky;
   top: var(--header);
   left: 0;
-  width: 360px;
+  width: var(--sidebar);
   height: 100vh;
   background-color: var(--algoview);
 }

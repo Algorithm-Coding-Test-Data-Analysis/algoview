@@ -10,20 +10,10 @@
 </head>
 
 <body>
-  <header class="header">
-    <h1>header</h1>
-  </header>
+  <header class="header"></header>
 
-  <div class="sidebar">
-    <ul>
-      <li><a href="#1.level">레벨</a></li>
-      <li><a href="#2.method">레벨</a></li>
-      <li><a href="#3.problem">레벨</a></li>
-    </ul>
-  </div>
-
-  <!-- main -->
   <main class="main">
+    <div class="sidebar"></div>
 
     <!-- 셀렉트 언어 -->
     <div class="select-lang">
@@ -39,166 +29,169 @@
     </div>
 
     <!-- 차트 -->
-    <section class="sec-charts">
-      <h2>Chart</h2>
-      <article id="1.level">
-        <h3 class="sr-only">level-chart</h3>
-        <ul>
-          <li>
-            <h4>level-count-chart</h4>
-            <canvas id="level-count-chart"></canvas>
-          </li>
+    <section class="sec-main">
+      <div class="sec-charts">
+        <h2 class="sec-tit">Chart</h2>
+        <article id="1.level">
+          <h3 class="category-tit">레벨별</h3>
+          <ul>
+            <li>
+              <h4 class="chart-tit">level-count-chart</h4>
+              <canvas id="level-count-chart"></canvas>
+            </li>
 
-          <li>
-            <h4>level-problem-type-count-chart</h4>
-            <canvas id="level-problem-type-count-chart"></canvas>
-          </li>
+            <li>
+              <h4 class="chart-tit">level-problem-type-count-chart</h4>
+              <canvas id="level-problem-type-count-chart"></canvas>
+            </li>
 
-          <li>
-            <h4>level0-problem-type-chart</h4>
-            <canvas id="level0-problem-type-chart"></canvas>
-          </li>
+            <li>
+              <h4 class="chart-tit">level0-problem-type-chart</h4>
+              <canvas id="level0-problem-type-chart"></canvas>
+            </li>
 
-          <li>
-            <h4>level1-problem-type-chart</h4>
-            <canvas id="level1-problem-type-chart"></canvas>
-          </li>
+            <li>
+              <h4 class="chart-tit">level1-problem-type-chart</h4>
+              <canvas id="level1-problem-type-chart"></canvas>
+            </li>
 
-          <li>
-            <h4>level2-problem-type-chart</h4>
-            <canvas id="level2-problem-type-chart"></canvas>
-          </li>
+            <li>
+              <h4 class="chart-tit">level2-problem-type-chart</h4>
+              <canvas id="level2-problem-type-chart"></canvas>
+            </li>
 
-          <li>
-            <h4>level3-problem-type-chart</h4>
-            <canvas id="level3-problem-type-chart"></canvas>
-          </li>
+            <li>
+              <h4 class="chart-tit">level3-problem-type-chart</h4>
+              <canvas id="level3-problem-type-chart"></canvas>
+            </li>
 
-          <!-- <li>
-            <h4>level4-problem-type-chart</h4>
-            <canvas id="level4-problem-type-chart"></canvas>
-          </li>
+            <li>
+              <h4 class="chart-tit">level4-problem-type-chart</h4>
+              <canvas id="level4-problem-type-chart"></canvas>
+            </li>
 
-          <li>
-            <h4>level5-problem-type-chart</h4>
-            <canvas id="level5-problem-type-chart"></canvas>
-          </li> -->
+            <li>
+              <h4 class="chart-tit">level5-problem-type-chart</h4>
+              <canvas id="level5-problem-type-chart"></canvas>
+            </li>
 
-          <li>
-            <h4>level0-method-count-chart</h4>
-            <canvas id="level0-method-count-chart"></canvas>
-          </li>
+            <li>
+              <h4 class="chart-tit">level0-method-count-chart</h4>
+              <canvas id="level0-method-count-chart"></canvas>
+            </li>
 
-          <li>
-            <h4>level1-method-count-chart</h4>
-            <canvas id="level1-method-count-chart"></canvas>
-          </li>
+            <li>
+              <h4 class="chart-tit">level1-method-count-chart</h4>
+              <canvas id="level1-method-count-chart"></canvas>
+            </li>
 
-          <li>
-            <h4>level2-method-count-chart</h4>
-            <canvas id="level2-method-count-chart"></canvas>
-          </li>
+            <li>
+              <h4 class="chart-tit">level2-method-count-chart</h4>
+              <canvas id="level2-method-count-chart"></canvas>
+            </li>
 
-          <li>
-            <h4>level3-method-count-chart</h4>
-            <canvas id="level3-method-count-chart"></canvas>
-          </li>
+            <li>
+              <h4 class="chart-tit">level3-method-count-chart</h4>
+              <canvas id="level3-method-count-chart"></canvas>
+            </li>
 
-          <!-- <li>
-            <h4>level4-method-count-chart</h4>
-            <canvas id="level4-method-count-chart"></canvas>
-          </li>
-          <li>
-            <h4>level5-method-count-chart</h4>
-            <canvas id="level5-method-count-chart"></canvas>
-          </li> -->
-        </ul>
-      </article>
+            <li>
+              <h4 class="chart-tit">level4-method-count-chart</h4>
+              <canvas id="level4-method-count-chart"></canvas>
+            </li>
+            <li>
+              <h4 class="chart-tit">level5-method-count-chart</h4>
+              <canvas id="level5-method-count-chart"></canvas>
+            </li>
+          </ul>
+        </article>
 
-      <article id="2.method">
-        <h3 class="sr-only">method-module-chart</h3>
-        <ul>
-          <li>
-            <h4>method-count-chart</h4>
-            <canvas id="method-count-chart"></canvas>
-          </li>
-        </ul>
-      </article>
+        <article id="2.method">
+          <h3 class="category-tit">메서드별</h3>
+          <ul>
+            <li>
+              <h4 class="chart-tit">method-count-chart</h4>
+              <canvas id="method-count-chart"></canvas>
+            </li>
+          </ul>
+        </article>
 
-      <article id="3.problem">
-        <h3 class="sr-only">problem-chart</h3>
-        <ul>
-          <li>
-            <h4>problem-type-count-chart</h4>
-            <canvas id="problem-type-count-chart"></canvas>
-          </li>
-          <li>
-            <h4>problem-type-function-method-chart</h4>
-            <canvas id="problem-type-function-method-chart"></canvas>
-          </li>
-          <li>
-            <h4>problem-type-function-chart</h4>
-            <canvas id="problem-type-function-chart"></canvas>
-          </li>
-          <li>
-            <h4>problem-type-method-chart</h4>
-            <canvas id="problem-type-method-chart"></canvas>
-          </li>
-          <!-- <li>
-            <h4>problem-type-module-chart</h4>
-            <canvas id="problem-type-module-chart"></canvas>
-          </li> -->
-          <li>
-            <h4>problem-type-function-method-wordcloud-chart</h4>
-            <canvas id="problem-type-function-method-wordcloud-chart"></canvas>
-          </li>
-          <li>
-            <h4>problem-type-module-wordcloud-chart</h4>
-            <canvas id="problem-type-module-wordcloud-chart"></canvas>
-          </li>
-        </ul>
-      </article>
+        <article id="3.problem">
+          <h3 class="category-tit">문제 유형별</h3>
+          <ul>
+            <li>
+              <h4 class="chart-tit">problem-type-count-chart</h4>
+              <canvas id="problem-type-count-chart"></canvas>
+            </li>
+            <li>
+              <h4 class="chart-tit">problem-type-function-method-chart</h4>
+              <canvas id="problem-type-function-method-chart"></canvas>
+            </li>
+            <li>
+              <h4 class="chart-tit">problem-type-function-chart</h4>
+              <canvas id="problem-type-function-chart"></canvas>
+            </li>
+            <li>
+              <h4 class="chart-tit">problem-type-method-chart</h4>
+              <canvas id="problem-type-method-chart"></canvas>
+            </li>
+            <li>
+              <h4 class="chart-tit">problem-type-module-chart</h4>
+              <canvas id="problem-type-module-chart"></canvas>
+            </li>
+            <li>
+              <h4 class="chart-tit">problem-type-function-method-wordcloud-chart</h4>
+              <canvas id="problem-type-function-method-wordcloud-chart"></canvas>
+            </li>
+            <li>
+              <h4 class="chart-tit">problem-type-module-wordcloud-chart</h4>
+              <canvas id="problem-type-module-wordcloud-chart"></canvas>
+            </li>
+          </ul>
+        </article>
 
-      <article id="4.year">
-        <h3 class="sr-only">year-chart</h3>
-        <ul>
-          <li>
-            <h4>year-type-chart</h4>
-            <canvas id="year-type-chart"></canvas>
-          </li>
-        </ul>
-      </article>
+        <article id="4.year">
+          <h3 class="category-tit">출제 연도별</h3>
+          <ul>
+            <li>
+              <h4 class="chart-tit">year-type-chart</h4>
+              <canvas id="year-type-chart"></canvas>
+            </li>
+          </ul>
+        </article>
 
-      <article id="5.company">
-        <h3 class="sr-only">company-chart</h3>
-        <ul>
-          <li class="hidden">
-            <h4>packJun-type-pie-chart</h4>
-            <canvas id="packJun-chart"></canvas>
-          </li>
-          <li class="hidden">
-            <h4>kakao-type-pie-chart</h4>
-            <canvas id="kakao-chart"></canvas>
-          </li>
-          <li class="hidden">
-            <h4>programmers-type-pie-chart</h4>
-            <canvas id="programmers-chart"></canvas>
-          </li>
-          <li>
-            <h4>company-type-radar-chart</h4>
-            <canvas id="company-type-radar-chart"></canvas>
-          </li>
-        </ul>
-      </article>
+        <article id="5.company">
+          <h3 class="category-tit">출제 업체별</h3>
+          <ul>
+            <li>
+              <h4 class="chart-tit">kakao-type-pie-chart</h4>
+              <canvas id="packJun-chart"></canvas>
+            </li>
+            <li>
+              <h4 class="chart-tit">kakao-type-pie-chart</h4>
+              <canvas id="kakao-chart"></canvas>
+            </li>
+            <li>
+              <h4 class="chart-tit">programmers-type-pie-chart</h4>
+              <canvas id="programmers-chart"></canvas>
+            </li>
+            <li>
+              <h4 class="chart-tit">company-type-radar-chart</h4>
+              <canvas id="company-type-radar-chart"></canvas>
+            </li>
+          </ul>
+        </article>
+
+      </div>
     </section>
     <button type="button" class="btn-top"></button>
   </main>
-  <!-- //main -->
 
   <footer class="footer">footer</footer>
 
   <script type="module" src="/src/js/common.js"></script>
   <script type="module" src="/src/js/chartpage.js"></script>
   <script type="module" src="/src/js/topbutton.js"></script>
+  <script type="module" src="/src/js/scrollBar.js"></script>
 </body>
 </html>
