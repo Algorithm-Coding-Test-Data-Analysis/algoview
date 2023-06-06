@@ -1,7 +1,7 @@
 .sidebar-menu-container {
   flex-shrink: 0;
   position: sticky;
-  top: 80px;
+  top: var(--header);
   left: 0;
   width: 360px;
   height: 100vh;
