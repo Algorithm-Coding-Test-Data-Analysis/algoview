@@ -14,22 +14,17 @@ export function sideBarHTML() {
           </li>
           <li>
             <a href="#3.problem" class="sidebar-menu-item">
-              문제유형
+              문제 유형
             </a>
           </li>
           <li>
             <a href="#4.year" class="sidebar-menu-item">
-              출제 업체
+              출제 연도
             </a>
           </li>
           <li>
             <a href="#5.company" class="sidebar-menu-item">
-              라인 수
-            </a>
-          </li>
-          <li>
-            <a href="#six" class="sidebar-menu-item">
-              모듈
+              출제 업체
             </a>
           </li>
         </ul>
@@ -39,9 +34,9 @@ export function sideBarHTML() {
   return;
 }
 
-export function side() {
+export function sidebarMenuHighlight() {
   const menuLinks = document.querySelectorAll('aside ul li a');
-  const charts = document.querySelectorAll('.sec-charts article'); // 특정 요소 선택
+  const charts = document.querySelectorAll('.sec-charts article');
 
   window.addEventListener('scroll', () => {
     const scrollPosition = window.pageYOffset + window.innerHeight / 5;
