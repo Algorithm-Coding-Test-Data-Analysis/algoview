@@ -1,14 +1,16 @@
 /* ===== HEADER ===== */
+
 .header-wrapper-div {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #fff;
-  padding: 16px 60px 15px 60px;
+  background-color: var(--bgc-white);
+  padding: 0 3.75rem;
+  height: var(--header);
   color: #878787;
   font-weight: 700;
-  font-size: 24px;
-  font-style: normal;
+  font-size: 1.5rem;
+  position: fixed;
 }
 
 .header-link {
@@ -23,7 +25,7 @@
 
 /* toggle change */
 #toggle:checked ~ .dark-toggle {
-  background: #ffffff;
+  background-color: var(--bgc-white);
 }
 
 #toggle:checked ~ .dark-toggle .light-toggle-img {
@@ -42,12 +44,12 @@
 
 /* toggle UI */
 .dark-toggle {
-  width: 64px;
-  height: 32px;
-  background-color: #605bff;
+  width: 4rem;
+  height: 2rem;
+  background-color: var(--algoview);
   box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 40px;
-  margin-left: 48px;
+  margin-left: 3px;
   border: 0px;
   cursor: pointer;
   position: relative;
@@ -56,14 +58,14 @@
 .dark-toggle-img {
   position: absolute;
   top: 50%;
-  left: 4px;
+  left: 0.25rem;
   transform: translateY(-50%);
 }
 
 .light-toggle-img {
   position: absolute;
   top: 50%;
-  right: 4px;
+  right: 0.25rem;
   transform: translateY(-50%);
   opacity: 0;
 }
@@ -71,7 +73,7 @@
 /* 메뉴 버튼 */
 .header-menu {
   display: flex;
-  gap: 32px;
+  gap: 2rem;
 }
 
 .header-menu-chart {
@@ -83,5 +85,5 @@
 }
 
 .header-menu .on-click {
-  color: #605bff;
+  color: var(--algoview);
 }
