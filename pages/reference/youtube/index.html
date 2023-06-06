@@ -1,29 +1,47 @@
 <!DOCTYPE html>
 <html lang="ko" class="html">
   <head>
-    <link rel="icon" href="./favicon.ico" />
+    <link rel="icon" href="/src/assets/images/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>youtube | Algoview</title>
-    <link rel="stylesheet" href="../../../src/css/common/reset.css" />
+    <link rel="stylesheet" href="/src/css/common/header.css" />
+    <link rel="stylesheet" href="/src/css/common/reset.css" />
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body class="body">
-    <header class="headerContainer">헤더 파트 추가 예정</header>
-    <nav class="referenceNavigationContainer">
-      <ul class="navigationListWrapper">
-        <li class="navigationItem active"><a href="#">YouTube</a></li>
-        <li class="navigationItem"><a href="#">Practice</a></li>
-      </ul>
-    </nav>
-    <main class="referenceContainer">
-      <h2 class="referenceTitle">YouTube</h2>
-      <ul class="youtubeListContainer" id="youtubeListContainer">
-        <!-- Existing item -->
-      </ul>
-    </main>
-    <footer></footer>
+    <!-- header -->
+    <header class="header"></header>
+    <!-- !header -->
 
-    <!-- 유튜버 리스트 추가 -->
+    <!-- main -->
+    <main class="main">
+      <!-- sidebar -->
+      <div class="sidebar">
+        <!-- <nav class="referenceNavigationContainer"> -->
+        <ul class="navigationListWrapper">
+          <li class="navigationItem active"><a href="#">YouTube</a></li>
+          <li class="navigationItem"><a href="#">Practice</a></li>
+        </ul>
+        <!-- </nav> -->
+      </div>
+      <!-- !sidebar -->
+
+      <!-- mainContent -->
+      <section class="referenceContainer">
+        <h2 class="referenceTitle">YouTube</h2>
+        <ul class="youtubeListContainer" id="youtubeListContainer">
+          <!-- Existing item -->
+        </ul>
+      </section>
+      <!-- !mainContent -->
+    </main>
+    <!-- !main -->
+
+    <!-- footer -->
+    <footer class="footer"></footer>
+    <!-- !footer -->
+
+    <!-- Add Youtuber List -->
     <script>
       async function loadMoreContent() {
         const response = await fetch('./youtuber.json');
@@ -49,11 +67,18 @@
 
       loadMoreContent();
     </script>
-    <!-- footer 추가 -->
+    <!-- !Add Youtuber List -->
+    <!-- Create Components -->
     <script type="module">
+      // Create Header
+      import { headerHTML, onClickHeader } from '/src/js/header.js';
+      headerHTML();
+      onClickHeader();
+      // Create Footer
       import { footerHTML } from '/src/js/footer.js';
-      const footer = document.querySelector('footer');
+      const footer = document.querySelector('.footer');
       footer.innerHTML = footerHTML();
     </script>
+    <!-- !Create Components -->
   </body>
 </html>

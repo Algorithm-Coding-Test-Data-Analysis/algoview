@@ -17,23 +17,27 @@
   font-family: 'Pretendard-Regular';
 }
 
-/* navigation */
-.referenceNavigationContainer {
-  float: left;
-  background: #605bff;
-  width: 360px;
-  height: calc(100% - 280px);
-  padding: 80px 60px;
+.main {
+  display: flex;
 }
+
+/* navigation */
+.sidebar {
+  width: 360px;
+  background: #605bff;
+}
+
+/* .referenceNavigationContainer {
+} */
 .navigationListWrapper {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  padding: 80px 60px;
 }
 .navigationItem {
   display: flex;
   align-items: center;
-  width: 225px;
   height: 70px;
   padding-left: 30px;
   border-radius: 10px;
@@ -51,9 +55,9 @@
 
 /* main */
 .referenceContainer {
+  flex: 1;
   overflow: scroll;
-  height: calc(100% - 280px);
-  padding: 80px 60px 120px 60px;
+  padding: 80px 60px 235px 60px;
   background-color: var(--bgc-body);
 }
 .referenceTitle {
