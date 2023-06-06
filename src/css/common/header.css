@@ -8,7 +8,7 @@
   padding: 0 3.75rem;
   height: var(--header);
   color: #878787;
-  font-weight: 700;
+  /* font-weight: 700; */
   font-size: 1.5rem;
   position: fixed;
 }
