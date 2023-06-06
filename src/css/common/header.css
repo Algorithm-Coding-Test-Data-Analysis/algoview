@@ -4,11 +4,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--bgc-white);
   padding: 0 3.75rem;
   height: var(--header);
+  width: 100%;
+  background-color: var(--bgc-white);
   color: #878787;
-  /* font-weight: 700; */
+  font-weight: 700;
   font-size: 1.5rem;
   position: fixed;
 }
@@ -49,7 +50,7 @@
   background-color: var(--algoview);
   box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 40px;
-  margin-left: 3px;
+  margin-left: 0.1875rem;
   border: 0px;
   cursor: pointer;
   position: relative;
@@ -77,11 +78,11 @@
 }
 
 .header-menu-chart {
-  padding: 10px 15px;
+  padding: 0.625rem 0.9375rem;
 }
 
 .header-menu-reference {
-  padding: 10px 15px;
+  padding: 0.625rem 0.9375rem;
 }
 
 .header-menu .on-click {
