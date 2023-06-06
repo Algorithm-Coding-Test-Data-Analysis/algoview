@@ -19,10 +19,7 @@
   --sub-color: #8d89ff;
   --bgc-body: #f2f2fd;
   --bgc-white: #ffffff;
-}
-
-header {
---header: 80px;
+  --header: 80px;
 }
 
 /* ===== FOOTER ===== */
