@@ -17,14 +17,17 @@ def module_count(data):
         file_data['module'] = dict(module_counts)
 
         if file_data["company_name"] == "프로그래머스":
-            # 첫 번째 def 제거
+    
             code = re.sub(r"def\s+\w+\s*\(.*?\)\s*:\s*(?=[^\n]+def|$)", "", code, count=1)
             
-            # def 카운팅
-            def_count = len(re.findall(r"def\s+\w+", code))
-            file_data['def_count'] = def_count
-            
-        has_user_class = 1 if re.findall(r"class\s+(\w+)", code) else 0
-        file_data['check_user_class'] = has_user_class
+            has_user_func = 1 if re.findall(r"def\s+\w+", code) else 0
+            file_data['check_user_func'] = has_user_func
+
+        else:
+            has_user_func = 1 if re.findall(r"def\s+\w+", code) else 0
+            file_data['check_user_func'] = has_user_func
+
+    has_user_class = 1 if re.findall(r"class\s+(\w+)", code) else 0
+    file_data['check_user_class'] = has_user_class
 
     return data
