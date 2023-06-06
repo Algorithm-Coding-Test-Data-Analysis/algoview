@@ -5,6 +5,7 @@
 
 /* ===== common ===== */
 @import './common/header.css';
+@import './common/sidebar.css';
 
 /* ===== pages ===== */
 @import './pages/chart.css';

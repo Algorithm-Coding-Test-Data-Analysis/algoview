@@ -1,5 +1,10 @@
-import { footerHTML } from '/src/js/footer.js';
-import { headerHTML } from '/src/js/header.js';
+import { headerHTML, onClickHeader } from './header.js';
+import { sideBarHTML, sidebarMenuHighlight } from '/src/js/sidebar.js';
+import { footerHTML } from './footer.js';
 
-export { footerHTML };
-export { headerHTML };
+headerHTML();
+onClickHeader();
+sideBarHTML();
+sidebarMenuHighlight();
+
+document.querySelector('.footer').innerHTML = footerHTML();
