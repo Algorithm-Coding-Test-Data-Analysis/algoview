@@ -1,3 +1,7 @@
-import { footerHTML } from '/src/js/footer.js';
+import { footerHTML } from './footer.js';
+import { headerHTML, onClickHeader } from './header.js';
 
-export { footerHTML };
+headerHTML();
+onClickHeader();
+
+document.querySelector('.footer').innerHTML = footerHTML();
