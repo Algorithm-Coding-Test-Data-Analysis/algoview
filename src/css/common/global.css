@@ -17,6 +17,11 @@
 :root {
   --algoview: #4e49ff;
   --bgc-body: #f2f2fd;
+  --bgc-white: #ffffff;
+}
+
+header {
+--header: 80px;
 }
 
 /* ===== FOOTER ===== */
