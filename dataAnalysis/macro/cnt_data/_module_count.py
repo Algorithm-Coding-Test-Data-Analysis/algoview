@@ -27,7 +27,7 @@ def module_count(data):
             has_user_func = 1 if re.findall(r"def\s+\w+", code) else 0
             file_data['check_user_func'] = has_user_func
 
-    has_user_class = 1 if re.findall(r"class\s+(\w+)", code) else 0
-    file_data['check_user_class'] = has_user_class
+        has_user_class = 1 if re.findall(r"class\s+(\w+)", code) else 0
+        file_data['check_user_class'] = has_user_class
 
     return data
