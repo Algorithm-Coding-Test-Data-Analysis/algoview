@@ -1,0 +1,108 @@
+.main {
+  display: flex;
+  font-size: 16px;
+  font-weight: 700;
+  background-color: var(--bgc-body);
+  padding-top: var(--header);
+}
+
+/* 차트 섹션 */
+.sec-main {
+  width: 100%;
+}
+
+.sec-charts {
+  padding: 80px 60px 120px;
+}
+
+.sec-charts .sec-tit {
+  font-size: 48px;
+}
+
+.sec-charts .category-tit {
+  font-size: 28px;
+  margin: 90px 0 48px;
+}
+
+.sec-charts .category-tit::before {
+  content: '';
+  display: block;
+  height: 1px;
+  width: 100%;
+  background-color: var(--sub-color);
+  margin-bottom: 48px;
+}
+
+.sec-charts .chart-tit {
+  font-size: 24px;
+  margin-bottom: 48px;
+  position: relative;
+  margin-left: calc(70px - 48px);
+}
+
+.sec-charts .chart-tit::before {
+  content: '';
+  display: block;
+  background-color: var(--algoview);
+  height: 24px;
+  width: 4px;
+  position: absolute;
+  top: 1px;
+  margin-left: -18px;
+}
+
+.sec-charts ul {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+.sec-charts li {
+  background-color: white;
+  border-radius: 10px;
+  padding: 48px;
+}
+
+.sec-charts canvas {
+  max-width: 100%;
+  max-height: 60vh;
+}
+
+/* 언어 선택 메뉴 */
+.select-lang{
+  border: 1px solid #8bfd6e;
+  position: absolute;
+  top: 150px;
+  right: 0;
+  z-index: 10;
+}
+
+/* 탑버튼 */
+.btn-top {
+  position: fixed;
+  bottom: 80px;
+  right: 80px;
+  width: 80px;
+  height: 80px;
+  border: none;
+  border-radius: 50%;
+  background: url('../../assets/images/btn-top.svg');
+}
+
+.btn-top.unfixed {
+  position: absolute;
+}
+
+/* 스크롤 인디케이터 */
+.scroll-indicator{
+  width: calc(100% - var(--sidebar));
+  height: 5px;
+  position: fixed;
+  right: 0px;
+  background-color: #D7D7D7;
+}
+
+#scroll-indicator-bar {
+  background: var(--algoview);
+  height: 5px;
+  width: 0%;
+}
