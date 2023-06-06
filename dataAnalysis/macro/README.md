@@ -33,8 +33,12 @@
 
 - ~~JavaScript 사용자 정의 클래스 카운팅 이슈 개선~~
   - 23-06-01 \_built_in_func_cnt.py 파일에서 개선
+  - "서로다른부분문자열의개수" Node.js 문법 체킹 이슈
 - ~~사용자 정의 클래스, 메서드 유/무 체크 개선~~
-  - 23-06-06 \_module_count.py 파일에서 개선 중
+  - 23-06-06 \_module_count.py 파일에서 개선
+  - def solution 체크 이슈
+- 모듈별 카운팅 진행시, 패키지와 모듈, 모듈과 함수 둘다 체킹되는 이슈
+  - from `a` import `b` - `a`, `b` 둘다 카운팅 되는 이슈
 - lambda 사용 유/무
 - excluded_list를 repo최상단에 위치하여 공유.
   - excluded_list 체크하여 예외 처리하거나 네이밍 컨벤션 공유
