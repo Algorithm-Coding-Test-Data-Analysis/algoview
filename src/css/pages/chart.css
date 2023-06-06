@@ -131,6 +131,10 @@
   position: absolute;
 }
 
+.hidden {
+  display: none;
+}
+
 /* footer */
 /* .footer {
   height: 200px;
