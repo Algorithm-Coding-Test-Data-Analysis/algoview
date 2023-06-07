@@ -1,13 +1,17 @@
-.main {
+/* .main {
   display: flex;
   font-size: 16px;
   font-weight: 700;
   background-color: var(--bg-color);
   padding-top: var(--header);
-  color: var(--text-color)
-}
+  color: var(--text-color);
+} */
 
 /* ===== 차트 섹션 ===== */
+.pin{
+  color: var(--point-color);
+}
+
 .sec-main {
   width: 100%;
 }
@@ -21,8 +25,8 @@
 }
 
 .sec-charts .category-tit {
-  font-size: 28px;
-  margin: 90px 0 48px;
+  font-size: 27px;
+  margin: 48px 0 40px;
 }
 
 .sec-charts .category-tit::before {
@@ -69,8 +73,7 @@
 }
 
 /* ===== 언어 선택 버튼 ===== */
-.select-lang{
-  border: 1px solid #8bfd6e;
+.select-lang {
   position: absolute;
   top: 150px;
   right: 0;
@@ -110,7 +113,7 @@
 }
 
 /* ===== 스크롤 인디케이터 ===== */
-.scroll-indicator{
+.scroll-indicator {
   width: calc(100% - var(--sidebar));
   height: 5px;
   position: fixed;
@@ -128,4 +131,13 @@
 /* ===== 차트 숨기기 ===== */
 .hidden {
   display: none;
+}
+
+
+@media screen and (width < 768px) {
+  .scroll-indicator {
+    width: 100%;
+    position: fixed;
+    z-index: 10;
+  }
 }
