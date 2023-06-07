@@ -38,6 +38,7 @@
 /* ===== main ===== */
 .main{
   --main-color: #605bff;
+  --point-color: #8d89ff;
   --text-color: #272b33;
   --bg-color: #f2f2fd;
   --bg-color-2: #ffffff;
@@ -45,6 +46,7 @@
 }
 
 .main.dark{
+  --point-color: #605bff;
   --text-color: #FFFFFF;
   --bg-color: #272b33;
   --bg-color-2: #393B46;

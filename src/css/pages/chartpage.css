@@ -30,7 +30,7 @@
   display: block;
   height: 1px;
   width: 100%;
-  background-color: var(--sub-color);
+  background-color: var(--point-color);
   margin-bottom: 48px;
 }
 
@@ -68,7 +68,7 @@
   max-height: 60vh;
 }
 
-/* ===== 언어 선택 메뉴 ===== */
+/* ===== 언어 선택 버튼 ===== */
 .select-lang{
   border: 1px solid #8bfd6e;
   position: absolute;
@@ -76,6 +76,22 @@
   right: 0;
   z-index: 10;
 }
+/* .main{
+  --main-color: #605bff;
+  --sub-color: #8D89FF;
+  --text-color: #272b33;
+  --bg-color: #f2f2fd;
+  --bg-color-2: #ffffff;
+  --scroll-bg: #D7D7D7;
+}
+
+.main.dark{
+  --sub-color: #605BFF;
+  --text-color: #FFFFFF;
+  --bg-color: #272b33;
+  --bg-color-2: #393B46;
+  --scroll-bg: #393B46;
+} */
 
 /* ===== 탑버튼 ===== */
 .btn-top {
