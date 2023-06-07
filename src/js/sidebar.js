@@ -1,36 +1,73 @@
 export function sideBarHTML() {
-  document.querySelector('.sidebar').innerHTML = `
-  <aside class="sidebar-menu-container">
-        <ul class="sidebar-menu-list">
-          <li>
-            <a href="#1.level" class="sidebar-menu-item">
-              레벨
-            </a>
-          </li>
-          <li>
-            <a href="#2.method" class="sidebar-menu-item">
-              메서드
-            </a>
-          </li>
-          <li>
-            <a href="#3.problem" class="sidebar-menu-item">
-              문제 유형
-            </a>
-          </li>
-          <li>
-            <a href="#4.year" class="sidebar-menu-item">
-              출제 연도
-            </a>
-          </li>
-          <li>
-            <a href="#5.company" class="sidebar-menu-item">
-              출제 업체
-            </a>
-          </li>
-        </ul>
-      </aside>
-  `;
+  const currentPath = window.location.pathname;
 
+  function chartSidebar() {
+    return `
+      <aside class="sidebar-menu-container">
+              <ul class="sidebar-menu-list">
+                <li>
+                  <a href="#1.level" class="sidebar-menu-item">
+                    레벨
+                  </a>
+                </li>
+                <li>
+                  <a href="#2.method" class="sidebar-menu-item">
+                    메서드
+                  </a>
+                </li>
+                <li>
+                  <a href="#3.problem" class="sidebar-menu-item">
+                    문제 유형
+                  </a>
+                </li>
+                <li>
+                  <a href="#4.year" class="sidebar-menu-item">
+                    출제 연도
+                  </a>
+                </li>
+                <li>
+                  <a href="#5.company" class="sidebar-menu-item">
+                    출제 업체
+                  </a>
+                </li>
+              </ul>
+            </aside>
+      `;
+  }
+
+  function referenceSidebar() {
+    return `
+      <aside class="sidebar-menu-container">
+              <ul class="sidebar-menu-list">
+                <li>
+                  <a href="/pages/reference/youtube" class="sidebar-menu-item ${
+                    currentPath === '/pages/reference/youtube/' &&
+                    'sidebar-highlight'
+                  }">
+                    YouTube
+                  </a>
+                </li>
+                <li>
+                  <a href="/pages/reference/practice" class="sidebar-menu-item ${
+                    currentPath === '/pages/reference/practice/' &&
+                    'sidebar-highlight'
+                  }">
+                    Practice
+                  </a>
+                </li>
+              </ul>
+            </aside>
+      `;
+  }
+
+  if (currentPath === '/') {
+    document.querySelector('.sidebar').innerHTML = chartSidebar();
+  } else if (
+    currentPath === '/pages/reference/youtube/' ||
+    currentPath === '/pages/reference/practice/'
+  ) {
+    document.querySelector('.sidebar').innerHTML = referenceSidebar();
+  }
   return;
 }
 
