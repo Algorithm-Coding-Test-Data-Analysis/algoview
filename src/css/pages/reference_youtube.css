@@ -2,6 +2,8 @@
 @import '/src/assets/fonts/font.css';
 @import '/src/css/common/global.css';
 @import '/src/css/common/reset.css';
+@import '/src/css/common/darkmode.css';
+
 /* !assets */
 
 /* common */
@@ -12,7 +14,7 @@
 
 .main {
   display: flex;
-  background-color: var(--bgc-body);
+  background-color: var(--bg-color);
   padding-top: var(--header);
 }
 
@@ -35,13 +37,13 @@
   display: flex;
   align-items: center;
   border-radius: 10px;
-  background-color: white;
+  background-color: var(--bg-color-2);
   width: 698px;
   height: 160px;
   padding: 32px;
   margin-bottom: 20px;
   text-decoration: none;
-  color: black;
+  color: var(--text-color);
 }
 .youtubeImage {
   background-color: yellow;
