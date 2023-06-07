@@ -107,3 +107,7 @@
   height: 5px;
   width: 0%;
 }
+
+.hidden {
+  display: none;
+}
