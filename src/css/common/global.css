@@ -21,10 +21,6 @@ body {
 
 /* ===== LAYOUT ===== */
 .main {
-  /* display: flex;
-  background-color: var(--bg-color);
-  padding-top: var(--header); */
-
   display: flex;
   font-size: 16px;
   font-weight: 700;

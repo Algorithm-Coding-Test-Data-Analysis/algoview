@@ -1,17 +1,8 @@
-/* .main {
-  display: flex;
-  font-size: 16px;
-  font-weight: 700;
-  background-color: var(--bg-color);
-  padding-top: var(--header);
-  color: var(--text-color);
-} */
-
-/* ===== 차트 섹션 ===== */
 .pin{
   color: var(--point-color);
 }
 
+/* ===== 차트 섹션 ===== */
 .sec-main {
   width: 100%;
 }
@@ -133,7 +124,7 @@
   display: none;
 }
 
-
+/* ===== 반응형 ===== */
 @media screen and (width < 768px) {
   .scroll-indicator {
     width: 100%;
