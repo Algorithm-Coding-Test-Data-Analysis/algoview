@@ -1,0 +1,107 @@
+/* ===== WAI-ARIA ===== */
+.sr-only {
+  position: absolute;
+  z-index: -1px;
+  display: inline-block;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  word-break: initial;
+  word-wrap: initial;
+}
+
+/* ===== VARIABLES ===== */
+:root {
+  /* color */
+  --algoview: #4e49ff;
+  --bgc-body: #f2f2fd;
+  --sub-color: #8d89ff;
+  --sub-color-2: #e5e5ff;
+  --bgc-white: #ffffff;
+
+  /* size */
+  --header: 80px;
+  --sidebar: 360px;
+}
+
+/* ===== FOOTER ===== */
+/* @font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff')
+    format('woff');
+  font-weight: 400;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.footer-wrapper-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+}
+
+.footer-logo {
+  flex-basis: 360px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-description {
+  flex-basis: 1200px;
+  padding-left: 20px;
+  font-family: 'Pretendard';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 25px;
+  color: #717171;
+}
+
+.footer-title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 25px;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.footer-link-wrapper {
+  flex-basis: 360px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-github-link {
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  padding: 5px 13px;
+  background-color: #bbbbbb;
+  font-size: 18px;
+  color: #ffffff;
+  text-decoration: none;
+  font-family: 'Pretendard';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.footer-img-github {
+  margin-right: 5px;
+}
+
+.footer-github-txt {
+  display: inline-block;
+  padding-top: 5px;
+} */

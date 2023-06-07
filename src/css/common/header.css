@@ -1,0 +1,91 @@
+/* ===== HEADER ===== */
+
+.header-wrapper-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 3.75rem;
+  height: var(--header);
+  width: 100%;
+  background-color: var(--bgc-white);
+  color: #878787;
+  font-weight: 700;
+  font-size: 1.5rem;
+  position: fixed;
+  z-index: 10;
+}
+
+.header-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+}
+
+/* toggle change */
+#toggle:checked ~ .dark-toggle {
+  background-color: var(--bgc-white);
+}
+
+#toggle:checked ~ .dark-toggle .light-toggle-img {
+  opacity: 1;
+  transition: all 0.3s ease-in;
+}
+
+#toggle:checked ~ .dark-toggle .dark-toggle-img {
+  left: calc(100% - 28px);
+}
+
+.dark-toggle,
+.dark-toggle-img {
+  transition: all 0.3s ease-in;
+}
+
+/* toggle UI */
+.dark-toggle {
+  width: 4rem;
+  height: 2rem;
+  background-color: var(--algoview);
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 40px;
+  margin-left: 0.1875rem;
+  border: 0px;
+  cursor: pointer;
+  position: relative;
+}
+
+.dark-toggle-img {
+  position: absolute;
+  top: 50%;
+  left: 0.25rem;
+  transform: translateY(-50%);
+}
+
+.light-toggle-img {
+  position: absolute;
+  top: 50%;
+  right: 0.25rem;
+  transform: translateY(-50%);
+  opacity: 0;
+}
+
+/* 메뉴 버튼 */
+.header-menu {
+  display: flex;
+  gap: 2rem;
+}
+
+.header-menu-chart {
+  padding: 0.625rem 0.9375rem;
+}
+
+.header-menu-reference {
+  padding: 0.625rem 0.9375rem;
+}
+
+.header-menu .on-click {
+  color: var(--algoview);
+}

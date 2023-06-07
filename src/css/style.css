@@ -1,0 +1,13 @@
+/* ===== assets ===== */
+@import '../assets/fonts/font.css';
+@import './common/reset.css';
+@import './common/global.css';
+
+/* ===== common ===== */
+@import './common/header.css';
+@import './common/sidebar.css';
+@import './common/footer.css';
+
+/* ===== pages ===== */
+@import './pages/chartpage.css';
+@import './pages/reference_practice.css';

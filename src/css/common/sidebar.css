@@ -1,0 +1,35 @@
+.sidebar-menu-container {
+  flex-shrink: 0;
+  position: sticky;
+  top: var(--header);
+  left: 0;
+  width: var(--sidebar);
+  height: 100vh;
+  background-color: var(--algoview);
+}
+
+.sidebar-menu-list {
+  width: 100%;
+  padding: 80px 60px;
+}
+
+.sidebar-menu-item {
+  display: block;
+  text-decoration: none;
+  font-family: 'Pretendard';
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28.8px;
+  color: #ffffff;
+  text-align: start;
+  border-radius: 10px;
+  width: 100%;
+  padding: 22px;
+  margin-bottom: 16px;
+}
+.sidebar-menu-item:hover {
+  background-color: var(--sub-color);
+}
+.sidebar-highlight {
+  background-color: var(--sub-color);
+}

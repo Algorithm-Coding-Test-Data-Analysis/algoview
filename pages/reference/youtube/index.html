@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <link rel="icon" href="/src/assets/images/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>youtube | Algoview</title>
+    <link rel="stylesheet" href="/src/css/pages/reference_youtube.css" />
+  </head>
+  <body>
+    <!-- header -->
+    <header class="header"></header>
+    <!-- !header -->
+
+    <!-- main -->
+    <main class="main">
+      <div class="sidebar"></div>
+
+      <section class="referenceContainer">
+        <h2 class="referenceTitle">YouTube</h2>
+        <ul class="youtubeListContainer" id="youtubeListContainer">
+          <!-- Existing item -->
+        </ul>
+      </section>
+    </main>
+    <!-- !main -->
+
+    <!-- footer -->
+    <footer class="footer"></footer>
+    <!-- !footer -->
+
+    <!-- Add Youtuber List -->
+    <script>
+      async function loadMoreContent() {
+        const response = await fetch('/src/assets/datas/youtuber.json');
+        const data = await response.json();
+
+        const youtubeList = document.getElementById('youtubeListContainer');
+
+        data.youtuber.forEach((youtuber) => {
+          const newItem = document.createElement('li');
+          newItem.innerHTML = `
+          <a href="${youtuber.link}" class="youtubeItem" target="_blank">
+            <img src="${youtuber.img}" alt="hi" class="youtubeImage" />
+            <div class="listInformation">
+              <h3 class="youtubeTitle">${youtuber.title}</h3>
+              <div class="youtubeID">${youtuber.id}</div>
+              <p class="youtubeContent">${youtuber.description}</p>
+            </div>
+          </a>
+          `;
+          youtubeList.appendChild(newItem);
+        });
+      }
+
+      loadMoreContent();
+    </script>
+    <!-- !Add Youtuber List -->
+    <script type="module" src="/src/js/common.js"></script>
+  </body>
+</html>
