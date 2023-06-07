@@ -8,4 +8,4 @@ onClickHeader();
 sideBarHTML();
 sidebarMenuHighlight();
 
-document.querySelector('.footer').innerHTML = footerHTML();
+footerHTML();
