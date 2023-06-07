@@ -1,0 +1,68 @@
+/* ===== header ===== */
+.header{
+  --bg-color: #ffffff;
+  --main-color: #605bff;
+  --text-color: #878787;
+}
+
+.header.dark{
+  --bg-color: rgba(39, 43, 51, 0.9);
+  --main-color: #605bff;
+  --point-color-2: #ffffff;
+}
+
+/* ===== scrollbar ===== */
+.scrollbar{
+  --main-color: #605bff;
+  --sub-color: #d7d7d7;
+}
+
+.scrollbar.dark{
+  --main-color: #605bff;
+  --sub-color: #393b46;
+}
+
+/* ===== sidebar ===== */
+.sidebar{
+  --main-color: #605bff;
+  --text-color: #ffffff;
+  --point-color: #8d89ff;
+}
+
+.sidebar.dark{
+  --main-color: #393b46;
+  --text-color: #ffffff;
+  --point-color: rgba(96, 91, 255, 0.8);
+}
+
+/* ===== main ===== */
+.main{
+  --main-color: #605bff;
+  --text-color: #272b33;
+  --bg-color: #f2f2fd;
+  --bg-color-2: #ffffff;
+  --scroll-bg: #D7D7D7;
+}
+
+.main.dark{
+  --text-color: #FFFFFF;
+  --bg-color: #272b33;
+  --bg-color-2: #393B46;
+  --scroll-bg: #393B46;
+}
+
+/* ===== footer ===== */
+.footer{
+  --bg-color: #ffffff;
+  --footer-text-L: #717171;
+  --footer-text-S: #717171;
+  --github-bg: #bbbbbb;
+}
+
+.footer.dark{
+  --bg-color: #272B33;
+  --footer-text-L: #FFFFFF;
+  --footer-text-S: #9E9E9E;
+  --github-bg: #393B46;
+}
+
