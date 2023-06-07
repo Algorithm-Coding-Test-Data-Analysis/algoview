@@ -1,0 +1,74 @@
+/* assets */
+@import '/src/assets/fonts/font.css';
+@import '/src/css/common/global.css';
+@import '/src/css/common/reset.css';
+/* !assets */
+
+/* common */
+@import '/src/css/common/header.css';
+@import '/src/css/common/footer.css';
+@import '/src/css/common/sidebar.css';
+/* !common */
+
+.main {
+  display: flex;
+  background-color: var(--bgc-body);
+  padding-top: var(--header);
+}
+
+/* list */
+.referenceContainer {
+  flex: 1;
+  padding: 80px 60px 40px 60px;
+}
+.referenceTitle {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 48px;
+}
+.youtubeListContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px 44px;
+}
+.youtubeItem {
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  background-color: white;
+  width: 698px;
+  height: 160px;
+  padding: 32px;
+  margin-bottom: 20px;
+  text-decoration: none;
+  color: black;
+}
+.youtubeImage {
+  background-color: yellow;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin-right: 30px;
+}
+.listInformation {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.youtubeTitle {
+  font-size: 24px;
+  font-weight: 700;
+}
+.yotubeID {
+  font-size: 14px;
+  font-weight: 600;
+  color: #595e89;
+}
+.youtubeContent {
+  width: 420px;
+  margin-top: 2px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #8a90a5;
+}
+/* !list */

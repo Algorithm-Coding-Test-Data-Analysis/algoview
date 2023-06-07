@@ -5,182 +5,182 @@
       "id": "@jejucodingcamp",
       "description": "안녕하세요! 위니브, 바울랩, 제주코딩베이스캠프 유튜브입니다",
       "link": "https://www.youtube.com/@jejucodingcamp",
-      "img": "images/jejucodingbasecamp.jpg"
+      "img": "/src/assets/images/reference/youtube/jejucodingbasecamp.jpg"
     },
     {
       "title": "빔캠프 CSS",
       "id": "@veamcamp",
       "description": "CSS 맛집",
       "link": "https://www.youtube.com/@veamcamp",
-      "img": "images/veamcamp.jpg"
+      "img": "/src/assets/images/reference/youtube/veamcamp.jpg"
     },
     {
       "title": "1분코딩",
       "id": "@studiomeal",
       "description": "제주 동쪽 바닷가 마을에 살며 주로 웹 분야의 디자인이나 개발을 하고 있어요",
       "link": "https://www.youtube.com/@studiomeal",
-      "img": "images/studiomeal.jpg"
+      "img": "/src/assets/images/reference/youtube/studiomeal.jpg"
     },
     {
       "title": "드림코딩",
       "id": "@dream-coding",
       "description": "모든 드림코더분들이 개발자로 성장해 나가고 꿈을 이루는 여정에 함께 할 채널입니다",
       "link": "https://www.youtube.com/@dream-coding",
-      "img": "images/dreamcoding.jpg"
+      "img": "/src/assets/images/reference/youtube/dreamcoding.jpg"
     },
     {
       "title": "김버그 Kimbug",
       "id": "@kimbug",
       "description": "KIMBUG A Seoul frontend developer & user interface designer",
       "link": "https://www.youtube.com/@kimbug",
-      "img": "images/kimbug.jpg"
+      "img": "/src/assets/images/reference/youtube/kimbug.jpg"
     },
     {
       "title": "라매 개발자",
       "id": "@lamedev",
       "description": "안녕하세요. 라매개발자입니다.",
       "link": "https://www.youtube.com/@lamedev",
-      "img": "images/lamedev.jpg"
+      "img": "/src/assets/images/reference/youtube/lamedev.jpg"
     },
     {
       "title": "코딩문 condingmoon",
       "id": "@codingmoon",
       "description": "테크 | 커리어 | 프로그래밍",
       "link": "https://www.youtube.com/@codingmoon",
-      "img": "images/codingmoon.jpg"
+      "img": "/src/assets/images/reference/youtube/codingmoon.jpg"
     },
     {
       "title": "이수안컴퓨터연구소",
       "id": "@user-ss5no9xw6e",
       "description": "이수안 교수와 함께 따라하며 배우는 컴퓨터 강의/실습 이수안컴퓨터연구소 suanlab.com.",
       "link": "https://www.youtube.com/@user-ss5no9xw6e",
-      "img": "images/leesuancomputer.jpg"
+      "img": "/src/assets/images/reference/youtube/leesuancomputer.jpg"
     },
     {
       "title": "sentdex",
       "id": "@sentdex",
       "description": "Python Programming tutorials, going further than just the basics.",
       "link": "https://www.youtube.com/@sentdex",
-      "img": "images/sentdex.jpg"
+      "img": "/src/assets/images/reference/youtube/sentdex.jpg"
     },
     {
       "title": "김왼손의 왼손코딩",
       "id": "@leftykhim",
       "description": "안녕하세요 김왼손의 왼손코딩입니다.",
       "link": "https://www.youtube.com/@leftykhim",
-      "img": "images/leftykhim.jpg"
+      "img": "/src/assets/images/reference/youtube/leftykhim.jpg"
     },
     {
       "title": "조코딩 JoCoding",
       "id": "@jocoding",
       "description": "누구나 배울 수 있는 쉬운 코딩 채널을 만들어가는 조코딩입니다.",
       "link": "https://www.youtube.com/@jocoding",
-      "img": "images/jocoding.jpg"
+      "img": "/src/assets/images/reference/youtube/jocoding.jpg"
     },
     {
       "title": "파이썬 클래스",
       "id": "@user-sc5wh4jk6j",
       "description": "파이썬 클래스입니다.",
       "link": "https://www.youtube.com/@user-sc5wh4jk6j",
-      "img": "images/pythonclass.jpg"
+      "img": "/src/assets/images/reference/youtube/pythonclass.jpg"
     },
     {
       "title": "동빈나",
       "id": "@dongbinna",
       "description": "동빈나입니다.",
       "link": "https://www.youtube.com/@dongbinna",
-      "img": "images/dongbinna.jpg"
+      "img": "/src/assets/images/reference/youtube/dongbinna.jpg"
     },
     {
       "title": "빵굽는개발자 빵형",
       "id": "@gotocoding",
       "description": "문의 : androidmaster@gmail.com",
       "link": "https://www.youtube.com/@gotocoding",
-      "img": "images/gotocoding.jpg"
+      "img": "/src/assets/images/reference/youtube/gotocoding.jpg"
     },
     {
       "title": "주니온TV 아무거나연구소",
       "id": "@joonion",
       "description": "주니온 TV 아무거나 연구소",
       "link": "https://www.youtube.com/@joonion",
-      "img": "images/joonion.jpg"
+      "img": "/src/assets/images/reference/youtube/joonion.jpg"
     },
     {
       "title": "하루코딩",
       "id": "@codingtest",
       "description": "코딩테스트 IT 정보관리기술사",
       "link": "https://www.youtube.com/@codingtest",
-      "img": "images/codingtest.jpg"
+      "img": "/src/assets/images/reference/youtube/codingtest.jpg"
     },
     {
       "title": "노마드 코더 Nomad Coders",
       "id": "@nomadcoders",
       "description": "한국인 린과 콜롬비아인 니꼴라스의 프로젝트 '노마드 코더' 입니다.",
       "link": "https://www.youtube.com/@nomadcoders",
-      "img": "images/nomadcoders.jpg"
+      "img": "/src/assets/images/reference/youtube/nomadcoders.jpg"
     },
     {
       "title": "생활코딩",
       "id": "@coohde",
       "description": "일반인에게 프로그래밍을 알려주는 온라인/오프라인 활동 입니다.",
       "link": "https://www.youtube.com/@coohde",
-      "img": "images/coohde.jpg"
+      "img": "/src/assets/images/reference/youtube/coohde.jpg"
     },
     {
       "title": "Ask Company",
       "id": "@askcompany444",
       "description": "여러분의 파이썬/장고 페이스메이커가 되겠습니다.",
       "link": "https://www.youtube.com/@askcompany444",
-      "img": "images/askcompany444.jpg"
+      "img": "/src/assets/images/reference/youtube/askcompany444.jpg"
     },
     {
       "title": "우아한테크",
       "id": "@woowatech",
       "description": "우아한형제들의 기술조직 이야기를 전하는 우아한Tech입니다.",
       "link": "https://www.youtube.com/@woowatech",
-      "img": "images/woowatech.jpg"
+      "img": "/src/assets/images/reference/youtube/woowatech.jpg"
     },
     {
       "title": "오늘코드todaycode",
       "id": "@todaycode",
       "description": "공공데이터 분석",
       "link": "https://www.youtube.com/@todaycode",
-      "img": "images/todaycode.jpg"
+      "img": "/src/assets/images/reference/youtube/todaycode.jpg"
     },
     {
       "title": "보안프로젝트[boanproject]",
       "id": "@boanproject",
       "description": "해킹, 보안, 빅데이터, 머신러닝, IT기술 전문 지식 등을 공유하는 채널입니다.",
       "link": "https://www.youtube.com/@boanproject",
-      "img": "images/boanproject.jpg"
+      "img": "/src/assets/images/reference/youtube/boanproject.jpg"
     },
     {
       "title": "재즐보프",
       "id": "@user-gy3ts8hg9t",
       "description": "정보보호 전문가와 함께 하는 유투브 코딩 보안 채널!",
       "link": "https://www.youtube.com/@user-gy3ts8hg9t",
-      "img": "images/jazzleboff.jpg"
+      "img": "/src/assets/images/reference/youtube/jazzleboff.jpg"
     },
     {
       "title": "이노베이션 아카데미",
       "id": "@user-dc9wm5wr3d",
       "description": "소프트웨어 인재 양성을 위한 비학위 교육기관.",
       "link": "https://www.youtube.com/@user-dc9wm5wr3d",
-      "img": "images/innovationacademy.jpg"
+      "img": "/src/assets/images/reference/youtube/innovationacademy.jpg"
     },
     {
       "title": "얄팍한 코딩사전",
       "id": "@yalco-coding",
       "description": "얄팍한 코딩사전입니다.",
       "link": "https://www.youtube.com/@yalco-coding",
-      "img": "images/yalco-coding.jpg"
+      "img": "/src/assets/images/reference/youtube/yalco-coding.jpg"
     },
     {
       "title": "SKplanet Tacademy",
       "id": "@SKplanetTacademy",
       "description": "SK플래닛 T아카데미의 온라인강의 채널입니다.",
       "link": "https://www.youtube.com/@SKplanetTacademy",
-      "img": "images/SKplanetTacademy.jpg"
+      "img": "/src/assets/images/reference/youtube/SKplanetTacademy.jpg"
     }
   ]
 }
