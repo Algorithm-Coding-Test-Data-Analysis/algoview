@@ -6,27 +6,27 @@ export function sideBarHTML() {
       <aside class="sidebar-menu-container">
               <ul class="sidebar-menu-list">
                 <li>
-                  <a href="#1.level" class="sidebar-menu-item">
+                  <a href="#level" class="sidebar-menu-item">
                     레벨
                   </a>
                 </li>
                 <li>
-                  <a href="#2.method" class="sidebar-menu-item">
+                  <a href="#method" class="sidebar-menu-item">
                     메서드
                   </a>
                 </li>
                 <li>
-                  <a href="#3.problem" class="sidebar-menu-item">
+                  <a href="#problem" class="sidebar-menu-item">
                     문제 유형
                   </a>
                 </li>
                 <li>
-                  <a href="#4.year" class="sidebar-menu-item">
+                  <a href="#year" class="sidebar-menu-item">
                     출제 연도
                   </a>
                 </li>
                 <li>
-                  <a href="#5.company" class="sidebar-menu-item">
+                  <a href="#company" class="sidebar-menu-item">
                     출제 업체
                   </a>
                 </li>

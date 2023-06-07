@@ -13,9 +13,9 @@
 /* !common */
 
 .main {
-  display: flex;
+  /* display: flex;
   background-color: var(--bg-color);
-  padding-top: var(--header);
+  padding-top: var(--header); */
 }
 
 /* list */

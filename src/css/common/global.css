@@ -18,3 +18,27 @@ body {
   --header: 80px;
   --sidebar: 360px;
 }
+
+/* ===== LAYOUT ===== */
+.main {
+  /* display: flex;
+  background-color: var(--bg-color);
+  padding-top: var(--header); */
+
+  display: flex;
+  font-size: 16px;
+  font-weight: 700;
+  background-color: var(--bg-color);
+  padding-top: var(--header);
+  color: var(--text-color);
+}
+
+@media screen and (width < 768px) {
+  .main {
+    flex-direction: column;
+  }
+
+  .sidebar{
+    display: none;
+  }
+}
