@@ -9,6 +9,5 @@
 @import './common/footer.css';
 
 /* ===== pages ===== */
-/* @import './pages/chart.css'; */
 @import './pages/chartpage.css';
-
+@import './pages/practicepage.css';
