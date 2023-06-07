@@ -2,11 +2,12 @@
   display: flex;
   font-size: 16px;
   font-weight: 700;
-  background-color: var(--bgc-body);
+  background-color: var(--bg-color);
   padding-top: var(--header);
+  color: var(--text-color)
 }
 
-/* 차트 섹션 */
+/* ===== 차트 섹션 ===== */
 .sec-main {
   width: 100%;
 }
@@ -43,7 +44,7 @@
 .sec-charts .chart-tit::before {
   content: '';
   display: block;
-  background-color: var(--algoview);
+  background-color: var(--main-color);
   height: 24px;
   width: 4px;
   position: absolute;
@@ -57,7 +58,7 @@
   gap: 60px;
 }
 .sec-charts li {
-  background-color: white;
+  background-color: var(--bg-color-2);
   border-radius: 10px;
   padding: 48px;
 }
@@ -67,7 +68,7 @@
   max-height: 60vh;
 }
 
-/* 언어 선택 메뉴 */
+/* ===== 언어 선택 메뉴 ===== */
 .select-lang{
   border: 1px solid #8bfd6e;
   position: absolute;
@@ -76,7 +77,7 @@
   z-index: 10;
 }
 
-/* 탑버튼 */
+/* ===== 탑버튼 ===== */
 .btn-top {
   position: fixed;
   bottom: 80px;
@@ -85,29 +86,30 @@
   height: 80px;
   border: none;
   border-radius: 50%;
-  background: url('../../assets/images/btn-top.svg');
+  background: url('/src/assets/images/btn-top.svg');
 }
 
 .btn-top.unfixed {
   position: absolute;
 }
 
-/* 스크롤 인디케이터 */
+/* ===== 스크롤 인디케이터 ===== */
 .scroll-indicator{
   width: calc(100% - var(--sidebar));
   height: 5px;
   position: fixed;
   right: 0px;
-  background-color: #D7D7D7;
+  background-color: var(--scroll-bg);
   z-index: 10;
 }
 
 #scroll-indicator-bar {
-  background: var(--algoview);
+  background: var(--main-color);
   height: 5px;
   width: 0%;
 }
 
+/* ===== 차트 숨기기 ===== */
 .hidden {
   display: none;
 }
