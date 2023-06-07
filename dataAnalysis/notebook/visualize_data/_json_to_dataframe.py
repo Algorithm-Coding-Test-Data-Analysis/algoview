@@ -43,6 +43,7 @@ def unicode_err(df):  # 회사명, 문제유형, 문제이름 중복 오류
         data : (DataFrame | Series)
     '''
     
+    df["problem_name"] = df['problem_name'].apply(lambda x: unicodedata.normalize('NFKC', x))
     df["company_name"] = df['company_name'].apply(lambda x: unicodedata.normalize('NFKC', x))
     df["problem_type"] = df['problem_type'].apply(lambda x: unicodedata.normalize('NFKC', x))
     return df
