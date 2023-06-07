@@ -78,7 +78,7 @@
 }
 /* .main{
   --main-color: #605bff;
-  --sub-color: #8D89FF;
+  --point-color: #8d89ff;
   --text-color: #272b33;
   --bg-color: #f2f2fd;
   --bg-color-2: #ffffff;
@@ -86,12 +86,12 @@
 }
 
 .main.dark{
-  --sub-color: #605BFF;
+  --point-color: #605bff;
   --text-color: #FFFFFF;
   --bg-color: #272b33;
   --bg-color-2: #393B46;
   --scroll-bg: #393B46;
-} */
+}
 
 /* ===== 탑버튼 ===== */
 .btn-top {
