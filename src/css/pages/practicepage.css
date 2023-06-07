@@ -2,6 +2,7 @@
 @import '../../../src/css//common/global.css';
 
 .practice {
+  width: 100%;
   font-family: 'Pretendard-Regular';
   padding: 60px;
   box-sizing: border-box;
@@ -23,9 +24,9 @@
 
 .practice-list-item {
   height: 70px;
-  background: white url('./images/button.png') no-repeat 93%;
+  background: white url('../../assets/images/button.png') no-repeat 93%;
   border-bottom: 1px solid #ddd;
-  transition: all .3s;
+  transition: all 0.3s;
 }
 
 .practice-link {
@@ -43,11 +44,11 @@
 }
 
 .practice-link:hover {
-  color: white
+  color: white;
 }
 
 .practice-list-item:hover {
-  background-image: url('./images/rt.png');
+  background-image: url('../../assets/images/rt.png');
   background-color: var(--algoview);
   transform: scale(1.1);
   border-radius: 10px;
