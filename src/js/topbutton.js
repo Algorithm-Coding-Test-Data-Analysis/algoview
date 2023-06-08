@@ -20,3 +20,6 @@ window.addEventListener('scroll', () => {
     btnTop.classList.remove('unfixed');
   }
 });
+
+// 언어 선택 버튼에 동일한 기능이 있어서 export 합니다.
+export default scrollToTop;

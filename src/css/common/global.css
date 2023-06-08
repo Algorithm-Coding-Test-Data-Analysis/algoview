@@ -33,8 +33,7 @@ body {
   padding-top: var(--header);
   color: var(--text-color);
 }
-
-@media screen and (width < 768px) {
+@media screen and (width < 805px) {
   :root {
     --header: 50px;
   }
