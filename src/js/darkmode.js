@@ -2,7 +2,7 @@ const COMPONENTS_CLASS = ['.header', '.sidebar', '.main', '.footer'];
 
 let isDarkMode = sessionStorage.getItem('algoview')
   ? JSON.parse(sessionStorage.getItem('algoview'))
-  : !window.matchMedia('(prefers-color-scheme)').matches;
+  : window.matchMedia('(prefers-color-scheme: dark)').matches;
 
 function renderDarkMode($darkmode) {
   const headerLogo = document.querySelector('.header-logo');
