@@ -43,6 +43,9 @@
   --bg-color: #f2f2fd;
   --bg-color-2: #ffffff;
   --scroll-bg: #D7D7D7;
+
+  /* sidebar로 옮길 예정 */
+  --btn-text-color: #878787;
 }
 
 .main.dark{
@@ -51,6 +54,9 @@
   --bg-color: #272b33;
   --bg-color-2: #393B46;
   --scroll-bg: #393B46;
+
+  /* sidebar로 옮길 예정 */
+  --btn-text-color: #595E89;
 }
 
 /* ===== footer ===== */

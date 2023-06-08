@@ -66,9 +66,31 @@
 /* ===== 언어 선택 버튼 ===== */
 .select-lang {
   position: absolute;
-  top: 150px;
-  right: 0;
-  z-index: 10;
+  font-size: 0;
+
+  /* 임시 */
+  position: fixed;
+}
+.select-lang button {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  padding: 7px 0 9px;
+  width: 120px;
+  box-sizing: border-box;
+  border: 2px solid var(--point-color);
+  background: none;
+  color: var(--btn-text-color);
+}
+.select-lang button.selected-btn {
+  color: #fff;
+  background: var(--point-color);
+}
+#js-btn {
+  border-radius: 0 10px 10px 0;
+}
+#py-btn {
+  border-radius: 10px 0 0 10px;
 }
 /* .main{
   --main-color: #605bff;
