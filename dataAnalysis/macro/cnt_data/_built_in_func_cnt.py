@@ -56,7 +56,7 @@ def get_method_cnt(code_data: str, language: str = 'py') -> dict:
         'keys', 'values', 'items', 'get', 'pop', 'update','lower', 'upper', 'split', 'join', 'strip', 'replace', 'find'
     ]
    
-    built_in_javascript = ['parseInt']
+    built_in_javascript = ['parseInt','parseFloat','isNaN','isFinite','decodeURI','decodeURIComponent','encodeURI','encodeURIComponent','eval']
     built_in_list = []
     match(language):
         case 'py':
