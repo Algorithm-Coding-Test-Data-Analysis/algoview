@@ -35,11 +35,14 @@ body {
 }
 
 @media screen and (width < 768px) {
+  :root {
+    --header: 50px;
+  }
   .main {
     flex-direction: column;
   }
 
-  .sidebar{
+  .sidebar {
     display: none;
   }
 }
