@@ -14,15 +14,20 @@
 }
 
 /* ===== VARIABLES ===== */
-body {
+:root {
   --header: 80px;
   --sidebar: 360px;
+}
+
+/* ===== GLOBAL SETTING ===== */
+body {
+  font-family: 'Pretendard-Regular';
+  font-size: 16px;
 }
 
 /* ===== LAYOUT ===== */
 .main {
   display: flex;
-  font-size: 16px;
   font-weight: 700;
   background-color: var(--bg-color);
   padding-top: var(--header);
