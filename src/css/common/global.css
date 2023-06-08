@@ -33,13 +33,15 @@ body {
   padding-top: var(--header);
   color: var(--text-color);
 }
-
 @media screen and (width < 805px) {
+  :root {
+    --header: 50px;
+  }
   .main {
     flex-direction: column;
   }
 
-  .sidebar{
+  .sidebar {
     display: none;
   }
 }

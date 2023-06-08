@@ -32,9 +32,15 @@ function renderDarkMode($darkmode) {
 
 export function toggleDarkMode() {
   const $darkmode = document.getElementById('toggle');
+  const $darkmode2 = document.getElementById('hiddenToggle');
   renderDarkMode($darkmode);
 
   $darkmode.addEventListener('click', () => {
+    isDarkMode = !isDarkMode;
+    sessionStorage.setItem('algoview', isDarkMode);
+    renderDarkMode($darkmode);
+  });
+  $darkmode2.addEventListener('click', () => {
     isDarkMode = !isDarkMode;
     sessionStorage.setItem('algoview', isDarkMode);
     renderDarkMode($darkmode);
