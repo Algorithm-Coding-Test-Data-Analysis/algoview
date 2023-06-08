@@ -1,5 +1,6 @@
-.pin{
+.pin {
   color: var(--point-color);
+  margin-right: .2em;
 }
 
 /* ===== 차트 섹션 ===== */
@@ -43,7 +44,7 @@
   height: 24px;
   width: 4px;
   position: absolute;
-  top: 1px;
+  top: 0px;
   margin-left: -18px;
 }
 
