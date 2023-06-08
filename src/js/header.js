@@ -1,4 +1,6 @@
 export function headerHTML() {
+  const currentPath = window.location.pathname;
+
   document.querySelector('.header').innerHTML = `
     <div class="header-wrapper-div">
       <h1>
@@ -9,8 +11,14 @@ export function headerHTML() {
       
       <nav class="header-nav">
           <ul class="header-menu">
-              <li class="header-menu-chart on-click"><a class="header-link" href="#none">Chart</a></li>
-              <li class="header-menu-reference"><a class="header-link" href="#none">Reference</a></li>
+              <li class="header-menu-chart ${
+                currentPath === '/' && 'on-click'
+              }"><a class="header-link" href="/">Chart</a></li>
+              <li class="header-menu-reference ${
+                (currentPath === '/pages/reference/youtube/' ||
+                  currentPath === '/pages/reference/practice/') &&
+                'on-click'
+              }"><a class="header-link" href="/pages/reference/youtube">Reference</a></li>
           </ul>
           <input type="checkbox" id="toggle" hidden>
           <label for="toggle" class="dark-toggle">
@@ -21,19 +29,4 @@ export function headerHTML() {
     </div>
     `;
   return;
-}
-
-export function onClickHeader() {
-  const headerElement = document.querySelector('.header-wrapper-div');
-  headerElement.innerHTML = headerHTML();
-  const topMenuChart = document.querySelector('.header-menu-chart');
-  const topMenuReference = document.querySelector('.header-menu-reference');
-  topMenuChart.addEventListener('click', () => {
-    topMenuChart.classList.add('on-click');
-    topMenuReference.classList.remove('on-click');
-  });
-  topMenuReference.addEventListener('click', () => {
-    topMenuReference.classList.add('on-click');
-    topMenuChart.classList.remove('on-click');
-  });
 }

@@ -1,5 +1,5 @@
 export function footerHTML() {
-  return `
+    document.querySelector('.footer').innerHTML = `
         <div class="footer-wrapper-div">
             <div class="footer-logo">
                 <img class="logo-img" src="/src/assets/images/ALGOVIEWlogo.png" alt="logo" />
@@ -31,4 +31,6 @@ export function footerHTML() {
             </div>
         <div>
     `;
+
+    return;
 }

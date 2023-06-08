@@ -1,17 +1,15 @@
-@import '../../../src/assets/fonts/font.css';
-@import '../../../src/css//common/global.css';
-
 .practice {
+  width: 100%;
   font-family: 'Pretendard-Regular';
   padding: 60px;
   box-sizing: border-box;
-  background-color: var(--bgc-body);
+  background-color: var(--bg-color);
 }
 
 .practice h2 {
   margin-bottom: 40px;
   font-size: 35px;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .practice-list {
@@ -23,9 +21,9 @@
 
 .practice-list-item {
   height: 70px;
-  background: white url('./images/button.png') no-repeat 93%;
+  background: var(--bg-color-2) url('../../assets/images/button.png') no-repeat 93%;
   border-bottom: 1px solid #ddd;
-  transition: all .3s;
+  transition: all 0.3s;
 }
 
 .practice-link {
@@ -35,7 +33,7 @@
   padding: 20px;
   box-sizing: border-box;
 
-  color: black;
+  color: var(--text-color);
   text-decoration: none;
   font-size: 18px;
   font-weight: bold;
@@ -43,12 +41,12 @@
 }
 
 .practice-link:hover {
-  color: white
+  color: white;
 }
 
 .practice-list-item:hover {
-  background-image: url('./images/rt.png');
-  background-color: var(--algoview);
+  background-image: url('../../assets/images/rt.png');
+  background-color: var(--main-color);
   transform: scale(1.1);
   border-radius: 10px;
 }

@@ -2,6 +2,7 @@
 @import '../assets/fonts/font.css';
 @import './common/reset.css';
 @import './common/global.css';
+@import './common/colors.css';
 
 /* ===== common ===== */
 @import './common/header.css';
@@ -9,6 +10,5 @@
 @import './common/footer.css';
 
 /* ===== pages ===== */
-/* @import './pages/chart.css'; */
 @import './pages/chartpage.css';
-
+@import './pages/reference_practice.css';

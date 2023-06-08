@@ -4,10 +4,28 @@
 <head>
   <link rel="icon" href="/src/assets/images/favicon.ico">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="keywords" content="Algorithm, Coding test, Methods, ChartJS, Visualization">
+  <meta name="description" content="풀이에 자주 사용되는 메서드 등 알고리즘 풀이에 참고할 수 있는 공간">
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Algoview" />
+  <meta property="og:title" content="chart | Algoview" />
+  <meta property="og:description" content="풀이에 자주 사용되는 메서드 등 알고리즘 풀이에 참고할 수 있는 공간" />
+  <meta property="og:image" content="https://github.com/Algorithm-Coding-Test-Data-Analysis/algoview/blob/main/src/assets/images/kakao_OG(800x400).jpg?raw=true" />
+  <meta property="og:url" content="https://algoview.co.kr/" />
+
+  <meta property="twitter:card" content="summary">
+  <meta property="twitter:site" content="Algoview">
+  <meta property="twitter:title" content="chart | Algoview">
+  <meta property="twitter:description" content="풀이에 자주 사용되는 메서드 등 알고리즘 풀이에 참고할 수 있는 공간">
+  <meta property="twitter:image" content="https://github.com/Algorithm-Coding-Test-Data-Analysis/algoview/blob/main/src/assets/images/twitter_OG(1200x630).jpg?raw=true">
+  <meta property="twitter:url" content="https://algoview.co.kr/">
+
   <title>chart | Algoview</title>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <link rel="stylesheet" href="/src/css/style.css">
 </head>
+
 
 <body>
   <header class="header"></header>
@@ -17,23 +35,18 @@
 
     <!-- 셀렉트 언어 -->
     <div class="select-lang">
-      <button type="button" id="lang-btn">언어 셀렉트</button>
-      <ul>
-        <li>
-          <button type="button" id="py-btn" value="py">Python</button>
-        </li>
-        <li>
-          <button type="button" id="js-btn" value="js">JavaScript</button>
-        </li>
-      </ul>
+      <button type="button" id="py-btn" value="py">Python</button>
+      <button type="button" id="js-btn" value="js">JavaScript</button>
     </div>
 
     <!-- 차트 -->
     <section class="sec-main">
       <div class="sec-charts">
         <h2 class="sec-tit">Chart</h2>
-        <article id="1.level">
-          <h3 class="category-tit">레벨별</h3>
+        <article id="level">
+          <h3 class="category-tit">
+            <span class="pin">✦</span> 레벨별
+          </h3>
           <ul>
             <li>
               <h4 class="chart-tit">level-count-chart</h4>
@@ -106,8 +119,8 @@
           </ul>
         </article>
 
-        <article id="2.method">
-          <h3 class="category-tit">메서드별</h3>
+        <article id="method">
+          <h3 class="category-tit"><span class="pin">✦</span> 메서드별</h3>
           <ul>
             <li>
               <h4 class="chart-tit">method-count-chart</h4>
@@ -116,8 +129,8 @@
           </ul>
         </article>
 
-        <article id="3.problem">
-          <h3 class="category-tit">문제 유형별</h3>
+        <article id="problem">
+          <h3 class="category-tit"><span class="pin">✦</span> 문제 유형별</h3>
           <ul>
             <li>
               <h4 class="chart-tit">problem-type-count-chart</h4>
@@ -150,8 +163,8 @@
           </ul>
         </article>
 
-        <article id="4.year">
-          <h3 class="category-tit">출제 연도별</h3>
+        <article id="year">
+          <h3 class="category-tit"><span class="pin">✦</span> 출제 연도별</h3>
           <ul>
             <li>
               <h4 class="chart-tit">year-type-chart</h4>
@@ -160,8 +173,8 @@
           </ul>
         </article>
 
-        <article id="5.company">
-          <h3 class="category-tit">출제 업체별</h3>
+        <article id="company">
+          <h3 class="category-tit"><span class="pin">✦</span> 출제 업체별</h3>
           <ul>
             <li class="hidden">
               <h4 class="chart-tit">packJun-type-pie-chart</h4>

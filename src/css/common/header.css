@@ -1,5 +1,4 @@
 /* ===== HEADER ===== */
-
 .header-wrapper-div {
   display: flex;
   justify-content: space-between;
@@ -7,8 +6,8 @@
   padding: 0 3.75rem;
   height: var(--header);
   width: 100%;
-  background-color: var(--bgc-white);
-  color: #878787;
+  background-color: var(--bg-color);
+  color: var(--text-color);
   font-weight: 700;
   font-size: 1.5rem;
   position: fixed;
@@ -27,7 +26,7 @@
 
 /* toggle change */
 #toggle:checked ~ .dark-toggle {
-  background-color: var(--bgc-white);
+  background-color: var(--bg-color);
 }
 
 #toggle:checked ~ .dark-toggle .light-toggle-img {
@@ -48,7 +47,7 @@
 .dark-toggle {
   width: 4rem;
   height: 2rem;
-  background-color: var(--algoview);
+  background-color: var(--main-color);
   box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 40px;
   margin-left: 0.1875rem;
@@ -87,5 +86,5 @@
 }
 
 .header-menu .on-click {
-  color: var(--algoview);
+  color: var(--main-color);
 }

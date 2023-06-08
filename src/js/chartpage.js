@@ -26,13 +26,10 @@ fetch(URL)
     setCharts();
   });
 
-// const $toggle = document.getElementById('lang-btn');
-
 const $pyBtn = document.getElementById('py-btn');
 const $jsBtn = document.getElementById('js-btn');
 
 $pyBtn.addEventListener('click', () => {
-  // lang = lang === 'py' ? 'js' : 'py';
   lang = 'py';
   updateCharts();
   showOnlyPyCanvas();
@@ -43,9 +40,14 @@ $jsBtn.addEventListener('click', () => {
   showOnlyJsCanvas();
 });
 
+/* 언어 종류에 따른 캔버스 숨김 */
 // py만 있는 차트
-const $pyOnlyChart1 = document.getElementById('problem-type-function-method-chart').parentNode;
-const $pyOnlyChart2 = document.getElementById('problem-type-function-chart').parentNode;
+const $pyOnlyChart1 = document.getElementById(
+  'problem-type-function-method-chart'
+).parentNode;
+const $pyOnlyChart2 = document.getElementById(
+  'problem-type-function-chart'
+).parentNode;
 // js만 있는 차트
 const $jsOnlyChart1 = document.getElementById('packJun-chart').parentNode;
 const $jsOnlyChart2 = document.getElementById('kakao-chart').parentNode;

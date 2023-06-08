@@ -1,12 +1,8 @@
-.main {
-  display: flex;
-  font-size: 16px;
-  font-weight: 700;
-  background-color: var(--bgc-body);
-  padding-top: var(--header);
+.pin{
+  color: var(--point-color);
 }
 
-/* 차트 섹션 */
+/* ===== 차트 섹션 ===== */
 .sec-main {
   width: 100%;
 }
@@ -20,8 +16,8 @@
 }
 
 .sec-charts .category-tit {
-  font-size: 28px;
-  margin: 90px 0 48px;
+  font-size: 27px;
+  margin: 48px 0 40px;
 }
 
 .sec-charts .category-tit::before {
@@ -29,7 +25,7 @@
   display: block;
   height: 1px;
   width: 100%;
-  background-color: var(--sub-color);
+  background-color: var(--point-color);
   margin-bottom: 48px;
 }
 
@@ -43,7 +39,7 @@
 .sec-charts .chart-tit::before {
   content: '';
   display: block;
-  background-color: var(--algoview);
+  background-color: var(--main-color);
   height: 24px;
   width: 4px;
   position: absolute;
@@ -57,7 +53,7 @@
   gap: 60px;
 }
 .sec-charts li {
-  background-color: white;
+  background-color: var(--bg-color-2);
   border-radius: 10px;
   padding: 48px;
 }
@@ -67,16 +63,31 @@
   max-height: 60vh;
 }
 
-/* 언어 선택 메뉴 */
-.select-lang{
-  border: 1px solid #8bfd6e;
+/* ===== 언어 선택 버튼 ===== */
+.select-lang {
   position: absolute;
   top: 150px;
   right: 0;
   z-index: 10;
 }
+/* .main{
+  --main-color: #605bff;
+  --point-color: #8d89ff;
+  --text-color: #272b33;
+  --bg-color: #f2f2fd;
+  --bg-color-2: #ffffff;
+  --scroll-bg: #D7D7D7;
+}
 
-/* 탑버튼 */
+.main.dark{
+  --point-color: #605bff;
+  --text-color: #FFFFFF;
+  --bg-color: #272b33;
+  --bg-color-2: #393B46;
+  --scroll-bg: #393B46;
+}
+
+/* ===== 탑버튼 ===== */
 .btn-top {
   position: fixed;
   bottom: 80px;
@@ -85,29 +96,41 @@
   height: 80px;
   border: none;
   border-radius: 50%;
-  background: url('../../assets/images/btn-top.svg');
+  background: url('/src/assets/images/btn-top.svg');
 }
 
 .btn-top.unfixed {
   position: absolute;
 }
 
-/* 스크롤 인디케이터 */
-.scroll-indicator{
+/* ===== 스크롤 인디케이터 ===== */
+.scroll-indicator {
   width: calc(100% - var(--sidebar));
   height: 5px;
   position: fixed;
   right: 0px;
-  background-color: #D7D7D7;
+  background-color: var(--scroll-bg);
   z-index: 10;
 }
 
 #scroll-indicator-bar {
-  background: var(--algoview);
+  background: var(--main-color);
   height: 5px;
   width: 0%;
 }
 
+/* ===== 차트 숨기기 ===== */
 .hidden {
   display: none;
+}
+
+/* ===== 반응형 ===== */
+@media screen and (width < 768px) {
+  .sec-charts {
+    padding: 80px 40px 120px; /* 모바일 양쪽 마진 각 40px 적용해보았습니다. */
+  }
+
+  .scroll-indicator {
+    width: 100%;
+  }
 }

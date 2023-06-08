@@ -2,6 +2,8 @@
 @import '/src/assets/fonts/font.css';
 @import '/src/css/common/global.css';
 @import '/src/css/common/reset.css';
+@import '/src/css/common/colors.css';
+
 /* !assets */
 
 /* common */
@@ -11,9 +13,9 @@
 /* !common */
 
 .main {
-  display: flex;
-  background-color: var(--bgc-body);
-  padding-top: var(--header);
+  /* display: flex;
+  background-color: var(--bg-color);
+  padding-top: var(--header); */
 }
 
 /* list */
@@ -25,6 +27,7 @@
   font-size: 48px;
   font-weight: 700;
   margin-bottom: 48px;
+  color: var(--text-color)
 }
 .youtubeListContainer {
   display: flex;
@@ -35,13 +38,13 @@
   display: flex;
   align-items: center;
   border-radius: 10px;
-  background-color: white;
+  background-color: var(--bg-color-2);
   width: 698px;
   height: 160px;
   padding: 32px;
   margin-bottom: 20px;
   text-decoration: none;
-  color: black;
+  color: var(--text-color);
 }
 .youtubeImage {
   background-color: yellow;
