@@ -147,9 +147,9 @@
 }
 
 /* ===== 반응형 ===== */
-@media screen and (width < 768px) {
+@media screen and (width < 805px) {
   .sec-charts {
-    padding: 80px 40px 120px; /* 모바일 양쪽 마진 각 40px 적용해보았습니다. */
+    padding: 80px 40px 120px; 
   }
 
   .scroll-indicator {
