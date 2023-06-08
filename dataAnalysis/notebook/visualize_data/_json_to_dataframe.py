@@ -28,6 +28,30 @@ def json_to_dataframe(language = "py"):
     
     return df
 
+
+def remap_problem_type(x):
+    '''
+    problem_type_list.txt에 리스트업된 문제 유형 기준으로
+    중복된 문제 유형을 그룹화합니다.
+    
+    Args:
+        data : (DataFrame | Series)
+
+    Returns:
+        data : (DataFrame | Series)
+    '''
+    
+    ptype_list_path = "https://raw.githubusercontent.com/Algorithm-Coding-Test-Data-Analysis/algoview/main/dataAnalysis/problem_type_list.txt"
+    res = requests.get(ptype_list_path)
+    ptype_lst = res.text.split("\n")[2:-1]
+    
+    for ptype in ptype_list:
+        if (x in ptype) or (ptype in x):
+            return ptype
+    else:
+        return x
+    
+
 def unicode_err(df):  # 회사명, 문제유형, 문제이름 중복 오류
     
     '''
@@ -46,6 +70,8 @@ def unicode_err(df):  # 회사명, 문제유형, 문제이름 중복 오류
     df["problem_name"] = df['problem_name'].apply(lambda x: unicodedata.normalize('NFKC', x))
     df["company_name"] = df['company_name'].apply(lambda x: unicodedata.normalize('NFKC', x))
     df["problem_type"] = df['problem_type'].apply(lambda x: unicodedata.normalize('NFKC', x))
+    df["file_name"] = df['file_name'].apply(lambda x: unicodedata.normalize('NFKC', x))
+
     return df
 
 
@@ -153,6 +179,7 @@ def json_to_df(json_file):  # methodcount 와 method명을 분리하기 위함
     df["company_name"] = df["company_name"].apply(lambda x: prob_type_to_etc(x))  # 문제 유형이 아닌 카테고리를 "기타"로 분류
     df = df.drop(df.loc[df["code"] == "",:].index).reset_index(drop = True)
     df["check_user_class"] = df["check_user_class"].astype("int").astype("category")
+    df["problem_type"] = df["problem_type"].apply(lambda x: remap_problem_type(x))
     
     return df
 
