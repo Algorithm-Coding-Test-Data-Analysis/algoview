@@ -180,6 +180,8 @@ def json_to_df(json_file):  # methodcount 와 method명을 분리하기 위함
     df = df.drop(df.loc[df["code"] == "",:].index).reset_index(drop = True)
     df["check_user_class"] = df["check_user_class"].astype("int").astype("category")
     df["problem_type"] = df["problem_type"].apply(lambda x: remap_problem_type(x))
+    df.loc[df["function_method"] == 0, "function_method"] = df.loc[df["function_method"] == 0, "function_method"].apply(lambda x: str(x).replace("0", "None")) # module 혹은 method를 사용하지 않은 경우 "None" 으로 대체
+
     
     return df
 
