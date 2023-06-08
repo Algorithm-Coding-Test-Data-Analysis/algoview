@@ -4,7 +4,7 @@ export function headerHTML() {
   document.querySelector('.header').innerHTML = `
     <div class="header-wrapper-div">
       <h1>
-          <a class="header-link" href="#">
+          <a class="header-link" href="/">
               <img class="header-logo" src="/src/assets/images/ALGOVIEW-headerlogo.svg" alt="알고뷰 로고">
           </a>
       </h1>
