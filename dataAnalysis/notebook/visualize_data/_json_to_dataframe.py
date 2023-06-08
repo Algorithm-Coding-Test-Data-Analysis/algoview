@@ -43,7 +43,7 @@ def remap_problem_type(x):
     
     ptype_list_path = "https://raw.githubusercontent.com/Algorithm-Coding-Test-Data-Analysis/algoview/main/dataAnalysis/problem_type_list.txt"
     res = requests.get(ptype_list_path)
-    ptype_lst = res.text.split("\n")[2:-1]
+    ptype_list = res.text.split("\n")[2:-1]
     
     for ptype in ptype_list:
         if (x in ptype) or (ptype in x):
