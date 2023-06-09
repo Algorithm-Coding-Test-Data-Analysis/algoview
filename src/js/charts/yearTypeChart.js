@@ -13,7 +13,6 @@ function getYearTypeChart(data, lang, charts) {
       (v) => v !== '0000'
     )
   );
-  console.log(yearTypelabels);
 
   // 데이터 값 세팅 : ‘0000’은 연도가 아니라서 제외
   for (const key in yearType) {
