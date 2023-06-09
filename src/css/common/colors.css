@@ -1,0 +1,77 @@
+/* ===== header ===== */
+.header {
+  --bg-color: #ffffff;
+  --main-color: #605bff;
+  --text-color: #878787;
+  --hamburger-color: #272b33;
+}
+
+.header.dark {
+  --bg-color: rgb(39, 43, 51);
+  --main-color: #605bff;
+  --point-color-2: #ffffff;
+  --hamburger-color: #fff;
+}
+
+/* ===== scrollbar ===== */
+.scrollbar {
+  --main-color: #605bff;
+  --sub-color: #d7d7d7;
+}
+
+.scrollbar.dark {
+  --main-color: #605bff;
+  --sub-color: #393b46;
+}
+
+/* ===== sidebar ===== */
+.sidebar {
+  --main-color: #605bff;
+  --text-color: #ffffff;
+  --point-color: #8d89ff;
+}
+
+.sidebar.dark {
+  --main-color: #393b46;
+  --text-color: #ffffff;
+  --point-color: rgba(96, 91, 255, 0.8);
+}
+
+/* ===== main ===== */
+.main {
+  --main-color: #605bff;
+  --point-color: #8d89ff;
+  --text-color: #272b33;
+  --bg-color: #f2f2fd;
+  --bg-color-2: #ffffff;
+  --scroll-bg: #D7D7D7;
+
+  /* sidebar로 옮길 예정 */
+  --btn-text-color: #878787;
+}
+
+.main.dark {
+  --point-color: #605bff;
+  --text-color: #ffffff;
+  --bg-color: #272b33;
+  --bg-color-2: #393B46;
+  --scroll-bg: #393B46;
+
+  /* sidebar로 옮길 예정 */
+  --btn-text-color: #595E89;
+}
+
+/* ===== footer ===== */
+.footer {
+  --bg-color: #ffffff;
+  --footer-text-L: #717171;
+  --footer-text-S: #717171;
+  --github-bg: #bbbbbb;
+}
+
+.footer.dark {
+  --bg-color: #272b33;
+  --footer-text-L: #ffffff;
+  --footer-text-S: #9e9e9e;
+  --github-bg: #393b46;
+}

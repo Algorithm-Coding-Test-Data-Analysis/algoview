@@ -1,5 +1,4 @@
 /* ===== FOOTER ===== */
-@import url('/src/assets/fonts/font.css');
 
 .footer-wrapper-div {
   display: flex;
@@ -8,7 +7,7 @@
   padding: 50px 0;
   height: 200px;
   width: 100%;
-  background-color: white;
+  background-color: var(--bg-color);
 }
 
 .footer-logo {
@@ -26,10 +25,11 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 25px;
-  color: #717171;
+  color: var(--footer-text-L);
 }
 
 .footer-description p {
+  color: var(--footer-text-S);
   margin: 0;
 }
 
@@ -53,7 +53,7 @@
   align-items: center;
   border-radius: 10px;
   padding: 5px 13px;
-  background-color: #bbbbbb;
+  background-color: var(--github-bg);
   font-size: 18px;
   color: #ffffff;
   text-decoration: none;

@@ -1,5 +1,9 @@
 /* ===== HEADER ===== */
-
+.header {
+  position: fixed;
+  z-index: 20;
+  width: 100%;
+}
 .header-wrapper-div {
   display: flex;
   justify-content: space-between;
@@ -7,15 +11,15 @@
   padding: 0 3.75rem;
   height: var(--header);
   width: 100%;
-  background-color: var(--bgc-white);
-  color: #878787;
+  background-color: var(--bg-color);
+  color: var(--text-color);
   font-weight: 700;
   font-size: 1.5rem;
   position: fixed;
   z-index: 10;
 }
 
-.header-link {
+.header-wrapper-div a {
   text-decoration: none;
   color: inherit;
 }
@@ -27,7 +31,7 @@
 
 /* toggle change */
 #toggle:checked ~ .dark-toggle {
-  background-color: var(--bgc-white);
+  background-color: var(--point-color-2);
 }
 
 #toggle:checked ~ .dark-toggle .light-toggle-img {
@@ -48,7 +52,7 @@
 .dark-toggle {
   width: 4rem;
   height: 2rem;
-  background-color: var(--algoview);
+  background-color: var(--main-color);
   box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 40px;
   margin-left: 0.1875rem;
@@ -86,6 +90,180 @@
   padding: 0.625rem 0.9375rem;
 }
 
-.header-menu .on-click {
-  color: var(--algoview);
+.on-click {
+  color: var(--main-color);
+}
+
+@media screen and (width >= 805px) {
+  .btn-hamburger {
+    display: none;
+  }
+  .hidden-menu-bar {
+    display: none;
+  }
+  .overlay {
+    display: none;
+  }
+}
+
+@media screen and (width < 805px) {
+  .header-wrapper-div {
+    padding: 0 1.25rem;
+    position: sticky;
+    width: 100%;
+  }
+  .header-wrapper-div h1 {
+    margin-top: 0.625rem;
+  }
+  .header-logo {
+    width: 120px;
+  }
+  .header-menu,
+  .dark-toggle,
+  .dark-toggle-input {
+    display: none;
+  }
+
+  /* 햄버거 메뉴 */
+  .btn-hamburger {
+    width: 2.125rem;
+    height: 1.25rem;
+    border: 0;
+    background: none;
+    position: relative;
+    padding: 0;
+    margin-left: 0.3125rem;
+  }
+
+  .btn-hamburger span {
+    display: block;
+    width: 100%;
+    height: 0.1875rem;
+    background: var(--hamburger-color);
+    position: absolute;
+    transition: all 0.2s;
+  }
+  .btn-hamburger span:first-child {
+    top: 0;
+  }
+
+  .btn-hamburger span:nth-child(2) {
+    top: 0.531rem;
+  }
+
+  .btn-hamburger span:nth-child(3) {
+    bottom: 0;
+  }
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 10;
+  }
+
+  .hidden-menu-bar {
+    display: none;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 14.625rem;
+    height: 100%;
+    background: var(--bg-color);
+    z-index: 20;
+    padding: 2.5rem 1.25rem;
+  }
+
+  .hidden-menu-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3.12125rem;
+  }
+
+  .hidden-menu-logo {
+    width: 7.480625rem;
+    height: 0.86rem;
+  }
+
+  .hidden-header-menu {
+    width: 9rem;
+    text-align: left;
+  }
+
+  .hidden-header-link {
+    display: block;
+    font-weight: 500;
+    font-size: 16px;
+    text-align: start;
+    width: 100%;
+    height: 44px;
+    line-height: 44px;
+    margin-bottom: 16px;
+    padding-left: 0.9375rem;
+  }
+
+  .on-click .hidden-header-link {
+    border-radius: 10px;
+    background-color: #f2f2fd;
+    color: var(--main-color);
+    font-weight: 700;
+  }
+
+  /* toggle change */
+  #hiddenToggle:checked ~ .hidden-dark-toggle {
+    background-color: var(--point-color-2);
+  }
+
+  #hiddenToggle:checked ~ .hidden-dark-toggle .hidden-light-toggle-img {
+    opacity: 1;
+    transition: all 0.3s ease-in;
+  }
+
+  #hiddenToggle:checked ~ .hidden-dark-toggle .hidden-dark-toggle-img {
+    left: calc(100% - 18px);
+  }
+
+  .hidden-dark-toggle,
+  .hidden-dark-toggle-img {
+    transition: all 0.3s ease-in;
+  }
+
+  /* toggle UI */
+  .hidden-dark-toggle {
+    width: 2.4375rem;
+    height: 1.25rem;
+    background-color: var(--main-color);
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 40px;
+    margin-left: 0.1875rem;
+    border: 0px;
+    cursor: pointer;
+    position: relative;
+    display: block;
+  }
+
+  .hidden-dark-toggle-img {
+    position: absolute;
+    width: 0.9375rem;
+    height: 1rem;
+    top: 50%;
+    left: 0.25rem;
+    transform: translateY(-50%);
+  }
+
+  .hidden-light-toggle-img {
+    position: absolute;
+    width: 0.9375rem;
+    height: 1rem;
+    top: 50%;
+    right: 0.25rem;
+    transform: translateY(-50%);
+    opacity: 0;
+  }
 }
