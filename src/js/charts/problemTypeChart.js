@@ -34,17 +34,7 @@ function getProblemTypeData(data, lang, charts) {
           },
         ],
       },
-      options: {
-        scales: {
-          yAxes: [
-            {
-              ticks: {
-                beginAtZero: true,
-              },
-            },
-          ],
-        },
-      },
+      options: {},
     }
   );
 
