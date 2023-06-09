@@ -51,8 +51,11 @@ const canvasList = [...document.querySelectorAll('.sec-charts li')];
 
 function showOnlyDrawnCanvas() {
   resetHiddenClass();
-  const chartList = charts.map(index => index.canvas.parentNode);
-  canvasList.forEach(li => {
+
+  const chartList = charts.map((index) => {
+    if (index.canvas) return index.canvas.parentNode;
+  });
+  canvasList.forEach((li) => {
     if (!chartList.includes(li)) {
       li.classList.add('hidden');
     }
@@ -60,18 +63,17 @@ function showOnlyDrawnCanvas() {
 }
 // hidden 클래스 모두 제거
 function resetHiddenClass() {
-  canvasList.forEach(li => {
+  canvasList.forEach((li) => {
     li.classList.remove('hidden');
   });
 }
 
 /* 언어 버튼 선택 시, 스타일 변경 */
 function changeLengBtnStyle(event) {
-  if(event.target.id === 'js-btn') {
+  if (event.target.id === 'js-btn') {
     $jsBtn.classList.add('selected-btn');
     $pyBtn.classList.remove('selected-btn');
-  }
-  else if (event.target.id === 'py-btn') {
+  } else if (event.target.id === 'py-btn') {
     $jsBtn.classList.remove('selected-btn');
     $pyBtn.classList.add('selected-btn');
   }
