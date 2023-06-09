@@ -94,7 +94,7 @@
   color: var(--main-color);
 }
 
-@media screen and (width >= 805px) {
+@media screen and (min-width: 805px) {
   .btn-hamburger {
     display: none;
   }
@@ -112,7 +112,7 @@
   }
 }
 
-@media screen and (width < 805px) {
+@media screen and (max-width: 804px) {
   .header-wrapper-div {
     padding: 0 1.25rem;
     position: sticky;
