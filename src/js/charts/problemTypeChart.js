@@ -1,8 +1,11 @@
 function getProblemTypeData(data, lang, charts) {
-  let problemTypeCountData = [];
-  const problem_type = data[lang]['problem_type_count'];
-  for (const key in problem_type) {
-    problemTypeCountData.push(problem_type[key]);
+  let problemType = [];
+  let problemTypeCount = [];
+  const PROBLEM_TYPE_DATA = data[lang]['problem_type_count'];
+
+  for (const key in PROBLEM_TYPE_DATA) {
+    problemType.push(key);
+    problemTypeCount.push(PROBLEM_TYPE_DATA[key]);
   }
 
   const problemTypeCountChart = new Chart(
@@ -10,10 +13,10 @@ function getProblemTypeData(data, lang, charts) {
     {
       type: 'bar',
       data: {
-        labels: [...Object.keys(problem_type)],
+        labels: problemType,
         datasets: [
           {
-            data: problemTypeCountData,
+            data: problemTypeCount,
             backgroundColor: [
               'rgba(255, 99, 132, 0.2)',
               'rgba(54, 162, 235, 0.2)',
@@ -34,7 +37,13 @@ function getProblemTypeData(data, lang, charts) {
           },
         ],
       },
-      options: {},
+      options: {
+        plugins: {
+          legend: {
+            display: false,
+          },
+        },
+      },
     }
   );
 

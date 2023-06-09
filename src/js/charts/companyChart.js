@@ -1,11 +1,11 @@
 function getCompanyData(data, lang) {
   const charts_extracted = {}; // 차트 대체
-  const company_data = data[lang]['company_type'];
+  const COMPANY_DATA = data[lang]['company_type'];
   const $company_list = document.querySelector('ul#company_list');
 
   $company_list.innerHTML = '';
 
-  for (const key in company_data) {
+  for (const key in COMPANY_DATA) {
     const $canvas = document.createElement('canvas');
     const $h4 = document.createElement('h4');
     const $li = document.createElement('li');
@@ -22,10 +22,10 @@ function getCompanyData(data, lang) {
       {
         type: 'pie',
         data: {
-          labels: [...Object.keys(company_data[key])],
+          labels: [...Object.keys(COMPANY_DATA[key])],
           datasets: [
             {
-              data: [...Object.values(company_data[key])],
+              data: [...Object.values(COMPANY_DATA[key])],
               backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',
