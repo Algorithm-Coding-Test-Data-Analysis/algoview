@@ -17,15 +17,48 @@ function getLevelDataJs(data, lang, charts) {
     );
 
     // 레벨별 문제 유형 비율 level 0
-    const level0ProblemTypeData = [];
-    for (const key in data['js']['level_problem_type_ratio']['level0']) {
-      level0ProblemTypeData.push(
-        data['js']['level_problem_type_ratio']['level0'][key]
+    if (data.js.level_problem_type_ratio.level0) {
+      const level0ProblemTypeData = [];
+      for (const key in data['js']['level_problem_type_ratio']['level0']) {
+        level0ProblemTypeData.push(
+          data['js']['level_problem_type_ratio']['level0'][key]
+        );
+      }
+      const level0ProblemTypeLabels = Object.keys(
+        data['js']['level_problem_type_ratio']['level0']
       );
+      // 레벨별 문제 유형 비율 레벨 0
+      const level0ProblemTypeChart = new Chart(
+        document.getElementById('level0-problem-type-chart'),
+        {
+          type: 'doughnut',
+          data: {
+            labels: level0ProblemTypeLabels,
+            datasets: [
+              {
+                data: level0ProblemTypeData,
+                backgroundColor: [
+                  'rgba(255, 99, 132, 0.8)',
+                  'rgba(54, 162, 235, 0.8)',
+                  'rgba(255, 206, 86, 0.8)',
+                  'rgba(75, 192, 192, 0.8)',
+                  'rgba(60, 170, 170, 0.8)',
+                ],
+                borderColor: [
+                  'rgba(255, 99, 132, 1)',
+                  'rgba(54, 162, 235, 1)',
+                  'rgba(255, 206, 86, 1)',
+                  'rgba(75, 192, 192, 1)',
+                  'rgba(60, 170, 170, 1)',
+                ],
+                borderWidth: 1,
+              },
+            ],
+          },
+        }
+      );
+      charts.push(level0ProblemTypeChart);
     }
-    const level0ProblemTypeLabels = Object.keys(
-      data['js']['level_problem_type_ratio']['level0']
-    );
 
     // 레벨별 문제 유형 비율 level 1
     const level1ProblemTypeData = [];
@@ -59,6 +92,93 @@ function getLevelDataJs(data, lang, charts) {
     const level3ProblemTypeLabels = Object.keys(
       data['js']['level_problem_type_ratio']['level3']
     );
+
+    if (data.js.level_problem_type_ratio.level4) {
+      // 레벨별 문제 유형 비율 level 4
+      const level4ProblemTypeData = [];
+      for (const key in data['js']['level_problem_type_ratio']['level4']) {
+        level4ProblemTypeData.push(
+          data['js']['level_problem_type_ratio']['level4'][key]
+        );
+      }
+      const level4ProblemTypeLabels = Object.keys(
+        data['js']['level_problem_type_ratio']['level4']
+      );
+
+      // 레벨별 문제 유형 비율 레벨 4
+      const level4ProblemTypeChart = new Chart(
+        document.getElementById('level4-problem-type-chart'),
+        {
+          type: 'doughnut',
+          data: {
+            labels: level4ProblemTypeLabels,
+            datasets: [
+              {
+                data: level4ProblemTypeData,
+                backgroundColor: [
+                  'rgba(255, 99, 132, 0.8)',
+                  'rgba(54, 162, 235, 0.8)',
+                  'rgba(255, 206, 86, 0.8)',
+                  'rgba(75, 192, 192, 0.8)',
+                ],
+                borderColor: [
+                  'rgba(255, 99, 132, 1)',
+                  'rgba(54, 162, 235, 1)',
+                  'rgba(255, 206, 86, 1)',
+                  'rgba(75, 192, 192, 1)',
+                ],
+                borderWidth: 1,
+              },
+            ],
+          },
+        }
+      );
+      charts.push(level4ProblemTypeChart);
+    }
+
+    if (data.js.level_problem_type_ratio.level5) {
+      // 레벨별 문제 유형 비율 level 5
+      const level5ProblemTypeData = [];
+      for (const key in data['js']['level_problem_type_ratio']['level5']) {
+        level5ProblemTypeData.push(
+          data['js']['level_problem_type_ratio']['level5'][key]
+        );
+      }
+      const level5ProblemTypeLabels = Object.keys(
+        data['js']['level_problem_type_ratio']['level5']
+      );
+
+      // 레벨별 문제 유형 비율 레벨 5
+      const level5ProblemTypeChart = new Chart(
+        document.getElementById('level5-problem-type-chart'),
+        {
+          type: 'doughnut',
+          data: {
+            labels: level5ProblemTypeLabels,
+            datasets: [
+              {
+                data: level5ProblemTypeData,
+                backgroundColor: [
+                  'rgba(255, 99, 132, 0.8)',
+                  'rgba(54, 162, 235, 0.8)',
+                  'rgba(255, 206, 86, 0.8)',
+                  'rgba(75, 192, 192, 0.8)',
+                ],
+                borderColor: [
+                  'rgba(255, 99, 132, 1)',
+                  'rgba(54, 162, 235, 1)',
+                  'rgba(255, 206, 86, 1)',
+                  'rgba(75, 192, 192, 1)',
+                ],
+                borderWidth: 1,
+              },
+            ],
+          },
+        }
+      );
+
+      charts.push(level5ProblemTypeChart);
+    }
 
     // 레벨별 메서드 수 level 0
     const level0PerFunctionMethodData = [];
@@ -103,6 +223,132 @@ function getLevelDataJs(data, lang, charts) {
     const level3PerFunctionMethodLabels = Object.keys(
       data['js']['level_per_function_method']['level3']
     );
+
+    if (data.js.level_per_function_method.level4) {
+      // 레벨별 메서드 수 level 4
+      const level4PerFunctionMethodData = [];
+      for (const key in data['js']['level_per_function_method']['level4']) {
+        level4PerFunctionMethodData.push(
+          data['js']['level_per_function_method']['level4'][key]
+        );
+      }
+      const level4PerFunctionMethodLabels = Object.keys(
+        data['js']['level_per_function_method']['level4']
+      );
+
+      // 전체 메소드 유형 level 4
+      const level4PerFunctionMethodChart = new Chart(
+        document.getElementById('level4-method-count-chart'),
+        {
+          type: 'bar',
+          data: {
+            labels: level4PerFunctionMethodLabels,
+            datasets: [
+              {
+                data: level4PerFunctionMethodData,
+                backgroundColor: [
+                  'rgba(255, 99, 132, 0.2)',
+                  'rgba(54, 162, 235, 0.2)',
+                  'rgba(255, 206, 86, 0.2)',
+                  'rgba(75, 192, 192, 0.2)',
+                  'rgba(153, 102, 255, 0.2)',
+                  'rgba(255, 159, 64, 0.2)',
+                ],
+                borderWidth: 1,
+              },
+            ],
+          },
+          options: {
+            plugins: {
+              title: {
+                display: true,
+                text: 'level 4 Method Count Chart',
+                font: {
+                  size: 16,
+                  weight: 'bold',
+                },
+              },
+              legend: {
+                display: false,
+              },
+            },
+            scales: {
+              yAxes: [
+                {
+                  ticks: {
+                    beginAtZero: true,
+                  },
+                },
+              ],
+            },
+          },
+        }
+      );
+      charts.push(level4PerFunctionMethodChart);
+    }
+
+    if (data.js.level_per_function_method.level5) {
+      // 레벨별 메서드 수 level 5
+      const level5PerFunctionMethodData = [];
+      for (const key in data['js']['level_per_function_method']['level5']) {
+        level5PerFunctionMethodData.push(
+          data['js']['level_per_function_method']['level5'][key]
+        );
+      }
+      const level5PerFunctionMethodLabels = Object.keys(
+        data['js']['level_per_function_method']['level5']
+      );
+
+      // 전체 메소드 유형 level 5
+      const level5PerFunctionMethodChart = new Chart(
+        document.getElementById('level5-method-count-chart'),
+        {
+          type: 'bar',
+          data: {
+            labels: level5PerFunctionMethodLabels,
+            datasets: [
+              {
+                data: level5PerFunctionMethodData,
+                backgroundColor: [
+                  'rgba(255, 99, 132, 0.2)',
+                  'rgba(54, 162, 235, 0.2)',
+                  'rgba(255, 206, 86, 0.2)',
+                  'rgba(75, 192, 192, 0.2)',
+                  'rgba(153, 102, 255, 0.2)',
+                  'rgba(255, 159, 64, 0.2)',
+                ],
+                borderWidth: 1,
+              },
+            ],
+          },
+          options: {
+            plugins: {
+              title: {
+                display: true,
+                text: 'level 5 Method Count Chart',
+                font: {
+                  size: 16,
+                  weight: 'bold',
+                },
+              },
+              legend: {
+                display: false,
+              },
+            },
+            scales: {
+              yAxes: [
+                {
+                  ticks: {
+                    beginAtZero: true,
+                  },
+                },
+              ],
+            },
+          },
+        }
+      );
+      charts.push(level5PerFunctionMethodChart);
+    }
 
     // 레벨별 문제수
     const levelCountChart = new Chart(
@@ -154,37 +400,6 @@ function getLevelDataJs(data, lang, charts) {
                 'rgba(54, 162, 235, 1)',
                 'rgba(255, 206, 86, 1)',
                 'rgba(75, 192, 192, 1)',
-              ],
-              borderWidth: 1,
-            },
-          ],
-        },
-      }
-    );
-
-    // 레벨별 문제 유형 비율 레벨 0
-    const level0ProblemTypeChart = new Chart(
-      document.getElementById('level0-problem-type-chart'),
-      {
-        type: 'doughnut',
-        data: {
-          labels: level0ProblemTypeLabels,
-          datasets: [
-            {
-              data: level0ProblemTypeData,
-              backgroundColor: [
-                'rgba(255, 99, 132, 0.8)',
-                'rgba(54, 162, 235, 0.8)',
-                'rgba(255, 206, 86, 0.8)',
-                'rgba(75, 192, 192, 0.8)',
-                'rgba(60, 170, 170, 0.8)',
-              ],
-              borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(60, 170, 170, 1)',
               ],
               borderWidth: 1,
             },
@@ -493,7 +708,6 @@ function getLevelDataJs(data, lang, charts) {
     charts.push(
       levelCountChart,
       levelProblemTypeCountChart,
-      level0ProblemTypeChart,
       level1ProblemTypeChart,
       level2ProblemTypeChart,
       level3ProblemTypeChart,
