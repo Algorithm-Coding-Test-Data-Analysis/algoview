@@ -11,7 +11,7 @@ function getCompanyData(data, lang) {
     const $li = document.createElement('li');
 
     $h4.className = 'chart-tit';
-    $h4.textContent = `${key} 출제 문제`;
+    $h4.textContent = `${key} 출제 문제(임시)`; // 임시 차트명
     $canvas.id = `${key}-chart`;
     $li.append($h4);
     $li.append($canvas);
