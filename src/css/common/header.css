@@ -53,7 +53,7 @@
   width: 4rem;
   height: 2rem;
   background-color: var(--main-color);
-  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: inset 0px 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
   border-radius: 40px;
   margin-left: 0.1875rem;
   border: 0px;
@@ -94,7 +94,7 @@
   color: var(--main-color);
 }
 
-@media screen and (width >= 805px) {
+@media screen and (min-width: 805px) {
   .btn-hamburger {
     display: none;
   }
@@ -112,7 +112,7 @@
   }
 }
 
-@media screen and (width < 805px) {
+@media screen and (max-width: 804px) {
   .header-wrapper-div {
     padding: 0 1.25rem;
     position: sticky;
@@ -122,7 +122,7 @@
     margin-top: 0.625rem;
   }
   .header-logo {
-    width: 120px;
+    width: 7.5rem;
   }
   .header-menu,
   .dark-toggle,
@@ -211,26 +211,25 @@
   }
 
   .hidden-header-menu {
-    width: 9rem;
+    width: 10.6875rem;
     text-align: left;
   }
 
   .hidden-header-link {
     display: block;
     font-weight: 500;
-    font-size: 16px;
     text-align: start;
     width: 100%;
-    height: 44px;
-    line-height: 44px;
-    margin-bottom: 16px;
+    height: 2.75rem;
+    line-height: 2.75rem;
+    margin-bottom: 1rem;
     padding-left: 0.9375rem;
   }
 
   .on-click .hidden-header-link {
-    border-radius: 10px;
-    background-color: #f2f2fd;
-    color: var(--main-color);
+    border-radius: 0.625rem;
+    background-color: var(--hamburger-active-color);
+    color: var(--hamburger-active-text-color);
     font-weight: 700;
   }
 
@@ -258,13 +257,17 @@
     width: 2.4375rem;
     height: 1.25rem;
     background-color: var(--main-color);
-    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: inset 0 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
     border-radius: 40px;
     margin-left: 0.1875rem;
-    border: 0px;
+    border: 0;
     cursor: pointer;
     position: relative;
     display: block;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    -ms-border-radius: 40px;
+    -o-border-radius: 40px;
   }
 
   .hidden-dark-toggle-img {
