@@ -61,3 +61,21 @@
 #py-btn {
   border-radius: 10px 0 0 10px;
 }
+@media (max-width: 805px) {
+  .select-lang {
+    display: flex;
+    flex-direction: column;
+  }
+  .select-lang button {
+    padding: 3px 0;
+    width: 93px;
+    font-size: 12px;
+    line-height: 14px;
+  }
+  #js-btn {
+    border-radius: 0 0 7px 7px;
+  }
+  #py-btn {
+    border-radius: 7px 7px 0 0;
+}
+}
