@@ -9,7 +9,7 @@ function getYearsChart(data, lang, charts) {
   const chartData = [];
 
   // 데이터 레이블 세팅
-  yearslabels.push(...Object.keys(years));
+  yearslabels.push(...Object.keys(years).filter((v) => v !== '0000'));
   yearslabels.sort((a, b) => a - b);
 
   // 데이터 값 세팅
