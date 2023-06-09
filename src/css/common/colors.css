@@ -4,13 +4,17 @@
   --main-color: #605bff;
   --text-color: #878787;
   --hamburger-color: #272b33;
+  --hamburger-active-color: #f2f2fd;
+  --hamburger-active-text-color: #605bff;
 }
 
 .header.dark {
   --bg-color: rgb(39, 43, 51);
   --main-color: #605bff;
   --point-color-2: #ffffff;
-  --hamburger-color: #fff;
+  --hamburger-color: #ffffff;
+  --hamburger-active-color: #605bff;
+  --hamburger-active-text-color: #ffffff;
 }
 
 /* ===== scrollbar ===== */
