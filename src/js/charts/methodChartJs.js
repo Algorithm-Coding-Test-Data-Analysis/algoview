@@ -36,15 +36,6 @@ function getMethodDataJs(data, lang, charts) {
               display: false,
             },
           },
-          scales: {
-            yAxes: [
-              {
-                ticks: {
-                  beginAtZero: true,
-                },
-              },
-            ],
-          },
         },
       }
     );

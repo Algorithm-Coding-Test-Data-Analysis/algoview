@@ -18,7 +18,8 @@
 
 .sec-charts .category-tit {
   font-size: 27px;
-  margin: 48px 0 40px;
+  /* margin: 48px 0 40px; */
+  margin: 90px 0 45px;
 }
 
 .sec-charts .category-tit::before {
@@ -27,7 +28,8 @@
   height: 1px;
   width: 100%;
   background-color: var(--point-color);
-  margin-bottom: 48px;
+  /* margin-bottom: 48px; */
+  margin-bottom: 40px;
 }
 
 .sec-charts .chart-tit {
@@ -51,8 +53,9 @@
 .sec-charts ul {
   display: flex;
   flex-direction: column;
-  gap: 60px;
+  gap: 40px;
 }
+
 .sec-charts li {
   background-color: var(--bg-color-2);
   border-radius: 10px;
@@ -62,22 +65,6 @@
 .sec-charts canvas {
   max-width: 100%;
   max-height: 60vh;
-}
-/* .main{
-  --main-color: #605bff;
-  --point-color: #8d89ff;
-  --text-color: #272b33;
-  --bg-color: #f2f2fd;
-  --bg-color-2: #ffffff;
-  --scroll-bg: #D7D7D7;
-}
-
-.main.dark{
-  --point-color: #605bff;
-  --text-color: #FFFFFF;
-  --bg-color: #272b33;
-  --bg-color-2: #393B46;
-  --scroll-bg: #393B46;
 }
 
 /* ===== 탑버튼 ===== */
@@ -121,6 +108,10 @@
 @media screen and (width < 805px) {
   .sec-charts {
     padding: 80px 40px 120px; 
+  }
+
+  .sec-charts ul {
+    gap: 20px;
   }
 
   .scroll-indicator {

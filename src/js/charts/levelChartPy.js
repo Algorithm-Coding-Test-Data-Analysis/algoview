@@ -237,15 +237,6 @@ function getLevelDataPy(data, lang, charts) {
                 display: false,
               },
             },
-            scales: {
-              yAxes: [
-                {
-                  ticks: {
-                    beginAtZero: true,
-                  },
-                },
-              ],
-            },
           },
         }
       );
@@ -299,23 +290,11 @@ function getLevelDataPy(data, lang, charts) {
                 display: false,
               },
             },
-            scales: {
-              yAxes: [
-                {
-                  ticks: {
-                    beginAtZero: true,
-                  },
-                },
-              ],
-            },
           },
         }
       );
       charts.push(methodCountLv5Chart);
     }
-
-
-
 
     // 레벨별 문제수
     const levelCountChart = new Chart(
@@ -499,15 +478,6 @@ function getLevelDataPy(data, lang, charts) {
               display: false,
             },
           },
-          scales: {
-            yAxes: [
-              {
-                ticks: {
-                  beginAtZero: true,
-                },
-              },
-            ],
-          },
         },
       }
     );
@@ -559,15 +529,6 @@ function getLevelDataPy(data, lang, charts) {
               display: false,
             },
           },
-          scales: {
-            yAxes: [
-              {
-                ticks: {
-                  beginAtZero: true,
-                },
-              },
-            ],
-          },
         },
       }
     );
@@ -607,15 +568,6 @@ function getLevelDataPy(data, lang, charts) {
               display: false,
             },
           },
-          scales: {
-            yAxes: [
-              {
-                ticks: {
-                  beginAtZero: true,
-                },
-              },
-            ],
-          },
         },
       }
     );
@@ -654,15 +606,6 @@ function getLevelDataPy(data, lang, charts) {
             legend: {
               display: false,
             },
-          },
-          scales: {
-            yAxes: [
-              {
-                ticks: {
-                  beginAtZero: true,
-                },
-              },
-            ],
           },
         },
       }

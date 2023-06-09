@@ -272,15 +272,6 @@ function getLevelDataJs(data, lang, charts) {
                 display: false,
               },
             },
-            scales: {
-              yAxes: [
-                {
-                  ticks: {
-                    beginAtZero: true,
-                  },
-                },
-              ],
-            },
           },
         }
       );
@@ -334,15 +325,6 @@ function getLevelDataJs(data, lang, charts) {
               legend: {
                 display: false,
               },
-            },
-            scales: {
-              yAxes: [
-                {
-                  ticks: {
-                    beginAtZero: true,
-                  },
-                },
-              ],
             },
           },
         }
@@ -537,15 +519,6 @@ function getLevelDataJs(data, lang, charts) {
               display: false,
             },
           },
-          scales: {
-            yAxes: [
-              {
-                ticks: {
-                  beginAtZero: true,
-                },
-              },
-            ],
-          },
         },
       }
     );
@@ -577,15 +550,6 @@ function getLevelDataJs(data, lang, charts) {
             legend: {
               display: false,
             },
-          },
-          scales: {
-            yAxes: [
-              {
-                ticks: {
-                  beginAtZero: true,
-                },
-              },
-            ],
           },
         },
       }
@@ -619,15 +583,6 @@ function getLevelDataJs(data, lang, charts) {
               display: false,
             },
           },
-          scales: {
-            yAxes: [
-              {
-                ticks: {
-                  beginAtZero: true,
-                },
-              },
-            ],
-          },
         },
       }
     );
@@ -659,15 +614,6 @@ function getLevelDataJs(data, lang, charts) {
             legend: {
               display: false,
             },
-          },
-          scales: {
-            yAxes: [
-              {
-                ticks: {
-                  beginAtZero: true,
-                },
-              },
-            ],
           },
         },
       }
