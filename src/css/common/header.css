@@ -211,14 +211,14 @@
   }
 
   .hidden-header-menu {
-    width: 9rem;
+    width: 10.6875rem;
     text-align: left;
   }
 
   .hidden-header-link {
     display: block;
     font-weight: 500;
-    font-size: 16px;
+    /* font-size: 16px; */
     text-align: start;
     width: 100%;
     height: 44px;
@@ -229,8 +229,8 @@
 
   .on-click .hidden-header-link {
     border-radius: 10px;
-    background-color: #f2f2fd;
-    color: var(--main-color);
+    background-color: var(--hamburger-active-color);
+    color: var(--hamburger-active-text-color);
     font-weight: 700;
   }
 

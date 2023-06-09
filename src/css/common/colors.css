@@ -4,6 +4,8 @@
   --main-color: #605bff;
   --text-color: #878787;
   --hamburger-color: #272b33;
+  --hamburger-active-color: #f2f2fd;
+  --hamburger-active-text-color: #605bff;
 }
 
 .header.dark {
@@ -11,6 +13,8 @@
   --main-color: #605bff;
   --point-color-2: #ffffff;
   --hamburger-color: #fff;
+  --hamburger-active-color: #605bff;
+  --hamburger-active-text-color: #fff;
 }
 
 /* ===== scrollbar ===== */
@@ -38,7 +42,7 @@
   --text-color: #ffffff;
   --point-color: rgba(96, 91, 255, 0.8);
   /* 언어 버튼 속성 */
-  --btn-text-color: #595E89;
+  --btn-text-color: #595e89;
 }
 
 /* ===== main ===== */
@@ -48,15 +52,15 @@
   --text-color: #272b33;
   --bg-color: #f2f2fd;
   --bg-color-2: #ffffff;
-  --scroll-bg: #D7D7D7;
+  --scroll-bg: #d7d7d7;
 }
 
 .main.dark {
   --point-color: #605bff;
   --text-color: #ffffff;
   --bg-color: #272b33;
-  --bg-color-2: #393B46;
-  --scroll-bg: #393B46;
+  --bg-color-2: #393b46;
+  --scroll-bg: #393b46;
 }
 
 /* ===== footer ===== */
