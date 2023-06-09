@@ -318,14 +318,6 @@ function getLevelDataJs(data, lang, charts) {
         },
         options: {
           plugins: {
-            title: {
-              display: true,
-              text: 'level 0 Method Count Chart',
-              font: {
-                size: 16,
-                weight: 'bold',
-              },
-            },
             legend: {
               display: false,
             },
@@ -367,14 +359,6 @@ function getLevelDataJs(data, lang, charts) {
         },
         options: {
           plugins: {
-            title: {
-              display: true,
-              text: 'level 1 Method Count Chart',
-              font: {
-                size: 16,
-                weight: 'bold',
-              },
-            },
             legend: {
               display: false,
             },
@@ -416,14 +400,6 @@ function getLevelDataJs(data, lang, charts) {
         },
         options: {
           plugins: {
-            title: {
-              display: true,
-              text: 'level 2 Method Count Chart',
-              font: {
-                size: 16,
-                weight: 'bold',
-              },
-            },
             legend: {
               display: false,
             },
@@ -465,14 +441,6 @@ function getLevelDataJs(data, lang, charts) {
         },
         options: {
           plugins: {
-            title: {
-              display: true,
-              text: 'level 3 Method Count Chart',
-              font: {
-                size: 16,
-                weight: 'bold',
-              },
-            },
             legend: {
               display: false,
             },

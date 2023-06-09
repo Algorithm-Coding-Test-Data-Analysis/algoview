@@ -285,14 +285,6 @@ function getLevelDataPy(data, lang, charts) {
         },
         options: {
           plugins: {
-            title: {
-              display: true,
-              text: 'Level 0 Method Count Chart',
-              font: {
-                size: 16,
-                weight: 'bold',
-              },
-            },
             legend: {
               display: false,
             },
@@ -353,14 +345,6 @@ function getLevelDataPy(data, lang, charts) {
         },
         options: {
           plugins: {
-            title: {
-              display: true,
-              text: 'Level 1 Method Count Chart',
-              font: {
-                size: 16,
-                weight: 'bold',
-              },
-            },
             legend: {
               display: false,
             },
@@ -409,14 +393,6 @@ function getLevelDataPy(data, lang, charts) {
         },
         options: {
           plugins: {
-            title: {
-              display: true,
-              text: 'Level 2 Method Count Chart',
-              font: {
-                size: 16,
-                weight: 'bold',
-              },
-            },
             legend: {
               display: false,
             },
@@ -465,14 +441,6 @@ function getLevelDataPy(data, lang, charts) {
         },
         options: {
           plugins: {
-            title: {
-              display: true,
-              text: 'Level 3 Method Count Chart',
-              font: {
-                size: 16,
-                weight: 'bold',
-              },
-            },
             legend: {
               display: false,
             },
