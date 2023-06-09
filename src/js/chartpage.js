@@ -23,12 +23,19 @@ function updateCharts() {
   setCharts();
 }
 
-fetch(URL)
-  .then((response) => response.json())
-  .then((json) => {
-    data = json;
-    setCharts();
-  });
+(async () => {
+  try {
+    const res = await fetch(URL);
+    if (res.status === 200) {
+      data = await res.json();
+      setCharts();
+    } else throw res.statusText;
+  } catch (err) {
+    console.error('에러 발생!', err);
+    alert('현재는 차트를 불러올 수 없습니다.');
+    return;
+  }
+})();
 
 const $pyBtn = document.getElementById('py-btn');
 const $jsBtn = document.getElementById('js-btn');

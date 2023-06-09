@@ -18,8 +18,7 @@
 
 .sec-charts .category-tit {
   font-size: 27px;
-  margin: 48px 0 40px;
-  /* margin: 48px 0 50px; */
+  margin: 48px 0 50px;
 }
 
 .sec-charts .category-tit::before {

@@ -75,6 +75,7 @@
   --footer-text-L: #717171;
   --footer-text-S: #717171;
   --github-bg: #bbbbbb;
+  --border: #393b46;
 }
 
 .footer.dark {
@@ -82,5 +83,4 @@
   --footer-text-L: #ffffff;
   --footer-text-S: #9e9e9e;
   --github-bg: #393b46;
-  border-top: 1px solid #393b46;
 }
