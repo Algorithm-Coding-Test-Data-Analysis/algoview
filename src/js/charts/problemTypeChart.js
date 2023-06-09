@@ -1,8 +1,8 @@
 function getProblemTypeData(data, lang, charts) {
   let problemTypeCountData = [];
-
-  for (const key in data[lang]['problem_type_count']) {
-    problemTypeCountData.push(data[lang]['problem_type_count'][key]);
+  const problem_type = data[lang]['problem_type_count'];
+  for (const key in problem_type) {
+    problemTypeCountData.push(problem_type[key]);
   }
 
   const problemTypeCountChart = new Chart(
@@ -10,16 +10,7 @@ function getProblemTypeData(data, lang, charts) {
     {
       type: 'bar',
       data: {
-        labels: [
-          '구현',
-          '스택큐',
-          '기타',
-          '완전탐색',
-          'DFSBFS',
-          '해시',
-          '그리디',
-          '비트연산',
-        ],
+        labels: [...Object.keys(problem_type)],
         datasets: [
           {
             data: problemTypeCountData,
