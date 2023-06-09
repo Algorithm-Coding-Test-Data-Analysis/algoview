@@ -182,6 +182,19 @@
     background: var(--bg-color);
     z-index: 20;
     padding: 2.5rem 1.25rem;
+    animation: showMenu 0.5s ease forwards;
+  }
+
+  /* 햄버거 메뉴 부드럽게 연결되는 에니메이션 */
+  @keyframes showMenu {
+    0% {
+      opacity: 0;
+      transform: translateX(300px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
   }
 
   .hidden-menu-wrapper {
