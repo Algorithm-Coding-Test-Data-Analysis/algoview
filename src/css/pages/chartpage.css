@@ -19,7 +19,7 @@
 .sec-charts .category-tit {
   font-size: 27px;
   /* margin: 48px 0 40px; */
-  margin: 90px 0 45px;
+  margin: 48px 0 50px;
 }
 
 .sec-charts .category-tit::before {
@@ -184,6 +184,11 @@
   /* 스크롤 인디케이터 */
   .scroll-indicator {
     width: 100%;
+    height: 3px;
+  }
+
+  #scroll-indicator-bar {
+    height: 3px;
   }
 
   /* 툴팁 */
