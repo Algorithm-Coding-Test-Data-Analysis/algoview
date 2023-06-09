@@ -31,12 +31,6 @@ function getProblemTypeFunctionMethodData(data, lang, charts) {
           datasets: datasets,
         },
         options: {
-          plugins: {
-            title: {
-              display: true,
-              text: '문제유형별 빌트인함수 + 메서드 사용횟수'
-            },
-          },
           responsive: true,
           scales: {
             x: {

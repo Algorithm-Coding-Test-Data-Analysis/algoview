@@ -45,12 +45,6 @@ function getYearTypeChart(data, lang, charts) {
     },
     options: {
       // maintainAspectRatio: false,
-      plugins: {
-        title: {
-          display: true,
-          text: '연도별 문제유형',
-        },
-      },
       scales: {
         x: {
           stacked: true,

@@ -32,14 +32,6 @@ function getMethodDataJs(data, lang, charts) {
         },
         options: {
           plugins: {
-            title: {
-              display: true,
-              text: 'Method Count Chart',
-              font: {
-                size: 16,
-                weight: 'bold',
-              },
-            },
             legend: {
               display: false,
             },

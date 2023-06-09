@@ -52,12 +52,6 @@ function drawChart(labels, datasets) {
       datasets: datasets
     },
     options: {
-      plugins: {
-        title: {
-          display: true,
-          text: '문제유형별 전체 메소드 사용횟수'
-        },
-      },
       responsive: true,
       scales: {
         x: {
