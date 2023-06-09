@@ -192,6 +192,9 @@ function getCompanyData(data, lang, charts) {
         },
       }
     );
+    
+    charts.push(packJunJsData, kakaoJsData, programmersJsData); // 차트 모으기!
+
   } else if (lang === 'py') {
     //  PY - 백준 데이터
     for (const key in data['py']['company_type']['백준']) {
@@ -378,9 +381,10 @@ function getCompanyData(data, lang, charts) {
         },
       }
     );
-  }
+    
 
-  charts.push(packJunJsData, kakaoJsData, programmersJsData, packJunPyData, kakaoaPyData, programmersPyData); // 차트 모으기!
+  charts.push(packJunPyData, kakaoPyData, programmersPyData); // 차트 모으기!
+  }
 }
 
 export default getCompanyData;
