@@ -1,5 +1,6 @@
 function getCompanyDataForRadar(data, lang) {
   const COMPANY_DATA = data[lang]['company_type'];
+  const COMPANY_DESC = data['description']['company_type'];
   const $company_list = document.querySelector('ul#company_list');
 
   const $canvas = document.createElement('canvas');
@@ -8,7 +9,7 @@ function getCompanyDataForRadar(data, lang) {
   const $tooltip = document.createElement('span');
   const $tooltip_txt = document.createElement('span');
 
-  $tooltip_txt.textContent = '임시 툴팁 체험해보세요';
+  $tooltip_txt.textContent = COMPANY_DESC;
 
   $h4.className = 'chart-tit';
   $tooltip.className = 'tooltip';
