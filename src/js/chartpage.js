@@ -36,14 +36,12 @@ const $jsBtn = document.getElementById('js-btn');
 $pyBtn.addEventListener('click', (event) => {
   lang = 'py';
   updateCharts();
-  showOnlyPyCanvas();
   changeLengBtnStyle(event);
   scrollToTop();
 });
 $jsBtn.addEventListener('click', (event) => {
   lang = 'js';
   updateCharts();
-  showOnlyJsCanvas();
   changeLengBtnStyle(event);
   scrollToTop();
 });
