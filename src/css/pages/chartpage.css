@@ -188,7 +188,7 @@
 
   /* 툴팁 */
   .tooltip {
-    top: calc(20px + 5px);
+    top: calc(20px + 6px);
     right: 16px;
   }
 
