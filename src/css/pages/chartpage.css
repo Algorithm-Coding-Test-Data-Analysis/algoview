@@ -18,8 +18,8 @@
 
 .sec-charts .category-tit {
   font-size: 27px;
-  /* margin: 48px 0 40px; */
-  margin: 48px 0 50px;
+  margin: 48px 0 40px;
+  /* margin: 48px 0 50px; */
 }
 
 .sec-charts .category-tit::before {
@@ -28,7 +28,6 @@
   height: 1px;
   width: 100%;
   background-color: var(--point-color);
-  /* margin-bottom: 48px; */
   margin-bottom: 40px;
 }
 
@@ -108,6 +107,7 @@
   position: absolute;
   top: calc(48px - 1px);
   right: 48px;
+  margin-left: 16px;
   background: url('/src/assets/images/tooltip.png') center/cover no-repeat;
 }
 
@@ -155,7 +155,7 @@
 /* ===== 반응형 ===== */
 @media screen and (width < 805px) {
   .sec-charts {
-    padding: 80px 40px 120px;
+    padding: 80px 20px 120px;
   }
 
   .sec-charts ul {
@@ -163,7 +163,7 @@
   }
 
   .sec-charts li {
-    padding: 28px;
+    padding: 24px;
   }
 
   .sec-charts .chart-tit {
@@ -174,7 +174,7 @@
 
   .sec-charts .chart-tit::before {
     height: 20px;
-    margin-left: -18px;
+    margin-left: -16px;
   }
 
   .sec-charts canvas {
