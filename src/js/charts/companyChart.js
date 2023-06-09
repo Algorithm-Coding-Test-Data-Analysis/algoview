@@ -9,11 +9,19 @@ function getCompanyData(data, lang) {
     const $canvas = document.createElement('canvas');
     const $h4 = document.createElement('h4');
     const $li = document.createElement('li');
+    const $tooltip = document.createElement('span');
+    const $tooltip_txt = document.createElement('span');
+
+    $tooltip_txt.textContent = '임시 툴팁 체험해보세요';
 
     $h4.className = 'chart-tit';
+    $tooltip.className = 'tooltip';
+    $tooltip_txt.className = 'tooltip-txt';
     $h4.textContent = `${key} 출제 문제(임시)`; // 임시 차트명
     $canvas.id = `${key}-chart`;
+    $tooltip.append($tooltip_txt);
     $li.append($h4);
+    $li.append($tooltip);
     $li.append($canvas);
     $company_list.append($li);
 

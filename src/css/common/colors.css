@@ -57,6 +57,8 @@
   --bg-color: #f2f2fd;
   --bg-color-2: #ffffff;
   --scroll-bg: #d7d7d7;
+  --tooltip-bg: #595E89;
+  --tooltip-text: #ffffff;
 }
 
 .main.dark {
