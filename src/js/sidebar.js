@@ -3,46 +3,48 @@ export function sidebarHTML() {
 
   function chartSidebar() {
     return `
-      <aside class="sidebar-menu-container">
-        <!-- 셀렉트 언어 -->
-        <div class="select-lang">
-          <button class="selected-btn" type="button" id="py-btn" value="py">Python</button>
-          <button type="button" id="js-btn" value="js">JavaScript</button>
-        </div>
-        <ul class="sidebar-menu-list">
-          <li>
-            <button class="sidebar-menu-item">
-              레벨
-            </button>
-          </li>
-          <li>
-            <button class="sidebar-menu-item">
-              메서드
-            </button>
-          </li>
-          <li>
-            <button class="sidebar-menu-item">
-              문제 유형
-            </button>
-          </li>
-          <li>
-            <button class="sidebar-menu-item">
-              출제 연도
-            </button>
-          </li>
-          <li>
-            <button class="sidebar-menu-item">
-              출제 업체
-            </button>
-          </li>
-        </ul>
-      </aside>
-      `;
+    <input id="sidebar-check-btn" type="checkbox" />
+    <aside class="sidebar-menu-container">
+      <label class="sidebar-check-label dark" for="sidebar-check-btn">
+      </label>
+      <div class="select-lang">
+        <button class="selected-btn" type="button" id="py-btn" value="py">Python</button>
+        <button type="button" id="js-btn" value="js">JavaScript</button>
+      </div>
+      <ul class="sidebar-menu-list">
+        <li>
+          <button class="sidebar-menu-item">
+            레벨
+          </button>
+        </li>
+        <li>
+          <button class="sidebar-menu-item">
+            메서드
+          </button>
+        </li>
+        <li>
+          <button class="sidebar-menu-item">
+            문제 유형
+          </button>
+        </li>
+        <li>
+          <button class="sidebar-menu-item">
+            출제 연도
+          </button>
+        </li>
+        <li>
+          <button class="sidebar-menu-item">
+            출제 업체
+          </button>
+        </li>
+      </ul>
+    </aside>
+    `;
   }
 
   function referenceSidebar() {
     return `
-      <aside class="sidebar-menu-container">
+      <aside class="sidebar-menu-container refer">
               <ul class="sidebar-menu-list">
                 <li>
                   <a href="/pages/reference/youtube" class="sidebar-menu-item ${
@@ -105,4 +107,13 @@ export function sidebarScrollEvent() {
       });
     });
   }
+}
+
+export function sidebarToggleEvent() {
+  const sidebarToggleBtn = document.querySelector('#sidebar-check-btn');
+  const sidebarToggleLabel = document.querySelector('.sidebar-check-label');
+
+  sidebarToggleBtn.addEventListener('click', () => {
+    sidebarToggleLabel.classList.toggle('rotate');
+  });
 }

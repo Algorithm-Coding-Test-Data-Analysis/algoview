@@ -3,6 +3,7 @@ import {
   sidebarHTML,
   sidebarMenuHighlight,
   sidebarScrollEvent,
+  sidebarToggleEvent,
 } from './sidebar.js';
 import { footerHTML } from './footer.js';
 import { toggleDarkMode } from './darkmode.js';
@@ -13,6 +14,7 @@ hamburger();
 sidebarHTML();
 sidebarMenuHighlight();
 sidebarScrollEvent();
+sidebarToggleEvent();
 
 footerHTML();
 

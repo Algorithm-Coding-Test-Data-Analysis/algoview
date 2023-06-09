@@ -42,6 +42,9 @@ body {
   }
 
   .sidebar {
-    display: none;
+    position: sticky;
+    left: 0;
+    top: 50px;
+    z-index: 100;
   }
 }
