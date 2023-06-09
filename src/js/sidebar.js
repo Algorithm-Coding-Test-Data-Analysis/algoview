@@ -1,48 +1,50 @@
-export function sideBarHTML() {
+export function sidebarHTML() {
   const currentPath = window.location.pathname;
 
   function chartSidebar() {
     return `
-      <aside class="sidebar-menu-container">
-              <!-- 셀렉트 언어 -->
-              <div class="select-lang">
-                <button class="selected-btn" type="button" id="py-btn" value="py">Python</button>
-                <button type="button" id="js-btn" value="js">JavaScript</button>
-              </div>
-              <ul class="sidebar-menu-list">
-                <li>
-                  <a href="#level" class="sidebar-menu-item">
-                    레벨
-                  </a>
-                </li>
-                <li>
-                  <a href="#method" class="sidebar-menu-item">
-                    메서드
-                  </a>
-                </li>
-                <li>
-                  <a href="#problem" class="sidebar-menu-item">
-                    문제 유형
-                  </a>
-                </li>
-                <li>
-                  <a href="#year" class="sidebar-menu-item">
-                    출제 연도
-                  </a>
-                </li>
-                <li>
-                  <a href="#company" class="sidebar-menu-item">
-                    출제 업체
-                  </a>
-                </li>
-              </ul>
-            </aside>
-      `;
+    <input id="sidebar-check-btn" type="checkbox" />
+    <aside class="sidebar-menu-container">
+      <label class="sidebar-check-label dark" for="sidebar-check-btn">
+      </label>
+      <div class="select-lang">
+        <button class="selected-btn" type="button" id="py-btn" value="py">Python</button>
+        <button type="button" id="js-btn" value="js">JavaScript</button>
+      </div>
+      <ul class="sidebar-menu-list">
+        <li>
+          <button class="sidebar-menu-item">
+            레벨
+          </button>
+        </li>
+        <li>
+          <button class="sidebar-menu-item">
+            메서드
+          </button>
+        </li>
+        <li>
+          <button class="sidebar-menu-item">
+            문제 유형
+          </button>
+        </li>
+        <li>
+          <button class="sidebar-menu-item">
+            출제 연도
+          </button>
+        </li>
+        <li>
+          <button class="sidebar-menu-item">
+            출제 업체
+          </button>
+        </li>
+      </ul>
+    </aside>
+    `;
   }
 
   function referenceSidebar() {
     return `
-      <aside class="sidebar-menu-container">
+      <aside class="sidebar-menu-container refer">
               <ul class="sidebar-menu-list">
                 <li>
                   <a href="/pages/reference/youtube" class="sidebar-menu-item ${
@@ -77,7 +79,7 @@ export function sideBarHTML() {
 }
 
 export function sidebarMenuHighlight() {
-  const menuLinks = document.querySelectorAll('aside ul li a');
+  const menuLinks = document.querySelectorAll('aside ul li button');
   const charts = document.querySelectorAll('.sec-charts article');
 
   window.addEventListener('scroll', () => {
@@ -91,5 +93,27 @@ export function sidebarMenuHighlight() {
         menuLinks[index].classList.remove('sidebar-highlight');
       }
     }
+  });
+}
+
+export function sidebarScrollEvent() {
+  const sidebarBtnList = document.querySelectorAll('.sidebar-menu-list button');
+  const articleList = document.querySelectorAll('.sec-charts article');
+
+  for (let i = 0; i < sidebarBtnList.length; i++) {
+    sidebarBtnList[i].addEventListener('click', () => {
+      window.scrollTo({
+        top: articleList[i].offsetTop - 80,
+      });
+    });
+  }
+}
+
+export function sidebarToggleEvent() {
+  const sidebarToggleBtn = document.querySelector('#sidebar-check-btn');
+  const sidebarToggleLabel = document.querySelector('.sidebar-check-label');
+
+  sidebarToggleBtn.addEventListener('click', () => {
+    sidebarToggleLabel.classList.toggle('rotate');
   });
 }

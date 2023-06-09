@@ -40,9 +40,13 @@
 .sidebar.dark {
   --main-color: #393b46;
   --text-color: #ffffff;
-  --point-color: rgba(96, 91, 255, 0.8);
+  --point-color: #605bff;
   /* 언어 버튼 속성 */
   --btn-text-color: #595e89;
+}
+
+.sidebar-check-label.dark {
+  --main-color: #605bff;
 }
 
 /* ===== main ===== */

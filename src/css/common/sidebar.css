@@ -1,20 +1,32 @@
 .sidebar-menu-container {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: space-between;
   flex-shrink: 0;
+  gap: 200px;
   position: sticky;
   top: var(--header);
   left: 0;
   width: var(--sidebar);
-  height: 100vh;
+  min-height: 100vh;
+  padding: 80px 60px 160px 60px;
+  font-size: 24px;
   background-color: var(--main-color);
+  transform: translateX(0px);
+  transition: transform 0.4s ease-in-out;
+}
+.sidebar-menu-container.refer {
+  flex-direction: column;
 }
 
 .sidebar-menu-list {
   width: 100%;
-  padding: 80px 60px;
 }
 
 .sidebar-menu-item {
   display: block;
+  width: 100%;
   text-decoration: none;
   font-family: 'Pretendard';
   font-weight: 700;
@@ -22,11 +34,13 @@
   line-height: 28.8px;
   color: var(--text-color);
   text-align: start;
-  border-radius: 10px;
-  width: 100%;
+  border-radius: 12px;
+  border: none;
   padding: 22px;
   margin-bottom: 16px;
+  background-color: var(--main-color);
 }
+
 .sidebar-menu-item:hover {
   background-color: var(--point-color);
 }
@@ -35,21 +49,23 @@
 }
 
 /* 차트 페이지 언어 버튼을 위한 속성*/
+#sidebar-check-btn {
+  display: none;
+}
+
 .select-lang {
-  position: absolute;
   font-size: 0;
-  bottom: calc(var(--header) + 80px);
-  left: 60px;
 }
 .select-lang button {
+  width: 120px;
+  color: var(--btn-text-color);
+  background: none;
   font-weight: 700;
   font-size: 18px;
   line-height: 20px;
-  padding: 7px 0 9px;
-  width: 120px;
   border: 2px solid var(--point-color);
-  background: none;
-  color: var(--btn-text-color);
+  padding: 7px 0 9px;
+  margin-bottom: 30px;
 }
 .select-lang button.selected-btn {
   color: #fff;
@@ -61,21 +77,72 @@
 #py-btn {
   border-radius: 10px 0 0 10px;
 }
+
 @media (max-width: 805px) {
+  .sidebar-menu-container {
+    position: absolute;
+    top: 0;
+    width: 133px;
+    justify-content: center;
+    gap: 55px;
+    padding: 60px 20px 120px 20px;
+    transform: translatex(-100%);
+    transition: transform 0.4s ease-in-out;
+  }
+  .sidebar-menu-container.refer {
+    display: none;
+  }
+  .sidebar-menu-item {
+    font-size: 14px;
+    line-height: 16.71px;
+    border-radius: 7px;
+    padding: 6px 10px;
+  }
+
+  /* 차트 페이지 언어 버튼을 위한 속성*/
   .select-lang {
     display: flex;
     flex-direction: column;
   }
   .select-lang button {
-    padding: 3px 0;
     width: 93px;
     font-size: 12px;
     line-height: 14px;
+    padding: 3px 0;
+  }
+  #py-btn {
+    border-radius: 7px 7px 0 0;
+    margin-bottom: 0;
   }
   #js-btn {
     border-radius: 0 0 7px 7px;
   }
-  #py-btn {
-    border-radius: 7px 7px 0 0;
-}
+
+  /* 사이드바 토글 버튼을 위한 속성 */
+  .sidebar-check-label {
+    position: absolute;
+    width: 10.2px;
+    height: 50px;
+    right: -10px;
+    top: 40%;
+    border-radius: 0px 3px 3px 0px;
+    background-color: var(--main-color);
+    cursor: pointer;
+  }
+  .sidebar-check-label::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s;
+    transform: rotate(180deg);
+    background: url(../../assets/images/arrow-button.svg) center no-repeat;
+  }
+  .sidebar-check-label.rotate::after {
+    transform: rotate(0deg);
+  }
+  #sidebar-check-btn:checked ~ .sidebar-menu-container {
+    transform: translatex(0);
+    transition: transform 0.4s ease-in-out;
+  }
 }
