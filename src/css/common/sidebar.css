@@ -33,3 +33,31 @@
 .sidebar-highlight {
   background-color: var(--point-color);
 }
+
+/* 차트 페이지 언어 버튼을 위한 속성*/
+.select-lang {
+  position: absolute;
+  font-size: 0;
+  bottom: calc(var(--header) + 80px);
+  left: 60px;
+}
+.select-lang button {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  padding: 7px 0 9px;
+  width: 120px;
+  border: 2px solid var(--point-color);
+  background: none;
+  color: var(--btn-text-color);
+}
+.select-lang button.selected-btn {
+  color: #fff;
+  background: var(--point-color);
+}
+#js-btn {
+  border-radius: 0 10px 10px 0;
+}
+#py-btn {
+  border-radius: 10px 0 0 10px;
+}
