@@ -13,19 +13,28 @@ function getYearTypeChart(data, lang, charts) {
       (v) => v !== '0000'
     )
   );
+  console.log(yearTypelabels);
 
   // 데이터 값 세팅 : ‘0000’은 연도가 아니라서 제외
   for (const key in yearType) {
     let tempData = [];
+
     for (const year in yearType[key]) {
       year !== '0000' && tempData.push(yearType[key][year]);
     }
-    let chartData = {
-      label: key,
-      data: tempData,
-      // borderWidth: 1,
-    };
-    yearTypeData.push(chartData);
+
+    // 데이터 값이 null이 아닐 경우에만 data 세팅
+    for (let i = 0; i < tempData.length; i++) {
+      if (tempData[i]) {
+        let chartData = {
+          label: key,
+          data: tempData,
+          // borderWidth: 1,
+        };
+        yearTypeData.push(chartData);
+        break;
+      }
+    }
   }
 
   // 년도별 유형(year_type) 차트 세팅
