@@ -4,6 +4,11 @@ export function sideBarHTML() {
   function chartSidebar() {
     return `
       <aside class="sidebar-menu-container">
+              <!-- 셀렉트 언어 -->
+              <div class="select-lang">
+                <button class="selected-btn" type="button" id="py-btn" value="py">Python</button>
+                <button type="button" id="js-btn" value="js">JavaScript</button>
+              </div>
               <ul class="sidebar-menu-list">
                 <li>
                   <a href="#level" class="sidebar-menu-item">

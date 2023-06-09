@@ -29,12 +29,16 @@
   --main-color: #605bff;
   --text-color: #ffffff;
   --point-color: #8d89ff;
+  /* 언어 버튼 속성 */
+  --btn-text-color: #878787;
 }
 
 .sidebar.dark {
   --main-color: #393b46;
   --text-color: #ffffff;
   --point-color: rgba(96, 91, 255, 0.8);
+  /* 언어 버튼 속성 */
+  --btn-text-color: #595E89;
 }
 
 /* ===== main ===== */
@@ -45,9 +49,6 @@
   --bg-color: #f2f2fd;
   --bg-color-2: #ffffff;
   --scroll-bg: #D7D7D7;
-
-  /* sidebar로 옮길 예정 */
-  --btn-text-color: #878787;
 }
 
 .main.dark {
@@ -56,9 +57,6 @@
   --bg-color: #272b33;
   --bg-color-2: #393B46;
   --scroll-bg: #393B46;
-
-  /* sidebar로 옮길 예정 */
-  --btn-text-color: #595E89;
 }
 
 /* ===== footer ===== */
