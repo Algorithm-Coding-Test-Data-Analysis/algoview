@@ -24,8 +24,17 @@ def extract_from_text(lst, pattern):
     return temp_lst
 
 
+def remove_unicode(lst):
+    new_lst = []
+    for item in lst:
+        item = ''.join(c for c in unicodedata.normalize('NFD', item) if not unicodedata.combining(c))
+        new_lst.append(item)
+    return new_lst
+
+
 def description_to_dict():
     temp_lst = get_description_text()
+    temp_lst = remove_unicode(temp_lst)
     key_lst = extract_from_text(temp_lst, key_pattern)
     value_lst = extract_from_text(temp_lst, value_pattern)
 
