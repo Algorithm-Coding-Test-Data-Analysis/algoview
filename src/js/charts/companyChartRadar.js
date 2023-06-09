@@ -18,36 +18,21 @@ function getCompanyDataForRadar(data, lang) {
   // labels = [DFSBFS, 구현, 그리다, 기타, 스택큐, 완전탐색, 해시]
   const labels = Object.keys(COMPANY_DATA[companyName[0]]);
 
+  const datasets = [];
+  companyName.forEach(v => {
+    datasets.push({
+      'label': v,
+      'data': Object.values(COMPANY_DATA[v])
+    });
+  });
+
   const companyChartRadar = new Chart(
     document.getElementById('company-type-radar-chart'),
     {
       type: 'radar',
       data: {
         labels: labels,
-        datasets: [
-          {
-            label: companyName[0],
-            data: Object.values(COMPANY_DATA[companyName[0]]),
-            fill: true,
-            backgroundColor: 'rgba(255, 99, 132, 0.2)',
-            borderColor: 'rgb(255, 99, 132)',
-            pointBackgroundColor: 'rgb(255, 99, 132)',
-            pointBorderColor: '#fff',
-            pointHoverBackgroundColor: '#fff',
-            pointHoverBorderColor: 'rgb(255, 99, 132)',
-          },
-          {
-            label: companyName[1],
-            data: Object.values(COMPANY_DATA[companyName[1]]),
-            fill: true,
-            backgroundColor: 'rgba(54, 162, 235, 0.2)',
-            borderColor: 'rgb(54, 162, 235)',
-            pointBackgroundColor: 'rgb(54, 162, 235)',
-            pointBorderColor: '#fff',
-            pointHoverBackgroundColor: '#fff',
-            pointHoverBorderColor: 'rgb(54, 162, 235)',
-          },
-        ],
+        datasets: datasets,
       },
       options: {
         elements: {
