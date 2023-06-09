@@ -104,6 +104,12 @@
   .overlay {
     display: none;
   }
+  .hidden-menu-wrapper {
+    display: none;
+  }
+  .hidden-header-menu {
+    display: none;
+  }
 }
 
 @media screen and (width < 805px) {
