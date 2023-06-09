@@ -62,6 +62,90 @@ function getLevelDataPy(data, lang, charts) {
       data['py']['level_problem_type_ratio']['level3']
     );
 
+    // 레벨별 문제 유형 비율(lv4)
+    if (data['py']['level_problem_type_ratio']['level4']) {
+      const level4ProblemTypeData = [];
+      for (const key in data['py']['level_problem_type_ratio']['level4']) {
+        level4ProblemTypeData.push(
+          data['py']['level_problem_type_ratio']['level4'][key]
+        );
+      }
+      const level4ProblemTypeLabels = Object.keys(
+        data['py']['level_problem_type_ratio']['level4']
+      );
+
+      const level4ProblemTypeChart = new Chart(
+        document.getElementById('level4-problem-type-chart'),
+        {
+          type: 'doughnut',
+          data: {
+            labels: level4ProblemTypeLabels,
+            datasets: [
+              {
+                data: level4ProblemTypeData,
+                backgroundColor: [
+                  'rgba(255, 99, 132, 0.8)',
+                  'rgba(54, 162, 235, 0.8)',
+                  'rgba(255, 206, 86, 0.8)',
+                  'rgba(75, 192, 192, 0.8)',
+                ],
+                borderColor: [
+                  'rgba(255, 99, 132, 1)',
+                  'rgba(54, 162, 235, 1)',
+                  'rgba(255, 206, 86, 1)',
+                  'rgba(75, 192, 192, 1)',
+                ],
+                borderWidth: 1,
+              },
+            ],
+          },
+        }
+      );
+      charts.push(level4ProblemTypeChart);
+    }
+
+    // 레벨별 문제 유형 비율(lv5)
+    if (data['py']['level_problem_type_ratio']['level5']) {
+      const level5ProblemTypeData = [];
+      for (const key in data['py']['level_problem_type_ratio']['level5']) {
+        level5ProblemTypeData.push(
+          data['py']['level_problem_type_ratio']['level5'][key]
+        );
+      }
+      const level5ProblemTypeLabels = Object.keys(
+        data['py']['level_problem_type_ratio']['level5']
+      );
+
+      const level5ProblemTypeChart = new Chart(
+        document.getElementById('level5-problem-type-chart'),
+        {
+          type: 'doughnut',
+          data: {
+            labels: level5ProblemTypeLabels,
+            datasets: [
+              {
+                data: level5ProblemTypeData,
+                backgroundColor: [
+                  'rgba(255, 99, 132, 0.8)',
+                  'rgba(54, 162, 235, 0.8)',
+                  'rgba(255, 206, 86, 0.8)',
+                  'rgba(75, 192, 192, 0.8)',
+                ],
+                borderColor: [
+                  'rgba(255, 99, 132, 1)',
+                  'rgba(54, 162, 235, 1)',
+                  'rgba(255, 206, 86, 1)',
+                  'rgba(75, 192, 192, 1)',
+                ],
+                borderWidth: 1,
+              },
+            ],
+          },
+        }
+      );
+      charts.push(level5ProblemTypeChart);
+    }
+
     // 레벨별 모듈 메소드(lv0~lv3)
     // 레벨별 모듈 메소드(lv0)
     const level0MethodCountData = [];
