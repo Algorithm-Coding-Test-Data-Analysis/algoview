@@ -7,12 +7,9 @@ let data;
 let charts = [];
 const URL = 'https://algoview.co.kr/dataAnalysis/notebook/chart_data.json';
 
-// Chart.defaults.font.size = '16';
-// console.dir(Chart);
-
-Chart.defaults.color = isDarkMode ? '#fff' : '#272b33';
-
 function setCharts(lang = 'py') {
+  Chart.defaults.color = isDarkMode ? '#fff' : '#272b33';
+
   getCategoryLevelMethod([data, lang, charts]);
   getCategoryProblemType([data, lang, charts]);
   getCategoryYearCompany([data, lang, charts]);
@@ -27,16 +24,18 @@ export function updateCharts({ lang, mode = isDarkMode }) {
 }
 
 (async () => {
-  try {
-    const res = await fetch(URL);
-    if (res.status === 200) {
-      data = await res.json();
-      setCharts();
-    } else throw res.statusText;
-  } catch (err) {
-    console.error('에러 발생!', err);
-    alert('현재는 차트를 불러올 수 없습니다.');
-    return;
+  if (window.location.pathname === '/') {
+    try {
+      const res = await fetch(URL);
+      if (res.status === 200) {
+        data = await res.json();
+        setCharts();
+      } else throw res.statusText;
+    } catch (err) {
+      console.error('에러 발생!', err);
+      alert('현재는 차트를 불러올 수 없습니다.');
+      return;
+    }
   }
 })();
 
