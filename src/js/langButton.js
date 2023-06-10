@@ -16,7 +16,7 @@ $jsBtn.addEventListener('click', (e) => {
 });
 
 function changeLang(e) {
-  updateCharts(lang);
+  updateCharts({ lang });
   changeLengBtnStyle(e);
   scrollToTop();
 }
