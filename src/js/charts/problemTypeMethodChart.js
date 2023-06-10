@@ -1,4 +1,7 @@
 export default function getProblemTypeMethod(data, lang, charts) {
+  const canvas = document.querySelector('#problem-type-method-chart');
+  createToolTip(canvas, data);
+
   if (lang === 'py') {
     const labels = Object.keys(data[lang]['problem_type_method']);
     const problemTypeMethodData = Object.values(data[lang]['problem_type_method']);
@@ -22,7 +25,7 @@ export default function getProblemTypeMethod(data, lang, charts) {
       });
     });
 
-    charts.push(drawChart(labels, datasets));
+    charts.push(drawChart(labels, datasets, canvas));
 
   } else if (lang === 'js') {
     const labelList = Object.keys(data[lang]['problem_type_method']);
@@ -40,12 +43,12 @@ export default function getProblemTypeMethod(data, lang, charts) {
         datasets[i].data = Object.values(type);
     });
 
-    charts.push(drawChart(labels, datasets));
+    charts.push(drawChart(labels, datasets, canvas));
   }
 }
 
-function drawChart(labels, datasets) {
-  return new Chart(document.querySelector('#problem-type-method-chart'), {
+function drawChart(labels, datasets, canvas) {
+  return new Chart(canvas, {
     type: 'bar',
     data: {
       labels: labels,
@@ -63,4 +66,8 @@ function drawChart(labels, datasets) {
       }
     },
   });
+}
+
+function createToolTip(canvas, data) {
+  canvas.previousElementSibling.childNodes[0].textContent = data['description']['problem_type_method']; 
 }

@@ -12,12 +12,12 @@ import { toggleDarkMode } from './darkmode.js';
 headerHTML();
 hamburger();
 
+footerHTML();
+
 sidebarHTML();
 sidebarMenuHighlight();
 sidebarScrollEvent();
 sidebarToggleEvent();
-
-footerHTML();
 
 toggleDarkMode();
 
