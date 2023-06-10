@@ -5,6 +5,7 @@ import {
   sidebarMenuHighlight,
   sidebarScrollEvent,
   sidebarToggleEvent,
+  sidebarDisplayEvent,
 } from './sidebar.js';
 import { footerHTML } from './footer.js';
 import { toggleDarkMode } from './darkmode.js';
@@ -18,6 +19,7 @@ sidebarHTML();
 sidebarMenuHighlight();
 sidebarScrollEvent();
 sidebarToggleEvent();
+sidebarDisplayEvent();
 
 toggleDarkMode();
 

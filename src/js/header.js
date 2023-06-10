@@ -73,6 +73,17 @@ export function hamburger() {
   // 햄버거 버튼 클릭 이벤트 리스너
   BtnHamburger.addEventListener('click', () => {
     toggleMenu();
+
+    // 사이드바 열려 있을 때, 햄버거 버튼 클릭 시 사이드바 닫히는 기능
+    const checkBox = document.querySelector('#sidebar-check-btn');
+    const sidebarToggleLabel = document.querySelector('.sidebar-check-label');
+    const sidebarOverlay = document.querySelector('.sidebar-overlay');
+
+    if (checkBox.checked === true) {
+      sidebarOverlay.style.display = 'none';
+      sidebarToggleLabel.classList.toggle('rotate');
+    }
+    checkBox.checked = false;
   });
 
   // 문서 클릭 이벤트 리스너
