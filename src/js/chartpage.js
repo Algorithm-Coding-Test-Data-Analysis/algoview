@@ -42,16 +42,18 @@ const $jsBtn = document.getElementById('js-btn');
 
 $pyBtn.addEventListener('click', (event) => {
   lang = 'py';
-  updateCharts();
-  changeLengBtnStyle(event);
-  scrollToTop();
+  changeLang(event);
 });
 $jsBtn.addEventListener('click', (event) => {
   lang = 'js';
+  changeLang(event);
+});
+
+function changeLang(event) {
   updateCharts();
   changeLengBtnStyle(event);
   scrollToTop();
-});
+}
 
 /* 그려지지 않은 캔버스 숨김 */
 const canvasList = [...document.querySelectorAll('.sec-charts li')];
