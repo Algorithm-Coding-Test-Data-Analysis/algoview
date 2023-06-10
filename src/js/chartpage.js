@@ -4,30 +4,30 @@ import getCategoryProblemType from './charts/categoryProblemType.js';
 import getCategoryYearCompany from './charts/categoryYearCompany.js';
 
 let data;
-let lang = 'py';
 let charts = [];
+let lang = 'py';
 const URL = 'https://algoview.co.kr/dataAnalysis/notebook/chart_data.json';
-
-Chart.defaults.color = isDarkMode ? '#fff' : '#272b33';
 
 // Chart.defaults.font.size = '16';
 // Chart.defaults.borderColor = '#36A2EB';
-console.dir(Chart);
+// console.dir(Chart);
 // Chart.defaults.plugins.legend.labels.padding = 15;
 // Chart.defaults.plugins.legend.fullSize = false;
 
-function setCharts() {
+Chart.defaults.color = isDarkMode ? '#fff' : '#272b33';
+
+function setCharts(lang = 'py') {
   getCategoryLevelMethod([data, lang, charts]);
   getCategoryProblemType([data, lang, charts]);
   getCategoryYearCompany([data, lang, charts]);
-  showOnlyDrawnCanvas(); //그려진 캔버스만 보여줌
+  showOnlyDrawnCanvas(); // 그려진 캔버스만 보여줌
 }
 
 export function updateCharts(mode) {
   charts.map((chart) => chart.destroy());
   charts = [];
   Chart.defaults.color = mode ? '#fff' : '#272b33';
-  setCharts();
+  setCharts(lang);
 }
 
 (async () => {
