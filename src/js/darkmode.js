@@ -1,6 +1,8 @@
+import store from './common.js';
+
 const COMPONENTS_CLASS = ['.header', '.sidebar', '.main', '.footer'];
 
-let isDarkMode = sessionStorage.getItem('algoview')
+export let isDarkMode = sessionStorage.getItem('algoview')
   ? JSON.parse(sessionStorage.getItem('algoview'))
   : window.matchMedia('(prefers-color-scheme: dark)').matches;
 
@@ -45,6 +47,7 @@ export function toggleDarkMode() {
   function updateMode() {
     isDarkMode = !isDarkMode;
     sessionStorage.setItem('algoview', isDarkMode);
+    store.setDarkMode = isDarkMode;
     renderDarkMode($darkmode);
   }
 }
