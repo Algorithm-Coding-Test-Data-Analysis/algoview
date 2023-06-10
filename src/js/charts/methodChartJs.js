@@ -1,4 +1,9 @@
 function getMethodDataJs(data, lang, charts) {
+  document.getElementById(
+    'method-count-chart'
+  ).previousElementSibling.childNodes[0].textContent =
+    data['description']['function_method_sort'];
+
   if (lang === 'js') {
     // 종합 메소드 모듈 빈도수
     const methodCountData = [];

@@ -7,6 +7,11 @@ function getYearTypeChart(data, lang, charts) {
   // 데이터 값
   const yearTypeData = [];
 
+  document.getElementById(
+    'year-type-chart'
+  ).previousElementSibling.childNodes[0].textContent =
+    data['description']['year_type'];
+
   // 데이터 레이블 세팅 : ‘0000’은 연도가 아니라서 제외
   yearTypelabels.push(
     ...Object.keys(yearType[Object.keys(yearType)[0]]).filter(

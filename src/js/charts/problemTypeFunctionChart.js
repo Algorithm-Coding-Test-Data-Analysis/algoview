@@ -1,26 +1,33 @@
 function getProblemTypeFunctionData(data, lang, charts) {
+  document.getElementById(
+    'problem-type-function-chart'
+  ).previousElementSibling.childNodes[0].textContent =
+    data['description']['problem_type_function'];
+
   if (lang === 'py') {
     const problemType = Object.keys(data['py']['problem_type_function']);
 
-    const problemTypeFunctionData = Object.values(data['py']['problem_type_function']);
+    const problemTypeFunctionData = Object.values(
+      data['py']['problem_type_function']
+    );
     const allFunctions = [];
-    problemTypeFunctionData.forEach(i => {
+    problemTypeFunctionData.forEach((i) => {
       allFunctions.push(...Object.keys(i));
     });
     const functionList = new Set(allFunctions);
 
     const datasets = [];
-    functionList.forEach(item => {
+    functionList.forEach((item) => {
       datasets.push({
-        'label': item,
-        'data': []
+        label: item,
+        data: [],
       });
     });
-    problemTypeFunctionData.forEach(el => {
+    problemTypeFunctionData.forEach((el) => {
       [...functionList].forEach((funcName, idx) => {
-        datasets[idx].data.push(el[funcName] || 0)
-      })
-    })
+        datasets[idx].data.push(el[funcName] || 0);
+      });
+    });
 
     const problemTypeFunctionChart = new Chart(
       document.getElementById('problem-type-function-chart'),
@@ -37,8 +44,8 @@ function getProblemTypeFunctionData(data, lang, charts) {
               stacked: true,
             },
             y: {
-              stacked: true
-            }
+              stacked: true,
+            },
           },
         },
       }

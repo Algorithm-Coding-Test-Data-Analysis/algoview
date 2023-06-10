@@ -8,6 +8,11 @@ function getYearsChart(data, lang, charts) {
   const yearsData = [];
   const chartData = [];
 
+  document.getElementById(
+    'years-chart'
+  ).previousElementSibling.childNodes[0].textContent =
+    data['description']['years'];
+
   // 데이터 레이블 세팅
   yearslabels.push(...Object.keys(years).filter((v) => v !== '0000'));
   yearslabels.sort((a, b) => a - b);
