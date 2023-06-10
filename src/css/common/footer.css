@@ -70,6 +70,23 @@
   padding-top: 5px;
 }
 
+@media screen and (max-width: 1400px) {
+  .footer-description p {
+    width: 330px;
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .footer-title {
+    font-size: 22px;
+    width: 290px;
+  }
+  .footer-description {
+    width: 100%;
+  }
+}
+
 /* 레이아웃 체크를 위해 추가했습니다. 수정하셔도 됩니다! */
 @media screen and (max-width: 805px) {
   .footer-wrapper-div {
@@ -131,9 +148,10 @@
     width: 100%;
   }
   .footer-description p {
-    width: 240px;
+    width: 271px;
   }
   .footer-title {
     font-size: 14px;
+    width: 220px;
   }
 }
