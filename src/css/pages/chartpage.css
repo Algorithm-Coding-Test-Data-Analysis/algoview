@@ -107,7 +107,7 @@
   position: absolute;
   top: calc(48px - 1px);
   right: 48px;
-  background: url('/src/assets/images/tooltip.png') center/cover no-repeat;
+  background: url('/src/assets/images/tooltip.svg') center/cover no-repeat;
 }
 
 .tooltip-txt {
