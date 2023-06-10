@@ -5,14 +5,10 @@ import getCategoryYearCompany from './charts/categoryYearCompany.js';
 
 let data;
 let charts = [];
-let lang = 'py';
 const URL = 'https://algoview.co.kr/dataAnalysis/notebook/chart_data.json';
 
 // Chart.defaults.font.size = '16';
-// Chart.defaults.borderColor = '#36A2EB';
 // console.dir(Chart);
-// Chart.defaults.plugins.legend.labels.padding = 15;
-// Chart.defaults.plugins.legend.fullSize = false;
 
 Chart.defaults.color = isDarkMode ? '#fff' : '#272b33';
 
@@ -23,7 +19,7 @@ function setCharts(lang = 'py') {
   showOnlyDrawnCanvas(); // 그려진 캔버스만 보여줌
 }
 
-export function updateCharts(mode) {
+export function updateCharts({ lang, mode = isDarkMode }) {
   charts.map((chart) => chart.destroy());
   charts = [];
   Chart.defaults.color = mode ? '#fff' : '#272b33';
