@@ -1,4 +1,4 @@
-import store from './common.js';
+import store from './store.js';
 
 const COMPONENTS_CLASS = ['.header', '.sidebar', '.main', '.footer'];
 
