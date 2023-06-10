@@ -18,7 +18,7 @@ function getCompanyData(data, lang) {
     $h4.className = 'chart-tit';
     $tooltip.className = 'tooltip';
     $tooltip_txt.className = 'tooltip-txt';
-    $h4.textContent = `${key} 출제 문제(임시)`; // 임시 차트명
+    $h4.textContent = `${key} 출제  문제 유형 수`;
     $canvas.id = `${key}-chart`;
     $tooltip.append($tooltip_txt);
     $li.append($h4);
