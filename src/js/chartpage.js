@@ -8,7 +8,7 @@ let charts = [];
 const URL = 'https://algoview.co.kr/dataAnalysis/notebook/chart_data.json';
 
 function setCharts(lang = 'py') {
-  Chart.defaults.color = isDarkMode ? '#fff' : '#272b33';
+  Chart.defaults.color = isDarkMode ? '#ffffff' : '#272b33';
 
   getCategoryLevelMethod([data, lang, charts]);
   getCategoryProblemType([data, lang, charts]);
