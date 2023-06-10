@@ -36,13 +36,15 @@ export function toggleDarkMode() {
   renderDarkMode($darkmode);
 
   $darkmode.addEventListener('click', () => {
-    isDarkMode = !isDarkMode;
-    sessionStorage.setItem('algoview', isDarkMode);
-    renderDarkMode($darkmode);
+    updateMode();
   });
   $darkmode2.addEventListener('click', () => {
+    updateMode();
+  });
+
+  function updateMode() {
     isDarkMode = !isDarkMode;
     sessionStorage.setItem('algoview', isDarkMode);
     renderDarkMode($darkmode);
-  });
+  }
 }
