@@ -70,14 +70,13 @@
   padding-top: 5px;
 }
 
-
 /* 레이아웃 체크를 위해 추가했습니다. 수정하셔도 됩니다! */
 @media screen and (max-width: 805px) {
   .footer-wrapper-div {
     height: 294px;
     flex-direction: column;
     overflow: hidden;
-    padding: 50px 40px;
+    padding: 50px 20px;
     justify-content: flex-start;
     align-items: flex-start;
   }
@@ -93,7 +92,6 @@
     width: 100%;
     height: 100%;
   }
-
 
   .footer-description {
     padding-left: 0px;
@@ -112,8 +110,8 @@
 
   .footer-title {
     margin-bottom: 20px;
-    font-Weight: 700;
-    font-Size: 16px;
+    font-weight: 700;
+    font-size: 16px;
     line-height: 25px;
   }
 
@@ -126,7 +124,16 @@
   .footer-github-link {
     padding: 5px 8x;
   }
+}
 
-
-
+@media screen and (max-width: 550px) {
+  .footer-description {
+    width: 100%;
+  }
+  .footer-description p {
+    width: 240px;
+  }
+  .footer-title {
+    font-size: 14px;
+  }
 }
