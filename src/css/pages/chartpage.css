@@ -198,6 +198,7 @@
 
   .tooltip-txt {
     right: -23px;
+    min-width: 60px;
     max-width: 300px;
   }
 
