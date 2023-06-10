@@ -78,9 +78,11 @@
   border-radius: 50%;
   background: url('/src/assets/images/btn-top.svg');
 }
-
 .btn-top.unfixed {
   position: absolute;
+}
+.btn-top:hover {
+  opacity: .85;
 }
 
 /* ===== 스크롤 인디케이터 ===== */

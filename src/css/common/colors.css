@@ -34,14 +34,15 @@
   --text-color: #ffffff;
   --point-color: #8d89ff;
   /* 언어 버튼 속성 */
+  --btn-bg-color: #605bff;
   --btn-text-color: #878787;
 }
 
 .sidebar.dark {
   --main-color: #393b46;
-  --text-color: #ffffff;
   --point-color: #605bff;
   /* 언어 버튼 속성 */
+  --btn-bg-color: #393b46;
   --btn-text-color: #595e89;
 }
 

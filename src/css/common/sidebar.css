@@ -55,15 +55,22 @@
 .select-lang button {
   width: 120px;
   color: var(--btn-text-color);
-  background: none;
+  background: var(--btn-bg-color);
   font-weight: 700;
   font-size: 18px;
   line-height: 20px;
   border: 2px solid var(--point-color);
   padding: 7px 0 9px;
   margin-bottom: 70px;
+  transition: all .15s;
 }
 .select-lang button.selected-btn {
+  color: #fff;
+  background: var(--point-color);
+}
+.select-lang button:hover {
+  opacity: .65;
+  box-shadow: rgba(149, 157, 165, 0.103) 3px 1px 24px 1px;
   color: #fff;
   background: var(--point-color);
 }
