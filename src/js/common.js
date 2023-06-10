@@ -1,3 +1,4 @@
+import store from './store.js';
 import { headerHTML, hamburger } from './header.js';
 import {
   sidebarHTML,
@@ -19,3 +20,5 @@ sidebarToggleEvent();
 footerHTML();
 
 toggleDarkMode();
+
+export default store;

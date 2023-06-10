@@ -1,14 +1,20 @@
+import { isDarkMode } from './darkmode.js';
 import getCategoryLevelMethod from './charts/categoryLevelMethod.js';
 import getCategoryProblemType from './charts/categoryProblemType.js';
 import getCategoryYearCompany from './charts/categoryYearCompany.js';
-
-// 언어 버튼 선택 시 맨 위로 스크롤하는 함수
-import scrollToTop from './topbutton.js';
 
 let data;
 let lang = 'py';
 let charts = [];
 const URL = 'https://algoview.co.kr/dataAnalysis/notebook/chart_data.json';
+
+Chart.defaults.color = isDarkMode ? '#fff' : '#272b33';
+
+// Chart.defaults.font.size = '16';
+// Chart.defaults.borderColor = '#36A2EB';
+console.dir(Chart);
+// Chart.defaults.plugins.legend.labels.padding = 15;
+// Chart.defaults.plugins.legend.fullSize = false;
 
 function setCharts() {
   getCategoryLevelMethod([data, lang, charts]);
@@ -17,9 +23,10 @@ function setCharts() {
   showOnlyDrawnCanvas(); //그려진 캔버스만 보여줌
 }
 
-function updateCharts() {
+export function updateCharts(mode) {
   charts.map((chart) => chart.destroy());
   charts = [];
+  Chart.defaults.color = mode ? '#fff' : '#272b33';
   setCharts();
 }
 
@@ -37,22 +44,6 @@ function updateCharts() {
   }
 })();
 
-const $pyBtn = document.getElementById('py-btn');
-const $jsBtn = document.getElementById('js-btn');
-
-$pyBtn.addEventListener('click', (event) => {
-  lang = 'py';
-  updateCharts();
-  changeLengBtnStyle(event);
-  scrollToTop();
-});
-$jsBtn.addEventListener('click', (event) => {
-  lang = 'js';
-  updateCharts();
-  changeLengBtnStyle(event);
-  scrollToTop();
-});
-
 /* 그려지지 않은 캔버스 숨김 */
 const canvasList = [...document.querySelectorAll('.sec-charts li')];
 
@@ -68,20 +59,9 @@ function showOnlyDrawnCanvas() {
     }
   });
 }
-// hidden 클래스 모두 제거
+
 function resetHiddenClass() {
   canvasList.forEach((li) => {
     li.classList.remove('hidden');
   });
-}
-
-/* 언어 버튼 선택 시, 스타일 변경 */
-function changeLengBtnStyle(event) {
-  if (event.target.id === 'js-btn') {
-    $jsBtn.classList.add('selected-btn');
-    $pyBtn.classList.remove('selected-btn');
-  } else if (event.target.id === 'py-btn') {
-    $jsBtn.classList.remove('selected-btn');
-    $pyBtn.classList.add('selected-btn');
-  }
 }
