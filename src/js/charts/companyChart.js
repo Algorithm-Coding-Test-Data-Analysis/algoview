@@ -44,6 +44,7 @@ function getCompanyData(data, lang) {
                 '#ffcd56aa',
                 '#c9cbcfaa',
               ],
+              borderColor: '#ffffff',
               borderWidth: 1,
             },
           ],

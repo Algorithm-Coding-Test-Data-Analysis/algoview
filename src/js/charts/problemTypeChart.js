@@ -28,8 +28,6 @@ function getProblemTypeData(data, lang, charts) {
             '#ffcd56aa',
             '#c9cbcfaa',
           ],
-          borderColor: '#ffffff',
-          borderWidth: 2,
         },
       ],
     },
