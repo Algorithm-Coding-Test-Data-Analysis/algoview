@@ -190,7 +190,8 @@ def drop_duplicated_solution(df):
     Returns:
         data: (DataFrame)
     '''
-    
+
+    df = df[df['problem_type'] != '구현']
     df = df.loc[df['module'].isna()]  # 메서드, 함수 사용 데이터 추출
     df = df[df['function_method'] != 'None']  # 메서드, 함수 미사용 데이터 제거
     df["problem_name"] = df["problem_name"].apply(lambda x: re.sub("\(1\)|\s", "", x))  # 문제이름(1)과 문제이름 => 동일 문제 처리
@@ -227,7 +228,7 @@ def get_ptype_dict(df):
 
 
     # 차트에 시각화할 상위 갯수 지정
-    top_n = 10
+    top_n = 5
     
     # 문제유형별 내장함수,메서드 사용빈도
     temp_df = drop_duplicated_solution(df)

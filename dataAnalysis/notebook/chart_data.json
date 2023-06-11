@@ -197,151 +197,122 @@
             "비트연산": 1
         },
         "problem_type_function_method": {
-            "DFSBFS": {
-                ".append": 4.0,
-                ".index": 1.0,
-                ".popleft": 2.0,
-                "collections": 0.0,
-                "deque": 0.0,
-                "len": 6.0,
-                "print": 1.0,
-                "range": 7.0
-            },
-            "그리디": {
-                ".sort": 1.0,
-                "None": 0.0,
-                "len": 2.0,
-                "set": 1.0
-            },
-            "다이나믹": {
-                ".append": 2.0,
-                "len": 2.0,
-                "max": 2.0,
-                "range": 6.0
-            },
-            "비트연산": {
-                ".append": 1.0,
-                ".replace": 2.0,
-                ".zfill": 1.0,
-                "bin": 1.0,
-                "range": 1.0
-            },
             "스택큐": {
                 ".append": 12.0,
                 ".pop": 10.0,
                 ".popleft": 7.0,
-                "None": 0.0,
-                "ceil": 0.0,
-                "collections": 0.0,
-                "deque": 0.0,
-                "divmod": 1.0,
-                "int": 1.0,
                 "len": 6.0,
-                "list": 1.0,
-                "math": 0.0,
-                "max": 2.0,
-                "range": 4.0,
-                "sorted": 2.0,
-                "str": 1.0,
-                "zip": 1.0
+                "range": 4.0
             },
             "완전탐색": {
-                ".append": 5.0,
-                ".values": 1.0,
                 "len": 6.0,
-                "max": 5.0,
-                "range": 6.0
+                "range": 6.0,
+                ".append": 5.0,
+                "max": 3.0,
+                ".values": 1.0
             },
             "해시": {
-                ".append": 5.0,
-                ".items": 1.0,
-                ".sort": 3.0,
-                "enumerate": 1.0,
                 "len": 7.0,
-                "list": 1.0,
-                "range": 1.0,
+                ".append": 5.0,
                 "set": 5.0,
-                "sorted": 1.0,
-                "zip": 1.0
+                ".sort": 3.0,
+                ".items": 1.0
+            },
+            "DFSBFS": {
+                "range": 7.0,
+                "len": 6.0,
+                ".append": 4.0,
+                ".popleft": 2.0,
+                ".index": 1.0
+            },
+            "다이나믹": {
+                "range": 6.0,
+                ".append": 2.0,
+                "len": 2.0,
+                "max": 2.0
+            },
+            "비트연산": {
+                ".replace": 2.0,
+                ".append": 1.0,
+                ".zfill": 1.0,
+                "bin": 1.0,
+                "range": 1.0
+            },
+            "그리디": {
+                "len": 2.0,
+                ".sort": 1.0,
+                "set": 1.0
             }
         },
         "problem_type_function": {
-            "DFSBFS": {
+            "스택큐": {
                 "len": 6.0,
-                "print": 1.0,
-                "range": 7.0
+                "range": 4.0,
+                "max": 2.0,
+                "sorted": 2.0,
+                "divmod": 1.0
             },
-            "그리디": {
-                "None": 0.0,
-                "len": 2.0,
-                "set": 1.0
+            "완전탐색": {
+                "len": 6.0,
+                "range": 6.0,
+                "max": 3.0
+            },
+            "해시": {
+                "len": 7.0,
+                "set": 5.0,
+                "enumerate": 1.0,
+                "list": 1.0,
+                "range": 1.0
+            },
+            "DFSBFS": {
+                "range": 7.0,
+                "len": 6.0,
+                "print": 1.0
             },
             "다이나믹": {
+                "range": 6.0,
                 "len": 2.0,
-                "max": 2.0,
-                "range": 6.0
+                "max": 2.0
+            },
+            "그리디": {
+                "len": 2.0,
+                "set": 1.0
             },
             "비트연산": {
                 "bin": 1.0,
                 "range": 1.0
-            },
-            "스택큐": {
-                "None": 0.0,
-                "divmod": 1.0,
-                "int": 1.0,
-                "len": 6.0,
-                "list": 1.0,
-                "max": 2.0,
-                "range": 4.0,
-                "sorted": 2.0,
-                "str": 1.0,
-                "zip": 1.0
-            },
-            "완전탐색": {
-                "len": 6.0,
-                "max": 5.0,
-                "range": 6.0
-            },
-            "해시": {
-                "enumerate": 1.0,
-                "len": 7.0,
-                "list": 1.0,
-                "range": 1.0,
-                "set": 5.0,
-                "sorted": 1.0,
-                "zip": 1.0
             }
         },
         "problem_type_method": {
-            "DFSBFS": {
-                ".append": 4.0,
-                ".index": 1.0,
-                ".popleft": 2.0
-            },
-            "그리디": {
-                ".sort": 1.0
-            },
-            "다이나믹": {
-                ".append": 2.0
-            },
-            "비트연산": {
-                ".append": 1.0,
-                ".replace": 2.0,
-                ".zfill": 1.0
-            },
             "스택큐": {
                 ".append": 12.0,
                 ".pop": 10.0,
                 ".popleft": 7.0
             },
+            "해시": {
+                ".append": 5.0,
+                ".sort": 3.0,
+                ".items": 1.0
+            },
+            "DFSBFS": {
+                ".append": 4.0,
+                ".popleft": 2.0,
+                ".index": 1.0
+            },
             "완전탐색": {
                 ".append": 5.0,
                 ".values": 1.0
             },
-            "해시": {
-                ".append": 5.0,
-                ".items": 1.0,
-                ".sort": 3.0
+            "비트연산": {
+                ".replace": 2.0,
+                ".append": 1.0,
+                ".zfill": 1.0
+            },
+            "다이나믹": {
+                ".append": 2.0
+            },
+            "그리디": {
+                ".sort": 1.0
             }
         },
         "years": {
@@ -656,40 +627,74 @@
             "트리": 1
         },
         "problem_type_function_method": {
-            "DFSBFS": {
-                ".filter": 1.0,
-                ".from": 1.0,
-                ".includes": 1.0,
-                ".log": 1.0,
-                ".map": 1.0,
-                ".pop": 4.0,
-                ".push": 8.0,
-                ".readFileSync": 1.0,
-                ".reverse": 1.0,
-                ".shift": 1.0,
-                ".sort": 1.0,
+            "해시": {
+                ".get": 9.0,
+                ".sort": 7.0,
+                ".forEach": 6.0,
+                ".set": 6.0,
+                ".flat": 4.0
+            },
+            "스택큐": {
+                ".push": 11.0,
+                ".pop": 6.0,
+                ".forEach": 5.0,
                 ".split": 3.0,
-                ".toString": 1.0,
-                ".trim": 1.0,
-                ".unshift": 1.0,
-                "None": 0.0
+                ".fill": 2.0
+            },
+            "정렬": {
+                ".sort": 10.0,
+                ".forEach": 5.0,
+                ".map": 5.0,
+                ".join": 3.0,
+                ".push": 3.0
+            },
+            "완전탐색": {
+                ".push": 8.0,
+                ".max": 4.0,
+                ".filter": 3.0,
+                ".forEach": 3.0,
+                ".map": 3.0
+            },
+            "DFSBFS": {
+                ".push": 8.0,
+                ".pop": 4.0,
+                ".split": 3.0,
+                ".filter": 1.0,
+                ".from": 1.0
+            },
+            "그리디": {
+                ".includes": 4.0,
+                ".sort": 3.0,
+                ".filter": 2.0,
+                ".indexOf": 2.0,
+                ".splice": 2.0
+            },
+            "투포인터슬라이딩윈도우": {
+                ".get": 4.0,
+                ".set": 3.0,
+                ".forEach": 2.0,
+                ".split": 1.0
+            },
+            "다이나믹": {
+                ".log": 2.0,
+                ".max": 2.0,
+                ".split": 2.0,
+                ".fill": 1.0,
+                ".filter": 1.0
+            },
+            "트리": {
+                ".push": 2.0,
+                "parseInt": 2.0,
+                ".log2": 1.0,
+                ".pow": 1.0,
+                ".toString": 1.0
             },
             "그래프": {
                 ".fill": 2.0,
                 ".filter": 1.0,
                 ".forEach": 1.0,
                 ".map": 1.0,
-                ".max": 1.0,
-                ".push": 1.0,
-                ".shift": 1.0
-            },
-            "그리디": {
-                ".filter": 2.0,
-                ".forEach": 1.0,
-                ".includes": 4.0,
-                ".indexOf": 2.0,
-                ".sort": 4.0,
-                ".splice": 2.0
+                ".max": 1.0
             },
             "기타": {
                 ".Array": 1.0,
@@ -698,124 +703,13 @@
                 ".map": 1.0,
                 ".sqrt": 1.0
             },
-            "다이나믹": {
-                ".fill": 1.0,
-                ".filter": 1.0,
-                ".from": 1.0,
-                ".log": 2.0,
-                ".map": 1.0,
-                ".max": 2.0,
-                ".push": 1.0,
-                ".readFileSync": 1.0,
-                ".split": 2.0,
-                ".test": 1.0,
-                ".toString": 1.0,
-                ".trim": 1.0,
-                "None": 0.0
-            },
-            "스택큐": {
-                ".ceil": 1.0,
-                ".fill": 2.0,
-                ".filter": 2.0,
-                ".forEach": 5.0,
-                ".from": 1.0,
-                ".map": 2.0,
-                ".max": 1.0,
-                ".pop": 6.0,
-                ".push": 12.0,
-                ".reduce": 1.0,
-                ".reverse": 1.0,
-                ".shift": 2.0,
-                ".slice": 2.0,
-                ".sort": 1.0,
-                ".splice": 1.0,
-                ".split": 3.0,
-                ".toString": 1.0,
-                ".unshift": 2.0,
-                "None": 0.0,
-                "parseInt": 1.0
-            },
-            "완전탐색": {
-                ".abs": 1.0,
-                ".entries": 1.0,
-                ".fill": 1.0,
-                ".filter": 3.0,
-                ".floor": 1.0,
-                ".forEach": 3.0,
-                ".map": 5.0,
-                ".max": 8.0,
-                ".min": 2.0,
-                ".push": 10.0,
-                ".sort": 4.0,
-                ".splice": 1.0,
-                "None": 0.0
-            },
             "재귀": {
                 ".replaceAll": 1.0,
                 ".toString": 1.0
             },
-            "정렬": {
-                ".filter": 1.0,
-                ".forEach": 5.0,
-                ".get": 2.0,
-                ".join": 4.0,
-                ".log": 1.0,
-                ".map": 6.0,
-                ".push": 3.0,
-                ".readFileSync": 1.0,
-                ".reduce": 1.0,
-                ".replaceAll": 2.0,
-                ".reverse": 2.0,
-                ".set": 2.0,
-                ".slice": 3.0,
-                ".sort": 14.0,
-                ".split": 3.0,
-                ".toString": 2.0,
-                ".trim": 2.0
-            },
             "집합": {
                 ".push": 1.0,
                 ".sort": 1.0
-            },
-            "투포인터슬라이딩윈도우": {
-                ".forEach": 2.0,
-                ".get": 4.0,
-                ".set": 3.0,
-                ".split": 1.0,
-                "None": 0.0
-            },
-            "트리": {
-                ".log2": 1.0,
-                ".pow": 1.0,
-                ".push": 2.0,
-                ".toString": 1.0,
-                "parseInt": 2.0
-            },
-            "해시": {
-                ".add": 1.0,
-                ".find": 1.0,
-                ".findIndex": 1.0,
-                ".flat": 4.0,
-                ".forEach": 6.0,
-                ".get": 9.0,
-                ".has": 1.0,
-                ".join": 2.0,
-                ".log": 1.0,
-                ".map": 3.0,
-                ".max": 2.0,
-                ".min": 2.0,
-                ".push": 3.0,
-                ".readFileSync": 1.0,
-                ".reduce": 2.0,
-                ".replaceAll": 1.0,
-                ".set": 6.0,
-                ".slice": 1.0,
-                ".sort": 9.0,
-                ".splice": 2.0,
-                ".toString": 1.0,
-                ".trim": 1.0,
-                ".values": 1.0,
-                "None": 0.0
             }
         },
         "years": {
