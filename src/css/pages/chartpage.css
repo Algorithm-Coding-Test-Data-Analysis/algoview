@@ -9,7 +9,7 @@
 }
 
 .sec-charts {
-  padding: 80px 60px 120px;
+  padding: 60px 60px 120px;
 }
 
 .sec-charts .sec-tit {
@@ -18,7 +18,7 @@
 
 .sec-charts .category-tit {
   font-size: 27px;
-  margin: 48px 0 50px;
+  margin: 48px 0 30px;
 }
 
 .sec-charts .category-tit::before {
@@ -27,7 +27,7 @@
   height: 1px;
   width: 100%;
   background-color: var(--point-color);
-  margin-bottom: 40px;
+  margin-bottom: 48px;
 }
 
 .sec-charts .chart-tit {
@@ -164,11 +164,12 @@
 /* ===== 반응형 ===== */
 @media screen and (width < 805px) {
   .sec-charts {
-    padding: 80px 20px 120px;
+    padding-left:  20px;
+    padding-right:  20px;
   }
 
   .sec-charts ul {
-    gap: 20px;
+    gap: 25px;
   }
 
   .sec-charts li {
