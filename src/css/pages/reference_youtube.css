@@ -1,12 +1,11 @@
 /* list */
 .referenceContainer {
   flex: 1;
-  padding: 80px 60px 40px 60px;
+  padding: 80px 60px;
 }
 .referenceTitle {
+  margin-bottom: 40px;
   font-size: 35px;
-  font-weight: 700;
-  margin-bottom: 48px;
   color: var(--text-color)
 }
 .youtubeListContainer {
