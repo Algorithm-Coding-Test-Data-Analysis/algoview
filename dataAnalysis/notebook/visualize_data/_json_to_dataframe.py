@@ -52,7 +52,29 @@ def json_to_dataframe(language = "py"):
 #         return x
     
 
-def unicode_err(df):  # 회사명, 문제유형, 문제이름 중복 오류
+# def unicode_err(df):  # 회사명, 문제유형, 문제이름 중복 오류
+    
+#     '''
+#     unicodedata.normalize() 함수는 문자열에 있는 유니코드 문자를 
+#     NFKC형식(문자열을 표준 호환성(KC) 형식으로 정규화)으로 정규화합니다.
+#     problem_name, problem_type, company_name 컬럼의 값 중 같은 값을 
+#     파이썬에서 다르게 인식하는 문제를 해결합니다.
+    
+#     Args:
+#         data : (DataFrame | Series)
+
+#     Returns:
+#         data : (DataFrame | Series)
+#     '''
+    
+#     df["problem_name"] = df['problem_name'].apply(lambda x: unicodedata.normalize('NFKC', x))
+#     df["company_name"] = df['company_name'].apply(lambda x: unicodedata.normalize('NFKC', x))
+#     df["problem_type"] = df['problem_type'].apply(lambda x: unicodedata.normalize('NFKC', x))
+#     df["file_name"] = df['file_name'].apply(lambda x: unicodedata.normalize('NFKC', x))
+
+#     return df
+
+def unicode_err(df, column):  # 회사명, 문제유형, 문제이름 중복 오류
     
     '''
     unicodedata.normalize() 함수는 문자열에 있는 유니코드 문자를 
@@ -66,13 +88,8 @@ def unicode_err(df):  # 회사명, 문제유형, 문제이름 중복 오류
     Returns:
         data : (DataFrame | Series)
     '''
-    
-    df["problem_name"] = df['problem_name'].apply(lambda x: unicodedata.normalize('NFKC', x))
-    df["company_name"] = df['company_name'].apply(lambda x: unicodedata.normalize('NFKC', x))
-    df["problem_type"] = df['problem_type'].apply(lambda x: unicodedata.normalize('NFKC', x))
-    df["file_name"] = df['file_name'].apply(lambda x: unicodedata.normalize('NFKC', x))
 
-    return df
+    return df[column].apply(lambda x: unicodedata.normalize('NFKC', x))
 
 
 def prob_type_to_etc(value):  # 문제 유형이 아닌 카테고리를 "기타"로 분류 (추후 제거 될 수 있는 기능)
@@ -174,7 +191,13 @@ def json_to_df(json_file):  # methodcount 와 method명을 분리하기 위함
              'function_method', 'countmethod', 'module', 'check_user_class', 'line_count', 'code']]
 
     df = df.fillna(np.nan)
-    df = unicode_err(df) # 회사명, 문제유형, 문제이름 중복 오류
+
+    # 회사명, 문제유형, 문제이름 중복 오류
+    df['problem_name'] = unicode_err(df, 'problem_name')
+    df['company_name'] = unicode_err(df, 'company_name')
+    df['problem_type'] = unicode_err(df, 'problem_type')
+    # df = unicode_err(df) 
+    
     df["problem_type"] = df["problem_type"].apply(lambda x: prob_type_to_etc(x))  # 문제 유형이 아닌 카테고리를 "기타"로 분류
     df["company_name"] = df["company_name"].apply(lambda x: prob_type_to_etc(x))  # 문제 유형이 아닌 카테고리를 "기타"로 분류
     df = df.drop(df.loc[df["code"] == "",:].index).reset_index(drop = True)
@@ -206,8 +229,3 @@ def json_to_df(json_file):  # methodcount 와 method명을 분리하기 위함
 
     
     return df
-
-
-
-
-
