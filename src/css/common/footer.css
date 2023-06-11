@@ -4,11 +4,10 @@
   align-items: center;
   justify-content: center;
   padding: 50px 88px;
-  height: 200px;
+  height: fit-content;
   width: 100%;
   background-color: var(--bg-color);
   border-top: 1px solid var(--border);
-  /* 디자인팀에서 추가하심 */
 }
 
 .footer-logo {
@@ -90,10 +89,8 @@
   }
 }
 
-/* 레이아웃 체크를 위해 추가했습니다. 수정하셔도 됩니다! */
 @media screen and (max-width: 805px) {
   .footer-wrapper-div {
-    height: 294px;
     flex-direction: column;
     overflow: hidden;
     padding: 50px 40px;
