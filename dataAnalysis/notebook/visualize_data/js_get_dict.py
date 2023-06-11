@@ -148,9 +148,9 @@ def get_ptype_dict(df):
     temp_df = temp_df[temp_df["problem_type"] != "구현"] # 현 데이터에 문제유형 중 '구현'(문제유형 불분명)이 상당 부분 차지하므로 임시 제외
     temp_df = temp_df.groupby(['problem_type', 'function_method'])['countmethod'].sum()
     
-    problem_type_method = df_to_dict(temp_df)
+    problem_type_function_method = df_to_dict(temp_df)
     
-    return problem_type_count, problem_type_method
+    return problem_type_count, problem_type_function_method
 
 
 # 전체 데이터 저장하는 모듈
@@ -166,7 +166,7 @@ def get_dict(df):
     # 딕셔너리에 파트별 데이터 삽입
     
     level_problem_name, level_problem_type, level_problem_type_ratio, level_per_function_method, function_method_sort = get_level_dict(df)  # 레벨별 & 전체적인 메서드 사용 현황
-    problem_type_count, problem_type_method = get_ptype_dict(df)  # 문제유형별
+    problem_type_count, problem_type_function_method = get_ptype_dict(df)  # 문제유형별
 
     years, year_type = get_year_dict(df) # 연도별
     companys, company_type, company_ptype_radar = get_c_dict(df) # 출제업체별
@@ -180,7 +180,7 @@ def get_dict(df):
 
     # 문제유형별
     temp_dict['problem_type_count'] = problem_type_count
-    temp_dict['problem_type_method'] = problem_type_method
+    temp_dict['problem_type_function_method'] = problem_type_function_method
     
     # 연도별
     temp_dict['years'] = years
