@@ -33,7 +33,15 @@ function getYearTypeChart(data, lang, charts) {
         let chartData = {
           label: key,
           data: tempData,
-          // borderWidth: 1,
+          // backgroundColor: [
+          //   '#36a2ebaa',
+          //   '#ff6384aa',
+          //   '#4bc0c0aa',
+          //   '#ff9f40aa',
+          //   '#9966ffaa',
+          //   '#ffcd56aa',
+          //   '#c9cbcfaa',
+          // ],
         };
         yearTypeData.push(chartData);
         break;

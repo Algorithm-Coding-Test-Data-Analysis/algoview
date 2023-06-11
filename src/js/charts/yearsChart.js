@@ -24,6 +24,15 @@ function getYearsChart(data, lang, charts) {
   yearsData.push({
     label: '연도별 수집 문제수',
     data: chartData,
+    backgroundColor: [
+      '#36a2ebaa',
+      '#ff6384aa',
+      '#4bc0c0aa',
+      '#ff9f40aa',
+      '#9966ffaa',
+      '#ffcd56aa',
+      '#c9cbcfaa',
+    ],
   });
 
   // 연도별 수집 문제수(years) 차트 세팅
