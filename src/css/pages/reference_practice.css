@@ -1,6 +1,6 @@
 .practice {
   width: 100%;
-  padding: 60px;
+  padding: 80px 60px;
   box-sizing: border-box;
   background-color: var(--bg-color);
 }
@@ -8,7 +8,6 @@
 .practice h2 {
   margin-bottom: 40px;
   font-size: 35px;
-  font-weight: 700;
 }
 
 .practice-list {
