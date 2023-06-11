@@ -70,17 +70,12 @@
 
 .footer-github-txt {
   display: inline-block;
-  padding: 0 5px;
+  padding: 5px 5px 0px;
 }
 
 @media screen and (max-width: 1400px) {
-  .footer-title {
-    /* font-size: 18px; */
-    /* width: 291px; */
-  }
-
   .footer-description p {
-    width: 330px;
+    width: 290px;
     font-size: 14px;
   }
 }
@@ -126,7 +121,7 @@
   .footer-description p {
     /* white-space: pre; */
     color: var(--footer-text-S);
-    width: 290px;
+    width: 250px;
     margin: 0;
     font-size: 12px;
     font-weight: 400;
@@ -167,7 +162,7 @@
   }
 
   .footer-description p {
-    width: 277px;
+    width: 250px;
   }
 
   .footer-title {
