@@ -6,7 +6,7 @@ import json
 from visualize_data import json_to_dataframe
 from visualize_data import py_get_dict
 from visualize_data import js_get_dict
-from visualize_data.get_description import description_to_dict
+from visualize_data import description_to_dict
 
 
 def get_viz_json():
@@ -29,5 +29,5 @@ if __name__ == '__main__':
     # write data into json format
     path = os.getcwd()
 
-    with open(f'{path}/dataAnalysis/notebook/chart_data.json', "w", encoding="cp949") as f:
+    with open(f'{path}/dataAnalysis/notebook/chart_data.json', "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii = False, indent = 4)
