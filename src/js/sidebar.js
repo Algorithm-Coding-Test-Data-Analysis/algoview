@@ -94,7 +94,7 @@ export function sidebarMenuHighlight() {
     for (let index = 0; index < charts.length; index++) {
       const chartTop = charts[index].offsetTop;
       const chartBottom = chartTop + charts[index].offsetHeight + 60;
-      if (scrollPosition >= chartTop && scrollPosition < chartBottom) {
+      if (scrollPosition >= chartTop && scrollPosition < chartBottom - 12) {
         menuLinks[index].classList.add('sidebar-highlight');
       } else {
         menuLinks[index].classList.remove('sidebar-highlight');
