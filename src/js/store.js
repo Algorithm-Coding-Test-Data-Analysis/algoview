@@ -9,7 +9,9 @@ class Store {
 
   set setDarkMode(newMode) {
     this.isDarkMode = newMode;
-    updateCharts(newMode);
+    if (window.location.pathname === '/') {
+      updateCharts({ newMode });
+    }
   }
 }
 
