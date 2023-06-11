@@ -6,6 +6,7 @@
   --hamburger-color: #272b33;
   --hamburger-active-color: #f2f2fd;
   --hamburger-active-text-color: #605bff;
+  --border: #d7d7d7;
 }
 
 .header.dark {
@@ -15,6 +16,7 @@
   --hamburger-color: #ffffff;
   --hamburger-active-color: #605bff;
   --hamburger-active-text-color: #ffffff;
+  --border: #393b46;
 }
 
 /* ===== scrollbar ===== */
@@ -76,7 +78,6 @@
   --footer-text-L: #717171;
   --footer-text-S: #717171;
   --github-bg: #bbbbbb;
-  --border: #393b46;
 }
 
 .footer.dark {
