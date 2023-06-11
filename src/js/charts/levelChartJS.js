@@ -28,35 +28,36 @@ function getLevelDataJs(data, lang, charts) {
         data['js']['level_problem_type_ratio']['level0']
       );
       // 레벨별 문제 유형 비율 레벨 0
-      const level0ProblemTypeChart = new Chart(
-        document.getElementById('level0-problem-type-chart'),
-        {
-          type: 'doughnut',
-          data: {
-            labels: level0ProblemTypeLabels,
-            datasets: [
-              {
-                data: level0ProblemTypeData,
-                backgroundColor: [
-                  'rgba(255, 99, 132, 0.8)',
-                  'rgba(54, 162, 235, 0.8)',
-                  'rgba(255, 206, 86, 0.8)',
-                  'rgba(75, 192, 192, 0.8)',
-                  'rgba(60, 170, 170, 0.8)',
-                ],
-                borderColor: [
-                  'rgba(255, 99, 132, 1)',
-                  'rgba(54, 162, 235, 1)',
-                  'rgba(255, 206, 86, 1)',
-                  'rgba(75, 192, 192, 1)',
-                  'rgba(60, 170, 170, 1)',
-                ],
-                borderWidth: 1,
-              },
-            ],
-          },
-        }
+      const level0ProblemTypeCanvas = document.getElementById(
+        'level0-problem-type-chart'
       );
+      createToolTip(level0ProblemTypeCanvas, data, 'level_problem_type_ratio');
+      const level0ProblemTypeChart = new Chart(level0ProblemTypeCanvas, {
+        type: 'doughnut',
+        data: {
+          labels: level0ProblemTypeLabels,
+          datasets: [
+            {
+              data: level0ProblemTypeData,
+              backgroundColor: [
+                'rgba(255, 99, 132, 0.8)',
+                'rgba(54, 162, 235, 0.8)',
+                'rgba(255, 206, 86, 0.8)',
+                'rgba(75, 192, 192, 0.8)',
+                'rgba(60, 170, 170, 0.8)',
+              ],
+              borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(60, 170, 170, 1)',
+              ],
+              borderWidth: 1,
+            },
+          ],
+        },
+      });
       charts.push(level0ProblemTypeChart);
     }
 
@@ -333,167 +334,178 @@ function getLevelDataJs(data, lang, charts) {
     }
 
     // 레벨별 문제수
-    const levelCountChart = new Chart(
-      document.getElementById('level-count-chart'),
-      {
-        type: 'doughnut',
-        data: {
-          labels: levelCountLabels,
-          datasets: [
-            {
-              data: levelCountData,
-              backgroundColor: [
-                'rgba(255, 99, 132, 0.8)',
-                'rgba(54, 162, 235, 0.8)',
-                'rgba(255, 206, 86, 0.8)',
-                'rgba(75, 192, 192, 0.8)',
-              ],
-              borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-              ],
-              borderWidth: 1,
-            },
-          ],
-        },
-      }
-    );
+    const levelCountCanvas = document.getElementById('level-count-chart');
+    createToolTip(levelCountCanvas, data, 'level_problem_name');
+    const levelCountChart = new Chart(levelCountCanvas, {
+      type: 'doughnut',
+      data: {
+        labels: levelCountLabels,
+        datasets: [
+          {
+            data: levelCountData,
+            backgroundColor: [
+              'rgba(255, 99, 132, 0.8)',
+              'rgba(54, 162, 235, 0.8)',
+              'rgba(255, 206, 86, 0.8)',
+              'rgba(75, 192, 192, 0.8)',
+            ],
+            borderColor: [
+              'rgba(255, 99, 132, 1)',
+              'rgba(54, 162, 235, 1)',
+              'rgba(255, 206, 86, 1)',
+              'rgba(75, 192, 192, 1)',
+            ],
+            borderWidth: 1,
+          },
+        ],
+      },
+    });
 
     // 레벨별 유형별 문제수
-    const levelProblemTypeCountChart = new Chart(
-      document.getElementById('level-problem-type-count-chart'),
-      {
-        type: 'doughnut',
-        data: {
-          labels: levelProblemTypeCountLabels,
-          datasets: [
-            {
-              data: levelProblemTypeCountData,
-              backgroundColor: [
-                'rgba(255, 99, 132, 0.8)',
-                'rgba(54, 162, 235, 0.8)',
-                'rgba(255, 206, 86, 0.8)',
-                'rgba(75, 192, 192, 0.8)',
-              ],
-              borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-              ],
-              borderWidth: 1,
-            },
-          ],
-        },
-      }
+    const levelProblemTypeCountCanvas = document.getElementById(
+      'level-problem-type-count-chart'
     );
+    createToolTip(levelProblemTypeCountCanvas, data, 'level_problem_type');
+    const levelProblemTypeCountChart = new Chart(levelProblemTypeCountCanvas, {
+      type: 'doughnut',
+      data: {
+        labels: levelProblemTypeCountLabels,
+        datasets: [
+          {
+            data: levelProblemTypeCountData,
+            backgroundColor: [
+              'rgba(255, 99, 132, 0.8)',
+              'rgba(54, 162, 235, 0.8)',
+              'rgba(255, 206, 86, 0.8)',
+              'rgba(75, 192, 192, 0.8)',
+            ],
+            borderColor: [
+              'rgba(255, 99, 132, 1)',
+              'rgba(54, 162, 235, 1)',
+              'rgba(255, 206, 86, 1)',
+              'rgba(75, 192, 192, 1)',
+            ],
+            borderWidth: 1,
+          },
+        ],
+      },
+    });
 
     // 레벨별 문제 유형 비율 레벨 1
-    const level1ProblemTypeChart = new Chart(
-      document.getElementById('level1-problem-type-chart'),
-      {
-        type: 'doughnut',
-        data: {
-          labels: level1ProblemTypeLabels,
-          datasets: [
-            {
-              data: level1ProblemTypeData,
-              backgroundColor: [
-                'rgba(255, 99, 132, 0.8)',
-                'rgba(54, 162, 235, 0.8)',
-                'rgba(255, 206, 86, 0.8)',
-                'rgba(75, 192, 192, 0.8)',
-                'rgba(60, 170, 170, 0.8)',
-                'rgba(153, 102, 255, 0.8)',
-                'rgba(255, 159, 64, 0.8)',
-                'rgba(180, 180, 25, 0.8)',
-              ],
-              borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(60, 170, 170, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)',
-                'rgba(180, 180, 25, 1)',
-              ],
-              borderWidth: 1,
-            },
-          ],
-        },
-      }
+    const level1ProblemTypeCanvas = document.getElementById(
+      'level1-problem-type-chart'
     );
+    createToolTip(level1ProblemTypeCanvas, data, 'level_problem_type_ratio');
+    const level1ProblemTypeChart = new Chart(level1ProblemTypeCanvas, {
+      type: 'doughnut',
+      data: {
+        labels: level1ProblemTypeLabels,
+        datasets: [
+          {
+            data: level1ProblemTypeData,
+            backgroundColor: [
+              'rgba(255, 99, 132, 0.8)',
+              'rgba(54, 162, 235, 0.8)',
+              'rgba(255, 206, 86, 0.8)',
+              'rgba(75, 192, 192, 0.8)',
+              'rgba(60, 170, 170, 0.8)',
+              'rgba(153, 102, 255, 0.8)',
+              'rgba(255, 159, 64, 0.8)',
+              'rgba(180, 180, 25, 0.8)',
+            ],
+            borderColor: [
+              'rgba(255, 99, 132, 1)',
+              'rgba(54, 162, 235, 1)',
+              'rgba(255, 206, 86, 1)',
+              'rgba(75, 192, 192, 1)',
+              'rgba(60, 170, 170, 1)',
+              'rgba(153, 102, 255, 1)',
+              'rgba(255, 159, 64, 1)',
+              'rgba(180, 180, 25, 1)',
+            ],
+            borderWidth: 1,
+          },
+        ],
+      },
+    });
 
     // 레벨별 문제 유형 비율 레벨 2
-    const level2ProblemTypeChart = new Chart(
-      document.getElementById('level2-problem-type-chart'),
-      {
-        type: 'doughnut',
-        data: {
-          labels: level2ProblemTypeLabels,
-          datasets: [
-            {
-              data: level2ProblemTypeData,
-              backgroundColor: [
-                'rgba(255, 99, 132, 0.8)',
-                'rgba(54, 162, 235, 0.8)',
-                'rgba(255, 206, 86, 0.8)',
-                'rgba(75, 192, 192, 0.8)',
-                'rgba(60, 170, 170, 0.8)',
-                'rgba(153, 102, 255, 0.8)',
-                'rgba(255, 159, 64, 0.8)',
-              ],
-              borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(60, 170, 170, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)',
-              ],
-              borderWidth: 1,
-            },
-          ],
-        },
-      }
+    const level2ProblemTypeCanvas = document.getElementById(
+      'level2-problem-type-chart'
     );
+    createToolTip(level2ProblemTypeCanvas, data, 'level_problem_type_ratio');
+    const level2ProblemTypeChart = new Chart(level2ProblemTypeCanvas, {
+      type: 'doughnut',
+      data: {
+        labels: level2ProblemTypeLabels,
+        datasets: [
+          {
+            data: level2ProblemTypeData,
+            backgroundColor: [
+              'rgba(255, 99, 132, 0.8)',
+              'rgba(54, 162, 235, 0.8)',
+              'rgba(255, 206, 86, 0.8)',
+              'rgba(75, 192, 192, 0.8)',
+              'rgba(60, 170, 170, 0.8)',
+              'rgba(153, 102, 255, 0.8)',
+              'rgba(255, 159, 64, 0.8)',
+            ],
+            borderColor: [
+              'rgba(255, 99, 132, 1)',
+              'rgba(54, 162, 235, 1)',
+              'rgba(255, 206, 86, 1)',
+              'rgba(75, 192, 192, 1)',
+              'rgba(60, 170, 170, 1)',
+              'rgba(153, 102, 255, 1)',
+              'rgba(255, 159, 64, 1)',
+            ],
+            borderWidth: 1,
+          },
+        ],
+      },
+    });
 
     // 레벨별 문제 유형 비율 레벨 3
-    const level3ProblemTypeChart = new Chart(
-      document.getElementById('level3-problem-type-chart'),
-      {
-        type: 'doughnut',
-        data: {
-          labels: level3ProblemTypeLabels,
-          datasets: [
-            {
-              data: level3ProblemTypeData,
-              backgroundColor: [
-                'rgba(255, 99, 132, 0.8)',
-                'rgba(54, 162, 235, 0.8)',
-                'rgba(255, 206, 86, 0.8)',
-                'rgba(75, 192, 192, 0.8)',
-              ],
-              borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-              ],
-              borderWidth: 1,
-            },
-          ],
-        },
-      }
+    const level3ProblemTypeCanvas = document.getElementById(
+      'level3-problem-type-chart'
     );
+    createToolTip(level3ProblemTypeCanvas, data, 'level_problem_type_ratio');
+    const level3ProblemTypeChart = new Chart(level3ProblemTypeCanvas, {
+      type: 'doughnut',
+      data: {
+        labels: level3ProblemTypeLabels,
+        datasets: [
+          {
+            data: level3ProblemTypeData,
+            backgroundColor: [
+              'rgba(255, 99, 132, 0.8)',
+              'rgba(54, 162, 235, 0.8)',
+              'rgba(255, 206, 86, 0.8)',
+              'rgba(75, 192, 192, 0.8)',
+            ],
+            borderColor: [
+              'rgba(255, 99, 132, 1)',
+              'rgba(54, 162, 235, 1)',
+              'rgba(255, 206, 86, 1)',
+              'rgba(75, 192, 192, 1)',
+            ],
+            borderWidth: 1,
+          },
+        ],
+      },
+    });
 
     // 전체 메소드 유형 level 0
+    const level0PerFunctionMethodCanvas = document.getElementById(
+      'level0-method-count-chart'
+    );
+    createToolTip(
+      level0PerFunctionMethodCanvas,
+      data,
+      'level_per_function_method'
+    );
     const level0PerFunctionMethodChart = new Chart(
-      document.getElementById('level0-method-count-chart'),
+      level0PerFunctionMethodCanvas,
       {
         type: 'bar',
         data: {
@@ -524,8 +536,16 @@ function getLevelDataJs(data, lang, charts) {
     );
 
     // 전체 메소드 유형 level 1
+    const level1PerFunctionMethodCanvas = document.getElementById(
+      'level1-method-count-chart'
+    );
+    createToolTip(
+      level1PerFunctionMethodCanvas,
+      data,
+      'level_per_function_method'
+    );
     const level1PerFunctionMethodChart = new Chart(
-      document.getElementById('level1-method-count-chart'),
+      level1PerFunctionMethodCanvas,
       {
         type: 'bar',
         data: {
@@ -556,8 +576,16 @@ function getLevelDataJs(data, lang, charts) {
     );
 
     // 전체 메소드 유형 level 2
+    const level2PerFunctionMethodCanvas = document.getElementById(
+      'level2-method-count-chart'
+    );
+    createToolTip(
+      level2PerFunctionMethodCanvas,
+      data,
+      'level_per_function_method'
+    );
     const level2PerFunctionMethodChart = new Chart(
-      document.getElementById('level2-method-count-chart'),
+      level2PerFunctionMethodCanvas,
       {
         type: 'bar',
         data: {
@@ -588,8 +616,16 @@ function getLevelDataJs(data, lang, charts) {
     );
 
     // 전체 메소드 유형 level 3
+    const level3PerFunctionMethodCanvas = document.getElementById(
+      'level3-method-count-chart'
+    );
+    createToolTip(
+      level3PerFunctionMethodCanvas,
+      data,
+      'level_per_function_method'
+    );
     const level3PerFunctionMethodChart = new Chart(
-      document.getElementById('level3-method-count-chart'),
+      level3PerFunctionMethodCanvas,
       {
         type: 'bar',
         data: {
@@ -632,4 +668,10 @@ function getLevelDataJs(data, lang, charts) {
     );
   }
 }
+
+function createToolTip(canvas, data, key) {
+  canvas.previousElementSibling.childNodes[0].textContent =
+    data['description'][key];
+}
+
 export default getLevelDataJs;
