@@ -43,6 +43,11 @@ function getYearsChart(data, lang, charts) {
       datasets: yearsData,
     },
     options: {
+      plugins: {
+        legend: {
+          display: false,
+        },
+      },
       scales: {
         y: {
           beginAtZero: true,
