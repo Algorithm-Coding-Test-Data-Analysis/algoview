@@ -28,23 +28,13 @@ function getYearTypeChart(data, lang, charts) {
     }
 
     // 데이터 값이 null이 아닐 경우에만 data 세팅
-    for (let i = 0; i < tempData.length; i++) {
+    for (let i = 0, j = 0; i < tempData.length; i++, j += 2) {
       if (tempData[i]) {
         let chartData = {
           label: key,
           data: tempData,
-          // backgroundColor: [
-          //   '#36a2ebaa',
-          //   '#ff6384aa',
-          //   '#4bc0c0aa',
-          //   '#ff9f40aa',
-          //   '#9966ffaa',
-          //   '#ffcd56aa',
-          //   '#c9cbcfaa',
-          // ],
         };
         yearTypeData.push(chartData);
-        break;
       }
     }
   }

@@ -21,15 +21,6 @@ function getProblemTypeFunctionMethodData(data, lang, charts) {
       datasets.push({
         label: item,
         data: [],
-        backgroundColor: [
-          '#36a2ebaa',
-          '#ff6384aa',
-          '#4bc0c0aa',
-          '#ff9f40aa',
-          '#9966ffaa',
-          '#ffcd56aa',
-          '#c9cbcfaa',
-        ],
       });
     });
     problemTypeFunctionData.forEach((el) => {
@@ -78,15 +69,6 @@ function getProblemTypeFunctionMethodData(data, lang, charts) {
       datasets.push({
         label: item,
         data: [],
-        backgroundColor: [
-          '#36a2ebaa',
-          '#ff6384aa',
-          '#4bc0c0aa',
-          '#ff9f40aa',
-          '#9966ffaa',
-          '#ffcd56aa',
-          '#c9cbcfaa',
-        ],
       });
     });
     problemTypeFunctionData.forEach((el) => {
