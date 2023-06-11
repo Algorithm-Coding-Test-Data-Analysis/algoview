@@ -16,7 +16,7 @@ function setCharts(lang = 'py') {
   showOnlyDrawnCanvas(); // 그려진 캔버스만 보여줌
 }
 
-export function updateCharts({ lang, mode = isDarkMode }) {
+export function updateCharts({ lang = 'py', mode = isDarkMode }) {
   charts.map((chart) => chart.destroy());
   charts = [];
   Chart.defaults.color = mode ? '#fff' : '#272b33';
