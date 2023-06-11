@@ -1,61 +1,44 @@
 function getProblemTypeData(data, lang, charts) {
-  let problemTypeCountData = [];
+  let problemType = [];
+  let problemTypeCount = [];
+  const PROBLEM_TYPE_DATA = data[lang]['problem_type_count'];
+  const PROBLEM_TYPE_DESC = data['description']['problem_type_count'];
+  const $canvas = document.getElementById('problem-type-count-chart');
+  const $tooltip = $canvas.previousElementSibling.childNodes[0];
+  $tooltip.textContent = PROBLEM_TYPE_DESC;
 
-  for (const key in data[lang]['problem_type_count']) {
-    problemTypeCountData.push(data[lang]['problem_type_count'][key]);
+  for (const key in PROBLEM_TYPE_DATA) {
+    problemType.push(key);
+    problemTypeCount.push(PROBLEM_TYPE_DATA[key]);
   }
 
-  const problemTypeCountChart = new Chart(
-    document.getElementById('problem-type-count-chart'),
-    {
-      type: 'bar',
-      data: {
-        labels: [
-          '구현',
-          '스택큐',
-          '기타',
-          '완전탐색',
-          'DFSBFS',
-          '해시',
-          '그리디',
-          '비트연산',
-        ],
-        datasets: [
-          {
-            data: problemTypeCountData,
-            backgroundColor: [
-              'rgba(255, 99, 132, 0.2)',
-              'rgba(54, 162, 235, 0.2)',
-              'rgba(255, 206, 86, 0.2)',
-              'rgba(75, 192, 192, 0.2)',
-              'rgba(153, 102, 255, 0.2)',
-              'rgba(255, 159, 64, 0.2)',
-            ],
-            borderColor: [
-              'rgba(255, 99, 132, 1)',
-              'rgba(54, 162, 235, 1)',
-              'rgba(255, 206, 86, 1)',
-              'rgba(75, 192, 192, 1)',
-              'rgba(153, 102, 255, 1)',
-              'rgba(255, 159, 64, 1)',
-            ],
-            borderWidth: 1,
-          },
-        ],
-      },
-      options: {
-        scales: {
-          yAxes: [
-            {
-              ticks: {
-                beginAtZero: true,
-              },
-            },
+  const problemTypeCountChart = new Chart($canvas, {
+    type: 'bar',
+    data: {
+      labels: problemType,
+      datasets: [
+        {
+          data: problemTypeCount,
+          backgroundColor: [
+            '#36a2ebaa',
+            '#ff6384aa',
+            '#4bc0c0aa',
+            '#ff9f40aa',
+            '#9966ffaa',
+            '#ffcd56aa',
+            '#c9cbcfaa',
           ],
         },
+      ],
+    },
+    options: {
+      plugins: {
+        legend: {
+          display: false,
+        },
       },
-    }
-  );
+    },
+  });
 
   charts.push(problemTypeCountChart); // 차트 모으기!
 }

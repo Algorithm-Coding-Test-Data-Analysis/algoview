@@ -1,8 +1,25 @@
 <!DOCTYPE html>
 <html lang="ko">
   <head>
-    <link rel="icon" href="/src/assets/images/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/src/assets/images/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Algorithm, Coding test, Methods, Visualization">
+    <meta name="description" content="Python과 JavaScript 코딩 테스트를 위한 정보를 시각화하여 제공합니다. 많이 사용되는 메서드, 출제 업체별 문제 유형 등 유용한 정보를 확인하실 수 있습니다.">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Algoview">
+    <meta property="og:title" content="알고리즘은 [Algoview] - youtube">
+    <meta property="og:description" content="Python과 JavaScript 코딩 테스트를 위한 정보를 시각화하여 제공합니다. 많이 사용되는 메서드, 출제 업체별 문제 유형 등 유용한 정보를 확인하실 수 있습니다.">
+    <meta property="og:image" content="https://github.com/Algorithm-Coding-Test-Data-Analysis/algoview/blob/main/src/assets/images/kakao_OG(800x400).jpg?raw=true">
+    <meta property="og:url" content="https://algoview.co.kr/">
+
+    <meta property="twitter:card" content="summary">
+    <meta property="twitter:site" content="Algoview">
+    <meta property="twitter:title" content="알고리즘은 [Algoview] - youtube">
+    <meta property="twitter:description" content="Python과 JavaScript 코딩 테스트를 위한 정보를 시각화하여 제공합니다. 많이 사용되는 메서드, 출제 업체별 문제 유형 등 유용한 정보를 확인하실 수 있습니다.">
+    <meta property="twitter:image" content="https://github.com/Algorithm-Coding-Test-Data-Analysis/algoview/blob/main/src/assets/images/twitter_OG(1200x630).jpg?raw=true">
+    <meta property="twitter:url" content="https://algoview.co.kr/">
+
     <title>youtube | Algoview</title>
     <link rel="stylesheet" href="/src/css/style.css" />
   </head>
@@ -27,18 +44,16 @@
     <!-- footer -->
     <footer class="footer"></footer>
     <!-- !footer -->
+  <script>
+    async function loadMoreContent() {
+      const response = await fetch('/src/assets/datas/youtuber.json');
+      const data = await response.json();
 
-    <!-- Add Youtuber List -->
-    <script>
-      async function loadMoreContent() {
-        const response = await fetch('/src/assets/datas/youtuber.json');
-        const data = await response.json();
+      const youtubeList = document.getElementById('youtubeListContainer');
 
-        const youtubeList = document.getElementById('youtubeListContainer');
-
-        data.youtuber.forEach((youtuber) => {
-          const newItem = document.createElement('li');
-          newItem.innerHTML = `
+      data.youtuber.forEach((youtuber) => {
+        const newItem = document.createElement('li');
+        newItem.innerHTML = `
           <a href="${youtuber.link}" class="youtubeItem" target="_blank">
             <img src="${youtuber.img}" alt="hi" class="youtubeImage" />
             <div class="listInformation">
@@ -48,13 +63,13 @@
             </div>
           </a>
           `;
-          youtubeList.appendChild(newItem);
-        });
-      }
+        youtubeList.appendChild(newItem);
+      });
+    }
 
-      loadMoreContent();
-    </script>
-    <!-- !Add Youtuber List -->
-    <script type="module" src="/src/js/common.js"></script>
-  </body>
+    loadMoreContent();
+  </script>
+  <!-- !Add Youtuber List -->
+  <script type="module" src="/src/js/common.js"></script>
+</body>
 </html>

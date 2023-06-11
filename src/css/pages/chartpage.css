@@ -1,5 +1,6 @@
-.pin{
+.pin {
   color: var(--point-color);
+  margin-right: 0.2em;
 }
 
 /* ===== 차트 섹션 ===== */
@@ -8,7 +9,7 @@
 }
 
 .sec-charts {
-  padding: 80px 60px 120px;
+  padding: 60px 60px 120px;
 }
 
 .sec-charts .sec-tit {
@@ -17,7 +18,7 @@
 
 .sec-charts .category-tit {
   font-size: 27px;
-  margin: 48px 0 40px;
+  margin: 48px 0 30px;
 }
 
 .sec-charts .category-tit::before {
@@ -34,6 +35,7 @@
   margin-bottom: 48px;
   position: relative;
   margin-left: calc(70px - 48px);
+  margin-right: 24px;
 }
 
 .sec-charts .chart-tit::before {
@@ -43,48 +45,26 @@
   height: 24px;
   width: 4px;
   position: absolute;
-  top: 1px;
+  top: 0px;
   margin-left: -18px;
 }
 
 .sec-charts ul {
   display: flex;
   flex-direction: column;
-  gap: 60px;
+  gap: 40px;
 }
+
 .sec-charts li {
   background-color: var(--bg-color-2);
   border-radius: 10px;
   padding: 48px;
+  position: relative;
 }
 
 .sec-charts canvas {
   max-width: 100%;
   max-height: 60vh;
-}
-
-/* ===== 언어 선택 버튼 ===== */
-.select-lang {
-  position: absolute;
-  top: 150px;
-  right: 0;
-  z-index: 10;
-}
-/* .main{
-  --main-color: #605bff;
-  --point-color: #8d89ff;
-  --text-color: #272b33;
-  --bg-color: #f2f2fd;
-  --bg-color-2: #ffffff;
-  --scroll-bg: #D7D7D7;
-}
-
-.main.dark{
-  --point-color: #605bff;
-  --text-color: #FFFFFF;
-  --bg-color: #272b33;
-  --bg-color-2: #393B46;
-  --scroll-bg: #393B46;
 }
 
 /* ===== 탑버튼 ===== */
@@ -96,11 +76,19 @@
   height: 80px;
   border: none;
   border-radius: 50%;
-  background: url('/src/assets/images/btn-top.svg');
+  background-image: url('/src/assets/images/btn-top.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.btn-top.dark {
+  background-image: url('/src/assets/images/btn-top_dark.svg');
 }
 
 .btn-top.unfixed {
   position: absolute;
+}
+.btn-top:hover {
+  opacity: 0.85;
 }
 
 /* ===== 스크롤 인디케이터 ===== */
@@ -119,18 +107,119 @@
   width: 0%;
 }
 
+/* ===== 툴팁 ===== */
+.tooltip {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: calc(48px - 1px);
+  right: 48px;
+  background: url('/src/assets/images/tooltip.svg') center/cover no-repeat;
+}
+
+.tooltip-txt {
+  display: inline-block;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  max-width: 350px;
+  padding: 12px 10px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.5em;
+  background-color: var(--tooltip-bg);
+  color: var(--tooltip-text);
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  bottom: calc(24px + 12px + 5px);
+  right: calc(24px / 2);
+  border-radius: 3px;
+  transition: all 0.1s;
+}
+
+.tooltip-txt::after {
+  content: '';
+  display: inline-block;
+  background-color: transparent;
+  position: absolute;
+  bottom: -12px;
+  right: 0;
+  border-right: 0 solid transparent;
+  border-left: 15px solid transparent;
+  border-top: calc(12px + 2px) solid var(--tooltip-bg);
+}
+
+.tooltip:hover .tooltip-txt {
+  visibility: visible;
+  opacity: 1;
+}
+
 /* ===== 차트 숨기기 ===== */
 .hidden {
   display: none;
 }
 
 /* ===== 반응형 ===== */
-@media screen and (width < 768px) {
+@media screen and (width < 805px) {
   .sec-charts {
-    padding: 80px 40px 120px; /* 모바일 양쪽 마진 각 40px 적용해보았습니다. */
+    padding-left:  20px;
+    padding-right:  20px;
   }
 
+  .sec-charts ul {
+    gap: 25px;
+  }
+
+  .sec-charts li {
+    padding: 24px;
+  }
+
+  .sec-charts .chart-tit {
+    font-size: 20px;
+    margin-bottom: 30px;
+    position: relative;
+  }
+
+  .sec-charts .chart-tit::before {
+    height: 20px;
+    margin-left: -16px;
+  }
+
+  .sec-charts canvas {
+    min-height: auto;
+  }
+
+  /* 스크롤 인디케이터 */
   .scroll-indicator {
     width: 100%;
+    height: 3px;
+  }
+
+  #scroll-indicator-bar {
+    height: 3px;
+  }
+
+  /* 툴팁 */
+  .tooltip {
+    top: 20px;
+    right: 16px;
+  }
+
+  .tooltip-txt {
+    right: -23px;
+    min-width: 60px;
+    max-width: 300px;
+  }
+
+  .tooltip-txt::after {
+    right: calc(18px + 15px);
+  }
+  .btn-top {
+    width: 50px;
+    height: 50px;
+    right: 19px;
+    bottom: 30px;
   }
 }

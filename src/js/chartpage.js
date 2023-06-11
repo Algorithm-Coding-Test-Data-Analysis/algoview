@@ -1,82 +1,62 @@
+import { isDarkMode } from './darkmode.js';
 import getCategoryLevelMethod from './charts/categoryLevelMethod.js';
 import getCategoryProblemType from './charts/categoryProblemType.js';
 import getCategoryYearCompany from './charts/categoryYearCompany.js';
 
 let data;
-let lang = 'py';
 let charts = [];
 const URL = 'https://algoview.co.kr/dataAnalysis/notebook/chart_data.json';
 
-function setCharts() {
+function setCharts(lang = 'py') {
+  Chart.defaults.color = isDarkMode ? '#ffffff' : '#272b33';
+
   getCategoryLevelMethod([data, lang, charts]);
   getCategoryProblemType([data, lang, charts]);
   getCategoryYearCompany([data, lang, charts]);
+  showOnlyDrawnCanvas(); // 그려진 캔버스만 보여줌
 }
 
-function updateCharts() {
+export function updateCharts({ lang = 'py', mode = isDarkMode }) {
   charts.map((chart) => chart.destroy());
   charts = [];
-  setCharts();
+  Chart.defaults.color = mode ? '#fff' : '#272b33';
+  setCharts(lang);
 }
 
-fetch(URL)
-  .then((response) => response.json())
-  .then((json) => {
-    data = json;
-    setCharts();
+(async () => {
+  if (window.location.pathname === '/') {
+    try {
+      const res = await fetch(URL);
+      if (res.status === 200) {
+        data = await res.json();
+        setCharts();
+      } else throw res.statusText;
+    } catch (err) {
+      console.error('에러 발생!', err);
+      alert('현재는 차트를 불러올 수 없습니다.');
+      return;
+    }
+  }
+})();
+
+/* 그려지지 않은 캔버스 숨김 */
+const canvasList = [...document.querySelectorAll('.sec-charts li')];
+
+function showOnlyDrawnCanvas() {
+  resetHiddenClass();
+
+  const chartList = charts.map((index) => {
+    if (index.canvas) return index.canvas.parentNode;
   });
-
-const $pyBtn = document.getElementById('py-btn');
-const $jsBtn = document.getElementById('js-btn');
-
-$pyBtn.addEventListener('click', () => {
-  lang = 'py';
-  updateCharts();
-  showOnlyPyCanvas();
-});
-$jsBtn.addEventListener('click', () => {
-  lang = 'js';
-  updateCharts();
-  showOnlyJsCanvas();
-});
-
-/* 언어 종류에 따른 캔버스 숨김 */
-// py만 있는 차트
-const $pyOnlyChart1 = document.getElementById(
-  'problem-type-function-method-chart'
-).parentNode;
-const $pyOnlyChart2 = document.getElementById(
-  'problem-type-function-chart'
-).parentNode;
-// js만 있는 차트
-const $jsOnlyChart1 = document.getElementById('packJun-chart').parentNode;
-const $jsOnlyChart2 = document.getElementById('kakao-chart').parentNode;
-const $jsOnlyChart3 = document.getElementById('programmers-chart').parentNode;
-
-function showOnlyPyCanvas() {
-  $jsOnlyChart1.classList.add('hidden');
-  $jsOnlyChart2.classList.add('hidden');
-  $jsOnlyChart3.classList.add('hidden');
-
-  $pyOnlyChart1.classList.remove('hidden');
-  $pyOnlyChart2.classList.remove('hidden');
+  canvasList.forEach((li) => {
+    if (!chartList.includes(li)) {
+      li.classList.add('hidden');
+    }
+  });
 }
 
-function showOnlyJsCanvas() {
-  $jsOnlyChart1.classList.remove('hidden');
-  $jsOnlyChart2.classList.remove('hidden');
-  $jsOnlyChart3.classList.remove('hidden');
-
-  $pyOnlyChart1.classList.add('hidden');
-  $pyOnlyChart2.classList.add('hidden');
-}
-
-// 언어 선택 토글로 변경 시, 이 함수로 변경
-function toggleCanvasHidden() {
-  $jsOnlyChart1.classList.toggle('hidden');
-  $jsOnlyChart2.classList.toggle('hidden');
-  $jsOnlyChart3.classList.toggle('hidden');
-
-  $pyOnlyChart1.classList.toggle('hidden');
-  $pyOnlyChart2.classList.toggle('hidden');
+function resetHiddenClass() {
+  canvasList.forEach((li) => {
+    li.classList.remove('hidden');
+  });
 }

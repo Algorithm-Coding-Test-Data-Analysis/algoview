@@ -1,6 +1,5 @@
 .practice {
   width: 100%;
-  font-family: 'Pretendard-Regular';
   padding: 60px;
   box-sizing: border-box;
   background-color: var(--bg-color);
@@ -13,17 +12,19 @@
 }
 
 .practice-list {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  gap: 20px 60px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 2rem;
 }
 
 .practice-list-item {
   height: 70px;
   background: var(--bg-color-2) url('../../assets/images/button.png') no-repeat 93%;
-  border-bottom: 1px solid #ddd;
   transition: all 0.3s;
+  flex: 1 1 40%;
+  margin-bottom: 2.25%;
+  min-width: 310px;
+  border-radius: 10px;
 }
 
 .practice-link {
@@ -32,7 +33,6 @@
   display: inline-block;
   padding: 20px;
   box-sizing: border-box;
-
   color: var(--text-color);
   text-decoration: none;
   font-size: 18px;
@@ -49,18 +49,4 @@
   background-color: var(--main-color);
   transform: scale(1.1);
   border-radius: 10px;
-}
-
-@media (max-width: 1080px) {
-  .practice-list {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-  }
-}
-
-@media (max-width: 715px) {
-  .practice-list {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-  }
 }

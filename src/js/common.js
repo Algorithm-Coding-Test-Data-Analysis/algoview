@@ -1,13 +1,23 @@
-import { headerHTML } from './header.js';
-import { sideBarHTML, sidebarMenuHighlight } from '/src/js/sidebar.js';
+import { headerHTML, hamburger } from './header.js';
+import {
+  sidebarHTML,
+  sidebarMenuHighlight,
+  sidebarScrollEvent,
+  sidebarToggleEvent,
+  sidebarDisplayEvent,
+} from './sidebar.js';
 import { footerHTML } from './footer.js';
 import { toggleDarkMode } from './darkmode.js';
 
 headerHTML();
-
-sideBarHTML();
-sidebarMenuHighlight();
+hamburger();
 
 footerHTML();
+
+sidebarHTML();
+sidebarMenuHighlight();
+sidebarScrollEvent();
+sidebarToggleEvent();
+sidebarDisplayEvent();
 
 toggleDarkMode();

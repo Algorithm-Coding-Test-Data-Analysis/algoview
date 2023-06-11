@@ -1,50 +1,49 @@
 function getMethodDataPy(data, lang, charts) {
+  document.getElementById(
+    'method-count-chart'
+  ).previousElementSibling.childNodes[0].textContent =
+    data['description']['function_method_sort'];
+
   if (lang === 'py') {
     // 메소드 모듈 빈도수
     const methodCountData = [];
-    for (const key in data["py"]["function_method_sort"]) {
-      methodCountData.push(data["py"]["function_method_sort"][key])
+    for (const key in data['py']['function_method_sort']) {
+      methodCountData.push(data['py']['function_method_sort'][key]);
     }
-    const methodCountLabels = Object.keys(data["py"]["function_method_sort"]);
+    const methodCountLabels = Object.keys(data['py']['function_method_sort']);
 
     // 메소드 모듈 빈도수
-    const methodCountLvChart = new Chart(document.getElementById('method-count-chart'), {
-      type: 'bar',
-      data: {
-        labels: methodCountLabels,
-        datasets: [{
-          data: methodCountData,
-          backgroundColor: ['rgba(255, 99, 132, 0.2)', 'rgba(54, 162, 235, 0.2)', 'rgba(255, 206, 86, 0.2)', 'rgba(75, 192, 192, 0.2)', 'rgba(153, 102, 255, 0.2)', 'rgba(255, 159, 64, 0.2)'],
-          // borderColor: ['rgba(255, 99, 132, 1)', 'rgba(54, 162, 235, 1)', 'rgba(255, 206, 86, 1)', 'rgba(75, 192, 192, 1)', 'rgba(153, 102, 255, 1)', 'rgba(255, 159, 64, 1)'],
-          borderWidth: 1
-        }]
-      },
-      options: {
-        plugins: {
-          title: {
-            display: true,
-            text: 'Method Count Chart',
-            font: {
-              size: 16,
-              weight: 'bold'
-            }
-          },
-          legend: {
-            display: false
-          }
+    const methodCountLvChart = new Chart(
+      document.getElementById('method-count-chart'),
+      {
+        type: 'bar',
+        data: {
+          labels: methodCountLabels,
+          datasets: [
+            {
+              data: methodCountData,
+              backgroundColor: [
+                '#36a2ebaa',
+                '#ff6384aa',
+                '#4bc0c0aa',
+                '#ff9f40aa',
+                '#9966ffaa',
+                '#ffcd56aa',
+                '#c9cbcfaa',
+              ],
+            },
+          ],
         },
-        scales: {
-          yAxes: [{
-            ticks: {
-              beginAtZero: true
-            }
-          }]
-        }
+        options: {
+          plugins: {
+            legend: {
+              display: false,
+            },
+          },
+        },
       }
-    });
-    charts.push(
-      methodCountLvChart
     );
+    charts.push(methodCountLvChart);
   }
 }
 

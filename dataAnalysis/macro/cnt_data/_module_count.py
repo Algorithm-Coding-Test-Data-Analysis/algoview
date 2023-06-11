@@ -16,16 +16,16 @@ def module_count(data):
 
         file_data['module'] = dict(module_counts)
 
-        if file_data["company_name"] == "프로그래머스":
+        # if file_data["company_name"] == "프로그래머스":  # 특정 파일이 아닌, 전부 체킹
     
-            code = re.sub(r"def\s+\w+\s*\(.*?\)\s*:\s*(?=[^\n]+def|$)", "", code, count=1)
-            
-            has_user_func = 1 if re.findall(r"def\s+\w+", code) else 0
-            file_data['check_user_func'] = has_user_func
+        code = re.sub(r"def solution", "", code, count=1, flags=re.M)
+        
+        has_user_func = 1 if re.findall(r"def\s+\w+", code) else 0
+        file_data['check_user_func'] = has_user_func
 
-        else:
-            has_user_func = 1 if re.findall(r"def\s+\w+", code) else 0
-            file_data['check_user_func'] = has_user_func
+        # else:
+        #     has_user_func = 1 if re.findall(r"def\s+\w+", code) else 0
+        #     file_data['check_user_func'] = has_user_func  # /특정 파일이 아닌, 전부 체킹
 
         has_user_class = 1 if re.findall(r"class\s+(\w+)", code) else 0
         file_data['check_user_class'] = has_user_class
