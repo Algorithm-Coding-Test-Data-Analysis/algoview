@@ -3,7 +3,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 50px 80px;
+  padding: 50px 88px;
   height: 200px;
   width: 100%;
   background-color: var(--bg-color);
@@ -12,7 +12,8 @@
 }
 
 .footer-logo {
-  width: 360px;
+  padding-right: 88px;
+  /* width: 360px; */
   display: flex;
   align-items: center;
 }
@@ -23,7 +24,6 @@
   font-family: 'Pretendard';
   font-style: normal;
   font-weight: 400;
-  font-size: 18px;
   line-height: 25px;
   color: var(--footer-text-L);
 }
@@ -31,11 +31,12 @@
 .footer-description p {
   color: var(--footer-text-S);
   margin: 0;
+  font-size: 16px;
 }
 
 .footer-title {
   font-weight: 700;
-  font-size: 24px;
+  font-size: 20px;
   line-height: 25px;
   display: inline-block;
   margin-bottom: 20px;
@@ -43,6 +44,7 @@
 
 .footer-link-wrapper {
   display: flex;
+  padding-left: 44px;
 }
 
 .footer-github-link {
@@ -59,6 +61,7 @@
   font-weight: 700;
   font-size: 18px;
   line-height: 24px;
+  height: 40px;
 }
 
 .footer-img-github {
@@ -67,21 +70,26 @@
 
 .footer-github-txt {
   display: inline-block;
-  padding-top: 5px;
+  padding: 0 5px;
 }
 
 @media screen and (max-width: 1400px) {
+  .footer-title {
+    /* font-size: 18px; */
+    /* width: 291px; */
+  }
+
   .footer-description p {
     width: 330px;
     font-size: 14px;
   }
 }
 
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1140px) {
   .footer-title {
-    font-size: 22px;
-    width: 291px;
+    white-space: pre;
   }
+
   .footer-description {
     width: 100%;
   }
@@ -93,7 +101,7 @@
     height: 294px;
     flex-direction: column;
     overflow: hidden;
-    padding: 50px 20px;
+    padding: 50px 40px;
     justify-content: flex-start;
     align-items: flex-start;
   }
@@ -103,6 +111,7 @@
     margin-bottom: 30px;
     width: 120px;
     height: 13.7px;
+    padding-right: 0;
   }
 
   .logo-img {
@@ -126,6 +135,7 @@
   }
 
   .footer-title {
+    white-space: normal;
     width: 100%;
     margin-bottom: 20px;
     font-weight: 700;
@@ -135,24 +145,47 @@
 
   .footer-link-wrapper {
     width: 76px;
-    height: 59px;
+    height: 35px;
     margin-top: 26px;
+    padding-left: 0px;
   }
 
   .footer-github-link {
     padding: 5px 8x;
+    font-size: 18px;
   }
+
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 490px) {
+  .footer-wrapper-div {
+    padding-top: 40px;
+  }
+
   .footer-description {
     width: 100%;
   }
+
   .footer-description p {
     width: 277px;
   }
+
   .footer-title {
-    font-size: 14px;
+    white-space: pre;
+    font-size: 16px;
     width: 220px;
   }
+
+  .footer-github-link {
+    font-size: 16px;
+    width: 100px;
+    height: 35px;
+  }
+
+  .footer-img-github {
+    margin-right: 0px;
+    width: 20px;
+    height: 20px;
+  }
+
 }
