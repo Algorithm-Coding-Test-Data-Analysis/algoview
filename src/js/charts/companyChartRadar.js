@@ -53,7 +53,6 @@ function getCompanyDataForRadar(data, lang) {
       },
     }
   );
-  console.dir(Chart);
 }
 
 export default getCompanyDataForRadar;
