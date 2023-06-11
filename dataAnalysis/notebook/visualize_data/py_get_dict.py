@@ -234,7 +234,7 @@ def get_ptype_dict(df):
     temp_df = temp_df.groupby(['problem_type', 'function_method'])['countmethod'].sum()
     temp_df = temp_df.groupby('problem_type').nlargest(top_n).reset_index(level = 0, drop = True)
     
-    sorted_index = list(temp_df.groupby('problem_type').sum().sort_values(ascending = False).index)
+    sorted_index = temp_df.groupby('problem_type').sum().sort_values(ascending = False).index
     temp_df = temp_df.loc[sorted_index]
     problem_type_function_method = df_to_dict(temp_df)
 
@@ -245,7 +245,7 @@ def get_ptype_dict(df):
     temp_df = temp_df.groupby(['problem_type', 'function_method'])['countmethod'].sum()
     temp_df = temp_df.groupby('problem_type').nlargest(top_n).reset_index(level = 0, drop = True)
     
-    sorted_index = list(temp_df.groupby('problem_type').sum().sort_values(ascending = False).index)
+    sorted_index = temp_df.groupby('problem_type').sum().sort_values(ascending = False).index
     temp_df = temp_df.loc[sorted_index]
     problem_type_function = df_to_dict(temp_df)
 
@@ -256,7 +256,7 @@ def get_ptype_dict(df):
     temp_df = temp_df.groupby(['problem_type', 'function_method'])['countmethod'].sum()
     temp_df = temp_df.groupby('problem_type').nlargest(top_n).reset_index(level = 0, drop = True)
     
-    sorted_index = list(temp_df.groupby('problem_type').sum().sort_values(ascending = False).index)
+    sorted_index = temp_df.groupby('problem_type').sum().sort_values(ascending = False).index
     temp_df = temp_df.loc[sorted_index]
     problem_type_method = df_to_dict(temp_df)
 
