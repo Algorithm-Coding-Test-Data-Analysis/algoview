@@ -15,8 +15,7 @@ function renderDarkMode($darkmode) {
     $darkmode.checked = true;
     headerLogo.src = '/src/assets/images/ALGOVIEW-headerlogo_dark.svg';
     footerLogo.src = '/src/assets/images/ALGOVIEWlogo_dark.png';
-    if (topBtnLogo)
-      topBtnLogo.style.background = `url('/src/assets/images/btn-top_dark.svg')`;
+    if (topBtnLogo) topBtnLogo.classList.add('dark');
     COMPONENTS_CLASS.forEach((component) =>
       document.querySelector(component).classList.add('dark')
     );
@@ -24,8 +23,7 @@ function renderDarkMode($darkmode) {
     $darkmode.checked = false;
     headerLogo.src = '/src/assets/images/ALGOVIEW-headerlogo.svg';
     footerLogo.src = '/src/assets/images/ALGOVIEWlogo.png';
-    if (topBtnLogo)
-      topBtnLogo.style.background = `url('/src/assets/images/btn-top.svg')`;
+    if (topBtnLogo) topBtnLogo.classList.remove('dark');
     COMPONENTS_CLASS.forEach((component) =>
       document.querySelector(component).classList.remove('dark')
     );
