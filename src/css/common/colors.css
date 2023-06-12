@@ -60,7 +60,7 @@
   --bg-color: #f2f2fd;
   --bg-color-2: #ffffff;
   --scroll-bg: #d7d7d7;
-  --tooltip-bg: #595E89;
+  --tooltip-bg: #595e89;
   --tooltip-text: #ffffff;
 }
 
@@ -78,6 +78,7 @@
   --footer-text-L: #717171;
   --footer-text-S: #717171;
   --github-bg: #bbbbbb;
+  --border: #d7d7d7;
 }
 
 .footer.dark {
@@ -85,4 +86,5 @@
   --footer-text-L: #ffffff;
   --footer-text-S: #9e9e9e;
   --github-bg: #393b46;
+  --border: #393b46;
 }
