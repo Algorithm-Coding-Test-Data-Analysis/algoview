@@ -30,7 +30,7 @@ jobs:
       env:
         GH_TOKEN: ${{ secrets.GH_TOKEN }}
       run: |
-        git add dataAnalysis/macro/data.json dataAnalysis/macro/excluded_list.txt
+        git add dataAnalysis/macro/data.json dataAnalysis/excluded_list.txt
         git commit -m "Update macro data.json and excluded_list.txt"
         git push https://github.com/Algorithm-Coding-Test-Data-Analysis/algoview.git HEAD:${{ github.ref }}
 
