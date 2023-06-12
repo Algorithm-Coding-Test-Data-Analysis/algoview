@@ -10,10 +10,13 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
 
-    - name: Collecting data
-      working-directory: dataAnalysis/macro
-      run: python main.py
+    - name: Collect and Analyze data
+      run: |
+        python dataAnalysis/macro/main.py
+        python dataAnalysis/notebook/main.py
 
-    - name: Analyze data
-      working-directory: dataAnalysis/notebook
-      run: python main.py
+    - name: Commit and push changes
+      run: |
+        git add dataAnalysis/macro/data.json dataAnalysis/macro/excluded_list.txt
+        git commit -m "Update data.json and excluded_list.txt"
+        git push
