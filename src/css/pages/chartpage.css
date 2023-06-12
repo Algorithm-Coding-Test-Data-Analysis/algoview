@@ -162,7 +162,7 @@
 }
 
 /* ===== 반응형 ===== */
-@media screen and (width < 805px) {
+@media screen and (max-width: 805px) {
   .sec-charts {
     padding-left:  20px;
     padding-right:  20px;
