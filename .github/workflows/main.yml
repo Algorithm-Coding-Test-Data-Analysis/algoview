@@ -1,6 +1,11 @@
 name: dataUpdate
 
-on: [push]
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'data/**'
 
 jobs:
   build:
@@ -9,6 +14,12 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
+      
+    - name: Set up Git identity
+      run: |
+        git config user.email "${{ github.actor }}@users.noreply.github.com"
+        git config user.name "${{ github.actor }}"
+
       
     - name: Install dependencies
       run: |
@@ -21,10 +32,12 @@ jobs:
         python dataAnalysis/macro/main.py
 
     - name: Commit and push macro data changes
+      env:
+        GH_TOKEN: ${{ secrets.GH_TOKEN }}
       run: |
         git add dataAnalysis/macro/data.json dataAnalysis/excluded_list.txt
         git commit -m "Update macro data.json and excluded_list.txt"
-        git push
+        git push https://github.com/Algorithm-Coding-Test-Data-Analysis/algoview.git HEAD:${{ github.ref }}
 
     - name: Analyze data
       run: |
@@ -34,4 +47,4 @@ jobs:
       run: |
         git add dataAnalysis/notebook/chart_data.json
         git commit -m "Update notebook data.json"
-        git push
+        git push https://github.com/Algorithm-Coding-Test-Data-Analysis/algoview.git HEAD:${{ github.ref }}
