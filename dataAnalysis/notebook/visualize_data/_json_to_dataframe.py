@@ -188,7 +188,7 @@ def json_to_df(json_file):  # methodcount 와 method명을 분리하기 위함
             
     df = df.reset_index(drop = True).rename(columns = {"index" : "function_method"})  # method명 column으로 변환
     df = df[['file_name', 'level', 'year', 'company_name','problem_name', 'problem_type',  # column 순서 재배치
-             'function_method', 'countmethod', 'module', 'check_user_class', 'line_count', 'code']]
+             'function_method', 'countmethod', 'module', 'check_user_class', 'check_user_func', 'line_count', 'code']]
 
     df = df.fillna(np.nan)
 
@@ -202,6 +202,7 @@ def json_to_df(json_file):  # methodcount 와 method명을 분리하기 위함
     df["company_name"] = df["company_name"].apply(lambda x: prob_type_to_etc(x))  # 문제 유형이 아닌 카테고리를 "기타"로 분류
     df = df.drop(df.loc[df["code"] == "",:].index).reset_index(drop = True)
     df["check_user_class"] = df["check_user_class"].astype("int").astype("category")
+    df["check_user_func"] = df["check_user_func"].astype("int").astype("category")
     # df["problem_type"] = df["problem_type"].apply(lambda x: remap_problem_type(x))
 
     # 알고리즘 데이터의 기본 문제 유형 리스트 생성
