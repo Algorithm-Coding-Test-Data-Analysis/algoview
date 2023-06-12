@@ -1,6 +1,6 @@
 function getCompanyDataForRadar(data, lang) {
-  const COMPANY_DATA = data[lang]['company_type'];
-  const COMPANY_DESC = data['description']['company_type'];
+  const COMPANY_DATA = data[lang]['company_ptype_radar'];
+  const COMPANY_DESC = data['description']['company_ptype_radar'];
   const $company_list = document.querySelector('ul#company_list');
 
   const $canvas = document.createElement('canvas');
