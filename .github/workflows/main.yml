@@ -1,6 +1,11 @@
 name: dataUpdate
 
-on: [push]
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'data/**'
 
 jobs:
   build:
