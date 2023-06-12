@@ -1,0 +1,19 @@
+name: dataUpdate
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Collecting data
+      working-directory: dataAnalysis/macro
+      run: python main.py
+
+    - name: Analyze data
+      working-directory: dataAnalysis/notebook
+      run: python main.py
