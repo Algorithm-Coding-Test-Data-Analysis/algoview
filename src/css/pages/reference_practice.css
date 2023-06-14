@@ -22,7 +22,7 @@
   transition: all 0.3s;
   flex: 1 1 40%;
   margin-bottom: 2.25%;
-  min-width: 310px;
+  min-width: 260px;
   border-radius: 10px;
 }
 
@@ -46,6 +46,6 @@
 .practice-list-item:hover {
   background-image: url('../../assets/images/rt.png');
   background-color: var(--main-color);
-  transform: scale(1.1);
+  transform: scale(1.03);
   border-radius: 10px;
 }
