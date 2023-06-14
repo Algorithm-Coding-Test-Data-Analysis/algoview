@@ -27,5 +27,6 @@ if __name__ == '__main__':
     data = get_cnt_data()
     
     # return된 data값을 json파일로 저장
-    with open('data.json', 'w', encoding='utf-8') as f:
+    path = os.getcwd()
+    with open(f'{path}/dataAnalysis/macro/data.json', 'w', encoding='utf-8') as f:
         f.write(data)
