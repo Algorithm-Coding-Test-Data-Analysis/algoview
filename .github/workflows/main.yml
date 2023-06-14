@@ -32,6 +32,8 @@ jobs:
         python dataAnalysis/macro/main.py
 
     - name: Commit and push macro data changes
+      env:
+        GH_TOKEN: ${{ secrets.GH_TOKEN }}
       run: |
         git add dataAnalysis/macro/data.json dataAnalysis/excluded_list.txt
         git commit -m "Update macro data.json and excluded_list.txt"
