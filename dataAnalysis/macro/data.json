@@ -988,6 +988,24 @@
         "check_user_func": 0,
         "check_user_class": 0
     },
+    "Lv0_0000_프로그래머스_옹알이(1)_구현_0.py": {
+        "file_name": "Lv0_0000_프로그래머스_옹알이(1)_구현_0.py",
+        "level": "level0",
+        "year": "0000",
+        "company_name": "프로그래머스",
+        "problem_name": "옹알이(1)",
+        "problem_type": "구현",
+        "countmethod": {
+            ".replace": 1,
+            "len": 1,
+            ".strip": 1
+        },
+        "line_count": 9,
+        "module": {},
+        "code": "def solution(babbling):\n    c = 0\n    for b in babbling:\n        for w in [ \"aya\", \"ye\", \"woo\", \"ma\" ]:\n            if w * 2 not in b:\n                b = b.replace(w, ' ')\n        if len(b.strip()) == 0:\n            c += 1\n    return c",
+        "check_user_func": 0,
+        "check_user_class": 0
+    },
     "Lv0_0000_프로그래머스_문자반복출력하기_구현_0.py": {
         "file_name": "Lv0_0000_프로그래머스_문자반복출력하기_구현_0.py",
         "level": "level0",
@@ -2395,6 +2413,23 @@
         "check_user_func": 0,
         "check_user_class": 0
     },
+    "Lv1_0000_프로그래머스_문자열내P와Y의개수_구현_0.py": {
+        "file_name": "Lv1_0000_프로그래머스_문자열내P와Y의개수_구현_0.py",
+        "level": "level1",
+        "year": "0000",
+        "company_name": "프로그래머스",
+        "problem_name": "문자열내P와Y의개수",
+        "problem_type": "구현",
+        "countmethod": {
+            ".append": 2,
+            "len": 2
+        },
+        "line_count": 12,
+        "module": {},
+        "code": "def solution(s):\n    y_list = []\n    p_list = []\n    for i in s:\n        if i == 'p' or i == 'P':\n            p_list.append(i)\n        elif i == 'y' or i == 'Y':\n            y_list.append(i)\n    \n    if len(y_list) == len(p_list):\n        return True\n    return False",
+        "check_user_func": 0,
+        "check_user_class": 0
+    },
     "Lv1_0000_프로그래머스_자릿수더하기_구현_2.py": {
         "file_name": "Lv1_0000_프로그래머스_자릿수더하기_구현_2.py",
         "level": "level1",
@@ -2732,6 +2767,22 @@
         "check_user_func": 0,
         "check_user_class": 0
     },
+    "Lv1_0000_프로그래머스_X만큼간격이있는N개의숫자_구현_0.py": {
+        "file_name": "Lv1_0000_프로그래머스_X만큼간격이있는N개의숫자_구현_0.py",
+        "level": "level1",
+        "year": "0000",
+        "company_name": "프로그래머스",
+        "problem_name": "X만큼간격이있는N개의숫자",
+        "problem_type": "구현",
+        "countmethod": {
+            "range": 3
+        },
+        "line_count": 8,
+        "module": {},
+        "code": "def solution(x, n):\n    if x == 0:\n        return [0 for _ in range(n)]\n    elif x >= 1:\n        answer = [val for val in range(x, x * n + 1, x)]\n    else:\n        answer = [val for val in range(x, x * n - 1, x)]\n    return answer",
+        "check_user_func": 0,
+        "check_user_class": 0
+    },
     "Lv1_0000_프로그래머스_X만틈간격이있는N개의숫자_구현_0.py": {
         "file_name": "Lv1_0000_프로그래머스_X만틈간격이있는N개의숫자_구현_0.py",
         "level": "level1",
@@ -2803,6 +2854,20 @@
         "check_user_func": 0,
         "check_user_class": 0
     },
+    "Lv1_0000_프로그래머스_짝수와홀수_구현_0.py": {
+        "file_name": "Lv1_0000_프로그래머스_짝수와홀수_구현_0.py",
+        "level": "level1",
+        "year": "0000",
+        "company_name": "프로그래머스",
+        "problem_name": "짝수와홀수",
+        "problem_type": "구현",
+        "countmethod": 0,
+        "line_count": 2,
+        "module": {},
+        "code": "def solution(num):\n    return \"Odd\" if num % 2 != 0 else \"Even\"",
+        "check_user_func": 0,
+        "check_user_class": 0
+    },
     "Lv1_0000_프로그래머스_나누어떨어지는숫자배열_구현_1.py": {
         "file_name": "Lv1_0000_프로그래머스_나누어떨어지는숫자배열_구현_1.py",
         "level": "level1",
@@ -2820,8 +2885,8 @@
         "check_user_func": 0,
         "check_user_class": 0
     },
-    "Lv1_0000_프로그래머스_문자열내P와Y의개수_구현_0.py": {
-        "file_name": "Lv1_0000_프로그래머스_문자열내P와Y의개수_구현_0.py",
+    "Lv1_0000_프로그래머스_문자열내P와Y의개수_구현_1.py": {
+        "file_name": "Lv1_0000_프로그래머스_문자열내P와Y의개수_구현_1.py",
         "level": "level1",
         "year": "0000",
         "company_name": "프로그래머스",
@@ -2973,8 +3038,8 @@
         "check_user_func": 0,
         "check_user_class": 0
     },
-    "Lv1_0000_프로그래머스_X만큼간격이있는N개의숫자_구현_0.py": {
-        "file_name": "Lv1_0000_프로그래머스_X만큼간격이있는N개의숫자_구현_0.py",
+    "Lv1_0000_프로그래머스_X만큼간격이있는N개의숫자_구현_1.py": {
+        "file_name": "Lv1_0000_프로그래머스_X만큼간격이있는N개의숫자_구현_1.py",
         "level": "level1",
         "year": "0000",
         "company_name": "프로그래머스",
@@ -3149,8 +3214,8 @@
         "check_user_func": 0,
         "check_user_class": 0
     },
-    "Lv1_0000_프로그래머스_짝수와홀수_구현_0.py": {
-        "file_name": "Lv1_0000_프로그래머스_짝수와홀수_구현_0.py",
+    "Lv1_0000_프로그래머스_짝수와홀수_구현_1.py": {
+        "file_name": "Lv1_0000_프로그래머스_짝수와홀수_구현_1.py",
         "level": "level1",
         "year": "0000",
         "company_name": "프로그래머스",
@@ -3358,8 +3423,8 @@
         "check_user_func": 0,
         "check_user_class": 0
     },
-    "Lv1_0000_프로그래머스_문자열내P와Y의개수_구현_1.py": {
-        "file_name": "Lv1_0000_프로그래머스_문자열내P와Y의개수_구현_1.py",
+    "Lv1_0000_프로그래머스_문자열내P와Y의개수_구현_2.py": {
+        "file_name": "Lv1_0000_프로그래머스_문자열내P와Y의개수_구현_2.py",
         "level": "level1",
         "year": "0000",
         "company_name": "프로그래머스",
@@ -3651,8 +3716,8 @@
         "check_user_func": 0,
         "check_user_class": 0
     },
-    "Lv1_0000_프로그래머스_문자열내P와Y의개수_구현_2.py": {
-        "file_name": "Lv1_0000_프로그래머스_문자열내P와Y의개수_구현_2.py",
+    "Lv1_0000_프로그래머스_문자열내P와Y의개수_구현_3.py": {
+        "file_name": "Lv1_0000_프로그래머스_문자열내P와Y의개수_구현_3.py",
         "level": "level1",
         "year": "0000",
         "company_name": "프로그래머스",
@@ -3700,8 +3765,8 @@
         "check_user_func": 0,
         "check_user_class": 0
     },
-    "Lv1_0000_프로그래머스_짝수와홀수_구현_1.py": {
-        "file_name": "Lv1_0000_프로그래머스_짝수와홀수_구현_1.py",
+    "Lv1_0000_프로그래머스_짝수와홀수_구현_2.py": {
+        "file_name": "Lv1_0000_프로그래머스_짝수와홀수_구현_2.py",
         "level": "level1",
         "year": "0000",
         "company_name": "프로그래머스",
