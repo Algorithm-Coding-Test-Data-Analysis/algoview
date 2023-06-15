@@ -53,16 +53,15 @@ export function sidebarHTML() {
         </label>
         <ul class="sidebar-menu-list">
           <li>
-            <a href="/pages/reference/youtube" class="sidebar-menu-item ${
-              currentPath === '/pages/reference/youtube/' && 'sidebar-highlight'
+            <a href="/referencePage/youtube" class="sidebar-menu-item ${
+              currentPath === '/referencePage/youtube/' && 'sidebar-highlight'
             }">
               YouTube
             </a>
           </li>
           <li>
-            <a href="/pages/reference/practice" class="sidebar-menu-item ${
-              currentPath === '/pages/reference/practice/' &&
-              'sidebar-highlight'
+            <a href="/referencePage/practice" class="sidebar-menu-item ${
+              currentPath === '/referencePage/practice/' && 'sidebar-highlight'
             }">
               Practice
             </a>
@@ -76,8 +75,8 @@ export function sidebarHTML() {
   if (currentPath === '/') {
     document.querySelector('.sidebar').innerHTML = chartSidebar();
   } else if (
-    currentPath === '/pages/reference/youtube/' ||
-    currentPath === '/pages/reference/practice/'
+    currentPath === '/referencePage/youtube/' ||
+    currentPath === '/referencePage/practice/'
   ) {
     document.querySelector('.sidebar').innerHTML = referenceSidebar();
   }

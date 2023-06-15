@@ -15,10 +15,10 @@ export function headerHTML() {
                 currentPath === '/' && 'on-click'
               }"><a class="header-link" href="/">Chart</a></li>
               <li class="header-menu-reference ${
-                (currentPath === '/pages/reference/youtube/' ||
-                  currentPath === '/pages/reference/practice/') &&
+                (currentPath === '/referencePage/youtube/' ||
+                  currentPath === '/referencePage/practice/') &&
                 'on-click'
-              }"><a class="header-link" href="/pages/reference/youtube">Reference</a></li>
+              }"><a class="header-link" href="/referencePage/youtube">Reference</a></li>
           </ul>
           <input class="dark-toggle-input" type="checkbox" id="toggle" hidden>
           <label for="toggle" class="dark-toggle">
@@ -48,10 +48,10 @@ export function headerHTML() {
                     currentPath === '/' && 'on-click'
                   }"><a class="hidden-header-link" href="/">Chart</a></li>
                   <li class="hidden-header-menu-reference ${
-                    (currentPath === '/pages/reference/youtube/' ||
-                      currentPath === '/pages/reference/practice/') &&
+                    (currentPath === '/referencePage/youtube/' ||
+                      currentPath === '/referencePage/practice/') &&
                     'on-click'
-                  }"><a class="hidden-header-link" href="/pages/reference/youtube">Reference</a></li>
+                  }"><a class="hidden-header-link" href="/referencePage/youtube">Reference</a></li>
                   <li class="hidden-header-menu-github">
                     <a class="hidden-header-link" href="https://github.com/Algorithm-Coding-Test-Data-Analysis/algoview">Github</a>
                   </li>
