@@ -1,6 +1,6 @@
 .practice {
   width: 100%;
-  padding: 80px 60px;
+  padding: 80px 60px 120px;
   box-sizing: border-box;
   background-color: var(--bg-color);
 }
@@ -52,6 +52,6 @@
 
 @media screen and (max-width: 805px) {
  .practice {
-    padding: 80px 20px;
+    padding: 80px 20px 120px;
   }
 }
