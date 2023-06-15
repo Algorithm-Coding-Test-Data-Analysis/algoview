@@ -49,3 +49,9 @@
   transform: scale(1.03);
   border-radius: 10px;
 }
+
+@media screen and (max-width: 805px) {
+ .practice {
+    padding: 80px 20px;
+  }
+}
