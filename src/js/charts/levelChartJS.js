@@ -170,60 +170,115 @@ function getLevelDataJs(data, lang, charts) {
     }
 
     // 레벨별 메서드 수 level 0
+    // const level0PerFunctionMethodData = [];
+    // for (const key in data['js']['level_per_function_method']['level0']) {
+    //   level0PerFunctionMethodData.push(
+    //     data['js']['level_per_function_method']['level0'][key]
+    //   );
+    // }
+    // const level0PerFunctionMethodLabels = Object.keys(
+    //   data['js']['level_per_function_method']['level0']
+    // );
     const level0PerFunctionMethodData = [];
-    for (const key in data['js']['level_per_function_method']['level0']) {
-      level0PerFunctionMethodData.push(
-        data['js']['level_per_function_method']['level0'][key]
-      );
-    }
-    const level0PerFunctionMethodLabels = Object.keys(
+    const level0PerFunctionMethodLabels = [];
+
+    let sortLevelMethod = Object.entries(
       data['js']['level_per_function_method']['level0']
-    );
+    ).sort((a, b) => b[1] - a[1]);
+
+    for (let element of sortLevelMethod) {
+      level0PerFunctionMethodData.push(element[1]);
+      level0PerFunctionMethodLabels.push(element[0]);
+    }
 
     // 레벨별 메서드 수 level 1
+    // const level1PerFunctionMethodData = [];
+    // for (const key in data['js']['level_per_function_method']['level1']) {
+    //   level1PerFunctionMethodData.push(
+    //     data['js']['level_per_function_method']['level1'][key]
+    //   );
+    // }
+    // const level1PerFunctionMethodLabels = Object.keys(
+    //   data['js']['level_per_function_method']['level1']
+    // );
     const level1PerFunctionMethodData = [];
-    for (const key in data['js']['level_per_function_method']['level1']) {
-      level1PerFunctionMethodData.push(
-        data['js']['level_per_function_method']['level1'][key]
-      );
-    }
-    const level1PerFunctionMethodLabels = Object.keys(
+    const level1PerFunctionMethodLabels = [];
+
+    sortLevelMethod = Object.entries(
       data['js']['level_per_function_method']['level1']
-    );
+    ).sort((a, b) => b[1] - a[1]);
+
+    for (let element of sortLevelMethod) {
+      level1PerFunctionMethodData.push(element[1]);
+      level1PerFunctionMethodLabels.push(element[0]);
+    }
 
     // 레벨별 메서드 수 level 2
+    // const level2PerFunctionMethodData = [];
+    // for (const key in data['js']['level_per_function_method']['level2']) {
+    //   level2PerFunctionMethodData.push(
+    //     data['js']['level_per_function_method']['level2'][key]
+    //   );
+    // }
+    // const level2PerFunctionMethodLabels = Object.keys(
+    //   data['js']['level_per_function_method']['level2']
+    // );
     const level2PerFunctionMethodData = [];
-    for (const key in data['js']['level_per_function_method']['level2']) {
-      level2PerFunctionMethodData.push(
-        data['js']['level_per_function_method']['level2'][key]
-      );
-    }
-    const level2PerFunctionMethodLabels = Object.keys(
+    const level2PerFunctionMethodLabels = [];
+
+    sortLevelMethod = Object.entries(
       data['js']['level_per_function_method']['level2']
-    );
+    ).sort((a, b) => b[1] - a[1]);
+
+    for (let element of sortLevelMethod) {
+      level2PerFunctionMethodData.push(element[1]);
+      level2PerFunctionMethodLabels.push(element[0]);
+    }
 
     // 레벨별 메서드 수 level 3
+    // const level3PerFunctionMethodData = [];
+    // for (const key in data['js']['level_per_function_method']['level3']) {
+    //   level3PerFunctionMethodData.push(
+    //     data['js']['level_per_function_method']['level3'][key]
+    //   );
+    // }
+    // const level3PerFunctionMethodLabels = Object.keys(
+    //   data['js']['level_per_function_method']['level3']
+    // );
     const level3PerFunctionMethodData = [];
-    for (const key in data['js']['level_per_function_method']['level3']) {
-      level3PerFunctionMethodData.push(
-        data['js']['level_per_function_method']['level3'][key]
-      );
-    }
-    const level3PerFunctionMethodLabels = Object.keys(
+    const level3PerFunctionMethodLabels = [];
+
+    sortLevelMethod = Object.entries(
       data['js']['level_per_function_method']['level3']
-    );
+    ).sort((a, b) => b[1] - a[1]);
+
+    for (let element of sortLevelMethod) {
+      level3PerFunctionMethodData.push(element[1]);
+      level3PerFunctionMethodLabels.push(element[0]);
+    }
 
     if (data.js.level_per_function_method.level4) {
       // 레벨별 메서드 수 level 4
+      // const level4PerFunctionMethodData = [];
+      // for (const key in data['js']['level_per_function_method']['level4']) {
+      //   level4PerFunctionMethodData.push(
+      //     data['js']['level_per_function_method']['level4'][key]
+      //   );
+      // }
+      // const level4PerFunctionMethodLabels = Object.keys(
+      //   data['js']['level_per_function_method']['level4']
+      // );
       const level4PerFunctionMethodData = [];
-      for (const key in data['js']['level_per_function_method']['level4']) {
-        level4PerFunctionMethodData.push(
-          data['js']['level_per_function_method']['level4'][key]
-        );
-      }
-      const level4PerFunctionMethodLabels = Object.keys(
+      const level4PerFunctionMethodLabels = [];
+
+      sortLevelMethod = Object.entries(
         data['js']['level_per_function_method']['level4']
-      );
+      ).sort((a, b) => b[1] - a[1]);
+
+      for (let element of sortLevelMethod) {
+        level4PerFunctionMethodData.push(element[1]);
+        level4PerFunctionMethodLabels.push(element[0]);
+      }
 
       // 전체 메소드 유형 level 4
       const level4PerFunctionMethodChart = new Chart(
@@ -269,15 +324,26 @@ function getLevelDataJs(data, lang, charts) {
 
     if (data.js.level_per_function_method.level5) {
       // 레벨별 메서드 수 level 5
+      // const level5PerFunctionMethodData = [];
+      // for (const key in data['js']['level_per_function_method']['level5']) {
+      //   level5PerFunctionMethodData.push(
+      //     data['js']['level_per_function_method']['level5'][key]
+      //   );
+      // }
+      // const level5PerFunctionMethodLabels = Object.keys(
+      //   data['js']['level_per_function_method']['level5']
+      // );
       const level5PerFunctionMethodData = [];
-      for (const key in data['js']['level_per_function_method']['level5']) {
-        level5PerFunctionMethodData.push(
-          data['js']['level_per_function_method']['level5'][key]
-        );
-      }
-      const level5PerFunctionMethodLabels = Object.keys(
+      const level5PerFunctionMethodLabels = [];
+
+      sortLevelMethod = Object.entries(
         data['js']['level_per_function_method']['level5']
-      );
+      ).sort((a, b) => b[1] - a[1]);
+
+      for (let element of sortLevelMethod) {
+        level5PerFunctionMethodData.push(element[1]);
+        level5PerFunctionMethodLabels.push(element[0]);
+      }
 
       // 전체 메소드 유형 level 5
       const level5PerFunctionMethodChart = new Chart(
