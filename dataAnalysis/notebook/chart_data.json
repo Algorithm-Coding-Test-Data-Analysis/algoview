@@ -61,7 +61,7 @@
                 ".strip": 1.0,
                 ".sub": 1.0,
                 ".upper": 2.0,
-                "None": 0.0,
+                "FunctionNotUsed": 0.0,
                 "abs": 1.0,
                 "input": 2.0,
                 "int": 17.0,
@@ -103,7 +103,7 @@
                 ".upper": 1.0,
                 ".values": 1.0,
                 ".zfill": 1.0,
-                "None": 0.0,
+                "FunctionNotUsed": 0.0,
                 "abs": 3.0,
                 "bin": 1.0,
                 "chr": 6.0,
@@ -134,7 +134,7 @@
                 ".popleft": 8.0,
                 ".split": 2.0,
                 ".upper": 2.0,
-                "None": 0.0,
+                "FunctionNotUsed": 0.0,
                 "bin": 2.0,
                 "divmod": 1.0,
                 "int": 2.0,
@@ -470,7 +470,7 @@
                 ".toLowerCase": 3.0,
                 ".toString": 3.0,
                 ".toUpperCase": 3.0,
-                "None": 0.0,
+                "FunctionNotUsed": 0.0,
                 "eval": 1.0,
                 "isNaN": 1.0,
                 "parseInt": 5.0
@@ -520,7 +520,7 @@
                 ".toString": 7.0,
                 ".toUpperCase": 5.0,
                 ".trunc": 2.0,
-                "None": 0.0,
+                "FunctionNotUsed": 0.0,
                 "isNaN": 5.0,
                 "parseInt": 19.0
             },
@@ -557,7 +557,7 @@
                 ".trim": 3.0,
                 ".unshift": 2.0,
                 ".values": 1.0,
-                "None": 0.0
+                "FunctionNotUsed": 0.0
             },
             "level3": {
                 ".fill": 3.0,
