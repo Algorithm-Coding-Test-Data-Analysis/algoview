@@ -34,8 +34,7 @@ def unicode_err(df, column):  # 회사명, 문제유형, 문제이름 중복 오
     '''
     unicodedata.normalize() 함수는 문자열에 있는 유니코드 문자를 
     NFKC형식(문자열을 표준 호환성(KC) 형식으로 정규화)으로 정규화합니다.
-    problem_name, problem_type, company_name 컬럼의 값 중 같은 값을 
-    파이썬에서 다르게 인식하는 문제를 해결합니다.
+    컬럼의 값 중 같은 값을 파이썬에서 다르게 인식하는 문제를 해결합니다.
     
     Args:
         data : (DataFrame | Series)
@@ -134,7 +133,7 @@ def json_to_df(json_file):  # methodcount 와 method명을 분리하기 위함
     for file_name in data_json.keys():
         temp_df = pd.DataFrame(data_json[file_name])
         temp_df = temp_df.reset_index()
-        df = pd.concat([df, temp_df], axis = 0) 
+        df = pd.concat([df, temp_df], axis = 0)
 
         temp_df_len = len(temp_df)  # countmethod가 0인 파일 사전 처리 후 concat
         if temp_df_len == 0:
@@ -175,9 +174,8 @@ def json_to_df(json_file):  # methodcount 와 method명을 분리하기 위함
             for i in index_dict[index_key]:
                 # df["problem_type"][i] = ptype
                 df.loc[i, "problem_type"] = ptype
-                
-     
-    df.loc[df["function_method"] == 0, "function_method"] = df.loc[df["function_method"] == 0, "function_method"].apply(lambda x: str(x).replace("0", "None")) # module 혹은 method를 사용하지 않은 경우 "None" 으로 대체
+
+    df.loc[df["function_method"] == 0, "function_method"] = df.loc[df["function_method"] == 0, "function_method"].apply(lambda x: str(x).replace("0", "FunctionNotUsed")) # module 혹은 method를 사용하지 않은 경우 "FunctionNotUsed" 으로 대체
 
     
     return df
