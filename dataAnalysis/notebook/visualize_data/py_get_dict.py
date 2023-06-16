@@ -62,7 +62,7 @@ def multi_index_to_dict(data):
 
 
 def get_level_dict(df):
-    
+    ㄴ
     # 레벨별 문제 수 : 지금까지 푼 문제 중 레벨별 문제 id의 개수를 의미합니다.
     temp_df = df.copy()
     temp_df["problem_name"] = temp_df["problem_name"].apply(lambda x: re.sub("\(1\)|\s", "", x))
@@ -84,7 +84,8 @@ def get_level_dict(df):
     
     # 레벨별 메소드 이용수, 누적 : 레벨별로 어떤 메소드를 주로 사용하여 문제를 풀이했는지 살펴보실 수 있습니다.
     temp_df = df.copy()
-    temp_df = df.groupby(['level','function_method'])['countmethod'].sum()
+    temp_df = temp_df.loc[temp_df["module"].isna(),:]
+    temp_df = temp_df.groupby(['level','function_method'])['countmethod'].sum()
     level_per_function_method = multi_index_to_dict(temp_df)
 
     # 메소드 이용 현황, 누적 값 : 문제 풀이 시, 어떤 메소드를 많이 사용했는지 순위 표를 보실 수 있습니다.
