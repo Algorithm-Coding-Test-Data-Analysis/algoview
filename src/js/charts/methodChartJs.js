@@ -1,4 +1,9 @@
 function getMethodDataJs(data, lang, charts) {
+  document.getElementById(
+    'method-count-chart'
+  ).previousElementSibling.childNodes[0].textContent =
+    data['description']['function_method_sort'];
+
   if (lang === 'js') {
     // 종합 메소드 모듈 빈도수
     const methodCountData = [];
@@ -18,15 +23,14 @@ function getMethodDataJs(data, lang, charts) {
             {
               data: methodCountData,
               backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)',
+                '#36a2ebaa',
+                '#ff6384aa',
+                '#4bc0c0aa',
+                '#ff9f40aa',
+                '#9966ffaa',
+                '#ffcd56aa',
+                '#c9cbcfaa',
               ],
-              // borderColor: ['rgba(255, 99, 132, 1)', 'rgba(54, 162, 235, 1)', 'rgba(255, 206, 86, 1)', 'rgba(75, 192, 192, 1)', 'rgba(153, 102, 255, 1)', 'rgba(255, 159, 64, 1)'],
-              borderWidth: 1,
             },
           ],
         },

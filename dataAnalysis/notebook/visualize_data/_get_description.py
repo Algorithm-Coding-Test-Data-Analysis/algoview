@@ -1,5 +1,6 @@
 import re
 import requests
+import unicodedata
 
 key_pattern = r'\- ([^\(]+)\(([^)]+)\).*'
 value_pattern = r'- ([^:]+):\s*([^)]+)'

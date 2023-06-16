@@ -9,7 +9,7 @@
 }
 
 .sec-charts {
-  padding: 80px 60px 120px;
+  padding: 60px 60px 120px;
 }
 
 .sec-charts .sec-tit {
@@ -18,7 +18,7 @@
 
 .sec-charts .category-tit {
   font-size: 27px;
-  margin: 48px 0 50px;
+  margin: 48px 0 30px;
 }
 
 .sec-charts .category-tit::before {
@@ -27,7 +27,7 @@
   height: 1px;
   width: 100%;
   background-color: var(--point-color);
-  margin-bottom: 40px;
+  margin-bottom: 48px;
 }
 
 .sec-charts .chart-tit {
@@ -76,11 +76,19 @@
   height: 80px;
   border: none;
   border-radius: 50%;
-  background: url('/src/assets/images/btn-top.svg');
+  background-image: url('/src/assets/images/btn-top.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.btn-top.dark {
+  background-image: url('/src/assets/images/btn-top_dark.svg');
 }
 
 .btn-top.unfixed {
   position: absolute;
+}
+.btn-top:hover {
+  opacity: 0.85;
 }
 
 /* ===== 스크롤 인디케이터 ===== */
@@ -107,11 +115,13 @@
   position: absolute;
   top: calc(48px - 1px);
   right: 48px;
-  background: url('/src/assets/images/tooltip.png') center/cover no-repeat;
+  background: url('/src/assets/images/tooltip.svg') center/cover no-repeat;
 }
 
 .tooltip-txt {
   display: inline-block;
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
   max-width: 350px;
   padding: 12px 10px;
@@ -152,13 +162,14 @@
 }
 
 /* ===== 반응형 ===== */
-@media screen and (width < 805px) {
+@media screen and (max-width: 805px) {
   .sec-charts {
-    padding: 80px 20px 120px;
+    padding-left:  20px;
+    padding-right:  20px;
   }
 
   .sec-charts ul {
-    gap: 20px;
+    gap: 25px;
   }
 
   .sec-charts li {
@@ -198,10 +209,17 @@
 
   .tooltip-txt {
     right: -23px;
+    min-width: 60px;
     max-width: 300px;
   }
 
   .tooltip-txt::after {
     right: calc(18px + 15px);
+  }
+  .btn-top {
+    width: 50px;
+    height: 50px;
+    right: 19px;
+    bottom: 30px;
   }
 }

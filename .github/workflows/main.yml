@@ -1,0 +1,47 @@
+name: dataUpdate
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'data/**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Git identity
+        run: |
+          git config user.email "${{ github.actor }}@users.noreply.github.com"
+          git config user.name "${{ github.actor }}"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pandas
+          pip install numpy
+
+      - name: Collect data
+        run: |
+          python dataAnalysis/macro/main.py
+
+      - name: Commit and push macro data changes
+        run: |
+          git add dataAnalysis/macro/data.json dataAnalysis/excluded_list.txt
+          git commit -m "Update macro data.json and excluded_list.txt"
+          git push https://github.com/Algorithm-Coding-Test-Data-Analysis/algoview.git HEAD:${{ github.ref }}
+
+      - name: Analyze data
+        run: |
+          python dataAnalysis/notebook/main.py
+
+      - name: Commit and push notebook data changes
+        run: |
+          git add dataAnalysis/notebook/chart_data.json
+          git commit -m "Update notebook data.json"
+          git push https://github.com/Algorithm-Coding-Test-Data-Analysis/algoview.git HEAD:${{ github.ref }}

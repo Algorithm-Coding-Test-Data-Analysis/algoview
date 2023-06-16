@@ -83,17 +83,15 @@ function getLevelDataPy(data, lang, charts) {
               {
                 data: level4ProblemTypeData,
                 backgroundColor: [
-                  'rgba(255, 99, 132, 0.8)',
-                  'rgba(54, 162, 235, 0.8)',
-                  'rgba(255, 206, 86, 0.8)',
-                  'rgba(75, 192, 192, 0.8)',
+                  '#36a2ebaa',
+                  '#ff6384aa',
+                  '#4bc0c0aa',
+                  '#ff9f40aa',
+                  '#9966ffaa',
+                  '#ffcd56aa',
+                  '#c9cbcfaa',
                 ],
-                borderColor: [
-                  'rgba(255, 99, 132, 1)',
-                  'rgba(54, 162, 235, 1)',
-                  'rgba(255, 206, 86, 1)',
-                  'rgba(75, 192, 192, 1)',
-                ],
+                borderColor: '#ffffff',
                 borderWidth: 1,
               },
             ],
@@ -125,17 +123,15 @@ function getLevelDataPy(data, lang, charts) {
               {
                 data: level5ProblemTypeData,
                 backgroundColor: [
-                  'rgba(255, 99, 132, 0.8)',
-                  'rgba(54, 162, 235, 0.8)',
-                  'rgba(255, 206, 86, 0.8)',
-                  'rgba(75, 192, 192, 0.8)',
+                  '#36a2ebaa',
+                  '#ff6384aa',
+                  '#4bc0c0aa',
+                  '#ff9f40aa',
+                  '#9966ffaa',
+                  '#ffcd56aa',
+                  '#c9cbcfaa',
                 ],
-                borderColor: [
-                  'rgba(255, 99, 132, 1)',
-                  'rgba(54, 162, 235, 1)',
-                  'rgba(255, 206, 86, 1)',
-                  'rgba(75, 192, 192, 1)',
-                ],
+                borderColor: '#ffffff',
                 borderWidth: 1,
               },
             ],
@@ -212,13 +208,15 @@ function getLevelDataPy(data, lang, charts) {
               {
                 data: level4MethodCountData,
                 backgroundColor: [
-                  'rgba(255, 99, 132, 0.2)',
-                  'rgba(54, 162, 235, 0.2)',
-                  'rgba(255, 206, 86, 0.2)',
-                  'rgba(75, 192, 192, 0.2)',
-                  'rgba(153, 102, 255, 0.2)',
-                  'rgba(255, 159, 64, 0.2)',
+                  '#36a2ebaa',
+                  '#ff6384aa',
+                  '#4bc0c0aa',
+                  '#ff9f40aa',
+                  '#9966ffaa',
+                  '#ffcd56aa',
+                  '#c9cbcfaa',
                 ],
+                borderColor: '#ffffff',
                 borderWidth: 1,
               },
             ],
@@ -265,13 +263,15 @@ function getLevelDataPy(data, lang, charts) {
               {
                 data: level5MethodCountData,
                 backgroundColor: [
-                  'rgba(255, 99, 132, 0.2)',
-                  'rgba(54, 162, 235, 0.2)',
-                  'rgba(255, 206, 86, 0.2)',
-                  'rgba(75, 192, 192, 0.2)',
-                  'rgba(153, 102, 255, 0.2)',
-                  'rgba(255, 159, 64, 0.2)',
+                  '#36a2ebaa',
+                  '#ff6384aa',
+                  '#4bc0c0aa',
+                  '#ff9f40aa',
+                  '#9966ffaa',
+                  '#ffcd56aa',
+                  '#c9cbcfaa',
                 ],
+                borderColor: '#ffffff',
                 borderWidth: 1,
               },
             ],
@@ -297,319 +297,321 @@ function getLevelDataPy(data, lang, charts) {
     }
 
     // 레벨별 문제수
-    const levelCountChart = new Chart(
-      document.getElementById('level-count-chart'),
-      {
-        type: 'doughnut',
-        data: {
-          labels: levelCountLabels,
-          datasets: [
-            {
-              data: levelCountData,
-              backgroundColor: [
-                'rgba(255, 99, 132, 0.5)',
-                'rgba(54, 162, 235, 0.5)',
-                'rgba(225, 225, 0, 0.5)',
-                'rgba(225, 120, 102, 0.5)',
-              ],
-              // borderColor: ['rgba(255, 99, 132, 1)', 'rgba(54, 162, 235, 1)', 'rgba(255, 206, 86, 1)', 'rgba(75, 192, 192, 1)'],
-              borderWidth: 1,
-            },
-          ],
-        },
-      }
-    );
+    const levelCountCanvas = document.getElementById('level-count-chart');
+    createToolTip(levelCountCanvas, data, 'level_problem_name');
+    const levelCountChart = new Chart(levelCountCanvas, {
+      type: 'doughnut',
+      data: {
+        labels: levelCountLabels,
+        datasets: [
+          {
+            data: levelCountData,
+            backgroundColor: [
+              '#36a2ebaa',
+              '#ff6384aa',
+              '#4bc0c0aa',
+              '#ff9f40aa',
+              '#9966ffaa',
+              '#ffcd56aa',
+              '#c9cbcfaa',
+            ],
+            borderColor: '#ffffff',
+            borderWidth: 1,
+          },
+        ],
+      },
+    });
 
     // 레벨별 유형별 문제수
-    const levelProblemTypeCountChart = new Chart(
-      document.getElementById('level-problem-type-count-chart'),
-      {
-        type: 'doughnut',
-        data: {
-          labels: levelProblemTypeCountLabels,
-          datasets: [
-            {
-              data: levelCountData,
-              backgroundColor: [
-                'rgba(255, 99, 132, 0.5)',
-                'rgba(54, 162, 235, 0.5)',
-                'rgba(225, 225, 0, 0.5)',
-                'rgba(225, 120, 102, 0.5)',
-              ],
-              // borderColor: ['rgba(255, 99, 132, 1)', 'rgba(54, 162, 235, 1)', 'rgba(255, 206, 86, 1)', 'rgba(75, 192, 192, 1)'],
-              borderWidth: 1,
-            },
-          ],
-        },
-      }
+    const levelProblemTypeCountCanvas = document.getElementById(
+      'level-problem-type-count-chart'
     );
+    createToolTip(levelProblemTypeCountCanvas, data, 'level_problem_type');
+    const levelProblemTypeCountChart = new Chart(levelProblemTypeCountCanvas, {
+      type: 'doughnut',
+      data: {
+        labels: levelProblemTypeCountLabels,
+        datasets: [
+          {
+            data: levelCountData,
+            backgroundColor: [
+              '#36a2ebaa',
+              '#ff6384aa',
+              '#4bc0c0aa',
+              '#ff9f40aa',
+              '#9966ffaa',
+              '#ffcd56aa',
+              '#c9cbcfaa',
+            ],
+            borderColor: '#ffffff',
+            borderWidth: 1,
+          },
+        ],
+      },
+    });
 
     // 레벨별 문제 유형 비율(lv0~lv3)
     // 레벨별 문제 유형 비율(lv0)
-    const level0ProblemTypeChart = new Chart(
-      document.getElementById('level0-problem-type-chart'),
-      {
-        type: 'doughnut',
-        data: {
-          labels: level0ProblemTypeLabels,
-          datasets: [
-            {
-              data: level0ProblemTypeData,
-              backgroundColor: [
-                'rgba(255, 99, 132, 0.5)',
-                'rgba(54, 162, 235, 0.5)',
-              ],
-              // borderColor: ['rgba(255, 99, 132, 1)', 'rgba(54, 162, 235, 1)', 'rgba(255, 206, 86, 1)', 'rgba(75, 192, 192, 1)'],
-              borderWidth: 1,
-            },
-          ],
-        },
-      }
+    const level0ProblemTypeCanvas = document.getElementById(
+      'level0-problem-type-chart'
     );
+    createToolTip(level0ProblemTypeCanvas, data, 'level_problem_type_ratio');
+    const level0ProblemTypeChart = new Chart(level0ProblemTypeCanvas, {
+      type: 'doughnut',
+      data: {
+        labels: level0ProblemTypeLabels,
+        datasets: [
+          {
+            data: level0ProblemTypeData,
+            backgroundColor: [
+              '#36a2ebaa',
+              '#ff6384aa',
+              '#4bc0c0aa',
+              '#ff9f40aa',
+              '#9966ffaa',
+              '#ffcd56aa',
+              '#c9cbcfaa',
+            ],
+            borderColor: '#ffffff',
+            borderWidth: 1,
+          },
+        ],
+      },
+    });
 
     // 레벨별 문제 유형 비율(lv1)
-    const level1ProblemTypeChart = new Chart(
-      document.getElementById('level1-problem-type-chart'),
-      {
-        type: 'doughnut',
-        data: {
-          labels: level1ProblemTypeLabels,
-          datasets: [
-            {
-              data: level1ProblemTypeData,
-              backgroundColor: [
-                'rgba(255, 99, 132, 0.5)',
-                'rgba(54, 162, 235, 0.5)',
-                'rgba(225, 225, 0, 0.5)',
-                'rgba(225, 120, 102, 0.5)',
-                'rgba(205, 99, 105, 0.5)',
-                'rgba(104, 52, 75, 0.5)',
-                'rgba(85, 99, 150, 0.5)',
-                'rgba(120, 162, 99, 0.5)',
-              ],
-              // borderColor: ['rgba(255, 99, 132, 1)', 'rgba(54, 162, 235, 1)', 'rgba(255, 206, 86, 1)', 'rgba(75, 192, 192, 1)'],
-              borderWidth: 1,
-            },
-          ],
-        },
-      }
+    const level1ProblemTypeCanvas = document.getElementById(
+      'level1-problem-type-chart'
     );
+    createToolTip(level1ProblemTypeCanvas, data, 'level_problem_type_ratio');
+    const level1ProblemTypeChart = new Chart(level1ProblemTypeCanvas, {
+      type: 'doughnut',
+      data: {
+        labels: level1ProblemTypeLabels,
+        datasets: [
+          {
+            data: level1ProblemTypeData,
+            backgroundColor: [
+              '#36a2ebaa',
+              '#ff6384aa',
+              '#4bc0c0aa',
+              '#ff9f40aa',
+              '#9966ffaa',
+              '#ffcd56aa',
+              '#c9cbcfaa',
+            ],
+            borderColor: '#ffffff',
+            borderWidth: 1,
+          },
+        ],
+      },
+    });
 
     // 레벨별 문제 유형 비율(lv2)
-    const level2ProblemTypeChart = new Chart(
-      document.getElementById('level2-problem-type-chart'),
-      {
-        type: 'doughnut',
-        data: {
-          labels: level2ProblemTypeLabels,
-          datasets: [
-            {
-              data: level2ProblemTypeData,
-              backgroundColor: [
-                'rgba(255, 99, 132, 0.5)',
-                'rgba(54, 162, 235, 0.5)',
-                'rgba(225, 225, 0, 0.5)',
-                'rgba(225, 120, 102, 0.5)',
-              ],
-              // borderColor: ['rgba(255, 99, 132, 1)', 'rgba(54, 162, 235, 1)', 'rgba(255, 206, 86, 1)', 'rgba(75, 192, 192, 1)'],
-              borderWidth: 1,
-            },
-          ],
-        },
-      }
+    const level2ProblemTypeCanvas = document.getElementById(
+      'level2-problem-type-chart'
     );
+    createToolTip(level2ProblemTypeCanvas, data, 'level_problem_type_ratio');
+    const level2ProblemTypeChart = new Chart(level2ProblemTypeCanvas, {
+      type: 'doughnut',
+      data: {
+        labels: level2ProblemTypeLabels,
+        datasets: [
+          {
+            data: level2ProblemTypeData,
+            backgroundColor: [
+              '#36a2ebaa',
+              '#ff6384aa',
+              '#4bc0c0aa',
+              '#ff9f40aa',
+              '#9966ffaa',
+              '#ffcd56aa',
+              '#c9cbcfaa',
+            ],
+            borderColor: '#ffffff',
+            borderWidth: 1,
+          },
+        ],
+      },
+    });
 
     // 레벨별 문제 유형 비율(lv3)
-    const level3ProblemTypeChart = new Chart(
-      document.getElementById('level3-problem-type-chart'),
-      {
-        type: 'doughnut',
-        data: {
-          labels: level3ProblemTypeLabels,
-          datasets: [
-            {
-              data: level3ProblemTypeData,
-              backgroundColor: [
-                'rgba(255, 99, 132, 0.5)',
-                'rgba(54, 162, 235, 0.5)',
-                'rgba(225, 225, 0, 0.5)',
-              ],
-              // borderColor: ['rgba(255, 99, 132, 1)', 'rgba(54, 162, 235, 1)', 'rgba(255, 206, 86, 1)', 'rgba(75, 192, 192, 1)'],
-              borderWidth: 1,
-            },
-          ],
-        },
-      }
+    const level3ProblemTypeCanvas = document.getElementById(
+      'level3-problem-type-chart'
     );
+    createToolTip(level3ProblemTypeCanvas, data, 'level_problem_type_ratio');
+    const level3ProblemTypeChart = new Chart(level3ProblemTypeCanvas, {
+      type: 'doughnut',
+      data: {
+        labels: level3ProblemTypeLabels,
+        datasets: [
+          {
+            data: level3ProblemTypeData,
+            backgroundColor: [
+              '#36a2ebaa',
+              '#ff6384aa',
+              '#4bc0c0aa',
+              '#ff9f40aa',
+              '#9966ffaa',
+              '#ffcd56aa',
+              '#c9cbcfaa',
+            ],
+            borderColor: '#ffffff',
+            borderWidth: 1,
+          },
+        ],
+      },
+    });
 
     // 레벨별 모듈 메소드(lv0~lv3)
     // 레벨별 모듈 메소드 (lv0)
-    const methodCountLv0Chart = new Chart(
-      document.getElementById('level0-method-count-chart'),
-      {
-        type: 'bar',
-        data: {
-          labels: level0MethodCountLabels,
-          datasets: [
-            {
-              label: 'Level 0 Method Count',
-              data: level0MethodCountData,
-              backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)',
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)',
-              ],
-              borderWidth: 1,
-            },
-          ],
-        },
-        options: {
-          plugins: {
-            legend: {
-              display: false,
-            },
+    const level0PerFunctionMethodCanvas = document.getElementById(
+      'level0-method-count-chart'
+    );
+    createToolTip(
+      level0PerFunctionMethodCanvas,
+      data,
+      'level_per_function_method'
+    );
+    const methodCountLv0Chart = new Chart(level0PerFunctionMethodCanvas, {
+      type: 'bar',
+      data: {
+        labels: level0MethodCountLabels,
+        datasets: [
+          {
+            label: 'Level 0 Method Count',
+            data: level0MethodCountData,
+            backgroundColor: [
+              '#36a2ebaa',
+              '#ff6384aa',
+              '#4bc0c0aa',
+              '#ff9f40aa',
+              '#9966ffaa',
+              '#ffcd56aa',
+              '#c9cbcfaa',
+            ],
+          },
+        ],
+      },
+      options: {
+        plugins: {
+          legend: {
+            display: false,
           },
         },
-      }
-    );
+      },
+    });
 
     // 레벨별 모듈 메소드 (lv1)
-    const methodCountLv1Chart = new Chart(
-      document.getElementById('level1-method-count-chart'),
-      {
-        type: 'bar',
-        data: {
-          labels: level1MethodCountLabels,
-          datasets: [
-            {
-              data: level1MethodCountData,
-              backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)',
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)',
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)',
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)',
-              ],
-              // borderColor: ['rgba(255, 99, 132, 1)', 'rgba(54, 162, 235, 1)', 'rgba(255, 206, 86, 1)', 'rgba(75, 192, 192, 1)', 'rgba(153, 102, 255, 1)', 'rgba(255, 159, 64, 1)'],
-              borderWidth: 1,
-            },
-          ],
-        },
-        options: {
-          plugins: {
-            legend: {
-              display: false,
-            },
+    const level1PerFunctionMethodCanvas = document.getElementById(
+      'level1-method-count-chart'
+    );
+    createToolTip(
+      level1PerFunctionMethodCanvas,
+      data,
+      'level_per_function_method'
+    );
+    const methodCountLv1Chart = new Chart(level1PerFunctionMethodCanvas, {
+      type: 'bar',
+      data: {
+        labels: level1MethodCountLabels,
+        datasets: [
+          {
+            data: level1MethodCountData,
+            backgroundColor: [
+              '#36a2ebaa',
+              '#ff6384aa',
+              '#4bc0c0aa',
+              '#ff9f40aa',
+              '#9966ffaa',
+              '#ffcd56aa',
+              '#c9cbcfaa',
+            ],
+          },
+        ],
+      },
+      options: {
+        plugins: {
+          legend: {
+            display: false,
           },
         },
-      }
-    );
+      },
+    });
 
     // 레벨별 모듈 메소드 (lv2)
-    const methodCountLv2Chart = new Chart(
-      document.getElementById('level2-method-count-chart'),
-      {
-        type: 'bar',
-        data: {
-          labels: level2MethodCountLabels,
-          datasets: [
-            {
-              data: level2MethodCountData,
-              backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)',
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)',
-              ],
-              // borderColor: ['rgba(255, 99, 132, 1)', 'rgba(54, 162, 235, 1)', 'rgba(255, 206, 86, 1)', 'rgba(75, 192, 192, 1)', 'rgba(153, 102, 255, 1)', 'rgba(255, 159, 64, 1)'],
-              borderWidth: 1,
-            },
-          ],
-        },
-        options: {
-          plugins: {
-            legend: {
-              display: false,
-            },
+    const level2PerFunctionMethodCanvas = document.getElementById(
+      'level2-method-count-chart'
+    );
+    createToolTip(
+      level2PerFunctionMethodCanvas,
+      data,
+      'level_per_function_method'
+    );
+    const methodCountLv2Chart = new Chart(level2PerFunctionMethodCanvas, {
+      type: 'bar',
+      data: {
+        labels: level2MethodCountLabels,
+        datasets: [
+          {
+            data: level2MethodCountData,
+            backgroundColor: [
+              '#36a2ebaa',
+              '#ff6384aa',
+              '#4bc0c0aa',
+              '#ff9f40aa',
+              '#9966ffaa',
+              '#ffcd56aa',
+              '#c9cbcfaa',
+            ],
+          },
+        ],
+      },
+      options: {
+        plugins: {
+          legend: {
+            display: false,
           },
         },
-      }
-    );
+      },
+    });
 
     // 레벨별 모듈 메소드 (lv3)
-    const methodCountLv3Chart = new Chart(
-      document.getElementById('level3-method-count-chart'),
-      {
-        type: 'bar',
-        data: {
-          labels: level3MethodCountLabels,
-          datasets: [
-            {
-              data: level3MethodCountData,
-              backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)',
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)',
-              ],
-              // borderColor: ['rgba(255, 99, 132, 1)', 'rgba(54, 162, 235, 1)', 'rgba(255, 206, 86, 1)', 'rgba(75, 192, 192, 1)', 'rgba(153, 102, 255, 1)', 'rgba(255, 159, 64, 1)'],
-              borderWidth: 1,
-            },
-          ],
-        },
-        options: {
-          plugins: {
-            legend: {
-              display: false,
-            },
+    const level3PerFunctionMethodCanvas = document.getElementById(
+      'level3-method-count-chart'
+    );
+    createToolTip(
+      level3PerFunctionMethodCanvas,
+      data,
+      'level_per_function_method'
+    );
+    const methodCountLv3Chart = new Chart(level3PerFunctionMethodCanvas, {
+      type: 'bar',
+      data: {
+        labels: level3MethodCountLabels,
+        datasets: [
+          {
+            data: level3MethodCountData,
+            backgroundColor: [
+              '#36a2ebaa',
+              '#ff6384aa',
+              '#4bc0c0aa',
+              '#ff9f40aa',
+              '#9966ffaa',
+              '#ffcd56aa',
+              '#c9cbcfaa',
+            ],
+          },
+        ],
+      },
+      options: {
+        plugins: {
+          legend: {
+            display: false,
           },
         },
-      }
-    );
+      },
+    });
 
     charts.push(
       levelCountChart,
@@ -625,4 +627,10 @@ function getLevelDataPy(data, lang, charts) {
     );
   }
 }
+
+function createToolTip(canvas, data, key) {
+  canvas.previousElementSibling.childNodes[0].textContent =
+    data['description'][key];
+}
+
 export default getLevelDataPy;

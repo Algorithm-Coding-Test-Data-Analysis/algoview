@@ -1,6 +1,6 @@
 function getCompanyDataForRadar(data, lang) {
-  const COMPANY_DATA = data[lang]['company_type'];
-  const COMPANY_DESC = data['description']['company_type'];
+  const COMPANY_DATA = data[lang]['company_ptype_radar'];
+  const COMPANY_DESC = data['description']['company_ptype_radar'];
   const $company_list = document.querySelector('ul#company_list');
 
   const $canvas = document.createElement('canvas');
@@ -14,7 +14,7 @@ function getCompanyDataForRadar(data, lang) {
   $h4.className = 'chart-tit';
   $tooltip.className = 'tooltip';
   $tooltip_txt.className = 'tooltip-txt';
-  $h4.textContent = '출제 업체별 레이더 차트(임시)'; // 임시 차트명
+  $h4.textContent = '출제 업체별 문제 유형 비교';
   $canvas.id = 'company-type-radar-chart';
   $tooltip.append($tooltip_txt);
   $li.append($h4);

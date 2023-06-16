@@ -33,8 +33,8 @@ def get_data() -> list[dict]:
                     excluded_list.append(file_name)
 
     # 제외된 목록 저장
-    path = os.getcwd()
-    with open(f'{path}/dataAnalysis/excluded_list.txt', 'w', encoding='utf-8') as f:
+    dataAnalysis_folder_path = os.path.join(os.getcwd(), '..')
+    with open(os.path.join(dataAnalysis_folder_path, 'excluded_list.txt'), 'w', encoding='utf-8') as f:
         f.write('파일 업로드 양식에 맞지 않아 수집되지 않은 파일 리스트입니다.\n\n')
         for i in excluded_list:
             f.write(str(i).replace('/', '\\') + '\n')
