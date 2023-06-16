@@ -62,7 +62,7 @@ def multi_index_to_dict(data):
 
 
 def get_level_dict(df):
-    ㄴ
+    
     # 레벨별 문제 수 : 지금까지 푼 문제 중 레벨별 문제 id의 개수를 의미합니다.
     temp_df = df.copy()
     temp_df["problem_name"] = temp_df["problem_name"].apply(lambda x: re.sub("\(1\)|\s", "", x))
