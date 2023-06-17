@@ -7973,6 +7973,24 @@
         "check_user_func": 0,
         "check_user_class": 0
     },
+    "Lv0_0000_프로그래머스_저주의숫자3_구현_0.py": {
+        "file_name": "Lv0_0000_프로그래머스_저주의숫자3_구현_0.py",
+        "level": "level0",
+        "year": "0000",
+        "company_name": "프로그래머스",
+        "problem_name": "저주의숫자3",
+        "problem_type": "구현",
+        "countmethod": {
+            "str": 1,
+            ".append": 1,
+            "len": 1
+        },
+        "line_count": 11,
+        "module": {},
+        "code": "def solution(n):\n    count10 = 0\n    count3 = []\n    while 1:\n        count10 += 1\n        if count10 % 3 == 0 or '3' in str(count10):\n            continue\n        count3.append(count10)\n        if len(count3) >= n:\n            break\n    return count3[-1]",
+        "check_user_func": 0,
+        "check_user_class": 0
+    },
     "Lv0_0000_프로그래머스_중복된숫자개수_구현_0.py": {
         "file_name": "Lv0_0000_프로그래머스_중복된숫자개수_구현_0.py",
         "level": "level0",
