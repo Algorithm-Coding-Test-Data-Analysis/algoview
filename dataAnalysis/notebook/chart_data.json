@@ -1,7 +1,7 @@
 {
     "py": {
         "level_problem_name": {
-            "level0": 70,
+            "level0": 71,
             "level1": 55,
             "level2": 17,
             "level3": 5
@@ -14,7 +14,7 @@
         },
         "level_problem_type_ratio": {
             "level0": {
-                "구현": 119,
+                "구현": 120,
                 "그리디": 1
             },
             "level1": {
@@ -39,7 +39,7 @@
         },
         "level_per_function_method": {
             "level0": {
-                ".append": 17.0,
+                ".append": 18.0,
                 ".count": 8.0,
                 ".find": 2.0,
                 ".fromkeys": 1.0,
@@ -65,7 +65,7 @@
                 "abs": 1.0,
                 "input": 2.0,
                 "int": 17.0,
-                "len": 21.0,
+                "len": 22.0,
                 "list": 2.0,
                 "max": 6.0,
                 "min": 1.0,
@@ -73,7 +73,7 @@
                 "range": 19.0,
                 "set": 5.0,
                 "sorted": 12.0,
-                "str": 14.0,
+                "str": 15.0,
                 "sum": 6.0
             },
             "level1": {
@@ -166,10 +166,10 @@
         },
         "function_method_sort": {
             "range": 95.0,
-            "len": 84.0,
-            ".append": 72.0,
+            "len": 85.0,
+            ".append": 73.0,
             "int": 39.0,
-            "str": 33.0,
+            "str": 34.0,
             "sorted": 26.0,
             "sum": 25.0,
             ".join": 21.0,
@@ -177,7 +177,7 @@
             "max": 18.0
         },
         "problem_type_count": {
-            "구현": 120,
+            "구현": 121,
             "스택큐": 11,
             "DFSBFS": 4,
             "해시": 3,
@@ -331,7 +331,7 @@
             "월간코드챌린지시즌2": 1,
             "월간코드챌린지시즌3": 1,
             "카카오": 4,
-            "프로그래머스": 140
+            "프로그래머스": 141
         },
         "company_type": {
             "카카오": {
