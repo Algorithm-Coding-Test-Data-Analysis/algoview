@@ -1,0 +1,25 @@
+name: Update Excluded List
+
+on:
+  push:
+    paths:
+      - 'dataAnalysis/macro/excluded_list.txt'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Git identity
+        run: |
+          git config user.email "${{ github.actor }}@users.noreply.github.com"
+          git config user.name "${{ github.actor }}"
+
+      - name: Commit and push dataAnalysis excluded_list changes
+        run: |
+          git add dataAnalysis/excluded_list.txt
+          git commit -m "Update excluded_list.txt"
+          git push https://github.com/Algorithm-Coding-Test-Data-Analysis/algoview.git HEAD:${{ github.ref }}
