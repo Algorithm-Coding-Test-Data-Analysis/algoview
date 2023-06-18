@@ -6982,6 +6982,25 @@
         "check_user_func": 0,
         "check_user_class": 0
     },
+    "Lv1_0000_프로그래머스_자릿수더하기_구현_2.py": {
+        "file_name": "Lv1_0000_프로그래머스_자릿수더하기_구현_2.py",
+        "level": "level1",
+        "year": "0000",
+        "company_name": "프로그래머스",
+        "problem_name": "자릿수더하기",
+        "problem_type": "구현",
+        "countmethod": {
+            "list": 1,
+            "str": 1,
+            "sum": 1,
+            "int": 1
+        },
+        "line_count": 3,
+        "module": {},
+        "code": "def solution(n):\n    n = list(str(n))\n    return sum([int(val) for val in n])",
+        "check_user_func": 0,
+        "check_user_class": 0
+    },
     "Lv1_0000_프로그래머스_약수의합_구현_3.py": {
         "file_name": "Lv1_0000_프로그래머스_약수의합_구현_3.py",
         "level": "level1",
@@ -7165,8 +7184,8 @@
         "check_user_func": 0,
         "check_user_class": 0
     },
-    "Lv1_0000_프로그래머스_자릿수더하기_구현_2.py": {
-        "file_name": "Lv1_0000_프로그래머스_자릿수더하기_구현_2.py",
+    "Lv1_0000_프로그래머스_자릿수더하기_구현_3.py": {
+        "file_name": "Lv1_0000_프로그래머스_자릿수더하기_구현_3.py",
         "level": "level1",
         "year": "0000",
         "company_name": "프로그래머스",
@@ -8469,8 +8488,8 @@
         "check_user_func": 0,
         "check_user_class": 0
     },
-    "Lv0_0000_프로그래머스_자릿수더하기_구현_3.py": {
-        "file_name": "Lv0_0000_프로그래머스_자릿수더하기_구현_3.py",
+    "Lv0_0000_프로그래머스_자릿수더하기_구현_4.py": {
+        "file_name": "Lv0_0000_프로그래머스_자릿수더하기_구현_4.py",
         "level": "level0",
         "year": "0000",
         "company_name": "프로그래머스",
@@ -9509,8 +9528,8 @@
         "check_user_func": 0,
         "check_user_class": 0
     },
-    "Lv0_0000_프로그래머스_자릿수더하기_구현_4.py": {
-        "file_name": "Lv0_0000_프로그래머스_자릿수더하기_구현_4.py",
+    "Lv0_0000_프로그래머스_자릿수더하기_구현_5.py": {
+        "file_name": "Lv0_0000_프로그래머스_자릿수더하기_구현_5.py",
         "level": "level0",
         "year": "0000",
         "company_name": "프로그래머스",
