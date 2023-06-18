@@ -62,7 +62,7 @@ def multi_index_to_dict(data):
 
 
 def get_level_dict(df):
-    ㄴ
+    
     # 레벨별 문제 수 : 지금까지 푼 문제 중 레벨별 문제 id의 개수를 의미합니다.
     temp_df = df.copy()
     temp_df["problem_name"] = temp_df["problem_name"].apply(lambda x: re.sub("\(1\)|\s", "", x))
@@ -194,7 +194,7 @@ def drop_duplicated_solution(df):
 
     df = df[df['problem_type'] != '구현']
     df = df.loc[df['module'].isna()]  # 메서드, 함수 사용 데이터 추출
-    df = df[df['function_method'] != 'None']  # 메서드, 함수 미사용 데이터 제거
+    df = df[df['function_method'] != 'FunctionNotUsed']  # 메서드, 함수 미사용 데이터 제거
     df["problem_name"] = df["problem_name"].apply(lambda x: re.sub("\(1\)|\s", "", x))  # 문제이름(1)과 문제이름 => 동일 문제 처리
 
     # 중복 풀이된 고유 문제이름 리스트

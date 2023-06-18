@@ -143,60 +143,115 @@ function getLevelDataPy(data, lang, charts) {
 
     // 레벨별 모듈 메소드(lv0~lv3)
     // 레벨별 모듈 메소드(lv0)
+    // const level0MethodCountData = [];
+    // for (const key in data['py']['level_per_function_method']['level0']) {
+    //   level0MethodCountData.push(
+    //     data['py']['level_per_function_method']['level0'][key]
+    //   );
+    // }
+    // const level0MethodCountLabels = Object.keys(
+    //   data['py']['level_per_function_method']['level0']
+    // );
     const level0MethodCountData = [];
-    for (const key in data['py']['level_per_function_method']['level0']) {
-      level0MethodCountData.push(
-        data['py']['level_per_function_method']['level0'][key]
-      );
-    }
-    const level0MethodCountLabels = Object.keys(
+    const level0MethodCountLabels = [];
+
+    let sorted = Object.entries(
       data['py']['level_per_function_method']['level0']
-    );
+    ).sort((a, b) => b[1] - a[1]);
+
+    for (let element of sorted) {
+      level0MethodCountLabels.push(element[0]);
+      level0MethodCountData.push(element[1]);
+    }
 
     // 레벨별 모듈 메소드(lv1)
+    // const level1MethodCountData = [];
+    // for (const key in data['py']['level_per_function_method']['level1']) {
+    //   level1MethodCountData.push(
+    //     data['py']['level_per_function_method']['level1'][key]
+    //   );
+    // }
+    // const level1MethodCountLabels = Object.keys(
+    //   data['py']['level_per_function_method']['level1']
+    // );
     const level1MethodCountData = [];
-    for (const key in data['py']['level_per_function_method']['level1']) {
-      level1MethodCountData.push(
-        data['py']['level_per_function_method']['level1'][key]
-      );
-    }
-    const level1MethodCountLabels = Object.keys(
+    const level1MethodCountLabels = [];
+
+    sorted = Object.entries(
       data['py']['level_per_function_method']['level1']
-    );
+    ).sort((a, b) => b[1] - a[1]);
+
+    for (let element of sorted) {
+      level1MethodCountLabels.push(element[0]);
+      level1MethodCountData.push(element[1]);
+    }
 
     // 레벨별 모듈 메소드(lv2)
+    // const level2MethodCountData = [];
+    // for (const key in data['py']['level_per_function_method']['level2']) {
+    //   level2MethodCountData.push(
+    //     data['py']['level_per_function_method']['level2'][key]
+    //   );
+    // }
+    // const level2MethodCountLabels = Object.keys(
+    //   data['py']['level_per_function_method']['level2']
+    // );
     const level2MethodCountData = [];
-    for (const key in data['py']['level_per_function_method']['level2']) {
-      level2MethodCountData.push(
-        data['py']['level_per_function_method']['level2'][key]
-      );
-    }
-    const level2MethodCountLabels = Object.keys(
+    const level2MethodCountLabels = [];
+
+    sorted = Object.entries(
       data['py']['level_per_function_method']['level2']
-    );
+    ).sort((a, b) => b[1] - a[1]);
+
+    for (let element of sorted) {
+      level2MethodCountLabels.push(element[0]);
+      level2MethodCountData.push(element[1]);
+    }
 
     // 레벨별 모듈 메소드(lv3)
+    // const level3MethodCountData = [];
+    // for (const key in data['py']['level_per_function_method']['level3']) {
+    //   level3MethodCountData.push(
+    //     data['py']['level_per_function_method']['level3'][key]
+    //   );
+    // }
+    // const level3MethodCountLabels = Object.keys(
+    //   data['py']['level_per_function_method']['level3']
+    // );
     const level3MethodCountData = [];
-    for (const key in data['py']['level_per_function_method']['level3']) {
-      level3MethodCountData.push(
-        data['py']['level_per_function_method']['level3'][key]
-      );
-    }
-    const level3MethodCountLabels = Object.keys(
+    const level3MethodCountLabels = [];
+
+    sorted = Object.entries(
       data['py']['level_per_function_method']['level3']
-    );
+    ).sort((a, b) => b[1] - a[1]);
+
+    for (let element of sorted) {
+      level3MethodCountLabels.push(element[0]);
+      level3MethodCountData.push(element[1]);
+    }
 
     // 레벨별 모듈 메소드(lv4)
     if (data['py']['level_per_function_method']['level4']) {
+      // const level4MethodCountData = [];
+      // for (const key in data['py']['level_per_function_method']['level4']) {
+      //   level4MethodCountData.push(
+      //     data['py']['level_per_function_method']['level4'][key]
+      //   );
+      // }
+      // const level4MethodCountLabels = Object.keys(
+      //   data['py']['level_per_function_method']['level4']
+      // );
       const level4MethodCountData = [];
-      for (const key in data['py']['level_per_function_method']['level4']) {
-        level4MethodCountData.push(
-          data['py']['level_per_function_method']['level4'][key]
-        );
-      }
-      const level4MethodCountLabels = Object.keys(
+      const level4MethodCountLabels = [];
+
+      sorted = Object.entries(
         data['py']['level_per_function_method']['level4']
-      );
+      ).sort((a, b) => b[1] - a[1]);
+
+      for (let element of sorted) {
+        level4MethodCountLabels.push(element[0]);
+        level4MethodCountData.push(element[1]);
+      }
 
       const methodCountLv4Chart = new Chart(
         document.getElementById('level4-method-count-chart'),
@@ -243,15 +298,26 @@ function getLevelDataPy(data, lang, charts) {
 
     // 레벨별 모듈 메소드(lv5)
     if (data['py']['level_per_function_method']['level5']) {
+      // const level5MethodCountData = [];
+      // for (const key in data['py']['level_per_function_method']['level5']) {
+      //   level5MethodCountData.push(
+      //     data['py']['level_per_function_method']['level5'][key]
+      //   );
+      // }
+      // const level5MethodCountLabels = Object.keys(
+      //   data['py']['level_per_function_method']['level5']
+      // );
       const level5MethodCountData = [];
-      for (const key in data['py']['level_per_function_method']['level5']) {
-        level5MethodCountData.push(
-          data['py']['level_per_function_method']['level5'][key]
-        );
-      }
-      const level5MethodCountLabels = Object.keys(
+      const level5MethodCountLabels = [];
+
+      sorted = Object.entries(
         data['py']['level_per_function_method']['level5']
-      );
+      ).sort((a, b) => b[1] - a[1]);
+
+      for (let element of sorted) {
+        level5MethodCountLabels.push(element[0]);
+        level5MethodCountData.push(element[1]);
+      }
 
       const methodCountLv5Chart = new Chart(
         document.getElementById('level5-method-count-chart'),
