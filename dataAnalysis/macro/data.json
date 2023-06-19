@@ -5356,6 +5356,24 @@
         "check_user_func": 0,
         "check_user_class": 0
     },
+    "Lv5_0000_프로그래머스_테스트_테스트_0.py": {
+        "file_name": "Lv5_0000_프로그래머스_테스트_테스트_0.py",
+        "level": "level5",
+        "year": "0000",
+        "company_name": "프로그래머스",
+        "problem_name": "테스트",
+        "problem_type": "테스트",
+        "countmethod": {
+            ".main": 1
+        },
+        "line_count": 2,
+        "module": {
+            "__hello__": 1
+        },
+        "code": "import __hello__\n__hello__.main()",
+        "check_user_func": 0,
+        "check_user_class": 0
+    },
     "Lv3_0000_프로그래머스_단어변환_DFSBFS_0.py": {
         "file_name": "Lv3_0000_프로그래머스_단어변환_DFSBFS_0.py",
         "level": "level3",
