@@ -32,8 +32,8 @@ jobs:
 
       - name: Commit and push macro data changes
         run: |
-          git add dataAnalysis/macro/data.json
-          git commit -m "Update macro data.json"
+          git add dataAnalysis/macro/data.json dataAnalysis/excluded_list.txt
+          git commit -m "Update macro data.json and excluded_list.txt"
           git push https://github.com/Algorithm-Coding-Test-Data-Analysis/algoview.git HEAD:${{ github.ref }}
 
       - name: Analyze data
