@@ -654,6 +654,22 @@
         "check_user_func": 0,
         "check_user_class": 0
     },
+    "Lv1_0000_프로그래머스_음양더하기_구현_0.js": {
+        "file_name": "Lv1_0000_프로그래머스_음양더하기_구현_0.js",
+        "level": "level1",
+        "year": "0000",
+        "company_name": "프로그래머스",
+        "problem_name": "음양더하기",
+        "problem_type": "구현",
+        "countmethod": {
+            ".reduce": 1
+        },
+        "line_count": 6,
+        "module": {},
+        "code": "function solution(absolutes, signs) {\n  return absolutes.reduce(\n    (acc, val, index) => acc + val * (signs[index] ? 1 : -1),\n    0\n  );\n}\n",
+        "check_user_func": 0,
+        "check_user_class": 0
+    },
     "Lv1_0000_프로그래머스_정수내림차순으로배치하기_구현_0.js": {
         "file_name": "Lv1_0000_프로그래머스_정수내림차순으로배치하기_구현_0.js",
         "level": "level1",
@@ -1428,8 +1444,8 @@
         "check_user_func": 0,
         "check_user_class": 0
     },
-    "Lv1_0000_프로그래머스_음양더하기_구현_0.js": {
-        "file_name": "Lv1_0000_프로그래머스_음양더하기_구현_0.js",
+    "Lv1_0000_프로그래머스_음양더하기_구현_1.js": {
+        "file_name": "Lv1_0000_프로그래머스_음양더하기_구현_1.js",
         "level": "level1",
         "year": "0000",
         "company_name": "프로그래머스",
@@ -3652,6 +3668,22 @@
         "check_user_func": 0,
         "check_user_class": 0
     },
+    "Lv0_0000_프로그래머스_최댓값만들기(1)_구현_0.js": {
+        "file_name": "Lv0_0000_프로그래머스_최댓값만들기(1)_구현_0.js",
+        "level": "level0",
+        "year": "0000",
+        "company_name": "프로그래머스",
+        "problem_name": "최댓값만들기(1)",
+        "problem_type": "구현",
+        "countmethod": {
+            ".sort": 1
+        },
+        "line_count": 4,
+        "module": {},
+        "code": "function solution(numbers) {\n    numbers.sort((a,b) => b-a);\n    return numbers[0] * numbers[1]\n}",
+        "check_user_func": 0,
+        "check_user_class": 0
+    },
     "Lv0_0000_프로그래머스_문자반복출력하기_구현_0.js": {
         "file_name": "Lv0_0000_프로그래머스_문자반복출력하기_구현_0.js",
         "level": "level0",
@@ -5353,24 +5385,6 @@
         "line_count": 7,
         "module": {},
         "code": "function solution (n) {\n    let arr = [];\n    for(let i = 1; i <= n; i+=2){\n        arr.push(i);\n    }\n    return arr;\n}\n",
-        "check_user_func": 0,
-        "check_user_class": 0
-    },
-    "Lv5_0000_프로그래머스_테스트_테스트_0.py": {
-        "file_name": "Lv5_0000_프로그래머스_테스트_테스트_0.py",
-        "level": "level5",
-        "year": "0000",
-        "company_name": "프로그래머스",
-        "problem_name": "테스트",
-        "problem_type": "테스트",
-        "countmethod": {
-            ".main": 1
-        },
-        "line_count": 2,
-        "module": {
-            "__hello__": 1
-        },
-        "code": "import __hello__\n__hello__.main()",
         "check_user_func": 0,
         "check_user_class": 0
     },
