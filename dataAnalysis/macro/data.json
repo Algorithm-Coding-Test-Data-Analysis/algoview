@@ -7296,10 +7296,13 @@
         "company_name": "프로그래머스",
         "problem_name": "기능개발",
         "problem_type": "구현",
-        "countmethod": 0,
-        "line_count": 0,
+        "countmethod": {
+            "len": 2,
+            ".append": 1
+        },
+        "line_count": 18,
         "module": {},
-        "code": "",
+        "code": "def solution(progresses, speeds):\n    answer = []\n    i = 0\n    while len(speeds) > i:\n        cnt = 0\n        while progresses[i] < 100:\n            progresses[i] += speeds[i]\n            cnt += 1\n        success = 0\n        while len(progresses[(i + 1):]):\n            if progresses[(i + 1)] + (speeds[(i + 1)] * cnt) >= 100:\n                success += 1\n                i += 1\n            else:\n                break\n        answer.append(success + 1)\n        i += 1\n    return answer",
         "check_user_func": 0,
         "check_user_class": 0
     },
