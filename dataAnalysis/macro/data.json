@@ -7289,6 +7289,20 @@
         "check_user_func": 0,
         "check_user_class": 0
     },
+    "Lv2_0000_프로그래머스_기능개발_구현_0.py": {
+        "file_name": "Lv2_0000_프로그래머스_기능개발_구현_0.py",
+        "level": "level2",
+        "year": "0000",
+        "company_name": "프로그래머스",
+        "problem_name": "기능개발",
+        "problem_type": "구현",
+        "countmethod": 0,
+        "line_count": 0,
+        "module": {},
+        "code": "",
+        "check_user_func": 0,
+        "check_user_class": 0
+    },
     "Lv2_0000_프로그래머스_JADENCASE문자열만들기_구현_0.py": {
         "file_name": "Lv2_0000_프로그래머스_JADENCASE문자열만들기_구현_0.py",
         "level": "level2",
@@ -7615,8 +7629,8 @@
         "check_user_func": 1,
         "check_user_class": 0
     },
-    "Lv2_0000_프로그래머스_기능개발_스택큐_0.py": {
-        "file_name": "Lv2_0000_프로그래머스_기능개발_스택큐_0.py",
+    "Lv2_0000_프로그래머스_기능개발_스택큐_1.py": {
+        "file_name": "Lv2_0000_프로그래머스_기능개발_스택큐_1.py",
         "level": "level2",
         "year": "0000",
         "company_name": "프로그래머스",
