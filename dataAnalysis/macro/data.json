@@ -5657,6 +5657,23 @@
         "check_user_func": 0,
         "check_user_class": 0
     },
+    "Lv1_0000_프로그래머스_수박수박수박수박수박수_구현_0.py": {
+        "file_name": "Lv1_0000_프로그래머스_수박수박수박수박수박수_구현_0.py",
+        "level": "level1",
+        "year": "0000",
+        "company_name": "프로그래머스",
+        "problem_name": "수박수박수박수박수박수",
+        "problem_type": "구현",
+        "countmethod": {
+            "range": 1,
+            "print": 1
+        },
+        "line_count": 13,
+        "module": {},
+        "code": "def solution(n):\n    answer = ''\n    for i in range(0, n):\n        if i % 2:\n            answer += '박'\n        else:\n            answer += '수'\n    return answer\n# 다른풀이\ndef solution_b(n):\n    string = \"수박\" * n\n    return string[:n]\nprint(solution(3))\n",
+        "check_user_func": 1,
+        "check_user_class": 0
+    },
     "Lv1_0000_프로그래머스_평균구하기_구현_0.py": {
         "file_name": "Lv1_0000_프로그래머스_평균구하기_구현_0.py",
         "level": "level1",
