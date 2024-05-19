@@ -6746,6 +6746,23 @@
         "check_user_func": 0,
         "check_user_class": 0
     },
+    "Lv1_2024_PCCE 기출문제 9번_이웃한칸_구현_0.py": {
+        "file_name": "Lv1_2024_PCCE 기출문제 9번_이웃한칸_구현_0.py",
+        "level": "level1",
+        "year": "2024",
+        "company_name": "PCCE 기출문제 9번",
+        "problem_name": "이웃한칸",
+        "problem_type": "구현",
+        "countmethod": {
+            "len": 1,
+            "range": 1
+        },
+        "line_count": 13,
+        "module": {},
+        "code": "def solution(board, h, w):\n    answer = 0\n    color = board[h][w]\n    n = len(board)\n    dh, dw = [0, 1, -1, 0], [1, 0, 0, -1]\n    \n    for i in range(4):\n        h_check, w_check = h + dh[i], w + dw[i]\n        if 0 <= h_check < n and 0 <= w_check < n:\n            if color == board[h_check][w_check]:\n                answer += 1\n    \n    return answer",
+        "check_user_func": 0,
+        "check_user_class": 0
+    },
     "Lv1_0000_월간코드챌린지시즌3_나머지가1이되는수찾기_구현_3.py": {
         "file_name": "Lv1_0000_월간코드챌린지시즌3_나머지가1이되는수찾기_구현_3.py",
         "level": "level1",
@@ -9235,6 +9252,20 @@
         "check_user_func": 0,
         "check_user_class": 0
     },
+    "Lv0_0000_프로그래머스_커피심부름_구현_0.py": {
+        "file_name": "Lv0_0000_프로그래머스_커피심부름_구현_0.py",
+        "level": "level0",
+        "year": "0000",
+        "company_name": "프로그래머스",
+        "problem_name": "커피심부름",
+        "problem_type": "구현",
+        "countmethod": 0,
+        "line_count": 8,
+        "module": {},
+        "code": "def solution(order):\n    answer = 0\n    for coffe in order:\n        if \"cafelatte\" in coffe:\n            answer += 5000\n        elif \"americano\" in coffe or \"anything\" in coffe:\n            answer += 4500\n    return answer",
+        "check_user_func": 0,
+        "check_user_class": 0
+    },
     "Lv0_0000_프로그래머스_잘라서배열로저장하기_구현_0.py": {
         "file_name": "Lv0_0000_프로그래머스_잘라서배열로저장하기_구현_0.py",
         "level": "level0",
@@ -9499,6 +9530,22 @@
         "line_count": 3,
         "module": {},
         "code": "def solution(num_list):\n    num_list.reverse()\n    return num_list",
+        "check_user_func": 0,
+        "check_user_class": 0
+    },
+    "Lv0_0000_프로그래머스_특별한이차원배열1_구현_0.py": {
+        "file_name": "Lv0_0000_프로그래머스_특별한이차원배열1_구현_0.py",
+        "level": "level0",
+        "year": "0000",
+        "company_name": "프로그래머스",
+        "problem_name": "특별한이차원배열1",
+        "problem_type": "구현",
+        "countmethod": {
+            "range": 2
+        },
+        "line_count": 3,
+        "module": {},
+        "code": "def solution(n):\n    answer = [[1 if i == j else 0 for j in range(n)] for i in range(n)]\n    return answer",
         "check_user_func": 0,
         "check_user_class": 0
     },
