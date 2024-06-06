@@ -3597,6 +3597,25 @@
         "check_user_func": 0,
         "check_user_class": 0
     },
+    "Lv1_2024_카카오_가장많이받은선물_구현_0.py": {
+        "file_name": "Lv1_2024_카카오_가장많이받은선물_구현_0.py",
+        "level": "level1",
+        "year": "2024",
+        "company_name": "카카오",
+        "problem_name": "가장많이받은선물",
+        "problem_type": "구현",
+        "countmethod": {
+            ".split": 1,
+            ".items": 2,
+            "max": 1,
+            ".values": 1
+        },
+        "line_count": 22,
+        "module": {},
+        "code": "def solution(friends, gifts):\n    score = {name: {friend: 0 for friend in friends} for name in friends}\n    \n    for gift in gifts:\n        p, d = gift.split()\n        \n        score[p][p] += 1\n        score[d][d] -= 1\n        \n        score[p][d] += 1\n        score[d][p] -= 1\n    gift = {name: 0 for name in friends}    \n    for order, fre in score.items():\n        cnt = 0\n        for k, v in fre.items():\n            if v > 0 and order != k:\n                cnt += 1\n            elif v == 0 and (score[k][k] < score[order][order]) and order != k:\n                cnt += 1\n        gift[order] = cnt\n    \n    return max(gift.values())\n",
+        "check_user_func": 0,
+        "check_user_class": 0
+    },
     "Lv1_0000_프로그래머스_제일작은수제거하기_구현_1.py": {
         "file_name": "Lv1_0000_프로그래머스_제일작은수제거하기_구현_1.py",
         "level": "level1",
